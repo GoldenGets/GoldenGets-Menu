@@ -5,13 +5,12 @@ Hi, I'm not good at programming and I made this because I was inspired by someon
 
 ## Features
 
-This script does not need to be updated because it uses Tunables Variables that are not dependent on the update version.
 
 
 
 ## Features that need updating
 
-but there are also some features that should be updated in the future when GTA Online is updated. list that might expire on the next update:
+In fact, most of these scripts are independent of the GTA Online update version. However, there are some features that should be updated in the future when GTA Online is updated.
 
 - Auto Resupply
 - Instant Sell

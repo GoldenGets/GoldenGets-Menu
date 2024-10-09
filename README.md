@@ -41,5 +41,5 @@ In fact, most of these scripts are independent of the GTA Online update version.
 - [xesdoog](https://www.github.com/xesdoog) inspired a lot by him too
 - [sch-lda](https://www.github.com/sch-lda) for instant hacks from [MiniGameHack](https://www.github.com/YimMenu-Lua/MiniGameHack) and for production speed from [sch.lua](https://github.com/sch-lda/SCH-LUA-YIMMENU)
 - [gir489](https://www.github.com/gir489returns) for computer menu from [InternetComputers.lua](https://github.com/YimMenu-Lua/Internet)
-- [L7NEG](https://www.github.com/L7NEG) thanks for reports menu from [Ultimate Menu](https://www.unknowncheats.me/forum/grand-theft-auto-v/565688-1-64-ultimate-unlocker.html)
+- [L7NEG](https://www.github.com/L7NEG) thanks for reports menu from [Ultimate Menu](https://github.com/UltimateMenu/UltimateMenu)
 - [abuazizv](https://www.github.com/abuazizv) thanks for ATM menu from [Pessi](https://www.github.com/YimMenu-Lua/Pessi)

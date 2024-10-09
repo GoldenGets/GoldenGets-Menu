@@ -8,7 +8,7 @@ Hi, I'm not good at programming and I made this because I was inspired by someon
 
 
 
-## Features that need updating
+## Features that need to be updated in the next version
 
 In fact, most of these scripts are independent of the GTA Online update version. However, there are some features that should be updated in the future when GTA Online is updated.
 

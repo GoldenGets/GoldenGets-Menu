@@ -10,9 +10,9 @@ Hi, I'm not good at programming and I made this because I was inspired by someon
 - Remove All CCTV
 - Phone Animations
 - ATM
-- Many Computer
+- Many Computers
 - Many Cooldowns
-- Many Business Control
+- Many Business Controls
 - Many Business Resupply
 - Many Business Selling
 

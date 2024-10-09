@@ -22,7 +22,7 @@ Hi, I'm not good at programming and I made this because I was inspired by someon
 In fact, most of these scripts are independent of the GTA Online update version. However, there are some features that should be updated in the future when GTA Online is updated.
 
 - Switch CEO/President
-- Intant Hack
+- Instant Hack
 - Auto Resupply
 - Instant Sell
 - Shipment Type Sell

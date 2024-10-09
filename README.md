@@ -23,9 +23,10 @@ In fact, most of these scripts are independent of the GTA Online update version.
 
 - Switch CEO/President
 - Instant Hack
-- Auto Resupply
-- Instant Sell
-- Shipment Type Sell
+- Dispatch Work Cooldown
+- All Auto Resupply
+- All Instant Sell
+- All Shipment Type Sell
 
 > [⚠︎Disclaimer⚠︎]
 > We are not responsible for any loss you may incur after downloading from this source.

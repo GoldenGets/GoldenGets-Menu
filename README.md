@@ -6,7 +6,7 @@ Hi, I'm not good at programming and I made this because I was inspired by someon
 ## Features
 
 - Switch CEO/President
-- Intant Hack
+- Instant Hack
 - Remove All CCTV
 - Phone Animations
 - ATM

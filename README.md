@@ -10,10 +10,9 @@ This script does not need to be updated because it uses Tunables Variables that 
 - Instant Sell
 - Shipment Type Sell
 
-> [NOTE!!!]
-> **Discontinued** due to a series of unfortunate events including what happened to our beloved YimMenu as well as some shitty life circumstances. I will not update this small project anymore but pull requests are still welcome.
-> 
-> If you want to borrow code, feel free to do so. The only requirement is that you mention the author.
+> [⚠︎Disclaimer⚠︎]
+> We are not responsible for any losses you may incur.
+> By downloading it from this source, you agree to the applicable policies.
 
 ## Authors
 - [@Yimura](https://www.github.com/Yimura) master key

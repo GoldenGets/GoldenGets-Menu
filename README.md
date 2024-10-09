@@ -1,7 +1,7 @@
 # BusinessControls
 Lua script for YimMenu which is useful for your GTA Online progress
 
-Hi, I'm not good at programming and I made this because I was inspired by someone else, I think it might be too late to make and share this script after the disaster happened. But you can read the description below to consider.
+I think it might be too late to make and share this script after the disaster happened. But you can read the description below to consider.
 
 ## Features
 
@@ -31,6 +31,12 @@ In fact, most of these scripts are independent of the GTA Online update version.
 > [⚠︎Disclaimer⚠︎]
 > We are not responsible for any loss you may incur after downloading from this source.
 > By downloading it from this source, you're agree to the applicable terms.
+
+
+## About me
+
+Hi, I'm not good at programming and I made this because I was inspired by someone else
+
 
 ## Credits
 

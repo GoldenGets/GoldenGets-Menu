@@ -9,3 +9,5 @@ This script does not need to be updated because it uses Tunables Variables that 
 - Auto Resupply
 - Instant Sell
 - Shipment Type Sell
+
+![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)

@@ -5,13 +5,24 @@ Hi, I'm not good at programming and I made this because I was inspired by someon
 
 ## Features
 
-
+- Switch CEO/President
+- Intant Hack
+- Remove All CCTV
+- Phone Animations
+- ATM
+- Many Computer
+- Many Cooldowns
+- Many Business Control
+- Many Business Resupply
+- Many Business Selling
 
 
 ## Features that need to be updated in the next version
 
 In fact, most of these scripts are independent of the GTA Online update version. However, there are some features that should be updated in the future when GTA Online is updated.
 
+- Switch CEO/President
+- Intant Hack
 - Auto Resupply
 - Instant Sell
 - Shipment Type Sell

@@ -38,7 +38,7 @@ In fact, most of these scripts are independent of the GTA Online update version.
 
 
 > [!Note:]
-> We heard that the warehouse cargo method has been detected and restricted before the launch of BE. I set all sales prices to only 2x profit. I hope this method is safe because it is not excessive and is not directed in one direction. Because based on my experience, some of my accounts have recently been blocked just because they exceeded the large sales limit and used the direct money addition option.
+> We heard that the warehouse cargo method has been detected and restricted before the launch of BE. I set all sales prices to only 2x profit. I hope this method is safe because it is not excessive and is not directed in one direction. Because based on my experience, some of my accounts have recently been banned just because they exceeded the large sales limit and using the instant money add option..
 
 
 > [⚠︎Disclaimer⚠︎]

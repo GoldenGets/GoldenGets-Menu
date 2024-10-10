@@ -56,7 +56,8 @@ In fact, most of these scripts are independent of the GTA Online update version.
 
 ## About me
 
-Hi, I'm not good at programming and I made this because I was inspired by someone else. 
+Hi, I'm not good at programming and I made this because I was inspired by someone else.
+If you like this project, please consider donating to help further development. [Click here](https://www.paypal.me/mrafiwr) to donate. Thank you for your support!
 
 
 ## Credits

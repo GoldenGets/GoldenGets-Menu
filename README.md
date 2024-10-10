@@ -22,7 +22,6 @@ I think it might be too late to make and share this script after the disaster ha
 ![Screenshot1](https://github.com/GoldenGets/BusinessControls/blob/main/Screenshot/1.JPG)
 ![Screenshot2](https://github.com/GoldenGets/BusinessControls/blob/main/Screenshot/2.JPG)
 ![Screenshot3](https://github.com/GoldenGets/BusinessControls/blob/main/Screenshot/3.JPG)
-
 ![Screenshot4](https://github.com/GoldenGets/BusinessControls/blob/main/Screenshot/4.JPG)
 
 

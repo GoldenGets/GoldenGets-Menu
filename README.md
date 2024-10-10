@@ -16,10 +16,18 @@ I think it might be too late to make and share this script after the disaster ha
 - Many Business Resupply...
 - Many Business Selling...
 
-![Screenshot1](https://github.com/GoldenGets/BusinessControls/blob/main/Photos/1.JPG)
-![Screenshot1](https://github.com/GoldenGets/BusinessControls/blob/main/Photos/2.JPG)
-![Screenshot1](https://github.com/GoldenGets/BusinessControls/blob/main/Photos/3.JPG)
-![Screenshot1](https://github.com/GoldenGets/BusinessControls/blob/main/Photos/4.JPG)
+
+<div align="center">
+  <h1> ScreenShot Features</h1>
+</div>
+
+![Screenshot1]()
+
+![Screenshot2]()
+
+![Screenshot3]()
+
+![Screenshot4]()
 
 
 ## Features that need to be updated in the next version

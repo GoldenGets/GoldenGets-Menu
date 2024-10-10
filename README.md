@@ -16,6 +16,11 @@ I think it might be too late to make and share this script after the disaster ha
 - Many Business Resupply...
 - Many Business Selling...
 
+![Screenshot1]([link-ke-gambar](https://github.com/GoldenGets/BusinessControls/blob/main/Photos/1.JPG))
+![Screenshot1]([link-ke-gambar](https://github.com/GoldenGets/BusinessControls/blob/main/Photos/2.JPG))
+![Screenshot1]([link-ke-gambar](https://github.com/GoldenGets/BusinessControls/blob/main/Photos/3.JPG))
+![Screenshot1]([link-ke-gambar](https://github.com/GoldenGets/BusinessControls/blob/main/Photos/4.JPG))
+
 
 ## Features that need to be updated in the next version
 

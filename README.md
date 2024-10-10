@@ -33,12 +33,15 @@ In fact, most of these scripts are independent of the GTA Online update version.
 - Instant Hack
 - Dispatch Work Cooldown
 - Auto-Fill Low Supplies
+- Instant Collect Crates
+- Fill Warehouse/Hangar Staff Sourced
 - All Instant Sell
 - Shipment Type Sell
+- Remove Self Bounty
 
 
 > [!Note:]
-> Some of these features are experimental, some may not work.
+> Some of these features are experimental and may not work.
 
 
 > [!Note:]

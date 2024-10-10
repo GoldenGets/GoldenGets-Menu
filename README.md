@@ -21,13 +21,11 @@ I think it might be too late to make and share this script after the disaster ha
   <h1> ScreenShot Features</h1>
 </div>
 
-![Screenshot1]()
+![Screenshot1](https://github.com/GoldenGets/BusinessControls/blob/main/Screenshot/1.JPG)
+![Screenshot2](https://github.com/GoldenGets/BusinessControls/blob/main/Screenshot/2.JPG)
 
-![Screenshot2]()
-
-![Screenshot3]()
-
-![Screenshot4]()
+![Screenshot3](https://github.com/GoldenGets/BusinessControls/blob/main/Screenshot/3.JPG)
+![Screenshot4](https://github.com/GoldenGets/BusinessControls/blob/main/Screenshot/4.JPG)
 
 
 ## Features that need to be updated in the next version

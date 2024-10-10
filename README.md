@@ -1,4 +1,4 @@
-# BusinessControls
+# GoldenGets Menu
 Lua script for YimMenu which is useful for your GTA Online progress
 
 I think it might be too late to make and share this script after the disaster happened. But you can read the description below to consider.

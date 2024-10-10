@@ -8,13 +8,11 @@ I think it might be too late to make and share this script after the disaster ha
 - Switch CEO/President
 - Instant Hack
 - Remove All CCTV
-- Phone Animations
 - ATM
-- Many Computers...
-- Many Cooldowns...
-- Many Business Controls...
-- Many Business Resupply...
-- Many Business Selling...
+- Computers
+- Cooldowns
+- Business
+- Misc
 
 
 <div align="center">
@@ -39,7 +37,13 @@ In fact, most of these scripts are independent of the GTA Online update version.
 - All Instant Sell
 - All Shipment Type Sell
 
+
+> [!Note:]
+> We heard that the warehouse cargo method has been detected and restricted before the launch of BE. I set all sales prices to only 2x profit. I hope this method is safe because it is not excessive and is not directed in one direction. Because based on my experience, some of my accounts have recently been blocked just because they exceeded the large sales limit and used the direct money addition option.
+
+
 > [⚠︎Disclaimer⚠︎]
+> Use at your own risk!
 > We are not responsible for any loss you may incur after downloading from this source.
 > By downloading it from this source, you're agree to the applicable terms.
 

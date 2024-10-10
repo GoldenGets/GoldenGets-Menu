@@ -20,9 +20,9 @@ I think it might be too late to make and share this script after the disaster ha
 </div>
 
 ![Screenshots1](https://github.com/GoldenGets/GoldenGets-Menu/blob/main/Screenshots/1.JPG)
-![Screenshots2](https://github.com/GoldenGets/GoldenGets-Menu/blob/main/Screenshots/1.JPG)
-![Screenshots3](https://github.com/GoldenGets/GoldenGets-Menu/blob/main/Screenshots/1.JPG)
-![Screenshots4](https://github.com/GoldenGets/GoldenGets-Menu/blob/main/Screenshots/1.JPG)
+![Screenshots2](https://github.com/GoldenGets/GoldenGets-Menu/blob/main/Screenshots/2.JPG)
+![Screenshots3](https://github.com/GoldenGets/GoldenGets-Menu/blob/main/Screenshots/3.JPG)
+![Screenshots4](https://github.com/GoldenGets/GoldenGets-Menu/blob/main/Screenshots/4.JPG)
 
 
 ## Features that need to be updated in the next version

@@ -3,7 +3,7 @@ SupportVersion = "1.69"
 
 ------------------------------------ Launch Menu
 
-GoldenGetsMenu = gui.get_tab("GoldenGets Menu")
+GoldenGetsMenu = gui.get_tab("My Menu")
 gui.show_message("GoldenGets Menu v1.1 | "..SupportVersion.." b"..SupportBuild.."","is Successfully launched!")
 
 ------------------------------------ Build Compatibility
@@ -20,67 +20,67 @@ else
     BuildStatus = 1
 end
 
-function globals_b_get_int(SupportBuild_string, intglobal)
+function globals_get_int(SupportBuild_string, intglobal)
     if tostring(SupportBuild_string) == CurrentBuild_string or BuildStatus == 5 then
         return globals.get_int(intglobal)
     else
-        log.warning("Unable to read data, unsupported Build version (b"..SupportBuild_string.."). Current Build version is (b"..CurrentBuild_string..")")
+        log.warning("Unable to read data, unsupported Build version (b"..CurrentBuild_string.."). The supported Build version are (b"..SupportBuild_string..")")
     end
 end
 
-function globals_b_set_int(SupportBuild_string, intglobal, intval)
+function globals_set_int(SupportBuild_string, intglobal, intval)
     if tostring(SupportBuild_string) == CurrentBuild_string or BuildStatus == 5 then
         globals.set_int(intglobal, intval)
     else
-        log.warning("Unable to run, unsupported Build version (b"..SupportBuild_string.."). Current Build version is (b"..CurrentBuild_string..")")
+        log.warning("Unable to run, unsupported Build version (b"..CurrentBuild_string.."). The supported Build version are (b"..SupportBuild_string..")")
     end
 end
 
-function globals_b_get_float(SupportBuild_string, floatglobal)
+function globals_get_float(SupportBuild_string, floatglobal)
     if tostring(SupportBuild_string) == CurrentBuild_string or BuildStatus == 5 then
         return globals.get_float(floatglobal)
     else
-        log.warning("Unable to read data, unsupported Build version (b"..SupportBuild_string.."). Current Build version is (b"..CurrentBuild_string..")")
+        log.warning("Unable to read data, unsupported Build version (b"..CurrentBuild_string.."). The supported Build version are (b"..SupportBuild_string..")")
     end
 end
 
-function globals_b_set_float(SupportBuild_string, floatglobal, floatval)
+function globals_set_float(SupportBuild_string, floatglobal, floatval)
     if tostring(SupportBuild_string) == CurrentBuild_string or BuildStatus == 5 then
         globals.set_float(floatglobal, floatval)
     else
-        log.warning("Unable to run, unsupported Build version (b"..SupportBuild_string.."). Current Build version is (b"..CurrentBuild_string..")")
+        log.warning("Unable to run, unsupported Build version (b"..CurrentBuild_string.."). The supported Build version are (b"..SupportBuild_string..")")
     end
 end
 
-function locals_b_get_int(SupportBuild_string, scriptname, intlocal)
+function locals_get_int(SupportBuild_string, scriptname, intlocal)
     if tostring(SupportBuild_string) == CurrentBuild_string or BuildStatus == 5 then
         return locals.get_int(scriptname, intlocal)
     else
-        log.warning("Unable to read data, unsupported Build version (b"..SupportBuild_string.."). Current Build version is (b"..CurrentBuild_string..")")
+        log.warning("Unable to read data, unsupported Build version (b"..CurrentBuild_string.."). The supported Build version are (b"..SupportBuild_string..")")
     end
 end
 
-function locals_b_set_int(SupportBuild_string, scriptname, intlocal, intlocalval)
+function locals_set_int(SupportBuild_string, scriptname, intlocal, intlocalval)
     if tostring(SupportBuild_string) == CurrentBuild_string or BuildStatus == 5 then
         locals.set_int(scriptname, intlocal, intlocalval)
     else
-        log.warning("Unable to run, unsupported Build version (b"..SupportBuild_string.."). Current Build version is (b"..CurrentBuild_string..")")
+        log.warning("Unable to run, unsupported Build version (b"..CurrentBuild_string.."). The supported Build version are (b"..SupportBuild_string..")")
     end
 end
 
-function locals_b_get_float(SupportBuild_string, scriptname, flocal)
+function locals_get_float(SupportBuild_string, scriptname, flocal)
     if tostring(SupportBuild_string) == CurrentBuild_string or BuildStatus == 5 then
         return locals.get_float(scriptname, flocal)
     else
-        log.warning("Unable to read data, unsupported Build version (b"..SupportBuild_string.."). Current Build version is (b"..CurrentBuild_string..")")
+        log.warning("Unable to read data, unsupported Build version (b"..CurrentBuild_string.."). The supported Build version are (b"..SupportBuild_string..")")
     end
 end
 
-function locals_b_set_float(SupportBuild_string, scriptname, flocal, flocalval)
+function locals_set_float(SupportBuild_string, scriptname, flocal, flocalval)
     if tostring(SupportBuild_string) == CurrentBuild_string or BuildStatus == 5 then
         locals.set_float(scriptname, flocal, flocalval)
     else
-        log.warning("Unable to run, unsupported Build version (b"..SupportBuild_string.."). Current Build version is (b"..CurrentBuild_string..")")
+        log.warning("Unable to run, unsupported Build version (b"..CurrentBuild_string.."). The supported Build version are (b"..SupportBuild_string..")")
     end
 end
 
@@ -102,71 +102,71 @@ else
     VersionStatus = 1
 end
 
-function globals_v_get_int(SupportVersion_string, intglobal)
+function globals_get_int(SupportVersion_string, intglobal)
     if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
         return globals.get_int(intglobal)
     else
-        log.warning("Unable to read data, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to read data, unsupported Online version (v"..CurrentVersion_string.."). The supported Online version are (v"..SupportVersion_string..")")
     end
 end
 
-function globals_v_set_int(SupportVersion_string, intglobal, intval)
+function globals_set_int(SupportVersion_string, intglobal, intval)
     if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
         globals.set_int(intglobal, intval)
     else
-        log.warning("Unable to run, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to run, unsupported Online version (v"..CurrentVersion_string.."). The supported Online version are (v"..SupportVersion_string..")")
     end
 end
 
-function globals_v_get_float(SupportVersion_string, floatglobal)
+function globals_get_float(SupportVersion_string, floatglobal)
     if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
         return globals.get_float(floatglobal)
     else
-        log.warning("Unable to read data, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to read data, unsupported Online version (v"..CurrentVersion_string.."). The supported Online version are (v"..SupportVersion_string..")")
     end
 end
 
-function globals_v_set_float(SupportVersion_string, floatglobal, floatval)
+function globals_set_float(SupportVersion_string, floatglobal, floatval)
     if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
         globals.set_float(floatglobal, floatval)
     else
-        log.warning("Unable to run, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to run, unsupported Online version (v"..CurrentVersion_string.."). The supported Online version are (v"..SupportVersion_string..")")
     end
 end
 
-function locals_v_get_int(SupportVersion_string, scriptname, intlocal)
+function locals_get_int(SupportVersion_string, scriptname, intlocal)
     if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
         return locals.get_int(scriptname, intlocal)
     else
-        log.warning("Unable to read data, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to read data, unsupported Online version (v"..CurrentVersion_string.."). The supported Online version are (v"..SupportVersion_string..")")
     end
 end
 
-function locals_v_set_int(SupportVersion_string, scriptname, intlocal, intlocalval)
+function locals_set_int(SupportVersion_string, scriptname, intlocal, intlocalval)
     if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
         locals.set_int(scriptname, intlocal, intlocalval)
     else
-        log.warning("Unable to run, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to run, unsupported Online version (v"..CurrentVersion_string.."). The supported Online version are (v"..SupportVersion_string..")")
     end
 end
 
-function locals_v_get_float(SupportVersion_string, scriptname, flocal)
+function locals_get_float(SupportVersion_string, scriptname, flocal)
     if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
         return locals.get_float(scriptname, flocal)
     else
-        log.warning("Unable to read data, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to read data, unsupported Online version (v"..CurrentVersion_string.."). The supported Online version are (v"..SupportVersion_string..")")
     end
 end
 
-function locals_v_set_float(SupportVersion_string, scriptname, flocal, flocalval)
+function locals_set_float(SupportVersion_string, scriptname, flocal, flocalval)
     if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
         locals.set_float(scriptname, flocal, flocalval)
     else
-        log.warning("Unable to run, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to run, unsupported Online version (v"..CurrentVersion_string.."). The supported Online version are (v"..SupportVersion_string..")")
     end
 end
 
-function stats_v_set_packed_stat_bool(boolindex, boolval)
+function stats_set_packed_stat_bool(boolindex, boolval)
     stats.set_packed_stat_bool(boolindex, boolval)
 end
 
@@ -197,18 +197,210 @@ GSH   = "gunclub_shop"
 --Globals--
 
 FMg     = 262145 						-- free mode 				    	   		// Tunable: CASH_MULTIPLIER
-
+XMg     = FMg + 1 						-- xp multiplier 			    	   		// Tunable: XP_MULTIPLIER
+APg     = FMg + 31084 					-- agency payout 			    	   		// Tunable: FIXER_FINALE_LEADER_CASH_REWARD
+ACKg    = FMg + 31036 					-- agency cooldown killer       	   		// Tunable: FIXER_STORY_COOLDOWN_POSIX"
+ASPg1   = FMg + 30338 + 1 				-- auto shop payout 1 		    	   		// Tunable: TUNER_ROBBERY_LEADER_CASH_REWARD0
+ASPg2   = FMg + 30338 + 8 				-- auto shop payout 2 		    	   		// Tunable: TUNER_ROBBERY_LEADER_CASH_REWARD7
+ASFg    = FMg + 30334 					-- auto shop fee  			    	   		// Tunable: TUNER_ROBBERY_CONTACT_FEE
+ASCKg   = FMg + 30357 					-- auto shop cooldown  		    	   		// Tunable: TUNER_ROBBERY_COOLDOWN_TIME
+ACg1    = 1928958 + 1 + 1 				-- apartment player 1 cut
+ACg2    = 1928958 + 1 + 2 				-- apartment player 2 cut
+ACg3    = 1928958 + 1 + 3 				-- apartment player 3 cut
+ACg4    = 1928958 + 1 + 4 				-- apartment player 4 cut
+ACg5    = 1930926 + 3008 + 1 			-- local apartment player 1 cut
+ACFg1   = 1930926 + 192
+ACFg2   = 1930926 + 190
+AUAJg1  = FMg + 9101 					-- apartment unlock all jobs 1  	   		// Tunable: ROOT_ID_HASH_THE_FLECCA_JOB
+AUAJg2  = FMg + 9106 					-- apartment unlock all jobs 2  	   		// Tunable: ROOT_ID_HASH_THE_PRISON_BREAK
+AUAJg3  = FMg + 9113 					-- apartment unlock all jobs 3  	   		// Tunable: ROOT_ID_HASH_THE_HUMANE_LABS_RAID
+AUAJg4  = FMg + 9119 					-- apartment unlock all jobs 4  	   		// Tunable: ROOT_ID_HASH_SERIES_A_FUNDING
+AUAJg5  = FMg + 9125 					-- apartment unlock all jobs 5  	   		// Tunable: ROOT_ID_HASH_THE_PACIFIC_STANDARD_JOB
+CPCg1   = 1971648 + 831 + 56 + 1 		-- cayo perico player 1 cut
+CPCg2   = 1971648 + 831 + 56 + 2 		-- cayo perico player 2 cut
+CPCg3   = 1971648 + 831 + 56 + 3		-- cayo perico player 3 cut
+CPCg4   = 1971648 + 831 + 56 + 4 		-- cayo perico player 4 cut
+GCg     = 2685444 + 6639 				-- global cut 						   		// Guide:   fVar1 = (fVar1 * (fVar2 / 100f));
+CPBg    = FMg + 29211 					-- cayo perico bag  				   		// Tunable: HEIST_BAG_MAX_CAPACITY
+DCCg1   = 1964849 + 1497 + 736 + 92 + 1 -- diamond casino player 1 cut
+DCCg2   = 1964849 + 1497 + 736 + 92 + 2 -- diamond casino player 2 cut
+DCCg3   = 1964849 + 1497 + 736 + 92 + 3 -- diamond casino player 3 cut
+DCCg4   = 1964849 + 1497 + 736 + 92 + 4 -- diamond casino player 4 cut
+DCg1    = 1960755 + 812 + 50 + 1        -- doomsday player 1 cut
+DCg2    = 1960755 + 812 + 50 + 2        -- doomsday player 2 cut
+DCg3    = 1960755 + 812 + 50 + 3        -- doomsday player 3 cut
+DCg4    = 1960755 + 812 + 50 + 4        -- doomsday player 4 cut
+SYRTg   = FMg + 33023 					-- salvage yard robbery type 		   		// Tunable: SALV23_VEHICLE_ROBBERY_0
+SYCKg   = FMg + 33027                   -- salvage yard can keep 			   		// Tunable: SALV23_VEHICLE_ROBBERY_CAN_KEEP_0
+SYVTg   = FMg + 33031                   -- salvage yard vehicle type    	   		// Tunable: SALV23_VEHICLE_ROBBERY_ID_0
+SYVVg   = FMg + 33035                   -- salvage yard vehicle value   	   		// Tunable: SALV23_VEHICLE_ROBBERY_VALUE_0
+SYWCg   = FMg + 33054                   -- salvage yard weekly cooldown 	   		// Tunable: SALV23_VEH_ROBBERY_WEEK_ID
+SYCg1   = FMg + 33064                   -- salvage yard cooldown 			   		// Tunable: SALV23_VEH_ROB_COOLDOWN_TIME
+SYCg2   = FMg + 33065                   -- salvage yard cooldown 			   		// Tunable: SALV23_CFR_COOLDOWN_TIME
+SYCPg   = FMg + 33075                   -- salvage yard claim price 		   		// Tunable: SALV23_VEHICLE_CLAIM_PRICE
+SYCPDg  = FMg + 33076                   -- salvage yard claim price discount   		// Tunable: SALV23_VEHICLE_CLAIM_PRICE_FORGERY_DISCOUNT
+SYSMg   = FMg + 33043                   -- salvage yard salvage multiplier     		// Tunable: SALV23_VEHICLE_SALVAGE_VALUE_MULTIPLIER
+SYSPg   = FMg + 34961                   -- salvage yard setup price 		   		// Tunable: 71522671
+CMACLg1 = FMg + 26534                   -- casino master acquire chips limit 1 		// Tunable: VC_CASINO_CHIP_MAX_BUY
+CMACLg2 = FMg + 26535                   -- casino master acquire chips limit 2 		// Tunable: VC_CASINO_CHIP_MAX_BUY_PENTHOUSE
+HCVPg   = FMg + 22492                   -- hangar cargo vip payout 			   		// Tunable: SMUG_SELL_PRICE_PER_CRATE_MIXED
+HCVRCg  = FMg + 22475                   -- hangar cargo vip ron's cut 		   		// Tunable: SMUG_SELL_RONS_CUT
+CRg     = 2707357 + 36 					-- cash remover 					   		// Guide:   VEH_WHS_RP_A
+NHCNSg  = FMg + 23969 					-- nightclub helper cargo n shipments  		// Tunable: BB_BUSINESS_BASIC_VALUE_CARGO
+NHSGg   = FMg + 23963 					-- nightclub helper sporting goods 	   		// Tunable: BB_BUSINESS_BASIC_VALUE_WEAPONS
+NHSAIg  = FMg + 23964 					-- nightclub helper s.a. imports 	   		// Tunable: BB_BUSINESS_BASIC_VALUE_COKE
+NHPRg   = FMg + 23965 					-- nightclub helper pharmaceutical reseacrh // Tunable: BB_BUSINESS_BASIC_VALUE_METH
+NHOPg   = FMg + 23966 					-- nightclub helper organic produce 		// Tunable: BB_BUSINESS_BASIC_VALUE_WEED
+NHPNCg  = FMg + 23967 					-- nightclub helper printing n copying 		// Tunable: BB_BUSINESS_BASIC_VALUE_FORGED_DOCUMENTS
+NHCCg   = FMg + 23968 					-- nightclub helper cash creation 			// Tunable: BB_BUSINESS_BASIC_VALUE_COUNTERFEIT_CASH
+NHCKg1  = FMg + 24026 					-- nightclub helper cooldown killer 1 		// Tunable: BB_CLUB_MANAGEMENT_CLUB_MANAGEMENT_MISSION_COOLDOWN
+NHCKg2  = FMg + 24067 					-- nightclub helper cooldown killer 2 		// Tunable: BB_SELL_MISSIONS_MISSION_COOLDOWN
+NHCKg3  = FMg + 24068					-- nightclub helper cooldown killer 3 		// Tunable: BB_SELL_MISSIONS_DELIVERY_VEHICLE_COOLDOWN_AFTER_SELL_MISSION
+CSg1    = 1575035 						-- change session (type) 1 					// Guide:   NETWORK::UGC_SET_USING_OFFLINE_CONTENT(false);
+CSg2    = 1574589 						-- change session (switch) 2 				// Guide:   MP_POST_MATCH_TRANSITION_SCENE
+CSg3    = 1574589 + 2 					-- change session (quit) 3 					// Guide:   MP_POST_MATCH_TRANSITION_SCENE
+SCVPg   = FMg + 15732 					-- special cargo vip price 					// Tunable: EXEC_CONTRABAND_SALE_VALUE_THRESHOLD1
+SCVBCg  = FMg + 15499 					-- special cargo vip buy cooldown  			// Tunable: EXEC_BUY_COOLDOWN
+SCVScg  = FMg + 15500 					-- special cargo vip sell cooldown 			// Tunable: EXEC_SELL_COOLDOWN
 BTEg1   = 4537455 						-- bypass transaction error 1
 BTEg2   = 4537456 						-- bypass transaction error 2
 BTEg3   = 4537457 						-- bypass transaction error 3
-
+CLg     = 1964419 						-- cheap loop 								// Guide:   MPPLY_CASINO_MEM_BONUS
 TTg     = 4537311 						-- trigger transaction
-
+NLSCg   = FMg + 23680 					-- night loop safe capacity  				// Tunable: NIGHTCLUBMAXSAFEVALUE
+NLISg   = FMg + 23657 					-- night loop income start 	 				// Tunable: NIGHTCLUBINCOMEUPTOPOP5
+NLIEg   = FMg + 23676 					-- night loop income end	 				// Tunable: NIGHTCLUBINCOMEUPTOPOP100
+ORg     = 1962237 						-- orbital refund 							// Guide:   ORB_CAN_QUIT1
+AUg     = 4543384 + 1 					-- achievements unlocker 					// Guide:   PLAYER::HAS_ACHIEVEMENT_BEEN_PASSED(iParam0) && iParam1 == 1
+CUg     = 2708057 						-- collectibles unlocker					// Guide:   cellphone_badger
+AFo     = CUg + 209 					-- action figures offset
+LDOo    = CUg + 593 					-- ld organics offset
+PCo     = CUg + 210 					-- plating cards offset
+SJo     = CUg + 211 					-- signal jammers offset
+So      = CUg + 600 					-- snowmen offset
+MPo     = CUg + 494 					-- movie props offset
+JOLo    = CUg + 591 					-- jack o lanterns offset
+SCCg    = FMg + 18919 					-- sex changer change appearance cooldown	// Tunable: CHARACTER_APPEARANCE_COOLDOWN
+BUCg1   = FMg + 21264 					-- bunker unlocker cooldown 1				// Tunable: GR_RESEARCH_CAPACITY
+BUCg2   = FMg + 21265 					-- bunker unlocker cooldown 2 				// Tunable: GR_RESEARCH_PRODUCTION_TIME
+BUCg3   = FMg + 21266 					-- bunker unlocker cooldown 3 				// Tunable: GR_RESEARCH_UPGRADE_EQUIPMENT_REDUCTION_TIME
+BUCg4   = FMg + 21267 					-- bunker unlocker cooldown 4 				// Tunable: GR_RESEARCH_UPGRADE_STAFF_REDUCTION_TIME
+BUAg1   = FMg + 21268 					-- bunker unlocker additional 1 			// Tunable: GR_RESEARCH_MATERIAL_PRODUCT_COST
+BUAg2   = FMg + 21269 					-- bunker unlocker additional 2 			// Tunable: GR_RESEARCH_MATERIAL_PRODUCT_COST_UPGRADE_REDUCTION
+LSCMMg1 = FMg + 30958 					-- ls car meet multiplier 1 				// Tunable: TUNER_SPRINT_FIRST_TIME_BONUS_XP_MULTIPLIER
+LSCMMg2 = FMg + 30987 					-- ls car meet multiplier 2 				// Tunable: TUNER_MERCH_PURCHASE_XP_MULTIPLIER
 GSIg    = 1663174 						-- get supplies instantly 					// Guide:   OR_PSUP_DEL
+GVLg    = 2652592 + 2671 + 1 			-- gun van location 						// Guide:   NETWORK::NETWORK_GET_NUM_PARTICIPANTS()
+GVWSg   = FMg + 33273 					-- modify gun van weapon slot 				// Tunable: XM22_GUN_VAN_SLOT_WEAPON_TYPE_0
+GVTSg   = FMg + 33295 					-- modify gun van throwable slot 1 			// Tunable: XM22_GUN_VAN_SLOT_THROWABLE_TYPE_0
+GVWDg   = FMg + 33284 					-- modify gun van weapon slot 1 discount	// Tunable: XM22_GUN_VAN_SLOT_WEAPON_DISCOUNT_0
+GVTDg   = FMg + 33299 					-- modify gun van throwable discount		// Tunable: XM22_GUN_VAN_SLOT_THROWABLE_DISCOUNT_0
+GVADg   = FMg + 33303 					-- modify gun van armor discount 			// Tunable: XM22_GUN_VAN_SLOT_ARMOUR_DISCOUNT_0
+GVSg    = FMg + 33309 					-- modify gun van skins for knife and bat 	// Tunable: 1490225691
+EVg1    = FMg + 14700 					-- enable vehicles 1						// Tunable: ENABLE_LOWRIDER2_VIRGO3
+EVg2    = FMg + 14705 					-- enable vehicles 2 						// Tunable: ENABLE_LOWRIDER2_SLAMVAN
+EVg3    = FMg + 17352 					-- enable vehicles 3						// Tunable: ENABLE_BIKER_DEFILER
+EVg4    = FMg + 17373 					-- enable vehicles 4						// Tunable: ENABLE_BIKER_RATBIKE
+EVg5    = FMg + 18938 					-- enable vehicles 5						// Tunable: ENABLE_IE_VOLTIC2
+EVg6    = FMg + 18962 					-- enable vehicles 6 						// Tunable: ENABLE_IE_TEMPESTA
+EVg7    = FMg + 20828 					-- enable vehicles 7 						// Tunable: ENABLE_XA2
+EVg8    = FMg + 20833 					-- enable vehicles 8 						// Tunable: ENABLE_NIGHTSHARK
+EVg9    = FMg + 21598 					-- enable vehicles 9						// Tunable: ENABLE_ULTRALIGHT
+EVg10   = FMg + 21617 					-- enable vehicles 10 						// Tunable: ENABLE_LAZER
+EVg11   = FMg + 22540 					-- enable vehicles 11 						// Tunable: ENABLE_DELUXO
+EVg12   = FMg + 22567 					-- enable vehicles 12 						// Tunable: ENABLE_KAMACHO
+EVg13   = FMg + 23715 					-- enable vehicles 13 						// Tunable: ENABLE_HOTRING
+EVg14   = FMg + 23730 					-- enable vehicles 14 						// Tunable: ENABLE_JESTER3
+EVg15   = FMg + 23777 					-- enable vehicles 15 						// Tunable: ENABLE_TERBYTE
+EVg16   = FMg + 23799 					-- enable vehicles 16 						// Tunable: ENABLE_HABANERO
+EVg17   = FMg + 25366 					-- enable vehicles 17 						// Tunable: ENABLE_VEHICLE_TOROS
+EVg18   = FMg + 25397 					-- enable vehicles 18 						// Tunable: ENABLE_VEHICLE_PARAGON
+EVg19   = FMg + 26329 					-- enable vehicles 19 						// Tunable: ENABLE_VEHICLE_DEVESTE
+EVg20   = FMg + 26330 					-- enable vehicles 20 						// Tunable: ENABLE_VEHICLE_VAMOS
+EVg21   = FMg + 28169 					-- enable vehicles 21 						// Tunable: ENABLE_VEHICLE_FORMULA_PODIUM
+EVg22   = FMg + 28191 					-- enable vehicles 22 						// Tunable: ENABLE_VEHICLE_BLAZER2
+EVg23   = FMg + 28193 					-- enable vehicles 23 						// Tunable: ENABLE_VEHICLE_FORMULA
+EVg24   = FMg + 28196 					-- enable vehicles 24 						// Tunable: ENABLE_VEHICLE_FORMULA2
+EVg25   = FMg + 28201 					-- enable vehicles 25 						// Tunable: ENABLE_VEHICLE_IMORGEN
+EVg26   = FMg + 28203 					-- enable vehicles 26 						// Tunable: ENABLE_VEHICLE_VSTR
+EVg27   = FMg + 29156 					-- enable vehicles 27 						// Tunable: ENABLE_VEH_TIGON
+EVg28   = FMg + 29162 					-- enable vehicles 28 						// Tunable: ENABLE_VEH_GAUNTLET5
+EVg29   = FMg + 28828 					-- enable vehicles 29 						// Tunable: ENABLE_VEH_GLENDALE2
+EVg30   = FMg + 28835 					-- enable vehicles 30 						// Tunable: ENABLE_VEH_DUKES3
+EVg31   = FMg + 29589 					-- enable vehicles 31 						// Tunable: ENABLE_VEHICLE_TOREADOR
+EVg32   = FMg + 29605 					-- enable vehicles 32 						// Tunable: ENABLE_VEHICLE_VERUS
+EVg33   = FMg + 30305 					-- enable vehicles 33 						// Tunable: ENABLE_VEHICLE_TAILGATER2
+EVg34   = FMg + 30321 					-- enable vehicles 34 						// Tunable: ENABLE_VEHICLE_COMET6
+EVg35   = FMg + 31212 					-- enable vehicles 35 						// Tunable: ENABLE_VEHICLE_CHAMPION
+EVg36   = FMg + 31226 					-- enable vehicles 36 						// Tunable: ENABLE_VEHICLE_BALLER7
+EVg37   = FMg + 32412 					-- enable vehicles 37 						// Tunable: ENABLE_VEHICLE_OMNISEGT
+EVg38   = FMg + 32430 					-- enable vehicles 38 						// Tunable: ENABLE_VEHICLE_SENTINEL4
+EVg39   = FMg + 33374 					-- enable vehicles 39 						// Tunable: ENABLE_VEHICLE_ENTITY3
+EVg40   = FMg + 33389 					-- enable vehicles 40 						// Tunable: ENABLE_VEHICLE_BOOR
+EVg41   = FMg + 35172 					-- enable vehicles 41 						// Tunable: ENABLE_VEHICLE_FR36
+EVg42   = FMg + 35191 					-- enable vehicles 42 						// Tunable: ENABLE_VEHICLE_BENSON2
+EVg43   = FMg + 35405 					-- enable vehicles 43 						// Tunable: ENABLE_VEHICLE_YOSEMITE1500
+EVg44   = FMg + 34323 					-- enable vehicles 44 						// Tunable: ENABLE_VEHICLE_EXEMPLAR
+EVg45   = FMg + 34599 					-- enable vehicles 45 						// Tunable: ENABLE_VEHICLE_MONSTER
+EVg46   = FMg + 34605 					-- enable vehicles 46 						// Tunable: ENABLE_VEHICLE_L35
+EVg47   = FMg + 34617 					-- enable vehicles 47 						// Tunable: ENABLE_VEHICLE_BRIGHAM
+EDVBg   = 2707347 						-- enable dripfeed vehicles bypass
+EDVg1   = FMg + 35629 					-- enable dripfeed vehicles 1 				// Tunable: ENABLE_VEHICLE_ENVISAGE
+EDVg2   = FMg + 35643 					-- enable dripfeed vehicles 2 				// Tunable: ENABLE_VEHICLE_PIZZABOY
 
 --Locals--
 
+FMCSHl   = 3236  		    -- fm_mission_controller script host 	  	   // Guide: MP_Reduce_Score_For_Emitters_Scene
+FMC20SHl = 19376 		    -- fm_mission_controller_2020 script host 	   // Guide: bVar0 = NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT();
+AIFl1    = 38397 			-- agency instant finish 1 (outdated)
+AIFl2    = 39772 			-- agency instant finish 2 (outdated)
+ASRBl    = 383 			    -- auto shop reload board
+ASIFl1   = 50150 + 1  	    -- auto shop instant finish 1
+ASIFl2   = 50150 + 1770 + 1 -- auto shop finish 2
+AIFl3    = 19746  		    -- apartment instant finish 1
+AIFl4    = 28365 + 1 		-- apartment instant finish 2
+AIFl5    = 31621 + 69 		-- apartment instant finish 3
+AFHl     = 11778 + 24 		-- apartment fleeca hack
+AFDl     = 10069 + 11 		-- apartment fleeca drill
+CPRSl    = 1546 			-- cayo perico reload screen
+CPFHl    = 24880 			-- cayo perico fingerprint hack			 	   // Guide: practice
+CPPCCl   = 30939 + 3		-- cayo perico plasma cutter cut 			   // Guide: Overheat_Loop
+CPSTCl   = 29700 			-- cayo perico drainage pipe cut			   // Guide: UT_WELD_PROMPT
+CPIFl1   = 50150 			-- cayo perico instant finish 1
+CPIFl2   = 50150 + 1770 + 1 -- cayo perico instant finish 2
+DCRBl    = 185 			    -- diamond casino reload board
+DCAl     = 10255 		    -- diamond casino autograbber 			 	   // Guide: DLC_HEIST_MINIGAME_PAC_CASH_GRAB_SCENE
+DCASl    = 10255 + 14 	    -- diamond casino autograbber speed
+DCFHl    = 53019 		    -- diamond casino fingerprint hack		 	   // Guide: DLC_HEIST_MINIGAME_PAC_CASH_GRAB_SCENE
+DCKHl    = 54085 		    -- diamond casino keypad hack
+DCDVDl1  = 10109 + 7 	    -- diamond casino drill vault door 1 	 	   // Guide: DLC_HEIST_MINIGAME_FLEECA_DRILLING_SCENE
+DCDVDl2  = 10109 + 37 	    -- diamond casino drill vault door 2
+DDBHl    = 1514 			-- doomsday data breaches hack
+DDSHl    = 1271 + 135 		-- doomsday doomsday scenario hack
+DIFl1    = 19746	 		-- doomsday instant finish 1
+DIFl2    = 19746 + 1741 	-- doomsday instant finish 2
+DIFl3    = 27489 + 859 + 18 -- doomsday instant finish 3
+DIFl4    = 31621 + 69 		-- doomsday instant finish 4
+DIFl5    = 31621 + 97 		-- doomsday instant finish 5
+SYRSl    = 512 				-- salvage yard reload screen
 BCISl    = 1211 + 774 		-- bunker crash instant sell
+CMBJCl   = 116 				-- casino master bjackjack cards
+CMBJDl   = 846 				-- casino master bjackjack decks
+CMBJPTl  = 1776 			-- casino master bjackjack player's table
+CMBJPTSl = 8 				-- casino master bjackjack player's table size
+CMGLPl1  = 280 + 14 		-- casino master lucky wheel win state
+CMGLPl2  = 280 + 45 		-- casino master lucky wheel prize state
+CMPTl    = 749 				-- casino master poker table
+CMPTSl   = 9 				-- casino master poker table size
+CMPCl    = 116				-- casino master poker cards
+CMPCDl   = 168 				-- casino master poker current deck
+CMPACl   = 1038 			-- casino master poker anti cheat
+CMPACDl  = 799 				-- casino master poker anti cheat deck
+CMPDSl   = 55 				-- casino master poker deck size
+CMRMTl   = 124 				-- casino master roulette master table
+CMROTl   = 1357				-- casino master roulette outcomes table
+CMRBTl   = 153 				-- casino master roulette ball table
+CMSRRTl  = 1348 			-- casino master slots random results table
 HCVISl1  = 1934 + 1078 		-- hangar cargo vip instant sell 1 			   // Guide: SMOT_HLPDROP2
 HCVISl2  = 1934 + 768 		-- hangar cargo vip instant sell 2			   // Guide: MP_MISSION_COUNTDOWN_SOUNDSET
 SCVAl1   = 741 				-- special cargo vip appsecuroserv 1 		   // Guide: MP_WH_SELL
@@ -234,19 +426,66 @@ README  = "Read Me"  -- just read me
 
 ------------------------------------
 
-	-- GoldenGets Scripts --
+	-- GoldenGetsMenu Scripts --
 	
 	AMP 		= "am_mp_peds"
 	GBCS 		= "gb_biker_contraband_sell"
 	FCALS 		= "fm_content_acid_lab_sell"
 	
-	-- GoldenGets Globals 1.69 --
+	-- GoldenGetsMenu Globals 1.69 --
 	
 	SCSMg 	= FMg + 15624			-- Special Cargo Sell Mission global
+	--VCSMg 	= FMg + 19100			-- Vehicle Cargo Source Mission global 						// Tunable: IMPEXP_DISABLE_PARKED_CAR											// int *(false)* 		
+	--VCPPSRg 	= FMg + 19170 + 2	 	-- Vehicle Cargo Payment Price Standard Range global
+	--VCPPMRg 	= FMg + 19170 + 1	 	-- Vehicle Cargo Payment Price Mid Range global
+	--VCPPTRg 	= FMg + 19170		 	-- Vehicle Cargo Payment Price Top Range global
+	--MCBSDg 	= FMg + 18764		 	-- Motorcycle Club Business Supply Delay global 			// Tunable: BIKER_PURCHASE_SUPPLIES_DELAY										// int *(600ms)*
+	--MCBRCg 	= FMg + 18763			-- Motorcycle Club Business Resupply Cost global
+	--MCBSMg 	= FMg + 18874 			-- Motorcycle Club Business Sales Multiplier global
 	MCBSg 	= FMg + 18356		 	-- Motorcycle Club Business Sell global
+	--BRCPT 	= FMg + 21249			-- Bunker Resupply Cost & Produce Time
+	--BSDg 		= FMg + 21274			-- Bunker Supply Delay global 								// Tunable: GR_PURCHASE_SUPPLIES_DELAY											// int *(600ms)*
+	--HASMg 	= FMg + 22472			-- Hangar Air Sell Mission global
+	--ASg 		= FMg + 28751			-- Arcade Safe global
+	--NGg 		= FMg + 23948			-- Nightclub Goods global
+	--NSTCg 		= FMg + 24074			-- Nightclub Sell Tony's Cut global
+	--NSMg 		= FMg + 24047			-- Nightclub Sell Mission global 							// Tunable: BB_SELL_MISSIONS_WEIGHTING_SINGLE_DROP
+	--ASCCVC 	= FMg + 30421		 	-- Auto Shop Customer Cars Vehicle Cooldown					// Tunable: TUNER_AUTO_SHOP_CLIENT_VEH_SPAWN_COOLDOWN_POSIX_TIME				// int *(2880ms)*
+	--ASCCET 	= FMg + 30427		 	-- Auto Shop Customer Cars Extra Time						// Tunable: TUNER_AUTO_SHOP_STAFF_DELIVERY_TIME_SEC								// int *(600ms)*
 	ASCCC 	= FMg + 31869			-- Auto Shop Customer Cars % Chance							// Tunable: 
+	--ASCC2LC = FMg + 30423		 		-- Auto Shop Customer Cars 2 Lifts Cooldown					// Tunable: TUNER_AUTO_SHOP_CLIENT_VEH_SPAWN_COOLDOWN_POSIX_TIME_MULTIPLIER		// float *(0.500)*
+	--ASCCDP 	= FMg + 30428			-- Auto Shop Customer Cars Delivery Payout					// Tunable: TUNER_AUTO_SHOP_STAFF_DELIVERY_BONUS_LOW
+	--ASCCDDP = FMg + 30428 + 3	 		-- Auto Shop Customer Cars Displayed Delivery Payout		// Tunable: TUNER_CLIENT_VEHICLE_DELIVERY_LOW_PAYMENT							// int *(20000)*
 	
-	-- GoldenGets Locals 1.69 --
+	--VIPWCg 	= FMg + 13059 			-- VIP Work Cooldown global 								// Tunable: GB_COOLDOWN_UNTIL_NEXT_BOSS_WORK									// int *(300000ms)*
+	--MCWCg 	= FMg + 18571 			-- MC Club Work Cooldown global 							                                                  								// int *(180000ms)*
+	--CEOVCg 	= FMg + 12813 			-- CEO Vehicle Cooldown global 								// Tunable: GB_CALL_VEHICLE_COOLDOWN              								// int *(120000ms)*
+	--VCSCg 	= FMg + 19077 			-- Vehicle Cargo Source Cooldown global 					// Tunable: IMPEXP_STEAL_COOLDOWN                 								// int *(180000ms)*
+	--VCSCg1 	= FMg + 19153 			-- Vehicle Cargo Sell Cooldown global 1 					// Tunable: IMPEXP_SELL_COOLDOWN                  								// int *(180000ms)*
+	--VCSCg2 	= FMg + 19432 			-- Vehicle Cargo Sell Cooldown global 2 					                                                  								// int_1 *(1200000ms)*
+	--HCSCg 	= FMg + 22433 			-- Hangar Cargo Source Cooldown global 						// Tunable: SMUG_STEAL_EASY_COOLDOWN_TIMER        								// int_1 *(120000ms)*
+	--HCSCg1 	= FMg + 22474 			-- Hangar Cargo Sell Cooldown global 						                                                  								// int *(180000ms)*
+	--NSTCg 	= FMg + 31914 			-- Nightclub Source Truck Cooldown global 					                                                  								// int *(960000ms)*
+	--NEMGCg 	= FMg + 31892 			-- Nightclub Export Mixed Goods Cooldown global				// Tunable: EXPORT_CARGO_LAUNCH_CD_TIME											// int *(2880ms)*
+	--NTCg 		= FMg + 31882 			-- Nightclub Troublemaker Cooldown global 																									// int *(50%)*
+	--TBJCg	 	= FMg + 24208 			-- Terrorbyte Between Jobs Cooldown global 					// Tunable: BB_HACKER_WORK_CLIENT_WORK_GLOBAL_COOLDOWN                  		// int *(300000ms)*
+	--TRIPCg 	= FMg + 24209 			-- Terrorbyte Robbery in Progress Cooldown global 			// Tunable: BB_HACKER_WORK_CLIENT_WORK_COOLDOWN_BANK_JOB                		// int *(1800000ms)*
+	--TDSCg1 	= FMg + 24210 			-- Terrorbyte Data Sweep Cooldown global 					// Tunable: BB_HACKER_WORK_CLIENT_WORK_COOLDOWN_DATA_HACK               		// int *(1800000ms)*
+	--TTDCg	 	= FMg + 24211 			-- Terrorbyte Targeted Data Cooldown global 				// Tunable: BB_HACKER_WORK_CLIENT_WORK_COOLDOWN_INFILTRATION            		// int *(1800000ms)*
+	--TDSCg2 	= FMg + 24212 			-- Terrorbyte Diamond Shopping Cooldown global 				// Tunable: BB_HACKER_WORK_CLIENT_WORK_COOLDOWN_JEWEL_STORE_GRAB        		// int *(1800000ms)*
+	--									--															// Tunable: BB_HACKER_WORK_HACKER_CHALLENGE_COOLDOWN_GLOBAL_COOLDOWN    		// int *(180000ms)*
+	--TCPCg	 	= FMg + 24214 			-- Terrorbyte Collectors Pieces Cooldown global 			// Tunable: BB_HACKER_WORK_HACKER_CHALLENGE_COOLDOWN_SECURITY_VANS				// int *(600000ms)*										-- https://www.unknowncheats.me/forum/3496393-post32.html
+	--TDBCg	 	= FMg + 24215 			-- Terrorbyte Deal Breaker Cooldown global 					// Tunable: BB_HACKER_WORK_HACKER_CHALLENGE_COOLDOWN_TARGET_PURSUIT				// int *(600000ms)*										-- https://www.unknowncheats.me/forum/3496393-post32.html
+	--MBRWCg 	= FMg + 26794 			-- Mrs Baker Request Work Cooldown global 					// Tunable: VC_WORK_REQUEST_COOLDOWN                                    		// int *(180000ms)*
+	--ASCCg 	= FMg + 31038 			-- Agency Security Contract Cooldown global					// Tunable: FIXER_SECURITY_CONTRACT_COOLDOWN_TIME								// int *(300000ms)*
+	--APHACg 	= FMg + 31118 			-- Agency Payphone Hit Assassination Cooldown global		// Tunable: REQUEST_FRANKLIN_PAYPHONE_HIT_COOLDOWN								// int *(600000ms)*
+	
+	--LWCg1 	= FMg + 26746 			-- lucky wheel cooldown global 1 																								-- https://www.unknowncheats.me/forum/3531489-post51.html
+	--LWCg2 	= FMg + 26747 			-- lucky wheel cooldown global 2 																								-- https://www.unknowncheats.me/forum/3531489-post51.html
+	
+	--SHRg 		= FMg + 24836 			-- Stone Hatchet Rampage global
+	
+	-- GoldenGetsMenu Locals 1.69 --
 	
 	SCVSIl 	= 1942640				-- special cargo vip special item local
 	SCVUCl 	= 1942486				-- special cargo vip unique cargo local
@@ -345,23 +584,23 @@ GoldenGetsMenu:add_imgui(function()
 	--	local playerIndex = stats.get_int("MPPLY_LAST_MP_CHAR") --????ID
 	--	--playerOrganizationTypeRaw: {Global_1886967[PLAYER::PLAYER_ID() /*609*/].f_10.f_429}  GLOBAL  
 	--	--playerOrganizationType: {('1886967', '*609', '10', '429', '1')}  GLOBAL  global + (pid *pidmultiplier) + offset + offset + offset (values: 0 = CEO and 1 = MOTORCYCLE CLUB) 
-	--	if locals_b_get_int(SupportBuild, 1887305+playerIndex*609+10+430+1) == 0 then --1886967+playerIndex*609+10+429+1 = 0 ?CEO =1??????
-	--		locals_b_set_int(SupportBuild, 1887305+playerIndex*609+10+430+1,1)
+	--	if locals_get_int(SupportBuild, 1887305+playerIndex*609+10+430+1) == 0 then --1886967+playerIndex*609+10+429+1 = 0 ?CEO =1??????
+	--		locals_set_int(SupportBuild, 1887305+playerIndex*609+10+430+1,1)
 	--		gui.show_message("Switch as a President","Become a President of your own Motorcycle Club")
 	--	else
-	--		if locals_b_get_int(SupportBuild, 1887305+playerIndex*609+10+430+1) == 1 then
-	--			locals_b_set_int(SupportBuild, 1887305+playerIndex*609+10+430+1,0)
+	--		if locals_get_int(SupportBuild, 1887305+playerIndex*609+10+430+1) == 1 then
+	--			locals_set_int(SupportBuild, 1887305+playerIndex*609+10+430+1,0)
 	--			gui.show_message("Switch as a CEO","Become a CEO of your own Organization")
 	--		else
 	--			gui.show_message("You are Not the Boss","You Must Register as a CEO or President")
 	--		end
 	--	end
 	--end
-    --if ImGui.IsItemHovered() then	
-    --    ImGui.SetTooltip("May not work in public session")
-    --end
+    if ImGui.IsItemHovered() then	
+        ImGui.SetTooltip("May not work in public session")
+    end
 	--ImGui.SameLine()
-	--auto_ceo_mc = ImGui.Checkbox("Auto Register as a Boss", auto_ceo_mc) -- Detects the cases that you should be a CEO/MC to start some heists/missions, make you one of it.
+	--auto_ceo_mc = ImGui.Checkbox("Auto Become a CEO/MC", auto_ceo_mc) -- Detects the cases that you should be a CEO/MC to start some heists/missions, make you one of it.
 	
 	ImGui.SeparatorText("Device Access")
 	
@@ -391,28 +630,28 @@ GoldenGetsMenu:add_imgui(function()
 	
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_controller_2020")) ~= 0 then
 	
-			locals_v_set_int(SupportVersion, "fm_mission_controller_2020", 29700, 6) --3274 --??????????
+			locals_set_int(SupportVersion, "fm_mission_controller_2020", 29700, 6) --3274 --??????????
 	
-			locals_v_set_float(SupportVersion, "fm_mission_controller_2020", 30939 + 3, 100) --3274 ????????
+			locals_set_float(SupportVersion, "fm_mission_controller_2020", 30939 + 3, 100) --3274 ????????
 	
-			if locals_v_get_int(SupportVersion, "fm_mission_controller_2020", 30914) == 3 then --?????? --Input_Code_Enter_Correct
-				locals_v_set_int(SupportVersion, "fm_mission_controller_2020", 30915, 2) --3274 --???????
-				locals_v_set_float(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1, locals_v_get_int(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 1)) --3274 --???????????
-				locals_v_set_float(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 2, locals_v_get_int(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 1 + 2)) --3274 --???????????
-				locals_v_set_float(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 4, locals_v_get_int(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 1 + 4)) --3274 --???????????
+			if locals_get_int(SupportVersion, "fm_mission_controller_2020", 30914) == 3 then --?????? --Input_Code_Enter_Correct
+				locals_set_int(SupportVersion, "fm_mission_controller_2020", 30915, 2) --3274 --???????
+				locals_set_float(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1, locals_get_int(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 1)) --3274 --???????????
+				locals_set_float(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 2, locals_get_int(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 1 + 2)) --3274 --???????????
+				locals_set_float(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 4, locals_get_int(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 1 + 4)) --3274 --???????????
 				PAD.SET_CONTROL_VALUE_NEXT_FRAME(2, 237, 1.0) --????
 			end
 		
-			local_H4_hack_v = locals_v_get_int(SupportVersion, "fm_mission_controller_2020", local_H4_hack) --???finger clone
+			local_H4_hack_v = locals_get_int(SupportVersion, "fm_mission_controller_2020", local_H4_hack) --???finger clone
 			if (local_H4_hack_v & (1 << 0)) == 0 then
 				local_H4_hack_v = local_H4_hack_v ~ (1 << 0)
-				locals_v_set_int(SupportVersion, "fm_mission_controller_2020", local_H4_hack, local_H4_hack_v)
+				locals_set_int(SupportVersion, "fm_mission_controller_2020", local_H4_hack, local_H4_hack_v)
 			end
 		end
 				
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_controller")) ~= 0 then --????
-			locals_v_set_float(SupportVersion, "fm_mission_controller", 10069 + 11, 1) --3274 ??????
-			locals_v_set_int(SupportVersion, "fm_mission_controller", 10109 + 2, 8) --3274 ??????? DLC_HEIST3\HEIST_FINALE_LASER_DRILL case 8
+			locals_set_float(SupportVersion, "fm_mission_controller", 10069 + 11, 1) --3274 ??????
+			locals_set_int(SupportVersion, "fm_mission_controller", 10109 + 2, 8) --3274 ??????? DLC_HEIST3\HEIST_FINALE_LASER_DRILL case 8
 		end
 		--???????????
 		local local_H3_hack_1 = 53019 --3274    --func_14102(&Local_52985, &(Local_52920[Local_31603[bLocal_3229 /*292*/].f_27 /*2*/]), 0, joaat("heist"), Global_786547.f_1);
@@ -421,35 +660,35 @@ GoldenGetsMenu:add_imgui(function()
 		local local_H3_hack_2_p = 3841 --3274    
 	
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_controller")) ~= 0 then --??????
-			local_H3_hack_1_v = locals_v_get_int(SupportVersion, "fm_mission_controller", local_H3_hack_1)
+			local_H3_hack_1_v = locals_get_int(SupportVersion, "fm_mission_controller", local_H3_hack_1)
 			if (local_H3_hack_1_v & (1 << 0)) == 0 then
 				local_H3_hack_1_v = local_H3_hack_1_v ~ (1 << 0)
-				locals_v_set_int(SupportVersion, "fm_mission_controller", local_H3_hack_1, local_H3_hack_1_v)
+				locals_set_int(SupportVersion, "fm_mission_controller", local_H3_hack_1, local_H3_hack_1_v)
 			end
-			local_H3_hack_2_v = locals_v_get_int(SupportVersion, "fm_mission_controller", local_H3_hack_2)
+			local_H3_hack_2_v = locals_get_int(SupportVersion, "fm_mission_controller", local_H3_hack_2)
 			if (local_H3_hack_2_v & (1 << 0)) == 0 then
 				local_H3_hack_2_v = local_H3_hack_2_v ~ (1 << 0)
-				locals_v_set_int(SupportVersion, "fm_mission_controller", local_H3_hack_2, local_H3_hack_2_v)
+				locals_set_int(SupportVersion, "fm_mission_controller", local_H3_hack_2, local_H3_hack_2_v)
 			end
 		end
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("am_mp_arc_cab_manager")) ~= 0 then --??????-??
-			local_H3_hack_1_p_v = locals_v_get_int(SupportVersion, "am_mp_arc_cab_manager", local_H3_hack_1_p)
+			local_H3_hack_1_p_v = locals_get_int(SupportVersion, "am_mp_arc_cab_manager", local_H3_hack_1_p)
 			if (local_H3_hack_1_p_v & (1 << 0)) == 0 then
 				local_H3_hack_1_p_v = local_H3_hack_1_p_v ~ (1 << 0)
-				locals_v_set_int(SupportVersion, "am_mp_arc_cab_manager", local_H3_hack_1_p, local_H3_hack_1_p_v)
+				locals_set_int(SupportVersion, "am_mp_arc_cab_manager", local_H3_hack_1_p, local_H3_hack_1_p_v)
 			end
-			local_H3_hack_2_p_v = locals_v_get_int(SupportVersion, "am_mp_arc_cab_manager", local_H3_hack_2_p)
+			local_H3_hack_2_p_v = locals_get_int(SupportVersion, "am_mp_arc_cab_manager", local_H3_hack_2_p)
 			if (local_H3_hack_2_p_v & (1 << 0)) == 0 then
 				local_H3_hack_2_p_v = local_H3_hack_2_p_v ~ (1 << 0)
-				locals_v_set_int(SupportVersion, "am_mp_arc_cab_manager", local_H3_hack_2_p, local_H3_hack_2_p_v)
+				locals_set_int(SupportVersion, "am_mp_arc_cab_manager", local_H3_hack_2_p, local_H3_hack_2_p_v)
 			end
 		end
 	
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_controller")) ~= 0 then
-			locals_v_set_int(SupportVersion, "fm_mission_controller", 1545, 2)  --???-?????(Heist2-Mission1-Prep3:SERVER FARM)  GRAPHICS::DRAW_SPRITE("MPHotwire", "failed"
+			locals_set_int(SupportVersion, "fm_mission_controller", 1545, 2)  --???-?????(Heist2-Mission1-Prep3:SERVER FARM)  GRAPHICS::DRAW_SPRITE("MPHotwire", "failed"
 		end
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_controller_2020")) ~= 0 then
-			locals_v_set_int(SupportVersion, "fm_mission_controller_2020", 1254, 2)  --??????? (Bottom Dollar Bail Office Mission)  GRAPHICS::DRAW_SPRITE("MPHotwire", "failed"
+			locals_set_int(SupportVersion, "fm_mission_controller_2020", 1254, 2)  --??????? (Bottom Dollar Bail Office Mission)  GRAPHICS::DRAW_SPRITE("MPHotwire", "failed"
 		end
 	
 		--??voltlab
@@ -461,49 +700,49 @@ GoldenGetsMenu:add_imgui(function()
 		]]
 	
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_controller_2020")) ~= 0 then --voltlab????
-			locals_v_set_int(SupportVersion, "fm_mission_controller_2020", 1723, locals_v_get_int(SupportVersion, "fm_mission_controller_2020", 1724)) --3274 --voltlab???????????
-			locals_v_set_int(SupportVersion, "fm_mission_controller_2020", 1725, 3) --3274 ??????
+			locals_set_int(SupportVersion, "fm_mission_controller_2020", 1723, locals_get_int(SupportVersion, "fm_mission_controller_2020", 1724)) --3274 --voltlab???????????
+			locals_set_int(SupportVersion, "fm_mission_controller_2020", 1725, 3) --3274 ??????
 		end
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_content_island_heist")) ~= 0 then
-			locals_v_set_int(SupportVersion, "fm_content_island_heist", 766, locals_v_get_int(SupportVersion, "fm_content_island_heist", 767)) --3274 --voltlab???????????
-			locals_v_set_int(SupportVersion, "fm_content_island_heist", 768, 3) --3274  ??????
+			locals_set_int(SupportVersion, "fm_content_island_heist", 766, locals_get_int(SupportVersion, "fm_content_island_heist", 767)) --3274 --voltlab???????????
+			locals_set_int(SupportVersion, "fm_content_island_heist", 768, 3) --3274  ??????
 		end
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_content_vehrob_prep")) ~= 0 then
-			locals_v_set_int(SupportVersion, "fm_content_vehrob_prep", 547, locals_v_get_int(SupportVersion, "fm_content_vehrob_prep", 548)) --3274 --voltlab???????????
-			locals_v_set_int(SupportVersion, "fm_content_vehrob_prep", 549, 3) --3274  ??????
+			locals_set_int(SupportVersion, "fm_content_vehrob_prep", 547, locals_get_int(SupportVersion, "fm_content_vehrob_prep", 548)) --3274 --voltlab???????????
+			locals_set_int(SupportVersion, "fm_content_vehrob_prep", 549, 3) --3274  ??????
 		end
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("am_mp_arc_cab_manager")) ~= 0 then
-			locals_v_set_int(SupportVersion, "am_mp_arc_cab_manager", 455, locals_v_get_int(SupportVersion, "am_mp_arc_cab_manager", 456)) --3274 --voltlab???????????
-			locals_v_set_int(SupportVersion, "am_mp_arc_cab_manager", 457, 3) --3274  ??????
+			locals_set_int(SupportVersion, "am_mp_arc_cab_manager", 455, locals_get_int(SupportVersion, "am_mp_arc_cab_manager", 456)) --3274 --voltlab???????????
+			locals_set_int(SupportVersion, "am_mp_arc_cab_manager", 457, 3) --3274  ??????
 		end
 	
 	
 		--??????????????
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_content_vehrob_casino_prize")) ~= 0 then
-			locals_v_set_int(SupportVersion, "fm_content_vehrob_casino_prize", 1045 + 135 , 3) --3274 case 3 Pass_Remote
+			locals_set_int(SupportVersion, "fm_content_vehrob_casino_prize", 1045 + 135 , 3) --3274 case 3 Pass_Remote
 		end
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_controller")) ~= 0 then --
-			locals_v_set_int(SupportVersion, "fm_mission_controller", 1271 + 135 , 3) --3274 case 3 Pass_Remote
+			locals_set_int(SupportVersion, "fm_mission_controller", 1271 + 135 , 3) --3274 case 3 Pass_Remote
 		end
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_controller_2020")) ~= 0 then
-			locals_v_set_int(SupportVersion, "fm_mission_controller_2020", 980 + 135 , 3) --3095 case 3 Pass_Remote
+			locals_set_int(SupportVersion, "fm_mission_controller_2020", 980 + 135 , 3) --3095 case 3 Pass_Remote
 		end
 	
 		--??????? CIRC_COMP
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_controller")) ~= 0 then --
-			locals_v_set_int(SupportVersion, "fm_mission_controller", 11778 + 24 , 7)
+			locals_set_int(SupportVersion, "fm_mission_controller", 11778 + 24 , 7)
 		end
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_controller_2020")) ~= 0 then --
-			locals_v_set_int(SupportVersion, "fm_mission_controller_2020", 9018 + 24 , 7)
+			locals_set_int(SupportVersion, "fm_mission_controller_2020", 9018 + 24 , 7)
 		end
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_content_business_battles")) ~= 0 then --
-			locals_v_set_int(SupportVersion, "fm_content_business_battles", 4101 + 24 , 7)
+			locals_set_int(SupportVersion, "fm_content_business_battles", 4101 + 24 , 7)
 		end
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_content_island_heist")) ~= 0 then --
-			locals_v_set_int(SupportVersion, "fm_content_island_heist", 10080 + 24 , 7)
+			locals_set_int(SupportVersion, "fm_content_island_heist", 10080 + 24 , 7)
 		end
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_content_vehrob_prep")) ~= 0 then --
-			locals_v_set_int(SupportVersion, "fm_content_vehrob_prep", 9134 + 24 , 7)
+			locals_set_int(SupportVersion, "fm_content_vehrob_prep", 9134 + 24 , 7)
 		end
 	
 	
@@ -533,39 +772,39 @@ GoldenGetsMenu:add_imgui(function()
 	
 		for i = 1, 13 do
 			if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(minigamelocaltable[i].script_name)) ~= 0 then
-				minigame_tmp_v = locals_v_get_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local) --3274 -- WINBRUTE 
+				minigame_tmp_v = locals_get_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local) --3274 -- WINBRUTE 
 				if (minigame_tmp_v & (1 << 9)) == 0 then
 					minigame_tmp_v = minigame_tmp_v ~ (1 << 9)
-					locals_v_set_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local, minigame_tmp_v)
+					locals_set_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local, minigame_tmp_v)
 				end
 			end
 			if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(minigamelocaltable[i].script_name)) ~= 0 then
-				minigame_tmp_v = locals_v_get_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local) --3274 -- WINIP 
+				minigame_tmp_v = locals_get_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local) --3274 -- WINIP 
 				if (minigame_tmp_v & (1 << 18)) == 0 then
 					minigame_tmp_v = minigame_tmp_v ~ (1 << 18)
-					locals_v_set_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local, minigame_tmp_v)
+					locals_set_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local, minigame_tmp_v)
 				end
 			end
 			if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(minigamelocaltable[i].script_name)) ~= 0 then
-				minigame_tmp_v = locals_v_get_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local) --3274 --  --Biolab ?????????? ???? --"Hack_Success", "DLC_HEIST_BIOLAB_PREP_HACKING_SOUNDS"
+				minigame_tmp_v = locals_get_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local) --3274 --  --Biolab ?????????? ???? --"Hack_Success", "DLC_HEIST_BIOLAB_PREP_HACKING_SOUNDS"
 				if (minigame_tmp_v & (1 << 26)) == 0 then
 					minigame_tmp_v = minigame_tmp_v ~ (1 << 26)
-					locals_v_set_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local, minigame_tmp_v)
+					locals_set_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local, minigame_tmp_v)
 				end
 			end
 			if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(minigamelocaltable[i].script_name)) ~= 0 then
-				minigame_tmp_v = locals_v_get_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local) --3274 --  --Biolab ?????????? ???? --"Hack_Success", "DLC_HEIST_BIOLAB_PREP_HACKING_SOUNDS"
+				minigame_tmp_v = locals_get_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local) --3274 --  --Biolab ?????????? ???? --"Hack_Success", "DLC_HEIST_BIOLAB_PREP_HACKING_SOUNDS"
 				if (minigame_tmp_v & (1 << 28)) == 0 then
 					minigame_tmp_v = minigame_tmp_v ~ (1 << 28)
-					locals_v_set_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local, minigame_tmp_v)
+					locals_set_int(SupportVersion, minigamelocaltable[i].script_name, minigamelocaltable[i].minigame_local, minigame_tmp_v)
 				end
 			end
 		end
 	
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_controller")) ~= 0 then --patch for WINIP
-			locals_v_set_int(SupportVersion, "fm_mission_controller", 142 , 0)
-			locals_v_set_int(SupportVersion, "fm_mission_controller", 143 , 0)
-			locals_v_set_int(SupportVersion, "fm_mission_controller", 158 , 7)
+			locals_set_int(SupportVersion, "fm_mission_controller", 142 , 0)
+			locals_set_int(SupportVersion, "fm_mission_controller", 143 , 0)
+			locals_set_int(SupportVersion, "fm_mission_controller", 158 , 7)
 		end
 	
 		minigame_tmp_v2 = globals.get_int(2737663)
@@ -581,7 +820,7 @@ GoldenGetsMenu:add_imgui(function()
 		globals.set_int(2737663, minigame_tmp_v2)
 		
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_content_stash_house")) ~= 0 then --??????
-			locals_v_set_int(SupportVersion, "fm_content_stash_house", 119 + 1 , 1)
+			locals_set_int(SupportVersion, "fm_content_stash_house", 119 + 1 , 1)
 		end
 	end
 	if ImGui.IsItemHovered() then
@@ -1505,8 +1744,8 @@ script.register_looped("GoldenGets Cooldowns", function()
 	end
 	
 	if DispatchWorkCooldown then
-		if locals_v_get_int(SupportVersion, DWCl) ~= 0 then
-			locals_v_set_int(SupportVersion, DWCl, 0)
+		if locals_get_int(SupportVersion, DWCl) ~= 0 then
+			locals_set_int(SupportVersion, DWCl, 0)
 		end
 		if stats.get_int("MPX_DISPATCH_WORK_CALL_CD") ~= 0 then
 			stats.set_int("MPX_DISPATCH_WORK_CALL_CD", 0)
@@ -1515,7 +1754,7 @@ script.register_looped("GoldenGets Cooldowns", function()
 			stats.set_int("MPX_DISPATCH_WORK_REQUEST_CD", 0)
 		end
 	else
-		--locals_v_set_int(SupportVersion, DWCl, 0)
+		--locals_set_int(SupportVersion, DWCl, 0)
 		--stats.set_int("MPX_DISPATCH_WORK_CALL_CD", 0)
 		--stats.set_int("MPX_DISPATCH_WORK_REQUEST_CD", 0)
 	end
@@ -2350,9 +2589,9 @@ GoldenGetsBusiness:add_imgui(function()
 				ImGui.SeparatorText("Special Cargo")
 				
 				if ImGui.Button("Instant Collect Crates##SpecialCargo") then
-					locals_v_set_int(SupportVersion, GCB, SCVIBl1, 1)
-					locals_v_set_int(SupportVersion, GCB, SCVIBl3, 6)
-					locals_v_set_int(SupportVersion, GCB, SCVIBl4, 4)
+					locals_set_int(SupportVersion, GCB, SCVIBl1, 1)
+					locals_set_int(SupportVersion, GCB, SCVIBl3, 6)
+					locals_set_int(SupportVersion, GCB, SCVIBl4, 4)
 				end
 				if ImGui.IsItemHovered() then
 					ImGui.SetTooltip("Completing the current crate orders as needed. Not working\non Lupe's mission source special cargo")
@@ -2360,10 +2599,10 @@ GoldenGetsBusiness:add_imgui(function()
 				
 				collectcrates, drag = ImGui.DragInt("Crates Source", collectcrates, 1, 0, 111)
 				if ImGui.Button("Collect Crates Amount##SpecialCargo") then
-					locals_v_set_int(SupportVersion, GCB, SCVIBl1, 1)
-					locals_v_set_int(SupportVersion, GCB, SCVIBl2, collectcrates)
-					locals_v_set_int(SupportVersion, GCB, SCVIBl3, 6)
-					locals_v_set_int(SupportVersion, GCB, SCVIBl4, 4)
+					locals_set_int(SupportVersion, GCB, SCVIBl1, 1)
+					locals_set_int(SupportVersion, GCB, SCVIBl2, collectcrates)
+					locals_set_int(SupportVersion, GCB, SCVIBl3, 6)
+					locals_set_int(SupportVersion, GCB, SCVIBl4, 4)
 				end
 				if ImGui.IsItemHovered() then
 					ImGui.SetTooltip("Completing the current crate orders with customizations.\nNot working on Lupe's mission source special cargo")
@@ -2626,7 +2865,7 @@ GoldenGetsBusiness:add_imgui(function()
 				end
 				
 				if ImGui.Button("Instant Sell##SpecialCargo") then
-					locals_v_set_int(SupportVersion, GCS, SCVISl, 99999)
+					locals_set_int(SupportVersion, GCS, SCVISl, 99999)
 				end
 				
 				SpecialCargoSellCooldown = ImGui.Checkbox("Remove Special Cargo Sell Cooldown", SpecialCargoSellCooldown)
@@ -2689,8 +2928,8 @@ GoldenGetsBusiness:add_imgui(function()
 				
 				MCBusinessSell, drag = ImGui.DragInt("Supply Sell", MCBusinessSell, 1, 0, 15)
 				if ImGui.Button("Sell Supply Amount") then
-					if locals_v_get_int(SupportVersion, GBCS, MCBSTl) >= 1 then
-						locals_v_set_int(SupportVersion, GBCS, 704 + 122, MCBusinessSell) --704 + 122 = 826
+					if locals_get_int(SupportVersion, GBCS, MCBSTl) >= 1 then
+						locals_set_int(SupportVersion, GBCS, 704 + 122, MCBusinessSell) --704 + 122 = 826
 					else
 						gui.show_error("GoldenGets Selling - Error", "Not work with single Shipment, there will be no payment.")
 					end
@@ -2722,7 +2961,7 @@ GoldenGetsBusiness:add_imgui(function()
 				
 				if ImGui.Button("Instant Sell (Beta)##Bunker") then
 					gui.show_message("Autoshipment","may show that the task failed, but you should get the money!")
-					locals_v_set_int(SupportVersion, GB, BCISl, 0) 
+					locals_set_int(SupportVersion, GB, BCISl, 0) 
 					--  gb_gunrunning.c Local_1211.f_774
 					--	while (iVar0 < func_837(func_3839(), func_60(), Local_1211.f_774, Local_1211.f_809))
 					--  REMOVE_PARTICLE_FX_FROM_ENTITY
@@ -2738,8 +2977,8 @@ GoldenGetsBusiness:add_imgui(function()
 				
 				if ImGui.Button("Instant Sell - Air##HangarCargo") then
 				gui.show_message("Autoshipment","may show that the task failed, but you should get the money!")
-					local integer = locals_v_get_int(SupportVersion, GS, HCVISl1)  --Local_1934.f_1078 SMOT_HLPDROP2
-					locals_v_set_int(SupportVersion, GS, 1934 + 1035, integer) --1934 + 1035 = 2969
+					local integer = locals_get_int(SupportVersion, GS, HCVISl1)  --Local_1934.f_1078 SMOT_HLPDROP2
+					locals_set_int(SupportVersion, GS, 1934 + 1035, integer) --1934 + 1035 = 2969
 					gui.show_message("Autoshipment","may show that the task failed, but you should get the money!")
 				end
 				if ImGui.IsItemHovered() then
@@ -2793,24 +3032,24 @@ GoldenGetsBusiness:add_imgui(function()
 				ImGui.SeparatorText("Acid Lab")
 				
 				if ImGui.Button("Instant Sell##AcidLab") then
-					if locals_v_get_int(SupportVersion, FCALS) == true then -- https://www.unknowncheats.me/forum/3641612-post76.html
-						if locals_v_get_int(SupportVersion, FCALS, ALISCl1) >= 1 then
-							locals_v_set_int(SupportVersion, FCALS, ALISDl1 + 2, 10) -- Progress Delivery Mission
-							locals_v_set_int(SupportVersion, FCALS, ALISDl1 + 3, 10) -- Must Delivery Mission
+					if locals_get_int(SupportVersion, FCALS) == true then -- https://www.unknowncheats.me/forum/3641612-post76.html
+						if locals_get_int(SupportVersion, FCALS, ALISCl1) >= 1 then
+							locals_set_int(SupportVersion, FCALS, ALISDl1 + 2, 10) -- Progress Delivery Mission
+							locals_set_int(SupportVersion, FCALS, ALISDl1 + 3, 10) -- Must Delivery Mission
 							script:sleep(1000)
-							locals_v_set_int(SupportVersion, FCALS, ALISCl1, 2) -- Delivery Mission Passed
+							locals_set_int(SupportVersion, FCALS, ALISCl1, 2) -- Delivery Mission Passed
 					--	else
-					--		locals_v_set_int(SupportVersion, FCALS, ALISDl2, 3) -- Skip Fake Delivery Mission
+					--		locals_set_int(SupportVersion, FCALS, ALISDl2, 3) -- Skip Fake Delivery Mission
 					--		script:sleep(1000)
-					--		if locals_v_get_int(SupportVersion, FCALS, ALISDl2) == 3 then
-					--			locals_v_set_int(SupportVersion, FCALS, ALISDl2, 5)
-					--			locals_v_set_int(SupportVersion, FCALS, ALISCl2, 5) -- Delivery Mission Passed
+					--		if locals_get_int(SupportVersion, FCALS, ALISDl2) == 3 then
+					--			locals_set_int(SupportVersion, FCALS, ALISDl2, 5)
+					--			locals_set_int(SupportVersion, FCALS, ALISCl2, 5) -- Delivery Mission Passed
 					--		end
 						end
 					--else
-					--	locals_v_set_int(SupportVersion, FCALS, ALISDl3, 2)
+					--	locals_set_int(SupportVersion, FCALS, ALISDl3, 2)
 					--	script:sleep(1000)
-					--	locals_v_set_int(SupportVersion, FCALS, ALISCl3, 2) -- Delivery Mission Passed
+					--	locals_set_int(SupportVersion, FCALS, ALISCl3, 2) -- Delivery Mission Passed
 					end
 				end
 				ImGui.EndTabItem()
@@ -2821,6 +3060,12 @@ GoldenGetsBusiness:add_imgui(function()
 		ImGui.Text("\nUnavailable in Single Player.\n\n")
 	end
 end)
+
+------------------------------------
+
+------------------
+yim_resupplier = GoldenGetsBusiness:add_tab("Manage")
+------------------
 
 ------------------------------------
 
@@ -3114,35 +3359,35 @@ script.register_looped("GoldenGets Controls", function (script)
 		if stats.get_int("MPX_PROP_FAC_SLOT0") ~= 0 then
 			if stats.get_int ("MPX_MATTOTALFORFACTORY0") <= 18 then -- Cocaine Lockup
 			script:sleep(5000)
-				locals_v_set_int(SupportVersion, GSIg + 0 + 1, 1)
+				locals_set_int(SupportVersion, GSIg + 0 + 1, 1)
 				script:sleep(10000)
 			end
 		end
 		if stats.get_int("MPX_PROP_FAC_SLOT1") ~= 0 then
 			if stats.get_int ("MPX_MATTOTALFORFACTORY1") <= 11 then -- Methamphetamine Lab
 			script:sleep(5000)
-				locals_v_set_int(SupportVersion, GSIg + 1 + 1, 1)
+				locals_set_int(SupportVersion, GSIg + 1 + 1, 1)
 				script:sleep(10000)
 			end
 		end
 		if stats.get_int("MPX_PROP_FAC_SLOT2") ~= 0 then
 			if stats.get_int ("MPX_MATTOTALFORFACTORY2") <= 7 then -- Weed Farm
 			script:sleep(5000)
-				locals_v_set_int(SupportVersion, GSIg + 2 + 1, 1)
+				locals_set_int(SupportVersion, GSIg + 2 + 1, 1)
 				script:sleep(10000)
 			end
 		end
 		if stats.get_int("MPX_PROP_FAC_SLOT3") ~= 0 then
 			if stats.get_int ("MPX_MATTOTALFORFACTORY3") <= 5 then -- Counterfeit Cash Factory
 			script:sleep(5000)
-				locals_v_set_int(SupportVersion, GSIg + 3 + 1, 1)
+				locals_set_int(SupportVersion, GSIg + 3 + 1, 1)
 				script:sleep(10000)
 			end
 		end
 		if stats.get_int("MPX_PROP_FAC_SLOT4") ~= 0 then
 			if stats.get_int ("MPX_MATTOTALFORFACTORY4") <= 3 then -- Document Forgery
 			script:sleep(5000)
-				locals_v_set_int(SupportVersion, GSIg + 4 + 1, 1)
+				locals_set_int(SupportVersion, GSIg + 4 + 1, 1)
 				script:sleep(10000)
 			end
 		end
@@ -3152,7 +3397,7 @@ script.register_looped("GoldenGets Controls", function (script)
 		if stats.get_int("MPX_PROP_FAC_SLOT5") ~= 0 then
 			if stats.get_int ("MPX_MATTOTALFORFACTORY5") <= 10 then
 			script:sleep(5000)
-				locals_v_set_int(SupportVersion, GSIg + 5 + 1, 1)
+				locals_set_int(SupportVersion, GSIg + 5 + 1, 1)
 				script:sleep(10000)
 			end
 		end
@@ -3162,7 +3407,7 @@ script.register_looped("GoldenGets Controls", function (script)
 		if stats.get_int("MPX_PROP_FAC_SLOT6") ~= 0 then
 			if stats.get_int ("MPX_MATTOTALFORFACTORY6") <= 2 then
 			script:sleep(5000)
-				locals_v_set_int(SupportVersion, GSIg + 6 + 1, 1)
+				locals_set_int(SupportVersion, GSIg + 6 + 1, 1)
 				script:sleep(10000)
 			end
 		end
@@ -4150,7 +4395,7 @@ script.register_looped("GoldenGets Resupply", function (script)
 	end
 	
 	if CEOSpecialItem then
-		locals_v_set_int(SupportVersion, SCVSIl, 1)
+		locals_set_int(SupportVersion_string, SCVSIl, 1)
 	end
 	
 	if SpecialCargoSourceCooldown then
@@ -4192,8 +4437,8 @@ script.register_looped("GoldenGets Resupply", function (script)
 	end
 	
 	if TriggerBunkerProduction then
-		locals_v_set_int(SupportVersion, TTg + 6, 0)
-		locals_v_set_int(SupportVersion, TTg, 1)
+		locals_set_int(SupportVersion_string, TTg + 6, 0)
+		locals_set_int(SupportVersion_string, TTg, 1)
 		script:sleep(1000)
 	end
 	
@@ -4232,33 +4477,33 @@ end)
 
 script.register_looped("GoldenGets WarehouseAuto", function (script)
     if WarehouseAuto then
-        if locals_v_get_int(SupportVersion, GCS, 2) == 1 then -- Auto Sell Warehouse Special Cargo
-            locals_v_set_int(SupportVersion, GCS, SCVMTl + 588, 1) -- crates to sell
-            locals_v_set_int(SupportVersion, GCS, SCVMTl + 48, 0)
-            locals_v_set_int(SupportVersion, GCS, SCVMTl + 577, 0)
-            locals_v_set_int(SupportVersion, GCS, SCVMTl, 7) -- Special Cargo Sell Vehicle Type
+        if locals_get_int(SupportVersion, GCS, 2) == 1 then -- Auto Sell Warehouse Special Cargo
+            locals_set_int(SupportVersion, GCS, SCVMTl + 588, 1) -- crates to sell
+            locals_set_int(SupportVersion, GCS, SCVMTl + 48, 0)
+            locals_set_int(SupportVersion, GCS, SCVMTl + 577, 0)
+            locals_set_int(SupportVersion, GCS, SCVMTl, 7) -- Special Cargo Sell Vehicle Type
             script:sleep(500)
-            locals_v_set_int(SupportVersion, GCS, SCVISl, 99999)  
+            locals_set_int(SupportVersion, GCS, SCVISl, 99999)  
         end
-        if locals_v_get_int(SupportVersion, ASS, 2) == 1 then
+        if locals_get_int(SupportVersion, ASS, 2) == 1 then
             script:sleep(500)
-            locals_v_set_int(SupportVersion, ASS, SCVAl2, 1)
+            locals_set_int(SupportVersion, ASS, SCVAl2, 1)
             script:sleep(200)
-            locals_v_set_int(SupportVersion, ASS, SCVAl1, 1)
+            locals_set_int(SupportVersion, ASS, SCVAl1, 1)
             script:sleep(200)
-            locals_v_set_int(SupportVersion, ASS, SCVAl3, 3012)
+            locals_set_int(SupportVersion, ASS, SCVAl3, 3012)
             script:sleep(1000)
         end
-        if locals_v_get_int(SupportVersion, GCB, 2) == 1 then -- Auto Source Warehouse Special Cargo
-            locals_v_set_int(SupportVersion, GCB, SCVIBl1, 1)
-            locals_v_set_int(SupportVersion, GCB, SCVIBl2, 111)
-            locals_v_set_int(SupportVersion, GCB, SCVIBl3, 6)
-            locals_v_set_int(SupportVersion, GCB, SCVIBl4, 4)
+        if locals_get_int(SupportVersion, GCB, 2) == 1 then -- Auto Source Warehouse Special Cargo
+            locals_set_int(SupportVersion, GCB, SCVIBl1, 1)
+            locals_set_int(SupportVersion, GCB, SCVIBl2, 111)
+            locals_set_int(SupportVersion, GCB, SCVIBl3, 6)
+            locals_set_int(SupportVersion, GCB, SCVIBl4, 4)
             gui.show_message("Your Warehouse is now Full!")
         end
-        if locals_v_get_int(SupportVersion, GCS, 2) ~= 1 then  
+        if locals_get_int(SupportVersion, GCS, 2) ~= 1 then  
             script:sleep(500)
-            if locals_v_get_int(SupportVersion, AMW, 2) == 1 then
+            if locals_get_int(SupportVersion, AMW, 2) == 1 then
                 SCRIPT.REQUEST_SCRIPT(ASS)
                 SYSTEM.START_NEW_SCRIPT(ASS, 8344)
                 SCRIPT.SET_SCRIPT_AS_NO_LONGER_NEEDED(ASS)
@@ -4308,9 +4553,9 @@ script.register_looped("GoldenGets Selling", function()
 	
     if SpecialCargoShipmentType then
         if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(GCS)) ~= 0 then
-            if locals_v_get_int(SupportVersion, GCS, SCVMTl) ~= 12 then 
+            if locals_get_int(SupportVersion, GCS, SCVMTl) ~= 12 then 
                 gui.show_message("Special Cargo - Selling", "Sell with single Shipment/Tug, Boats")
-                locals_v_set_int(SupportVersion, GCS, SCVMTl, 12) -- gb_contraband_sell.c	iVar0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 14); --Local_545.f_7 = iVar0;
+                locals_set_int(SupportVersion, GCS, SCVMTl, 12) -- gb_contraband_sell.c	iVar0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 14); --Local_545.f_7 = iVar0;
             end
         end
     end
@@ -4355,19 +4600,19 @@ script.register_looped("GoldenGets Selling", function()
 	
 	if MCBusinessShipmentType then
         if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(GBCS)) ~= 0 then
-            if locals_v_get_int(SupportVersion, GBCS, MCBSTl) == 0 then
+            if locals_get_int(SupportVersion, GBCS, MCBSTl) == 0 then
                 log.info("Single shipment type detected, auto change random shipment type.")
 				random_value = math.random(1, 10)
-                locals_v_set_int(SupportVersion, GBCS, MCBSTl, random_value)
+                locals_set_int(SupportVersion, GBCS, MCBSTl, random_value)
             end
         end
 	end
 	
     if MCBusinessShipmentType0 then
         if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(GBCS)) ~= 0 then
-            if locals_v_get_int(SupportVersion, GBCS, MCBSTl) ~= 0 then
+            if locals_get_int(SupportVersion, GBCS, MCBSTl) ~= 0 then
 				gui.show_message("MC Business - Selling", "Sell with single Shipment/MTL, Pounder")
-                locals_v_set_int(SupportVersion, GBCS, MCBSTl, 0) -- gb_biker_contraband_sell.c	iVar0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 13); --Local_704.f_17 = randomIntInRange;
+                locals_set_int(SupportVersion, GBCS, MCBSTl, 0) -- gb_biker_contraband_sell.c	iVar0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 13); --Local_704.f_17 = randomIntInRange;
             end    
         end
     end
@@ -4408,6 +4653,3647 @@ script.register_looped("GoldenGets Selling", function()
 		tunables.set_float("BB_SELL_MISSIONS_TONYS_CUT", Nightclub_Sell_Tony_Cut)
 	end
 end)
+
+------------------------------------
+
+local json = require('CasinoPacinoJson')
+
+local casino_gui = GoldenGetsBusiness:add_tab("Casino") --IT'S NOT AL ANYMORE! IT'S DUNK!
+
+local blackjack_cards              = 116
+local blackjack_decks              = 846
+local blackjack_table_players      = 1776
+local blackjack_table_players_size = 8
+
+local three_card_poker_table           = 749
+local three_card_poker_table_size      = 9
+local three_card_poker_cards           = 116
+local three_card_poker_current_deck    = 168
+local three_card_poker_anti_cheat      = 1038
+local three_card_poker_anti_cheat_deck = 799
+local three_card_poker_deck_size       = 55
+
+local roulette_master_table   = 124
+local roulette_outcomes_table = 1357
+local roulette_ball_table     = 153
+
+local slots_random_results_table = 1348
+local slots_slot_machine_state   = 1638
+
+local prize_wheel_win_state   = 280
+local prize_wheel_prize       = 14
+local prize_wheel_prize_state = 45
+
+local gb_casino_heist_planning            = 1964849
+local gb_casino_heist_planning_cut_offset = 1497 + 736 + 92
+
+local fm_mission_controller_cart_grab       = 10255
+local fm_mission_controller_cart_grab_speed = 14
+local fm_mission_controller_cart_autograb   = true
+
+local casino_heist_approach      = 0
+local casino_heist_target        = 0
+local casino_heist_last_approach = 0
+local casino_heist_hard          = 0
+local casino_heist_gunman        = 0
+local casino_heist_driver        = 0
+local casino_heist_hacker        = 0
+local casino_heist_weapons       = 0
+local casino_heist_cars          = 0
+local casino_heist_masks         = 0
+
+AcquireCasinoChip = tunables.get_int("VC_CASINO_CHIP_MAX_BUY")
+AcquirePenthouseChip = tunables.get_int("VC_CASINO_CHIP_MAX_BUY_PENTHOUSE")
+
+script.register_looped("get_Casino Pacino Thread", function()
+	AcquireCasinoChip = tunables.get_int("VC_CASINO_CHIP_MAX_BUY")
+	AcquirePenthouseChip = tunables.get_int("VC_CASINO_CHIP_MAX_BUY_PENTHOUSE")
+end)
+
+casino_gui:add_imgui(function()
+	AcquireChip = ImGui.Checkbox("> Acquire Chip##AcquireChip", AcquireChip)
+	if ImGui.IsItemHovered() then
+		ImGui.SetTooltip("Toggle to expand for customize a acquire chip limit")
+	end
+	ImGui.SameLine()
+	if ImGui.Button("Acquire Chips Reset") then
+		stats.set_int("MPPLY_CASINO_CHIPS_PUR_GD", 0)
+	end
+	if AcquireChip then
+		AcquireCasinoChip, drag = ImGui.DragInt("Casino", AcquireCasinoChip, 1, 2000000000) -- 2000000000 is Tunable: VC_CASINO_CHIP_MAX_HELD
+		if drag then
+			tunables.set_int("VC_CASINO_CHIP_MAX_BUY", AcquireCasinoChip)
+		end
+		AcquirePenthouseChip, drag = ImGui.DragInt("Penthouse", AcquirePenthouseChip, 1, 2000000000) -- 2000000000 is Tunable: VC_CASINO_CHIP_MAX_HELD
+		if drag then
+			tunables.set_int("VC_CASINO_CHIP_MAX_BUY_PENTHOUSE", AcquirePenthouseChip)
+		end
+	end
+	
+	LuckyWheelPrize = ImGui.Checkbox("> Lucky Wheel %Chance Prize##LuckyWheelPrize", LuckyWheelPrize)
+	if ImGui.IsItemHovered() then
+		ImGui.SetTooltip("Toggle to expand for customize a lucky wheel prize")
+	end
+	ImGui.SameLine()
+	if ImGui.Button("Remove Cooldown Spin Lucky Wheel") then
+		if stats.get_int("MPX_LUCKY_WHEEL_NUM_SPIN") ~= 0 then
+			stats.set_int("MPX_LUCKY_WHEEL_NUM_SPIN", 0)
+		end
+		if tunables.get_int("VC_LUCKY_WHEEL_NUM_SPINS_PER_DAY") ~= 1 then
+			tunables.set_int("VC_LUCKY_WHEEL_NUM_SPINS_PER_DAY", 1)
+		end
+		if tunables.get_int("VC_LUCKY_WHEEL_ADDITIONAL_SPINS_ENABLE") ~= 1 then
+			tunables.set_int("VC_LUCKY_WHEEL_ADDITIONAL_SPINS_ENABLE", 1)
+		end
+	end
+	if LuckyWheelPrize then
+		if ImGui.Button("Reset Lucky Wheel Prize") then
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_1_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_1_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_2_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_2_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_3_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_3_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_4_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_4_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_RP2500_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_RP2500_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_RP5000_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_RP5000_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_RP75000_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_RP75000_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_RP10K_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_RP10K_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_RP15K_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_RP15K_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CASH20K_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CASH20K_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CASH30K_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CASH30K_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CASH40K_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CASH40K_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CASH50K_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CASH50K_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CHIPS10K_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CHIPS10K_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CHIPS15K_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CHIPS15K_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CHIPS20K_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CHIPS20K_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CHIPS25K_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CHIPS25K_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_MYSTERY_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_MYSTERY_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_VEHICLE_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_VEHICLE_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_DISCOUNT_W") ~= 5 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_DISCOUNT_W", 5)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_MYSTERY_CLOTHES") ~= 50 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_MYSTERY_CLOTHES", 50)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_MYSTERY_VEHICLE") ~= 50 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_MYSTERY_VEHICLE", 50)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_MYSTERY_CHIPS") ~= 50 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_MYSTERY_CHIPS", 50)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_MYSTERY_CASH") ~= 50 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_MYSTERY_CASH", 50)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_MYSTERY_RP") ~= 50 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_MYSTERY_RP", 50)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_MYSTERY_INVENTOR") ~= 50 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_MYSTERY_INVENTOR", 50)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_MYSTERY_BUSINESS") ~= 50 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_MYSTERY_BUSINESS", 50)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_MYSTERY_ITEM_LOW_W") ~= 10 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_MYSTERY_ITEM_LOW_W", 10)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_MYSTERY_ITEM_MID_W") ~= 30 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_MYSTERY_ITEM_MID_W", 30)
+			end
+			if tunables.get_int("CASINO_LUCKY_WHEEL_MYSTERY_ITEM_HIGH_W") ~= 60 then
+				tunables.set_int("CASINO_LUCKY_WHEEL_MYSTERY_ITEM_HIGH_W", 60)
+			end
+		end
+		if ImGui.Button("Clothes 1") then
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_1_W") ~= INT_MAX then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_1_W", INT_MAX)
+			end
+		end
+		ImGui.SameLine()
+		if ImGui.Button("Clothes 2") then
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_2_W") ~= INT_MAX then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_2_W", INT_MAX)
+			end
+		end
+		ImGui.SameLine()
+		if ImGui.Button("Clothes 3") then
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_3_W") ~= INT_MAX then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_3_W", INT_MAX)
+			end
+		end
+		ImGui.SameLine()
+		if ImGui.Button("Clothes 4") then
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_4_W") ~= INT_MAX then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_CLOTHES_4_W", INT_MAX)
+			end
+		end
+		if ImGui.Button("Vehicle") then
+			if tunables.get_int("CASINO_LUCKY_WHEEL_MYSTERY_VEHICLE") ~= INT_MAX then
+				tunables.set_int("CASINO_LUCKY_WHEEL_MYSTERY_VEHICLE", INT_MAX)
+			end
+		end
+		if ImGui.Button("Discount") then
+			if tunables.get_int("CASINO_LUCKY_WHEEL_REWARD_DISCOUNT_W") ~= INT_MAX then
+				tunables.set_int("CASINO_LUCKY_WHEEL_REWARD_DISCOUNT_W", INT_MAX)
+			end
+		end
+	end
+end)
+
+casino_gui:add_separator()
+
+local bypass_casino_bans = casino_gui:add_checkbox("Bypass Casino Cooldown")
+casino_gui:add_text("Winning too much too quickly might get you banned, enable this at your own risk.")
+casino_gui:add_text("Casino Cooldown Status:")
+casino_gui:add_sameline()
+local banned_element = casino_gui:add_input_string("##banned_element")
+casino_gui:add_separator()
+casino_gui:add_text("Poker") --If his name is Al Pacino and he said, "It's not Al anymore, it's Dunk!", then his name should now be Dunk Pacino.
+local force_poker_cards = casino_gui:add_checkbox("Force all Players Hands to Royal Flush")
+casino_gui:add_sameline()
+local set_dealers_poker_cards = casino_gui:add_checkbox("Force Dealer's Hand to Bad Beat")
+set_dealers_poker_cards:set_enabled(true)
+
+local config_table
+local pacinos_dunkpacino
+
+function set_poker_cards(player_id, players_current_table, card_one, card_two, card_three)
+    locals.set_int("three_card_poker", (three_card_poker_cards) + (three_card_poker_current_deck) + (1 + (players_current_table * three_card_poker_deck_size)) + (2) + (1) + (player_id * 3), card_one)
+    locals.set_int("three_card_poker", (three_card_poker_anti_cheat) + (three_card_poker_anti_cheat_deck) + (1) + (1 + (players_current_table * three_card_poker_deck_size)) + (1) + (player_id * 3), card_one)
+    locals.set_int("three_card_poker", (three_card_poker_cards) + (three_card_poker_current_deck) + (1 + (players_current_table * three_card_poker_deck_size)) + (2) + (2) + (player_id * 3), card_two)
+    locals.set_int("three_card_poker", (three_card_poker_anti_cheat) + (three_card_poker_anti_cheat_deck) + (1) + (1 + (players_current_table * three_card_poker_deck_size)) + (2) + (player_id * 3), card_two)
+    locals.set_int("three_card_poker", (three_card_poker_cards) + (three_card_poker_current_deck) + (1 + (players_current_table * three_card_poker_deck_size)) + (2) + (3) + (player_id * 3), card_three)
+    locals.set_int("three_card_poker", (three_card_poker_anti_cheat) + (three_card_poker_anti_cheat_deck) + (1) + (1 + (players_current_table * three_card_poker_deck_size)) + (3) + (player_id * 3), card_three)
+end
+
+function get_cardname_from_index(card_index)
+    if card_index == 0 then
+        return "Rolling"
+    end
+
+    local card_number = math.fmod(card_index, 13)
+    local cardName = ""
+    local cardSuit = ""
+
+    if card_number == 1 then
+        cardName = "Ace"
+    elseif card_number == 11 then
+        cardName = "Jack"
+    elseif card_number == 12 then
+        cardName = "Queen"
+    elseif card_number == 0 then
+        cardName = "King"
+    else
+        cardName = tostring(card_number)
+    end
+
+    if card_index >= 1 and card_index <= 13 then
+        cardSuit = "Clubs"
+    elseif card_index >= 14 and card_index <= 26 then
+        cardSuit = "Diamonds"
+    elseif card_index >= 27 and card_index <= 39 then
+        cardSuit = "Hearts"
+    elseif card_index >= 40 and card_index <= 52 then
+        cardSuit = "Spades"
+    end
+
+    return cardName .. " of " .. cardSuit
+end
+
+casino_gui:add_separator()
+casino_gui:add_text("Blackjack")
+casino_gui:add_text("Dealer's face down card: ")
+casino_gui:add_sameline()
+local dealers_card_gui_element = casino_gui:add_input_string("##dealers_card_gui_element")
+
+casino_gui:add_button("Set Dealer's Hand To Bust", function()
+    script.run_in_fiber(function (script)
+        local player_id = PLAYER.PLAYER_ID()
+        while NETWORK.NETWORK_GET_HOST_OF_SCRIPT("blackjack", -1, 0) ~= player_id and NETWORK.NETWORK_GET_HOST_OF_SCRIPT("blackjack", 0, 0) ~= player_id and NETWORK.NETWORK_GET_HOST_OF_SCRIPT("blackjack", 1, 0) ~= player_id and NETWORK.NETWORK_GET_HOST_OF_SCRIPT("blackjack", 2, 0) ~= player_id and NETWORK.NETWORK_GET_HOST_OF_SCRIPT("blackjack", 3, 0) ~= player_id do 
+            network.force_script_host("blackjack")
+            gui.show_message("CasinoPacino", "Taking control of the blackjack script.") --If you see this spammed, someone if fighting you for control.
+            script:yield()
+        end
+        local blackjack_table = locals.get_int("blackjack", blackjack_table_players + 1 + (player_id * blackjack_table_players_size) + 4) --The Player's current table he is sitting at.
+        if blackjack_table ~= -1 then
+            locals.set_int("blackjack", blackjack_cards + blackjack_decks + 1 + (blackjack_table * 13) + 1, 11)
+            locals.set_int("blackjack", blackjack_cards + blackjack_decks + 1 + (blackjack_table * 13) + 2, 12)
+            locals.set_int("blackjack", blackjack_cards + blackjack_decks + 1 + (blackjack_table * 13) + 3, 13)
+            locals.set_int("blackjack", blackjack_cards + blackjack_decks + 1 + (blackjack_table * 13) + 12, 3)
+        end
+    end)
+end)
+
+casino_gui:add_separator()
+casino_gui:add_text("Roulette")
+local force_roulette_wheel = casino_gui:add_checkbox("Force Roulette Wheel to Land On Red 18")
+
+casino_gui:add_separator()
+casino_gui:add_text("Slots")
+local rig_slot_machine = casino_gui:add_checkbox("Rig Slot Machines")
+casino_gui:add_sameline()
+local autoplay_slots = casino_gui:add_checkbox("Autoplay")
+casino_gui:add_sameline()
+local autoplay_cap = casino_gui:add_checkbox("Autoplay Cap")
+local autoplay_chips_cap = casino_gui:add_input_int("Autoplay Until Chips Cap") --Give it a good say there, laddie.
+
+casino_gui:add_separator()
+casino_gui:add_text("Lucky Wheel")
+
+casino_gui:add_button("Give Podium Vehicle", function ()
+    script.run_in_fiber(function (script)
+        if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("casino_lucky_wheel")) ~= 0 then
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize), 18)
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize_state), 11) 
+        end
+    end)
+end)
+casino_gui:add_sameline()
+casino_gui:add_button("Give Mystery Prize", function ()
+    script.run_in_fiber(function (script)
+        if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("casino_lucky_wheel")) ~= 0 then
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize), 11)
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize_state), 11) 
+        end
+    end)
+end)
+casino_gui:add_sameline()
+casino_gui:add_button("Give $50,000", function ()
+    script.run_in_fiber(function (script)
+        if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("casino_lucky_wheel")) ~= 0 then
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize), 19)
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize_state), 11) 
+        end
+    end)
+end)
+casino_gui:add_sameline()
+casino_gui:add_button("Give 25,000 Chips", function ()
+    script.run_in_fiber(function (script)
+        if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("casino_lucky_wheel")) ~= 0 then
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize), 15)
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize_state), 11) 
+        end
+    end)
+end)
+casino_gui:add_button("Give 15,000RP", function ()
+    script.run_in_fiber(function (script)
+        if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("casino_lucky_wheel")) ~= 0 then
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize), 17)
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize_state), 11) 
+        end
+    end)
+end)
+casino_gui:add_sameline()
+casino_gui:add_button("Give Discount", function ()
+    script.run_in_fiber(function (script)
+        if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("casino_lucky_wheel")) ~= 0 then
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize), 4)
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize_state), 11) 
+        end
+    end)
+end)
+casino_gui:add_sameline()
+casino_gui:add_button("Give Clothing", function ()
+    script.run_in_fiber(function (script)
+        if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("casino_lucky_wheel")) ~= 0 then
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize), 8)
+            locals.set_int("casino_lucky_wheel", (prize_wheel_win_state) + (prize_wheel_prize_state), 11) 
+        end
+    end)
+end)
+
+------------------------------------
+
+---------------
+GoldenGetsMission = GoldenGetsMenu:add_tab("Mission")
+---------------
+
+AloneLaunchMission = GoldenGetsMission:add_checkbox("Force Solo Mission")
+
+GoldenGetsMission:add_button("Force Ready", function() 
+	locals_set_int(SupportVersion_string, 1972760 + 1 + (1 * 27) + 8 + 1, 1) -- Thanks to @vithiam on Discord
+	locals_set_int(SupportVersion_string, 1972760 + 1 + (2 * 27) + 8 + 2, 1) 
+	locals_set_int(SupportVersion_string, 1972760 + 1 + (3 * 27) + 8 + 3, 1)
+end)
+GoldenGetsMission:add_sameline()
+GoldenGetsMission:add_button("Increase Team Lives", function()
+	if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC)) ~= 0 then
+		network.force_script_host(FMC)
+		locals_set_int(SupportVersion_string, 4718592 + 3592 + 1 + 38, 1)
+		teamlives = locals.get_int(FMC, 26172 + 1325 + 1)
+		locals_set_int(SupportVersion_string, FMC, 26172 + 1325 + 1, teamlives + INT_MAX)
+	end
+	if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC20)) ~= 0 then
+		network.force_script_host(FMC20)
+		teamlives = locals.get_int(FMC20, 56798 + 873 + 1)
+		locals_set_int(SupportVersion_string, FMC20, 56798 + 873 + 1, teamlives + INT_MAX)
+        --[[
+        int func_787(bool bParam0, bool bParam1)//Position - 0x200F2
+{
+	int iVar0;
+	int iVar1;
+	
+	iVar0 = Global_4718592.f_3592[bParam0 /*25891*/].f_38;
+	if (BitTest(Global_4718592.f_11, 5))
+	{
+		iVar0 = Global_4718592.f_3592[0 /*25891*/].f_38;
+	}
+	if (Local_28365[bParam0] < 17 && Global_4718592.f_3592[bParam0 /*25891*/].f_40[Local_28365[bParam0] ] != -1)
+	{
+		iVar0 = Global_4718592.f_3592[bParam0 /*25891*/].f_40[Local_28365[bParam0] ];
+	}
+	if (!(bParam1 && BitTest(uLocal_15178, 31)))
+	{
+		if (BitTest(Local_19746.f_2, 21) && (((((((((((BitTest(Local_19746.f_3, 30) || BitTest(Local_19746.f_4, 2)) || BitTest(Local_19746.f_4, 15)) || BitTest(Local_19746.f_4, 30)) || BitTest(Local_19746.f_4, 1)) || (BitTest(Local_19746.f_5, 18) && !func_605(Global_4718592.f_185586))) || BitTest(Local_19746.f_5, 31)) || BitTest(Local_19746.f_7, 4)) || (BitTest(Local_19746.f_7, 8) && !BitTest(Global_4718592.f_26, 28))) || (BitTest(Local_19746.f_4, 9) && BitTest(Global_4718592.f_24, 18))) || (BitTest(Local_19746.f_4, 9) && func_788(Global_4718592.f_185586))) || BitTest(Local_19746.f_8, 17)))
+		{
+			return 0;
+		}
+	}
+	if (BitTest(Global_4718592.f_19, 0))
+	{
+		iVar0 = Local_22960.f_1470[bParam0];
+		if (BitTest(Global_4718592.f_21, 16))
+		{
+			iVar0 = (iVar0 - 1);
+		}
+		return iVar0;
+	}
+	if (bParam1)
+	{
+		iVar1 = Local_31621[bLocal_3230 /*292*/].f_197;
+	}
+	else
+	{
+		iVar1 = Local_26172.f_1325[bParam0];
+	}
+	switch (iVar0)
+	{
+		case -1:
+			return (0 + iVar1);
+		
+		case 0:
+			return -1;
+		
+		case 1:
+			return (1 + iVar1);
+		
+		case 2:
+			return (2 + iVar1);
+		
+		case 3:
+			return (3 + iVar1);
+		
+		case 4:
+			return (4 + iVar1);
+		
+		case 5:
+			return (5 + iVar1);
+		
+		case 6:
+			return (6 + iVar1);
+		
+		case 7:
+			return (7 + iVar1);
+		
+		case 8:
+			return (8 + iVar1);
+		
+		case 9:
+			return (9 + iVar1);
+		
+		case 10:
+			return (10 + iVar1);
+		
+		case 11:
+			return (15 + iVar1);
+		
+		case 12:
+			return (20 + iVar1);
+		
+		case 13:
+			return (30 + iVar1);
+		
+		case 14:
+			return (50 + iVar1);
+		
+		case 15:
+			return (100 + iVar1);
+		
+		case 16:
+			return (Local_19746.f_1765[bParam0] + iVar1);
+		
+		case 17:
+			return ((2 * Local_19746.f_1765[bParam0]) + iVar1);
+		
+		default:
+	}
+	return 0;
+}
+]]
+    end
+end)
+
+local teamlivesfmc, teamlivesfmc20 = 0, 0
+local teamlives = 0
+local max_teamlives = 0
+
+if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC)) ~= 0 then
+    teamlivesfmc = locals.get_int(FMC, 26172 + 1325 + 1)
+end
+
+if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC20)) ~= 0 then
+    teamlivesfmc20 = locals.get_int(FMC20, 56798 + 873 + 1)
+end
+
+max_teamlives = math.max(teamlivesfmc, teamlivesfmc20)
+GoldenGetsMission:add_imgui(function()
+    teamlives, drag = ImGui.DragInt("Team Lives", max_teamlives, 1, 0, INT_MAX)
+    if drag then
+        max_teamlives = teamlives
+    end
+    if ImGui.Button("Set Team Lives Amount") then
+        if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC)) ~= 0 then 
+            network.force_script_host(FMC)
+            locals_set_int(SupportVersion_string, 4718592 + 3592 + 1 + 38, teamlives)
+            locals_set_int(SupportVersion_string, FMC, 26172 + 1325 + 1, teamlivesfmc + teamlives)
+        end
+        if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC20)) ~= 0 then 
+            network.force_script_host(FMC20)
+            locals_set_int(SupportVersion_string, FMC20, 56798 + 873 + 1, teamlivesfmc20 + teamlives)
+        end
+    end
+end)
+
+GoldenGetsMission:add_button("Skip to Next Checkpoint", function()
+	if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC)) ~= 0 then
+		locals_set_int(SupportVersion_string, FMC, 19748, 17)
+	end
+end)
+GoldenGetsMission:add_sameline()
+GoldenGetsMission:add_button("Mission/Heist Passed", function()
+	if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC)) ~= 0 then
+		if locals.get_int(FMC, 3236) ~= nil then
+			if locals.get_int(FMC, 3236) ~= 0 then
+				locals_set_int(SupportVersion_string, FMC, 31690, -1978588606)
+				locals_set_int(SupportVersion_string, FMC, 19746, 12)
+			end
+		end
+	end
+	if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC20)) ~= 0 then
+		if locals.get_int(FMC, 3236) ~= nil then
+			if locals.get_int(FMC, 3236) ~= 0 then
+				locals_set_int(SupportVersion_string, FMC20, 51921, -1978588606)
+				locals_set_int(SupportVersion_string, FMC20, 50150, 9)
+			end
+		end
+	end
+end)
+
+GoldenGetsMission:add_button("Instant Finish All Mission/Heist", function()
+	if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC)) ~= 0 then
+		locals_set_int(SupportVersion_string, FMC, AIFl3 + 2686, 15000000) -- How much did you take in the casino and pacific standard heist
+		locals_set_int(SupportVersion_string, FMC, DIFl2, 1000) -- Casino Aggressive Kills & Act 3
+		locals_set_int(SupportVersion_string, FMC, AIFl3, 12) -- Next Checkpoint Casino Heist & Act 3
+		locals_set_int(SupportVersion_string, FMC, AIFl4, 99999) -- 'fm_mission_controller' instant finish variable?
+		locals_set_int(SupportVersion_string, FMC, AIFl5, 99999) -- 'fm_mission_controller' instant finish variable?
+	end
+	if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC20)) ~= 0 then -- Cayo / Tuners / ULP / Agency
+		locals_set_int(SupportVersion_string, FMC20, ASIFl1, 51338977)
+		locals_set_int(SupportVersion_string, FMC20, ASIFl2, 101)
+	end
+	if ImGui.IsItemHovered() then
+		ImGui.SetTooltip("It's preferable to wait 5 to 10 second before press 'Instant Finish'")
+	end
+end)
+
+GoldenGetsMission:add_separator()
+
+GoldenGetsMission:add_text("-Heist Cuts Profil-")
+
+GoldenGetsMission:add_separator()
+
+GoldenGetsMission:add_imgui(function()
+	ImGui.Text("Heist Self (non-host) Cut: " .. (locals.get_int(GCg)))
+	ImGui.Separator()
+	ImGui.Text("Apartement Heist Self (non-host) Cut: " .. (locals.get_int(ACg5)))
+	ImGui.Text("Apartement Heist Player 1 Cut: " .. (locals.get_int(ACg1)))
+	ImGui.Text("Apartement Heist Player 2 Cut: " .. (locals.get_int(ACg2)))
+	ImGui.Text("Apartement Heist Player 3 Cut: " .. (locals.get_int(ACg3)))
+	ImGui.Text("Apartement Heist Player 4 Cut: " .. (locals.get_int(ACg4)))
+	ImGui.Separator()
+	ImGui.Text("The Doomsday Heist Player 1 Cut: " .. (locals.get_int(DCg1)))
+	ImGui.Text("The Doomsday Heist Player 2 Cut: " .. (locals.get_int(DCg2)))
+	ImGui.Text("The Doomsday Heist Player 3 Cut: " .. (locals.get_int(DCg3)))
+	ImGui.Text("The Doomsday Heist Player 4 Cut: " .. (locals.get_int(DCg4)))
+	ImGui.Separator()
+	ImGui.Text("The Diamond Casino Heist Player 1 Cut: " .. (locals.get_int(DCCg1)))
+	ImGui.Text("The Diamond Casino Heist Player 2 Cut: " .. (locals.get_int(DCCg2)))
+	ImGui.Text("The Diamond Casino Heist Player 3 Cut: " .. (locals.get_int(DCCg3)))
+	ImGui.Text("The Diamond Casino Heist Player 4 Cut: " .. (locals.get_int(DCCg4)))
+	ImGui.Separator()
+	ImGui.Text("Cayo Perico Heist Player 1 Cut: " .. (locals.get_int(CPCg1)))
+	ImGui.Text("Cayo Perico Heist Player 2 Cut: " .. (locals.get_int(CPCg2)))
+	ImGui.Text("Cayo Perico Heist Player 3 Cut: " .. (locals.get_int(CPCg3)))
+	ImGui.Text("Cayo Perico Heist Player 4 Cut: " .. (locals.get_int(CPCg4)))
+end)
+
+GoldenGetsMission:add_separator()
+
+GoldenGetsMission:add_text("-Heist Cuts Editor-")
+GoldenGetsMission:add_button("2 Player Cuts 50% - 50%", function ()
+	locals_set_int(SupportVersion_string, GCg, 50)
+		
+	locals_set_int(SupportVersion_string, ACg5, 50)
+	locals_set_int(SupportVersion_string, ACg1, 50)
+	locals_set_int(SupportVersion_string, ACg2, 50)
+		
+	locals_set_int(SupportVersion_string, DCg1, 50)
+	locals_set_int(SupportVersion_string, DCg2, 50)
+		
+	locals_set_int(SupportVersion_string, DCCg1, 50)
+	locals_set_int(SupportVersion_string, DCCg2, 50)
+		
+	locals_set_int(SupportVersion_string, CPCg1, 50)
+	locals_set_int(SupportVersion_string, CPCg2, 50)
+end)
+
+GoldenGetsMission:add_button("3 Player Cuts 30% - 35% - 35%", function ()
+	locals_set_int(SupportVersion_string, GCg, 30)
+		
+	locals_set_int(SupportVersion_string, ACg5, 30)
+	locals_set_int(SupportVersion_string, ACg1, 30)
+	locals_set_int(SupportVersion_string, ACg2, 35)
+	locals_set_int(SupportVersion_string, ACg3, 35)
+		
+	locals_set_int(SupportVersion_string, DCg1, 30)
+	locals_set_int(SupportVersion_string, DCg2, 35)
+	locals_set_int(SupportVersion_string, DCg3, 35)
+		
+	locals_set_int(SupportVersion_string, DCCg1, 30)
+	locals_set_int(SupportVersion_string, DCCg2, 35)
+	locals_set_int(SupportVersion_string, DCCg3, 35)
+		
+	locals_set_int(SupportVersion_string, CPCg1, 30)
+	locals_set_int(SupportVersion_string, CPCg2, 35)
+	locals_set_int(SupportVersion_string, CPCg3, 35)
+end)
+
+GoldenGetsMission:add_button("4 Player Cuts 25% - 25% - 25% - 25%", function ()
+    for i = 0, 4, 1 do
+        locals_set_int(SupportVersion_string, GCg, 25)
+		
+        locals_set_int(SupportVersion_string, ACg5, 25)
+        locals_set_int(SupportVersion_string, ACg1 + i, 25)
+		
+        locals_set_int(SupportVersion_string, DCg1 + i, 25)
+		
+        locals_set_int(SupportVersion_string, DCCg1 + i, 25)
+		
+        locals_set_int(SupportVersion_string, CPCg1 + i, 25)
+    end
+end)
+
+GoldenGetsMission:add_separator()
+
+GoldenGetsMission:add_button("All Cuts 85%", function ()
+    for i = 0, 4, 1 do
+        locals_set_int(SupportVersion_string, GCg, 85)
+		
+        locals_set_int(SupportVersion_string, ACg5, 85)
+        locals_set_int(SupportVersion_string, ACg1 + i, 85)
+		
+        locals_set_int(SupportVersion_string, DCg1 + i, 85)
+		
+        locals_set_int(SupportVersion_string, DCCg1 + i, 85)
+		
+        locals_set_int(SupportVersion_string, CPCg1 + i, 85)
+    end
+end)
+GoldenGetsMission:add_sameline()
+GoldenGetsMission:add_button("All Cuts 100%", function ()
+    for i = 0, 4, 1 do
+        locals_set_int(SupportVersion_string, GCg, 100)
+		
+        locals_set_int(SupportVersion_string, ACg5, 100)
+        locals_set_int(SupportVersion_string, ACg1 + i, 100)
+		
+        locals_set_int(SupportVersion_string, DCg1 + i, 100)
+		
+        locals_set_int(SupportVersion_string, DCCg1 + i, 100)
+		
+        locals_set_int(SupportVersion_string, CPCg1 + i, 100)
+    end
+end)
+
+GoldenGetsMission:add_button("All Cuts 125%", function ()
+    for i = 0, 4, 1 do
+        locals_set_int(SupportVersion_string, GCg, 125)
+		
+        locals_set_int(SupportVersion_string, ACg5, 125)
+        locals_set_int(SupportVersion_string, ACg1 + i, 125)
+		
+        locals_set_int(SupportVersion_string, DCg1 + i, 125)
+		
+        locals_set_int(SupportVersion_string, DCCg1 + i, 125)
+		
+        locals_set_int(SupportVersion_string, CPCg1 + i, 125)
+    end
+end)
+GoldenGetsMission:add_sameline()
+GoldenGetsMission:add_button("All Cuts 150%", function ()
+    for i = 0, 4, 1 do
+        locals_set_int(SupportVersion_string, GCg, 150)
+		
+        locals_set_int(SupportVersion_string, ACg5, 150)
+        locals_set_int(SupportVersion_string, ACg1 + i, 150)
+		
+        locals_set_int(SupportVersion_string, DCg1 + i, 150)
+		
+        locals_set_int(SupportVersion_string, DCCg1 + i, 150)
+		
+        locals_set_int(SupportVersion_string, CPCg1 + i, 150)
+    end
+end)
+
+GoldenGetsMission:add_button("All Cuts 175%", function ()
+    for i = 0, 4, 1 do
+        locals_set_int(SupportVersion_string, GCg, 175)
+		
+        locals_set_int(SupportVersion_string, ACg5, 175)
+        locals_set_int(SupportVersion_string, ACg1 + i, 175)
+		
+        locals_set_int(SupportVersion_string, DCg1 + i, 175)
+		
+        locals_set_int(SupportVersion_string, DCCg1 + i, 175)
+		
+        locals_set_int(SupportVersion_string, CPCg1 + i, 175)
+    end
+end)
+GoldenGetsMission:add_sameline()
+GoldenGetsMission:add_button("All Cuts 200%", function ()
+    for i = 0, 4, 1 do
+        locals_set_int(SupportVersion_string, GCg, 200)
+		
+        locals_set_int(SupportVersion_string, ACg5, 200)
+        locals_set_int(SupportVersion_string, ACg1 + i, 200)
+		
+        locals_set_int(SupportVersion_string, DCg1 + i, 200)
+		
+        locals_set_int(SupportVersion_string, DCCg1 + i, 200)
+		
+        locals_set_int(SupportVersion_string, CPCg1 + i, 200)
+    end
+end)
+
+GoldenGetsMission:add_button("All Cuts 225%", function ()
+    for i = 0, 4, 1 do
+        locals_set_int(SupportVersion_string, GCg, 225)
+		
+        locals_set_int(SupportVersion_string, ACg5, 225)
+        locals_set_int(SupportVersion_string, ACg1 + i, 225)
+		
+        locals_set_int(SupportVersion_string, DCg1 + i, 225)
+		
+        locals_set_int(SupportVersion_string, DCCg1 + i, 225)
+		
+        locals_set_int(SupportVersion_string, CPCg1 + i, 225)
+    end
+end)
+GoldenGetsMission:add_sameline()
+GoldenGetsMission:add_button("All Cuts 250%", function ()
+    for i = 0, 4, 1 do
+        locals_set_int(SupportVersion_string, GCg, 250)
+		
+        locals_set_int(SupportVersion_string, ACg5, 250)
+        locals_set_int(SupportVersion_string, ACg1 + i, 250)
+		
+        locals_set_int(SupportVersion_string, DCg1 + i, 250)
+		
+        locals_set_int(SupportVersion_string, DCCg1 + i, 250)
+		
+        locals_set_int(SupportVersion_string, CPCg1 + i, 250)
+    end
+end)
+
+GoldenGetsMission:add_separator()
+
+PlayerCut = locals.get_int(ACg1)
+SelfCutNonHost = locals.get_int(GCg)
+BagCapacity = tunables.get_int("HEIST_BAG_MAX_CAPACITY")
+
+script.register_looped("get_GoldenGets Mission", function()
+	SelfCutNonHost = locals.get_int(GCg)
+	PlayerCut = locals.get_int(ACg1)
+	BagCapacity = tunables.get_int("HEIST_BAG_MAX_CAPACITY")
+end)
+
+GoldenGetsMission:add_imgui(function()
+	SelfCutNonHost, drag = ImGui.DragInt("Self (non-host)", SelfCutNonHost, 1, 0, INT_MAX)
+	if drag then
+		changeSelfCutNonHost = SelfCutNonHost
+	end
+	
+	if ImGui.Button("Change Self (non-host) Amount") then
+		locals_set_int(SupportVersion_string, GCg, changeSelfCutNonHost)
+		locals_set_int(SupportVersion_string, ACg5, changeSelfCutNonHost)
+	end
+	
+	PlayerCut, drag = ImGui.DragInt("Player Cuts", PlayerCut, 1, 0, INT_MAX)
+	if drag then
+		changeplayer = PlayerCut
+	end
+	
+	if ImGui.Button("Change Player Cuts Amount") then
+		for i = 0, 4, 1 do
+			locals_set_int(SupportVersion_string, ACg1 + i, changeplayer)
+			locals_set_int(SupportVersion_string, DCg1 + i, changeplayer)
+			locals_set_int(SupportVersion_string, DCCg1 + i, changeplayer)
+			locals_set_int(SupportVersion_string, CPCg1 + i, changeplayer)
+		end
+	end
+	
+	ImGui.Separator()
+	
+	if ImGui.Button("1 Player Bag##CayoPericoHeist") then
+		tunables.set_int("HEIST_BAG_MAX_CAPACITY", 1800)
+	end
+	ImGui.SameLine()
+	if ImGui.Button("2 Player Bag##CayoPericoHeist") then
+		tunables.set_int("HEIST_BAG_MAX_CAPACITY", 3600)
+	end
+	
+	if ImGui.Button("3 Player Bag##CayoPericoHeist") then
+		tunables.set_int("HEIST_BAG_MAX_CAPACITY", 5400)
+	end
+	ImGui.SameLine()
+	if ImGui.Button("4 Player Bag##CayoPericoHeist") then
+		tunables.set_int("HEIST_BAG_MAX_CAPACITY", 7200)
+	end
+	
+	BagCapacity, drag = ImGui.DragInt("Bag Capacity##CayoPericoHeist", BagCapacity, 1, INT_MAX)
+	if drag then
+		tunables.set_int("HEIST_BAG_MAX_CAPACITY", BagCapacity)
+	end
+end)
+
+GoldenGetsMission:add_separator()
+
+GoldenGetsMission:add_text("-Heist Elite Challenge Profil-")
+
+GoldenGetsMission:add_separator()
+
+local HEIST_TYPES = {
+	OG_HEISTS      = 0,
+	DOOMSDAY_HEIST = 1,
+	CASINO_HEIST   = 2,
+	PERICO_HEIST   = 3
+}
+
+local global_one              = 4718592
+local global_one_offset       = 127178
+local global_two              = 2684504
+local global_three            = 2685444
+local global_three_offset_one = 6489
+local global_three_offset_two = 6487
+
+local mission_controller_local_one                        = 19746
+local mission_controller_local_two                        = 28365
+local mission_controller_local_three                      = 28365
+local mission_controller_2020_local_one                   = 53558
+local mission_controller_2020_local_two                   = 50150
+local mission_controller_2020_local_two_offset_one        = 1495
+local mission_controller_2020_local_two_offset_two        = 1492
+local mission_controller_2020_local_three                 = 62290
+local mission_controller_2020_local_three_offset_one_size = 275
+local mission_controller_2020_local_three_offset_two      = 237
+
+local selected_heist  = HEIST_TYPES.OG_HEISTS
+local view_objectives = false
+
+local has_quick_restarted = 0
+local elite_time          = 0
+local has_failed_hack     = 0
+local kills               = 0
+local headshots           = 0
+local deaths              = 0
+local vehicle_damage      = 0
+local rashkovsky_damage   = 0
+local noose_called        = 0
+local h4_elite_time       = 0
+local h4_has_failed_hack  = 0
+local h4_deaths           = 0
+local h4_bag_size         = 0
+local h4_grabbed_cash     = 0
+local h4_elite            = false
+local og_elites           = {}
+local h2_elites           = {}
+local ch_elites           = {}
+
+local function has_bit_set(address, pos)
+    return (address & (1 << pos)) ~= 0
+end
+
+local function format_int(number)
+    local i, j, minus, int, fraction = tostring(number):find('([-]?)(%d+)([.]?%d*)')
+    int = int:reverse():gsub("(%d%d%d)", "%1,")
+    return minus .. int:reverse():gsub("^,", "") .. fraction
+end
+
+local function format_milliseconds(ms)
+    local total_seconds = math.floor(ms / 1000)
+    local hours         = math.floor(total_seconds / 3600)
+    local minutes       = math.floor((total_seconds % 3600) / 60)
+    local seconds       = total_seconds % 60
+    return string.format("%02d:%02d:%02d", hours, minutes, seconds)
+end
+
+local function add_text_component_long_string(text)
+    local max_str_component_length = 99
+    for i = 1, #text, max_str_component_length do
+        local str_comp = string.sub(text, i, i + max_str_component_length - 1)
+        HUD.ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(str_comp)
+    end
+end
+
+local function get_net_difference(timeb)
+    if NETWORK.NETWORK_IS_GAME_IN_PROGRESS() then
+        return NETWORK.GET_TIME_DIFFERENCE(NETWORK.GET_NETWORK_TIME(), timeb)
+    end
+    return NETWORK.GET_TIME_DIFFERENCE(MISC.GET_GAME_TIMER(), timeb)
+end
+
+local function draw_text(text)
+    HUD.BEGIN_TEXT_COMMAND_DISPLAY_TEXT(string.len(text) < 99 and "STRING" or "jamyfafi")
+    if string.len(text) < 99 then
+        HUD.ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(text)
+    else
+        add_text_component_long_string(text)
+    end
+    HUD.SET_TEXT_RENDER_ID(1)
+    HUD.SET_TEXT_OUTLINE()
+    HUD.SET_TEXT_WRAP(0.0, 0.975)
+    HUD.SET_TEXT_RIGHT_JUSTIFY(true)
+    HUD.SET_TEXT_SCALE(0, 0.5)
+    HUD.SET_TEXT_FONT(4)
+    HUD.SET_TEXT_COLOUR(255, 255, 255, 240)
+    HUD.END_TEXT_COMMAND_DISPLAY_TEXT(0.0, 0.2, 0)
+end
+
+local function og_is_active()
+    local root_content_ids = {
+        tunables.get_int("ROOT_ID_HASH_THE_FLECCA_JOB"),
+        tunables.get_int("ROOT_ID_HASH_THE_PRISON_BREAK"),
+        tunables.get_int("ROOT_ID_HASH_THE_HUMANE_LABS_RAID"),
+        tunables.get_int("ROOT_ID_HASH_SERIES_A_FUNDING"),
+        tunables.get_int("ROOT_ID_HASH_THE_PACIFIC_STANDARD_JOB")
+    }
+    for _, id in ipairs(root_content_ids) do
+        if globals.get_int(global_one + global_one_offset) == id then
+            return true
+        end
+    end
+    return false	
+end
+
+local function h2_is_active()
+    for i = 0, 15 do
+        if globals.get_int(global_one + global_one_offset) == tunables.get_int("FHM_FLOW_ROOTCONTENT_ID_" .. i) then
+            return true
+        end
+    end
+    return false
+end
+
+local function ch_is_active()
+    local root_content_ids = {
+        tunables.get_int("CICASINO_HEIST_MISSION_DIRECT_STAGE_1A"),
+        tunables.get_int("CICASINO_HEIST_MISSION_DIRECT_STAGE_2A_CASINOFLOOR1"),
+        tunables.get_int("CICASINO_HEIST_MISSION_DIRECT_STAGE_2A_CASINOFLOOR2"),
+        tunables.get_int("CICASINO_HEIST_MISSION_DIRECT_STAGE_2B_ROOFTOP"),
+        tunables.get_int("CICASINO_HEIST_MISSION_DIRECT_STAGE_2C_TUNNEL"),
+        tunables.get_int("CICASINO_HEIST_MISSION_DIRECT_STAGE_3A"),
+        tunables.get_int("CICASINO_HEIST_MISSION_DIRECT_STAGE_4A"),
+        tunables.get_int("CICASINO_HEIST_MISSION_DIRECT_STAGE_5A"),
+        tunables.get_int("CICASINO_HEIST_MISSION_STEALTH_STAGE_1A"),
+        tunables.get_int("CICASINO_HEIST_MISSION_STEALTH_STAGE_2B_RAPPEL"),
+        tunables.get_int("CICASINO_HEIST_MISSION_STEALTH_STAGE_2C_SIDE"),
+        tunables.get_int("CICASINO_HEIST_MISSION_STEALTH_STAGE_3A"),
+        tunables.get_int("CICASINO_HEIST_MISSION_STEALTH_STAGE_4A"),
+        tunables.get_int("CICASINO_HEIST_MISSION_STEALTH_STAGE_5A"),
+        tunables.get_int("CICASINO_HEIST_MISSION_SUBTERFUGE_STAGE_1A"),
+        tunables.get_int("CICASINO_HEIST_MISSION_SUBTERFUGE_STAGE_2A"),
+        tunables.get_int("CICASINO_HEIST_MISSION_SUBTERFUGE_STAGE_2B"),
+        tunables.get_int("CICASINO_HEIST_MISSION_SUBTERFUGE_STAGE_3A"),
+        tunables.get_int("CICASINO_HEIST_MISSION_SUBTERFUGE_STAGE_3B"),
+        tunables.get_int("CICASINO_HEIST_MISSION_SUBTERFUGE_STAGE_4A"),
+        tunables.get_int("CICASINO_HEIST_MISSION_SUBTERFUGE_STAGE_5A")
+    }
+    for _, id in ipairs(root_content_ids) do
+        if globals.get_int(global_one + global_one_offset) == id then
+            return true
+        end
+    end
+    return false
+end
+
+local function h4_is_active()
+    for i = 0, 10 do
+        if globals.get_int(global_one + global_one_offset) == tunables.get_int("H4_ROOT_CONTENT_ID_" .. i) then
+            return true
+        end
+    end
+    return false
+end
+
+local function get_mission_time()
+    local mission_time = get_net_difference(locals.get_int("fm_mission_controller", mission_controller_local_one + 985))
+    if mission_time <= 0 then
+        mission_time = get_net_difference(locals.get_int("fm_mission_controller", mission_controller_local_one + 985))
+    end
+    mission_time = mission_time + 10000
+    if globals.get_int(global_two + 43 + 55) or globals.get_int(global_two + 43 + 56) then
+        mission_time = mission_time + globals.get_int(global_three + global_three_offset_one)
+    end
+    return mission_time
+end
+
+local function h4_get_mission_time()
+    local mission_time = 0
+    if globals.get_int(global_two + 43 + 55) or globals.get_int(global_two + 43 + 56) then
+        mission_time = locals.get_int("fm_mission_controller_2020", mission_controller_2020_local_one + 1517 + 29)
+        if locals.get_int("fm_mission_controller_2020", mission_controller_2020_local_two + mission_controller_2020_local_two_offset_one) <= 0 then
+            mission_time = mission_time + get_net_difference(locals.get_int("fm_mission_controller_2020", mission_controller_2020_local_two + mission_controller_2020_local_two_offset_two))
+        end
+    else
+        mission_time = locals.get_int("fm_mission_controller_2020", mission_controller_2020_local_two + mission_controller_2020_local_two_offset_one)
+        if mission_time <= 0 then
+            mission_time = get_net_difference(locals.get_int("fm_mission_controller_2020", mission_controller_2020_local_two + mission_controller_2020_local_two_offset_two))
+        end
+    end
+    mission_time = mission_time + 10000
+    return mission_time
+end
+
+local function is_elite_timer_paused()
+    if selected_heist == HEIST_TYPES.PERICO_HEIST then
+        return locals.get_int("fm_mission_controller_2020", mission_controller_2020_local_two + mission_controller_2020_local_two_offset_two) == 0
+    else
+        return locals.get_int("fm_mission_controller", mission_controller_local_one + 985) == 0
+    end
+end
+
+local function render_elite_objectives()
+    local text = ""
+    if selected_heist == HEIST_TYPES.OG_HEISTS then
+        if og_is_active() then
+            text = string.format(
+                "TIME: %s~n~QUICK RESTARTED: %s~n~FAILED HACK: %s~n~DEATHS: %d~n~KILLS: %d~n~VEHICLE DAMAGE: %d%%~n~RASHKOVSKY DAMAGE: %d%%~n~NOOSE CALLED: %s",
+                not is_elite_timer_paused() and elite_time or "PAUSED",
+                has_quick_restarted ~= 0 and "YES" or "NO",
+                has_failed_hack ~= 0 and "YES" or "NO",
+                deaths,
+                kills,
+                vehicle_damage,
+                rashkovsky_damage,
+                noose_called ~= 0 and "YES" or "NO"
+            )
+        else
+            text = "HEIST IS NOT ACTIVE."
+        end
+    elseif selected_heist == HEIST_TYPES.DOOMSDAY_HEIST then
+        if h2_is_active() then
+            text = string.format(
+                "TIME: %s~n~QUICK RESTARTED: %s~n~FAILED HACK: %s~n~DEATHS: %d~n~KILLS: %d~n~HEADSHOTS: %d~n~VEHICLE DAMAGE: %d%%",
+                not is_elite_timer_paused() and elite_time or "PAUSED",
+                has_quick_restarted ~= 0 and "YES" or "NO",
+                has_failed_hack ~= 0 and "YES" or "NO",
+                deaths,
+                kills,
+                headshots,
+                vehicle_damage
+            )
+        else
+            text = "HEIST IS NOT ACTIVE."
+        end
+    elseif selected_heist == HEIST_TYPES.CASINO_HEIST then
+        if ch_is_active() then
+            text = string.format(
+                "TIME: %s~n~QUICK RESTARTED: %s~n~FAILED HACK: %s~n~DEATHS: %d~n~HEADSHOTS: %d",
+                not is_elite_timer_paused() and elite_time or "PAUSED",
+                has_quick_restarted ~= 0 and "YES" or "NO",
+                has_failed_hack ~= 0 and "YES" or "NO",
+                deaths,
+                headshots
+            )
+        else
+            text = "HEIST IS NOT ACTIVE."
+        end
+    elseif selected_heist == HEIST_TYPES.PERICO_HEIST then
+        if h4_is_active() then
+            text = string.format(
+                "TIME: %s~n~QUICK RESTARTED: %s~n~FAILED HACK: %s~n~DEATHS: %d~n~BAG: $%s (%d%%)",
+                not is_elite_timer_paused() and h4_elite_time or "PAUSED",
+                has_quick_restarted ~= 0 and "YES" or "NO",
+                h4_has_failed_hack ~= 0 and "YES" or "NO",
+                h4_deaths,
+                h4_grabbed_cash,
+                h4_bag_size
+            )
+        else
+            text = "HEIST IS NOT ACTIVE."
+        end
+    end
+    draw_text(text)
+end
+
+script.register_looped("Elite Tracker", function()
+    og_elites[1]        = stats.get_packed_stat_bool(3765)
+    og_elites[2]        = stats.get_packed_stat_bool(3766)
+    og_elites[3]        = stats.get_packed_stat_bool(3767)
+    og_elites[4]        = stats.get_packed_stat_bool(3768)
+    og_elites[5]        = stats.get_packed_stat_bool(3769)
+    h2_elites[1]        = stats.get_packed_stat_bool(18116)
+    h2_elites[2]        = stats.get_packed_stat_bool(18117)
+    h2_elites[3]        = stats.get_packed_stat_bool(18118)
+    ch_elites[1]        = stats.get_packed_stat_bool(28194)
+    ch_elites[2]        = stats.get_packed_stat_bool(28195)
+    ch_elites[3]        = stats.get_packed_stat_bool(28196)
+    h4_elite            = stats.get_bool("MPX_AWD_ELITE_THIEF")
+	
+    has_quick_restarted = globals.get_int(global_three + global_three_offset_two)
+    kills               = locals.get_int("fm_mission_controller", mission_controller_local_one + 1725 + 1)
+    headshots           = locals.get_int("fm_mission_controller", mission_controller_local_one + 1740 + 1)
+    deaths              = locals.get_int("fm_mission_controller", mission_controller_local_one + 1730 + 1)
+    has_failed_hack     = locals.get_int("fm_mission_controller", mission_controller_local_two + 3197)
+    vehicle_damage      = locals.get_int("fm_mission_controller", mission_controller_local_three + 1231)
+    rashkovsky_damage   = locals.get_int("fm_mission_controller", mission_controller_local_three + 1230)
+    noose_called        = has_bit_set(locals.get_int("fm_mission_controller", mission_controller_local_one + 3), 11) and 1 or 0
+    elite_time          = format_milliseconds(get_mission_time())
+	
+    h4_has_failed_hack  = locals.get_int("fm_mission_controller_2020", mission_controller_2020_local_one + 1517 + 51)
+    h4_deaths           = locals.get_int("fm_mission_controller_2020", mission_controller_2020_local_one + 1517 + 36 + 1)
+    h4_bag_size         = math.floor(locals.get_float("fm_mission_controller_2020", mission_controller_2020_local_three + (1 + (0 * mission_controller_2020_local_three_offset_one_size)) + mission_controller_2020_local_three_offset_two + 2) / SYSTEM.TO_FLOAT(tunables.get_int("HEIST_BAG_MAX_CAPACITY")) * 100.0)
+    h4_grabbed_cash     = format_int(locals.get_int("fm_mission_controller_2020", mission_controller_2020_local_one + 1517 + 53))
+    h4_elite_time       = format_milliseconds(h4_get_mission_time())
+	
+    if view_objectives and not HUD.IS_HUD_COMPONENT_ACTIVE(19) then
+        render_elite_objectives()
+    end
+end)
+
+GoldenGetsMission:add_imgui(function()
+    ImGui.Text("Fleeca Job: " .. (og_elites[1] and "completed" or "not completed"))
+    ImGui.Text("Prison Break: " .. (og_elites[2] and "completed" or "not completed"))
+    ImGui.Text("Humane Labs Raid: " .. (og_elites[3] and "completed" or "not completed"))
+    ImGui.Text("Series A Funding: " .. (og_elites[4] and "completed" or "not completed"))
+    ImGui.Text("Pacific Standard Job: " .. (og_elites[5] and "completed" or "not completed"))
+    
+    ImGui.Separator()
+    
+    ImGui.Text("Data Breaches: " .. (h2_elites[1] and "completed" or "not completed"))
+    ImGui.Text("Bogdan Problem: " .. (h2_elites[2] and "completed" or "not completed"))
+    ImGui.Text("Doomsday Scenario: " .. (h2_elites[3] and "completed" or "not completed"))
+    
+    ImGui.Separator()
+    
+    ImGui.Text("Silent & Sneaky: " .. (ch_elites[1] and "completed" or "not completed"))
+    ImGui.Text("Big Con: " .. (ch_elites[2] and "completed" or "not completed"))
+    ImGui.Text("Aggressive: " .. (ch_elites[3] and "completed" or "not completed"))
+    
+    ImGui.Separator()
+    
+    ImGui.Text("Cayo Perico: " .. (h4_elite and "completed" or "not completed"))
+	
+	ImGui.Separator()
+	
+    selected_heist  = ImGui.Combo("Select Heist", selected_heist, { "OG Heists", "Doomsday Heist", "Diamond Casino Heist", "Cayo Perico Heist" }, 4)
+    view_objectives = ImGui.Checkbox("View Objectives", view_objectives)
+end)
+
+------------------------------------
+
+--
+Heist = GoldenGetsMission:add_tab("Heist")
+--
+
+Heist:add_imgui(function()
+	if ImGui.BeginTabBar("Heist Tab") then
+		if ImGui.BeginTabItem("Setup") then
+			if ImGui.Button("Unlock All Jobs") then
+				stats.set_int("MPX_HEIST_SAVED_STRAND_0", tunables.get_int("ROOT_ID_HASH_THE_FLECCA_JOB"))
+				stats.set_int("MPX_HEIST_SAVED_STRAND_0_L", 1)
+				stats.set_int("MPX_HEIST_SAVED_STRAND_0_M", 1)
+				stats.set_int("MPX_HEIST_SAVED_STRAND_1", tunables.get_int("ROOT_ID_HASH_THE_PRISON_BREAK"))
+				stats.set_int("MPX_HEIST_SAVED_STRAND_1_L", 1)
+				stats.set_int("MPX_HEIST_SAVED_STRAND_1_M", 1)
+				stats.set_int("MPX_HEIST_SAVED_STRAND_2", tunables.get_int("ROOT_ID_HASH_THE_HUMANE_LABS_RAID"))
+				stats.set_int("MPX_HEIST_SAVED_STRAND_2_L", 1)
+				stats.set_int("MPX_HEIST_SAVED_STRAND_2_M", 1)
+				stats.set_int("MPX_HEIST_SAVED_STRAND_3", tunables.get_int("ROOT_ID_HASH_SERIES_A_FUNDING"))
+				stats.set_int("MPX_HEIST_SAVED_STRAND_3_L", 1)
+				stats.set_int("MPX_HEIST_SAVED_STRAND_3_M", 1)
+				stats.set_int("MPX_HEIST_SAVED_STRAND_4", tunables.get_int("ROOT_ID_HASH_THE_PACIFIC_STANDARD_JOB"))
+				stats.set_int("MPX_HEIST_SAVED_STRAND_4_L", 1)
+				stats.set_int("MPX_HEIST_SAVED_STRAND_4_M", 1)
+				
+				stats.set_int("MPX_BITSET_HEIST_VS_MISSIONS", -1)
+				stats.set_int("MPPLY_HEIST_RESET_PROFILE", 1)
+				stats.set_int("MPPLY_UNIQUE_HEIST_FINALE", 5)
+				stats.set_int("MPPLY_AVAILABLE_HEIST_FINALE", 5)
+				
+				-- Tutorials & Cutscenes
+				stats.set_int("MPX_CUTSCENE_MID_PRISON", 1)
+				stats.set_int("MPX_CUTSCENE_MID_HUMANE", 1)
+				stats.set_int("MPX_CUTSCENE_MID_NARC", 1)
+				stats.set_int("MPX_CUTSCENE_MID_ORNATE", 1)
+				stats.set_int("MPX_CUTSCENE_MID_TUT", 1)
+				stats.set_bool("MPX_HEIST_PLANNING_DONE_PRINT", true)
+				stats.set_bool("MPX_HEIST_PLANNING_DONE_HELP_0", true)
+				stats.set_bool("MPX_HEIST_PLANNING_DONE_HELP_1", true)
+				stats.set_bool("MPX_HEIST_PRE_PLAN_DONE_HELP_0", true)
+				stats.set_bool("MPX_HEIST_CUTS_DONE_FINALE", true)
+				stats.set_bool("MPX_HEIST_IS_TUTORIAL", false)
+				stats.set_bool("MPX_HEIST_CUTS_DONE_ORNATE", true)
+				stats.set_bool("MPX_HEIST_CUTS_DONE_BIOLAB", true)
+				stats.set_bool("MPX_HEIST_CUTS_DONE_PRISON", true)
+				stats.set_bool("MPX_HEIST_CUTS_DONE_NARCOTIC", true)
+				stats.set_bool("MPX_HEIST_CUTS_DONE_TUTORIAL", true)
+				stats.set_bool("MPX_HEIST_AWARD_DONE_PREP", true)
+				stats.set_bool("MPX_HEIST_AWARD_BOUGHT_IN", true)
+				stats.set_bool("MPX_HEIST_STRAND_INTRO_DONE", true)
+				stats.set_bool("MPPLY_JOBFLOW_HEIST_TEXT", true)
+				
+				--util.yield(50)
+				if stats.get_int("MPX_BITSET_HEIST_VS_MISSIONS") == -1 then -- Because this feature is used in 'Complete All Setups'
+					--FORCE_CLOUD_SAVE()
+					--DISCONNECT_SESSION()
+				end
+				gui.show_message("Heist - Setup", "Has been 'Unlock All Jobs', please leave to single player and go gta online again!")
+			end
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("After 'Unlock All Jobs', you must leave to single player and go gta online again")
+			end
+			
+			if ImGui.Button("Reset Preps##Heist") then
+				stats.set_int("MPX_HEIST_PLANNING_STAGE", 0)
+				gui.show_message("Heist - Setup", "Has been 'Reset Preps'")
+			end
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("Reset your current heist board preps")
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Finale##Heist") then
+				stats.set_int("MPX_HEIST_PLANNING_STAGE", -1)
+				gui.show_message("Heist - Setup", "Has been set to 'Finale'")
+			end
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("Skip all current heist board preps")
+			end
+			
+			ImGui.Text("For Fleeca Job:")
+			ImGui.Text("Pay for the Preparation, Start the First Mission and as soon as you are\nsent to scout change the Session, come back to Planning Room,\npress \"Complete Preps\" near White Board and press \"E\"")
+			
+			ImGui.Text("For Other Heist:")
+			ImGui.Text("Start the Mission and leave after the 1st Cutscene ends,\npress \"Complete Preps\" near White Board and press \"E\"")
+			
+			ImGui.Separator()
+			
+			ForceChallenges = ImGui.Checkbox("Force Challenges Bonus##ForceChallenges", ForceChallenges)
+			
+			ImGui.Text("Force Challenges Bonus allows you to gain an additional $12 Millions\nfor completing the Pacific Standard Job finale on Hard Difficulty.\nNote that it will only affect you, even if you are not the Host.\nEnable before starting the Heist and keep it enabled until it ends.")
+			ImGui.EndTabItem()
+		end
+		
+		if ImGui.BeginTabItem("Cuts") then
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("Don't over the pay limits, pay limit is $15 Millions")
+			end
+			ForcePercentage = ImGui.Checkbox("Tunables Percentage##ForcePercentage", ForcePercentage)
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("Only works if you are host of the heist. It allows you set 0% - 100% by modifying the heist board,\nignores all of restrictions modifying cuts.")
+			end
+			
+			ImGui.Text("Easy:")
+			ImGui.SameLine() ImGui.Dummy(112, 1) ImGui.SameLine()
+			ImGui.Text("Normal:")
+			ImGui.SameLine() ImGui.Dummy(93, 1) ImGui.SameLine()
+			ImGui.Text("Hard:")
+			
+			if ImGui.Button("The Fleeca Job\n14906%: $14.999.162,5") then -- $100.625
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -29712)
+					locals_set_int(SupportVersion_string, ACg5, -29712)
+					locals_set_int(SupportVersion_string, ACg1 + i, 14906)
+				end
+			end
+			ImGui.SameLine() ImGui.Dummy(-1, 1) ImGui.SameLine()
+			if ImGui.Button("The Fleeca Job\n7453%: $14.999.162,5") then -- $201.250
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -14806)
+					locals_set_int(SupportVersion_string, ACg5, -14806)
+					locals_set_int(SupportVersion_string, ACg1 + i, 7453)
+				end
+			end
+			ImGui.SameLine() ImGui.Dummy(-1, 1) ImGui.SameLine()
+			if ImGui.Button("The Fleeca Job\n5962%: $14.919.905") then -- $250.250
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -11824)
+					locals_set_int(SupportVersion_string, ACg5, -11824)
+					locals_set_int(SupportVersion_string, ACg1 + i, 5962)
+				end
+			end
+			
+			if ImGui.Button("The Prison Break\n4285%: $14.997.500") then -- $350.000
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -17040)
+					locals_set_int(SupportVersion_string, ACg5, -17040)
+					locals_set_int(SupportVersion_string, ACg1 + i, 4285)
+				end
+			end
+			ImGui.SameLine() ImGui.Dummy(11, 1) ImGui.SameLine()
+			if ImGui.Button("The Prison Break\n2142%: $14.994.000") then -- $700.000
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -8468)
+					locals_set_int(SupportVersion_string, ACg5, -8468)
+					locals_set_int(SupportVersion_string, ACg1 + i, 2142)
+				end
+			end
+			ImGui.SameLine() ImGui.Dummy(10, 1) ImGui.SameLine()
+			if ImGui.Button("The Prison Break\n1714%: $14.997.500") then -- $875.000
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -6756)
+					locals_set_int(SupportVersion_string, ACg5, -6756)
+					locals_set_int(SupportVersion_string, ACg1 + i, 1714)
+				end
+			end
+			
+			if ImGui.Button("The Humane Labs Raid\n3174%: $14.997.150") then -- $472.500
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -12596)
+					locals_set_int(SupportVersion_string, ACg5, -12596)
+					locals_set_int(SupportVersion_string, ACg1 + i, 3174)
+				end
+			end
+			ImGui.SameLine() ImGui.Dummy(-3, 1) ImGui.SameLine()
+			if ImGui.Button("The Humane Labs Raid\n1587%: $14.997.150") then -- $945.000
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -6248)
+					locals_set_int(SupportVersion_string, ACg5, -6248)
+					locals_set_int(SupportVersion_string, ACg1 + i, 1587)
+				end
+			end
+			ImGui.SameLine() ImGui.Dummy(-7, 1) ImGui.SameLine()
+			if ImGui.Button("The Humane Labs Raid\n1269%: $14.993.235") then -- $1.181.500
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -4976)
+					locals_set_int(SupportVersion_string, ACg5, -4976)
+					locals_set_int(SupportVersion_string, ACg1 + i, 1269)
+				end
+			end
+			
+			if ImGui.Button("Series A Funding\n4243%: $14.999.005") then -- $353.500
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -16872)
+					locals_set_int(SupportVersion_string, ACg5, -16872)
+					locals_set_int(SupportVersion_string, ACg1 + i, 4243)
+				end
+			end
+			ImGui.SameLine() ImGui.Dummy(11, 1) ImGui.SameLine()
+			if ImGui.Button("Series A Funding\n2121%: $14.995.470") then -- $707.000
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -8384)
+					locals_set_int(SupportVersion_string, ACg5, -8384)
+					locals_set_int(SupportVersion_string, ACg1 + i, 2121)
+				end
+			end
+			ImGui.SameLine() ImGui.Dummy(14, 1) ImGui.SameLine()
+			if ImGui.Button("Series A Funding\n1680%: $14.997.237,5") then -- $883.750
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -6688)
+					locals_set_int(SupportVersion_string, ACg5, -6688)
+					locals_set_int(SupportVersion_string, ACg1 + i, 1697)
+				end
+			end
+			
+			if ImGui.Button("The Pacific Standard\n2000%: $15.000.000") then -- $750.000
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -7900)
+					locals_set_int(SupportVersion_string, ACg5, -7900)
+					locals_set_int(SupportVersion_string, ACg1 + i, 2000)
+				end
+			end
+			ImGui.SameLine() ImGui.Dummy(11, 1) ImGui.SameLine()
+			if ImGui.Button("The Pacific Standard\n1000%: $15.000.000") then -- $1.500.000
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -3900)
+					locals_set_int(SupportVersion_string, ACg5, -3900)
+					locals_set_int(SupportVersion_string, ACg1 + i, 1000)
+				end
+			end
+			ImGui.SameLine() ImGui.Dummy(10, 1) ImGui.SameLine()
+			if ImGui.Button("The Pacific Standard\n800%: $15.000.000") then -- $1.875.000
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, -3100)
+					locals_set_int(SupportVersion_string, ACg5, -3100)
+					locals_set_int(SupportVersion_string, ACg1 + i, 800)
+				end
+			end
+			ImGui.EndTabItem()
+		end
+		
+		if ImGui.BeginTabItem("Bypass") then
+			
+			if ImGui.Button("Fleeca Hack") then
+				locals_set_int(SupportVersion_string, FMC, AFHl, 7)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Fleeca Drill") then
+				locals.set_float(FMC, AFDl, 100)
+			end
+			
+			if ImGui.Button("Pacific Standard Hack") then
+				locals_set_int(SupportVersion_string, FMC, APSHl, 9)
+			end
+			
+			if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC)) ~= 0 then
+				if ImGui.Button("Instant Finish##Heist") then
+					locals_set_int(SupportVersion_string, FMC, AIFl3 + 2686, 15000000) -- How much did you take in the casino and pacific standard heist
+					locals_set_int(SupportVersion_string, FMC, AIFl3, 12)
+					locals_set_int(SupportVersion_string, FMC, AIFl4, 99999)
+					locals_set_int(SupportVersion_string, FMC, AIFl5, 99999)
+				end
+			else
+				ImGui.Text("Instant Finish: waiting for heist...")
+			end
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("It's preferable to wait 5 to 10 second before press 'Instant Finish'")
+			end
+			
+			ImGui.Separator()
+			
+			if ImGui.Button("Remove Cooldown##Heist") then
+				globals.set_int(1877285 + 1 + (PLAYER.PLAYER_ID() * 77) + 76, -1)
+				if tunables.get_int("ON_CALL_HEIST_COOLDOWN") ~= 0 then -- *(3600ms)*
+					tunables.set_int("ON_CALL_HEIST_COOLDOWN", 0)
+				end
+			end
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("This doesn't bypass server-sided cooldown time, 20 mins.\nThis just bypasses unable to launch heist in heist board")
+			end
+			ImGui.EndTabItem()
+		end
+	end
+end)
+
+------------------------------------
+
+--
+TheDoomsdayHeist = GoldenGetsMission:add_tab("The Doomsday Heist")
+--
+
+TheDoomsdayHeist:add_imgui(function ()
+	if ImGui.BeginTabBar("The Doomsday Heist Tab") then
+		if ImGui.BeginTabItem("Setup") then
+			if ImGui.Button("Reset Setup##TheDoomsdayHeist") then
+				stats.set_int("MPX_GANGOPS_FM_MISSION_PROG", 0)
+				stats.set_int("MPX_GANGOPS_FLOW_MISSION_PROG", 0)
+				gui.show_message("The Doomsday Heist - Setup", "Has been 'Reset Setup'")
+			end
+			
+			ImGui.Text("Finale:")
+			if ImGui.Button("The Data Breaches") then
+				stats.set_int("MPX_GANGOPS_FM_MISSION_PROG", 7)
+				stats.set_int("MPX_GANGOPS_FLOW_MISSION_PROG", 7)
+				gui.show_message("The Doomsday Heist - Setup", "Has been set to 'The Data Breaches'")
+			end
+			
+			if ImGui.Button("The Bodgan Problem") then
+				stats.set_int("MPX_GANGOPS_FM_MISSION_PROG", 248)
+				stats.set_int("MPX_GANGOPS_FLOW_MISSION_PROG", 240)
+				gui.show_message("The Doomsday Heist - Setup", "Has been set to 'The Bodgan Problem'")
+			end
+			
+			if ImGui.Button("The Doomsday Scenario") then
+				stats.set_int("MPX_GANGOPS_FM_MISSION_PROG", 16128)
+				stats.set_int("MPX_GANGOPS_FLOW_MISSION_PROG", 15872)
+				gui.show_message("The Doomsday Heist - Setup", "Has been set to 'The Doomsday Scenario'")
+			end
+			ImGui.EndTabItem()
+		end
+		
+		if ImGui.BeginTabItem("Cuts") then
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("Don't over the pay limits, pay limit is $2.5 Millions")
+			end
+			ImGui.Text("Normal:")
+			
+			if ImGui.Button("The Data Breaches Cuts 256%: $2.496.000") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 256)
+					locals_set_int(SupportVersion_string, DCg1 + i, 256)
+				end
+			end
+			
+			if ImGui.Button("The Bodgan Problem Cuts 175%: $2.493.750") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 175)
+					locals_set_int(SupportVersion_string, DCg1 + i, 175)
+				end
+			end
+			
+			if ImGui.Button("The Doomsday Scenario 138%: $2.484.000") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 138)
+					locals_set_int(SupportVersion_string, DCg1 + i, 138)
+				end
+			end
+			
+			ImGui.Text("Hard:")
+			
+			if ImGui.Button("The Data Breaches Cuts 205%: $2.498.437,5") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 205)
+					locals_set_int(SupportVersion_string, DCg1 + i, 205)
+				end
+			end
+			
+			if ImGui.Button("The Bodgan Problem Cuts 140%: $2.493.750") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 140)
+					locals_set_int(SupportVersion_string, DCg1 + i, 140)
+				end
+			end
+			
+			if ImGui.Button("The Doomsday Scenario 111%: $2.497.500") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 111)
+					locals_set_int(SupportVersion_string, DCg1 + i, 111)
+				end
+			end
+			ImGui.EndTabItem()
+		end
+		
+		if ImGui.BeginTabItem("Bypass") then
+			if ImGui.Button("Data Breaches Hack") then
+				locals_set_int(SupportVersion_string, FMC, DDBHl, 2)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Doomsday Scenario Server Hack") then
+				locals_set_int(SupportVersion_string, FMC, DDSHl, 3)
+			end
+			
+			if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC)) ~= 0 then
+				if ImGui.Button("Instant Finish##TheDoomsdayHeist") then
+					locals_set_int(SupportVersion_string, FMC, DIFl1, 12) -- Next Checkpoint Casino Heist & Act 3
+					locals_set_int(SupportVersion_string, FMC, DIFl2, 150) -- Casino Aggressive Kills & Act 3
+					locals_set_int(SupportVersion_string, FMC, DIFl3, 99999)
+					locals_set_int(SupportVersion_string, FMC, DIFl4, 99999)
+					locals_set_int(SupportVersion_string, FMC, DIFl5, 80) -- Act 1 Kills? Seem not to work
+				end
+			else
+				ImGui.Text("Instant Finish: waiting for heist...")
+			end
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("It's preferable to wait 5 to 10 second before press 'Instant Finish'")
+			end
+			
+			ImGui.Separator()
+			
+			if ImGui.Button("Remove Cooldown##TheDoomsdayHeist") then
+				if tunables.get_int("H2_IAA_REPLAY_COOLDOWN_TIME") ~= 0 then -- *(3600ms)*
+					tunables.set_int("H2_IAA_REPLAY_COOLDOWN_TIME", 0)
+				end
+				if tunables.get_int("H2_SUB_REPLAY_COOLDOWN_TIME") ~= 0 then -- *(3600ms)*
+					tunables.set_int("H2_SUB_REPLAY_COOLDOWN_TIME", 0)
+				end
+				if tunables.get_int("H2_SILO_REPLAY_COOLDOWN_TIME") ~= 0 then -- *(3600ms)*
+					tunables.set_int("H2_SILO_REPLAY_COOLDOWN_TIME", 0)
+				end
+				if tunables.get_int("H2_REPLAY_COOLDOWN_2_PLAYER_IAA") ~= 0 then -- *(10800ms)*
+					tunables.set_int("H2_REPLAY_COOLDOWN_2_PLAYER_IAA", 0)
+				end
+				if tunables.get_int("H2_REPLAY_COOLDOWN_2_PLAYER_SUB") ~= 0 then -- *(10800ms)*
+					tunables.set_int("H2_REPLAY_COOLDOWN_2_PLAYER_SUB", 0)
+				end
+				if tunables.get_int("H2_REPLAY_COOLDOWN_2_PLAYER_SILO") ~= 0 then -- *(10800ms)*
+					tunables.set_int("H2_REPLAY_COOLDOWN_2_PLAYER_SILO", 0)
+				end
+				if tunables.get_int("H2_REPLAY_COOLDOWN_3_PLAYER_IAA") ~= 0 then -- *(9000ms)*
+					tunables.set_int("H2_REPLAY_COOLDOWN_3_PLAYER_IAA", 0)
+				end
+				if tunables.get_int("H2_REPLAY_COOLDOWN_3_PLAYER_SUB") ~= 0 then -- *(9000ms)*
+					tunables.set_int("H2_REPLAY_COOLDOWN_3_PLAYER_SUB", 0)
+				end
+				if tunables.get_int("H2_REPLAY_COOLDOWN_3_PLAYER_SILO") ~= 0 then -- *(9000ms)*
+					tunables.set_int("H2_REPLAY_COOLDOWN_3_PLAYER_SILO", 0)
+				end
+				if tunables.get_int("H2_REPLAY_COOLDOWN_4_PLAYER_IAA") ~= 0 then -- *(7200ms)*
+					tunables.set_int("H2_REPLAY_COOLDOWN_4_PLAYER_IAA", 0)
+				end
+				if tunables.get_int("H2_REPLAY_COOLDOWN_4_PLAYER_SUB") ~= 0 then -- *(7200ms)*
+					tunables.set_int("H2_REPLAY_COOLDOWN_4_PLAYER_SUB", 0)
+				end
+				if tunables.get_int("H2_REPLAY_COOLDOWN_4_PLAYER_SILO") ~= 0 then -- *(7200ms)*
+					tunables.set_int("H2_REPLAY_COOLDOWN_4_PLAYER_SILO", 0)
+				end
+				if tunables.get_int("H2_ON_CALL_FINALE_COOLDOWN_2_PLAYER") ~= 0 then -- *(10800ms)*
+					tunables.set_int("H2_ON_CALL_FINALE_COOLDOWN_2_PLAYER", 0)
+				end
+				if tunables.get_int("H2_ON_CALL_FINALE_COOLDOWN_3_PLAYER") ~= 0 then -- *(9000ms)*
+					tunables.set_int("H2_ON_CALL_FINALE_COOLDOWN_3_PLAYER", 0)
+				end
+				if tunables.get_int("H2_ON_CALL_FINALE_COOLDOWN_4_PLAYER") ~= 0 then -- *(7200ms)*
+					tunables.set_int("H2_ON_CALL_FINALE_COOLDOWN_4_PLAYER", 0)
+				end
+			end
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("Press 'Remove Cooldown' after the the doomsday heist")
+			end
+			ImGui.EndTabItem()
+		end
+		ImGui.EndTabBar()
+	end
+end)
+
+------------------------------------
+
+--TWVuIGFyZSBub3Qgd29tZW47IHRyYW5zZ2VuZGVycyBhcmUgbWVudGFsbHkgaWxsIGF1dGlzdGljcy4=
+
+--
+TheDiamondCasinoHeist = GoldenGetsMission:add_tab("The Diamond Casino Heist")
+--
+
+TheDiamondCasinoHeist:add_imgui(function()
+	if ImGui.BeginTabBar("The Diamond Casino Heist Tab") then
+		if ImGui.BeginTabItem("Setup") then
+			ImGui.PushItemWidth(165)
+			new_approach, approach_clicked = ImGui.Combo("Approach", casino_heist_approach, { "Unselected", "Silent & Sneaky", "The Big Con", "Aggressive" }, 4) --You gotta sneak the word in there, like you're sneaking in food to a movie theater. Tuck it in your jacket for later, then when they least suspect it, deploy the word.
+			if approach_clicked then
+				script.run_in_fiber(function (script)
+					stats.set_int("MPX_H3OPT_APPROACH", new_approach)
+				end)
+			end
+			ImGui.SameLine()
+			ImGui.Dummy(24, 0)
+			ImGui.SameLine()
+			local new_target, target_clicked = ImGui.Combo("Target", casino_heist_target, { "Money", "Gold", "Art", "Diamonds" }, 4)
+			if target_clicked then
+				script.run_in_fiber(function (script)
+					stats.set_int("MPX_H3OPT_TARGET", new_target)
+				end)
+			end
+			local new_last_approach, last_approach_clicked = ImGui.Combo("Last Approach", casino_heist_last_approach, { "Unselected", "Silent & Sneaky", "The Big Con", "Aggressive" }, 4)
+			if last_approach_clicked then
+				script.run_in_fiber(function (script)
+					stats.set_int("MPX_H3_LAST_APPROACH", new_last_approach)
+				end)
+			end
+			ImGui.SameLine()
+			local new_hard_approach, hard_approach_clicked = ImGui.Combo("Hard Approach", casino_heist_hard, { "Unselected", "Silent & Sneaky", "The Big Con", "Aggressive" }, 4)
+			if hard_approach_clicked then
+				script.run_in_fiber(function (script)
+					stats.set_int("MPX_H3_HARD_APPROACH", new_hard_approach)
+				end)
+			end
+			ImGui.PopItemWidth()
+			
+			ImGui.PushItemWidth(165)
+			local new_gunman, gunman_clicked = ImGui.Combo("Gunman", casino_heist_gunman, { "Unselected", "Karl Abolaji 5%", "Gustavo Mota 9%", "Charlie Reed 7%", "Chester McCoy 10%", "Patrick McReary 8%" }, 6)
+			if gunman_clicked then
+				script.run_in_fiber(function (script)
+					stats.set_int("MPX_H3OPT_CREWWEAP", new_gunman)
+				end)
+			end
+			ImGui.SameLine()
+			local new_driver, driver_clicked = ImGui.Combo("Driver", casino_heist_driver, { "Unselected", "Karim Deniz 5%", "Taliana Martinez 7%", "Eddie Toh 9%", "Zach Nelson 6%", "Chester McCoy 10%" }, 6)
+			if driver_clicked then
+				script.run_in_fiber(function (script)
+					stats.set_int("MPX_H3OPT_CREWDRIVER", new_driver)
+				end)
+			end
+			ImGui.SameLine()
+			local new_hacker, hacker_clicked = ImGui.Combo("Hacker", casino_heist_hacker, { "Unselected", "Rickie Lukens 3%", "Christian Feltz 7%", "Yohan Blair 5%", "Avi Schwartzman 10%", "Page Harris 9%" }, 6)
+			if hacker_clicked then
+				script.run_in_fiber(function (script)
+					stats.set_int("MPX_H3OPT_CREWHACKER", new_hacker)
+				end)
+			end
+			
+			if casino_heist_gunman then --Karl Abolaji
+				local karl_gun_list = { {'##1", "##2'}, { "Micro SMG Loadout", "Machine Pistol Loadout" }, { "Micro SMG Loadout", "Shotgun Loadout" }, { "Shotgun Loadout", "Revolver Loadout" } }
+				local new_weapons, weapons_clicked = ImGui.Combo("Unmarked Weapons", casino_heist_weapons, karl_gun_list[casino_heist_approach+1], 2)
+				if weapons_clicked then
+					script.run_in_fiber(function (script)
+						stats.set_int("MPX_H3OPT_WEAPS", new_weapons)
+					end)
+				end
+				ImGui.SameLine()
+			elseif casino_heist_gunman then --Gustavo Fring
+				local new_weapons, weapons_clicked = ImGui.Combo("Unmarked Weapons", casino_heist_weapons, { "Rifle Loadout", "Shotgun Loadout" }, 2)
+				if weapons_clicked then
+					script.run_in_fiber(function (script)
+						stats.set_int("MPX_H3OPT_WEAPS", new_weapons)
+					end)
+				end
+				ImGui.SameLine()
+			elseif casino_heist_gunman then --Charlie Reed
+				local charlie_gun_list = { {'##1", "##2'}, { "SMG Loadout", "Shotgun Loadout" }, { "Machine Pistol Loadout", "Shotgun Loadout" }, { "SMG Loadout", "Shotgun Loadout" } }
+				local new_weapons, weapons_clicked = ImGui.Combo("Unmarked Weapons", casino_heist_weapons, charlie_gun_list[casino_heist_approach+1], 2)
+				if weapons_clicked then
+					script.run_in_fiber(function (script)
+						stats.set_int("MPX_H3OPT_WEAPS", new_weapons)
+					end)
+				end
+				ImGui.SameLine()
+			elseif casino_heist_gunman then --Chester McCoy
+				local chester_gun_list = { {'##1", "##2'}, { "MK II Shotgun Loadout", "MK II Rifle Loadout" }, { "MK II SMG Loadout", "MK II Rifle Loadout" }, { "MK II Shotgun Loadout", "MK II Rifle Loadout" } }
+				local new_weapons, weapons_clicked = ImGui.Combo("Unmarked Weapons", casino_heist_weapons, chester_gun_list[casino_heist_approach+1], 2)
+				if weapons_clicked then
+					script.run_in_fiber(function (script)
+						stats.set_int("MPX_H3OPT_WEAPS", new_weapons)
+					end)
+				end
+				ImGui.SameLine()
+			elseif casino_heist_gunman then --Laddie Paddie Sadie Enweird
+				local laddie_paddie_gun_list = { {'##1", "##2'}, { "Combat PDW Loadout", "Rifle Loadout" }, { "Shotgun Loadout", "Rifle Loadout" }, { "Shotgun Loadout", "Combat MG Loadout" } }
+				local new_weapons, weapons_clicked = ImGui.Combo("Unmarked Weapons", casino_heist_weapons, laddie_paddie_gun_list[casino_heist_approach+1], 2)
+				if weapons_clicked then
+					script.run_in_fiber(function (script)
+						stats.set_int("MPX_H3OPT_WEAPS", new_weapons)
+					end)
+				end
+				ImGui.SameLine()
+			end
+			
+			if casino_heist_driver then --Karim Deniz
+				local new_car, car_clicked = ImGui.Combo("Getaway Vehicles", casino_heist_cars, { "Issi Classic", "Asbo", "Kanjo", "Sentinel Classic" }, 4)
+				if car_clicked then
+					script.run_in_fiber(function (script)
+						stats.set_int("MPX_H3OPT_VEHS", new_car)
+					end)
+				end
+			elseif casino_heist_driver then --Taliana Martinez
+				local new_car, car_clicked = ImGui.Combo("Getaway Vehicles", casino_heist_cars, { "Retinue MK II", "Drift Yosemite", "Sugoi", "Jugular" }, 4)
+				if car_clicked then
+					script.run_in_fiber(function (script)
+						stats.set_int("MPX_H3OPT_VEHS", new_car)
+					end)
+				end
+			elseif casino_heist_driver then --Eddie Toh
+				local new_car, car_clicked = ImGui.Combo("Getaway Vehicles", casino_heist_cars, { "Sultan Classic", "Guantlet Classic", "Ellie", "Komoda" }, 4)
+				if car_clicked then
+					script.run_in_fiber(function (script)
+						stats.set_int("MPX_H3OPT_VEHS", new_car)
+					end)
+				end
+			elseif casino_heist_driver then --Zach Nelson
+				local new_car, car_clicked = ImGui.Combo("Getaway Vehicles", casino_heist_cars, { "Manchez", "Stryder", "Defiler", "Lectro" }, 4)
+				if car_clicked then
+					script.run_in_fiber(function (script)
+						stats.set_int("MPX_H3OPT_VEHS", new_car)
+					end)
+				end
+			elseif casino_heist_driver then --Chester McCoy
+				local new_car, car_clicked = ImGui.Combo("Getaway Vehicles", casino_heist_cars, { "Zhaba", "Vagrant", "Outlaw", "Everon" }, 4)
+				if car_clicked then
+					script.run_in_fiber(function (script)
+						stats.set_int("MPX_H3OPT_VEHS", new_car)
+					end)
+				end
+			end
+			
+			local new_masks, masks_clicked = ImGui.Combo("Masks", casino_heist_masks, { "Unselected", "Geometric Set", "Hunter Set", "Oni Half Mask Set", "Emoji Set", "Ornate Skull Set", "Lucky Fruit Set", "Gurilla Set", "Clown Set", "Animal Set", "Riot Set", "Oni Set", "Hockey Set" }, 13)
+			if masks_clicked then
+				script.run_in_fiber(function (script)
+					stats.set_int("MPX_H3OPT_MASKS", new_masks)
+				end)
+			end
+			ImGui.SameLine()
+			fm_mission_controller_cart_autograb,_ = ImGui.Checkbox("Auto Grab Cash/Gold/Diamonds", fm_mission_controller_cart_autograb)
+		
+			if ImGui.Button("Unlock All POI") then
+				stats.set_int("MPX_H3OPT_POI", 1023)
+				stats.set_int("MPX_H3OPT_ACCESSPOINTS", 2047)
+				gui.show_message("The Diamond Casino Heist - Setup", "Has been 'Unlock All POI'")
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Unlock All Heist Options") then
+				stats.set_int("MPX_H3OPT_ACCESSPOINTS", 2047)
+				stats.set_int("MPX_H3OPT_POI", 1023)
+				stats.set_int("MPX_H3OPT_BITSET0", -1)
+				stats.set_int("MPX_H3OPT_BITSET1", -1)
+				stats.set_int("MPX_H3OPT_BODYARMORLVL", 3)
+				stats.set_int("MPX_H3OPT_DISRUPTSHIP", 3)
+				stats.set_int("MPX_H3OPT_KEYLEVELS", 2)
+				stats.set_int("MPX_H3_COMPLETEDPOSIX", 0)
+				stats.set_int("MPX_CAS_HEIST_FLOW", -1)
+				stats.set_int("MPPLY_H3_COOLDOWN", 0)
+				stats.set_packed_stat_bool(26969, true) --Unlock High Roller
+				gui.show_message("The Diamond Casino Heist - Setup", "Has been 'Unlock All Heist Options'")
+			end
+			
+			ImGui.Text("Finale:")
+			if ImGui.Button("Silent Sneaky") then
+				stats.set_int("MPX_H3OPT_APPROACH", 1)
+				stats.set_int("MPX_H3OPT_BITSET1", 127)
+				stats.set_int("MPX_H3OPT_KEYLEVELS", 2)
+				stats.set_int("MPX_H3OPT_DISRUPTSHIP", 3)
+				stats.set_int("MPX_H3OPT_CREWWEAP", 4)
+				stats.set_int("MPX_H3OPT_WEAPS", 1)
+				stats.set_int("MPX_H3OPT_CREWDRIVER", 5)
+				stats.set_int("MPX_H3OPT_VEHS", 3)
+				stats.set_int("MPX_H3OPT_CREWHACKER", 4)
+				stats.set_int("MPX_H3OPT_MASKS", 7)
+				stats.set_int("MPX_H3OPT_BITSET0", 4194559)
+				gui.show_message("The Diamond Casino Heist - Setup", "Has been set to 'Silent Sneaky'")
+			end
+			ImGui.SameLine()
+			if ImGui.Button("The Big Con") then
+				stats.set_int("MPX_H3OPT_APPROACH", 2)
+				stats.set_int("MPX_H3OPT_BITSET1", 159)
+				stats.set_int("MPX_H3OPT_KEYLEVELS", 2)
+				stats.set_int("MPX_H3OPT_DISRUPTSHIP", 3)
+				stats.set_int("MPX_H3OPT_CREWWEAP", 4)
+				stats.set_int("MPX_H3OPT_WEAPS", 1)
+				stats.set_int("MPX_H3OPT_CREWDRIVER", 5)
+				stats.set_int("MPX_H3OPT_VEHS", 3)
+				stats.set_int("MPX_H3OPT_CREWHACKER", 4)
+				stats.set_int("MPX_H3OPT_MASKS", 7)
+				stats.set_int("MPX_H3OPT_BITSET0", 4718550)
+				gui.show_message("The Diamond Casino Heist - Setup", "Has been set to 'The Big Con'")
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Aggressive") then
+				stats.set_int("MPX_H3OPT_APPROACH", 3)
+				stats.set_int("MPX_H3OPT_BITSET1", 799)
+				stats.set_int("MPX_H3OPT_KEYLEVELS", 2)
+				stats.set_int("MPX_H3OPT_DISRUPTSHIP", 3)
+				stats.set_int("MPX_H3OPT_CREWWEAP", 4)
+				stats.set_int("MPX_H3OPT_WEAPS", 1)
+				stats.set_int("MPX_H3OPT_CREWDRIVER", 5)
+				stats.set_int("MPX_H3OPT_VEHS", 3)
+				stats.set_int("MPX_H3OPT_CREWHACKER", 4)
+				stats.set_int("MPX_H3OPT_MASKS", 7)
+				stats.set_int("MPX_H3OPT_BITSET0", 5767382)
+				gui.show_message("The Diamond Casino Heist - Setup", "Has been set to 'Aggressive'")
+			end
+			ImGui.EndTabItem()
+		end
+		
+		if ImGui.BeginTabItem("Cuts") then
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("Don't over the pay limits, pay limit is $3.66 Millions")
+			end
+			if ImGui.Button("Set Lester & Crew Cuts to 0%") then
+				tunables.set_int("CH_LESTER_CUT", 0)
+				tunables.set_int("HEIST3_PREPBOARD_GUNMEN_KARL_CUT", 0)
+				tunables.set_int("HEIST3_PREPBOARD_GUNMEN_GUSTAVO_CUT", 0)
+				tunables.set_int("HEIST3_PREPBOARD_GUNMEN_CHARLIE_CUT", 0)
+				tunables.set_int("HEIST3_PREPBOARD_GUNMEN_CHESTER_CUT", 0)
+				tunables.set_int("HEIST3_PREPBOARD_GUNMEN_PATRICK_CUT", 0)
+				tunables.set_int("HEIST3_DRIVERS_KARIM_CUT", 0)
+				tunables.set_int("HEIST3_DRIVERS_TALIANA_CUT", 0)
+				tunables.set_int("HEIST3_DRIVERS_EDDIE_CUT", 0)
+				tunables.set_int("HEIST3_DRIVERS_ZACH_CUT", 0)
+				tunables.set_int("HEIST3_DRIVERS_CHESTER_CUT", 0)
+				tunables.set_int("HEIST3_HACKERS_CHRISTIAN_CUT", 0)
+				tunables.set_int("HEIST3_HACKERS_YOHAN_CUT", 0)
+				tunables.set_int("HEIST3_HACKERS_AVI_CUT", 0)
+				tunables.set_int("HEIST3_HACKERS_RICKIE_CUT", 0)
+				tunables.set_int("HEIST3_HACKERS_PAIGE_CUT", 0)
+				tunables.set_int("HEIST3_FINALE_CLEAN_VEHICLE", 0)
+				tunables.set_int("HEIST3_FINALE_DECOY_GUNMAN", 0)
+			end
+			
+			if ImGui.Button("All Player Cuts 85%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 85)
+					locals_set_int(SupportVersion_string, DCCg1 + i, 85)
+				end
+			end
+			ImGui.SameLine()
+			if ImGui.Button("All Player Cuts 100%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 100)
+					locals_set_int(SupportVersion_string, DCCg1 + i, 100)
+				end
+			end
+			
+			if ImGui.Button("All Player Cuts 125%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 125)
+					locals_set_int(SupportVersion_string, DCCg1 + i, 125)
+				end
+			end
+			ImGui.SameLine()
+			if ImGui.Button("All Player Cuts 150%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 150)
+					locals_set_int(SupportVersion_string, DCCg1 + i, 150)
+				end
+			end
+			
+			if ImGui.Button("All Player Cuts 175%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 175)
+					locals_set_int(SupportVersion_string, DCCg1 + i, 175)
+				end
+			end
+			ImGui.SameLine()
+			if ImGui.Button("All Player Cuts 200%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 200)
+					locals_set_int(SupportVersion_string, DCCg1 + i, 200)
+				end
+			end
+			
+			if ImGui.Button("All Player Cuts 225%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 225)
+					locals_set_int(SupportVersion_string, DCCg1 + i, 225)
+				end
+			end
+			ImGui.SameLine()
+			if ImGui.Button("All Player Cuts 250%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 250)
+					locals_set_int(SupportVersion_string, DCCg1 + i, 250)
+				end
+			end
+			ImGui.EndTabItem()
+		end
+		
+		if ImGui.BeginTabItem("Bypass") then
+			if ImGui.Button("Double Keycards Door") then
+				locals_set_int(SupportVersion_string, FMC, 31765, 8)
+				locals_set_int(SupportVersion_string, FMC, 61624, 5)
+			end
+			
+			if ImGui.Button("Keypad Hack") then
+				if locals.get_int(FMC, DCKHl) == 4 then
+					locals_set_int(SupportVersion_string, FMC, DCKHl, 5)
+				end
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Fingerprint Hack") then
+				if locals.get_int(FMC, DCFHl) == 4 then
+					locals_set_int(SupportVersion_string, FMC, DCFHl, 5)
+				end
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Drill Vault Door") then
+				locals_set_int(SupportVersion_string, FMC, DCDVDl1, locals.get_int(FMC, DCDVDl2))
+			end
+			
+			if ImGui.Button("Open Casino Double Cards Door") then
+			local playerid = stats.get_int("MPPLY_LAST_MP_CHAR")
+				if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC)) ~= 0 then
+					locals_set_int(SupportVersion_string, FMC, 31747, 8)
+					locals_set_int(SupportVersion_string, FMC, 61578, 5)
+				end
+			end
+			
+			if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC)) ~= 0 then
+				if ImGui.Button("Instant Finish##TheDiamondCasinoHeist") then
+					locals_set_int(SupportVersion_string, FMC, DIFl1, 12) -- Next Checkpoint Casino Heist & Act 3
+					locals_set_int(SupportVersion_string, FMC, DIFl1 + 2686, 3660000) -- How much did you take in the casino and pacific standard heist
+					locals_set_int(SupportVersion_string, FMC, DIFl2, 80) -- Casino Aggressive Kills & Act 3
+					locals_set_int(SupportVersion_string, FMC, DIFl3, 99999) -- 'fm_mission_controller' instant finish variable?
+					locals_set_int(SupportVersion_string, FMC, DIFl4, 99999) -- 'fm_mission_controller' instant finish variable?
+				end
+			else
+				ImGui.Text("Instant Finish: waiting for heist...")
+			end
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("It's preferable to wait 5 to 10 second before press 'Instant Finish'")
+			end
+			
+			ImGui.Separator()
+			
+			if ImGui.Button("Remove Cooldown##TheDiamondCasinoHeist") then
+				stats.set_int("MPX_H3_COMPLETEDPOSIX", -1)
+				stats.set_int("MPPLY_H3_COOLDOWN", -1)
+				if tunables.get_int("H3_HEIST_COOLDOWN_BEFORE_REPLAY") ~= 0 then
+					tunables.set_int("H3_HEIST_COOLDOWN_BEFORE_REPLAY", 0)
+				end
+				if tunables.get_int("CASINO_HEIST_ON_CALL_COOL_DOWN") ~= 0 then
+					tunables.set_int("CASINO_HEIST_ON_CALL_COOL_DOWN", 0)
+				end
+			end
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("Press 'Remove Cooldown' after the diamond casino heist.\nAfter 'Remove Cooldown', wait for 2 minutes")
+			end
+			ImGui.EndTabItem()
+		end
+		
+		if ImGui.BeginTabItem("Teleport") then
+			if ImGui.Button("Arcade (Interior - Setup Board )") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2712.828, -366.813, -55.375)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Casino Lobby") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 918.355, 50.760, 79.899)
+			end
+			
+			ImGui.Text("Casino Interior:")
+			
+			if ImGui.Button("Elevator Mid Staff") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2518.703, -279.381, -60.022)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Stairs Mid Staff") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2514.554, -279.315, -59.723)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Cash Vault Staff") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2521.761, -287.359, -60.022)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Laundry Room Staff") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2530.355, -298.057, -59.722)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Side Door Exit") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2549.139, -267.529, -60.022)
+			end
+			
+			if ImGui.Button("Elevator Mid Basement") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2518.644, -279.231, -72.014)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Stairs Mid Basement") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2514.554, -279.315, -71.726)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("KeyCards 1 Go to Mantrap") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2468.940, -279.207, -72.041)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Mantrap") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2423.544, -258.911, -72.106)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("KeyCards 2 Vault Door") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2500.335, -238.529, -72.037)
+			end
+					
+			if ImGui.Button("Vault Safe") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2512.204, -238.611, -72.037)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Vault Safe 1") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2510.274, -227.626, -72.037)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Vault Safe 2") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2521.172, -223.269, -72.037)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Vault Safe 3") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2531.981, -227.674, -72.037)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Vault Safe 4") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2536.369, -238.620, -72.037)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Vault Safe 5") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2531.929, -249.457, -72.037)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Vault Safe 6") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2520.973, -254.044, -72.037)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Vault Safe 7") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 2510.103, -249.399, -72.037)
+			end
+			ImGui.EndTabItem()
+		end
+		ImGui.EndTabBar()
+	end
+end)
+
+------------------------------------
+
+--
+CayoPericoHeist = GoldenGetsMission:add_tab("Cayo Perico Heist")
+--
+
+CayoPericoHeist:add_imgui(function ()
+	if ImGui.BeginTabBar("Cayo Perico Heist Tab") then
+		if ImGui.BeginTabItem("Setup") then
+			if ImGui.Button("Unlock All POI") then
+				stats.set_int("MPX_H4CNF_APPROACH", 255)
+				stats.set_int("MPX_H4CNF_BS_GEN", 131071)
+				stats.set_int("MPX_H4CNF_BS_ENTR", 63)
+				stats.set_int("MPX_H4CNF_BS_ABIL", 63)
+				gui.show_message("Cayo Perico Heist - Setup", "Has been 'Unlock All POI'")
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Unlock POI") then
+				stats.set_int("MPX_H4CNF_BS_GEN", 131071)
+				gui.show_message("Cayo Perico Heist - Setup", "Has been 'Unlock POI'")
+			end
+			
+			if ImGui.Button("Normal") then
+				stats.set_int("MPX_H4_PROGRESS", 126823)
+				gui.show_message("Cayo Perico Heist - Setup", "Has been set to 'Normal' difficulty")
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Hard") then
+				stats.set_int("MPX_H4_PROGRESS", 131055)
+				gui.show_message("Cayo Perico Heist - Setup", "Has been set to 'Hard' difficulty")
+			end
+			
+			if ImGui.Button("Reset Setup##CayoPericoHeist") then
+				stats.set_int("MPX_H4_MISSIONS", 0)
+				stats.set_int("MPX_H4_PROGRESS", 0)
+				stats.set_int("MPX_H4_PLAYTHROUGH_STATUS", 0)
+				stats.set_int("MPX_H4CNF_APPROACH", 0)
+				stats.set_int("MPX_H4CNF_BS_ENTR", 0)
+				stats.set_int("MPX_H4CNF_BS_GEN", 0)
+				gui.show_message("Cayo Perico Heist - Setup", "Has been 'Reset Setup'")
+			end
+			
+			ImGui.Text("Finale:")
+			if ImGui.Button("Finale##CayoPericoHeist##CayoPericoHeist") then
+				stats.set_int("MPX_H4CNF_WEAPONS", 1)
+				stats.set_int("MPX_H4CNF_WEP_DISRP", 3)
+				stats.set_int("MPX_H4CNF_ARM_DISRP", 3)
+				stats.set_int("MPX_H4CNF_HEL_DISRP", 3)
+				stats.set_int("MPX_H4CNF_BOLTCUT", 4424)
+				stats.set_int("MPX_H4CNF_UNIFORM", 5256)
+				stats.set_int("MPX_H4CNF_GRAPPEL", 5156)
+				stats.set_int("MPX_H4CNF_BS_GEN", 131071)
+				stats.set_int("MPX_H4CNF_BS_ABIL", 63)
+				stats.set_int("MPX_H4_MISSIONS", 65535)
+				gui.show_message("Cayo Perico Heist - Setup", "Has been set to 'Finale'")
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Finale - Panther##CayoPericoHeist") then
+				PlayerIndex = stats.get_int("MPPLY_LAST_MP_CHAR")
+				if PlayerIndex == 0 then
+					mpx = "MP0_"
+				else
+					mpx = "MP1_"
+				end
+					STATS.STAT_SET_INT(joaat(mpx .. "H4CNF_BS_GEN"), 131071, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4CNF_BS_ENTR"), 63, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4CNF_BS_ABIL"), 63, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4CNF_WEAPONS"), 5, true)
+					STATS.STAT_SET_INT(joaat(mpx .. "H4CNF_WEP_DISRP"), 3, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4CNF_ARM_DISRP"), 3, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4CNF_HEL_DISRP"), 3, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4CNF_TARGET"), 5, true)
+					STATS.STAT_SET_INT(joaat(mpx .. "H4CNF_TROJAN"), 2, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4CNF_APPROACH"), -1, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_CASH_I"), 0, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_CASH_C"), 0, true)
+					STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_WEED_I"), 0, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_WEED_C"), 0, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_COKE_I"), 0, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_COKE_C"), 0, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_CASH_I"), 0, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_GOLD_I"), 0, true)
+					STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_GOLD_C"), 0, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_PAINT"), -1, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4_PROGRESS"), 126823, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_CASH_I_SCOPED"), 0, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_CASH_C_SCOPED"), 0, true)
+					STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_WEED_I_SCOPED"), 0, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_WEED_C_SCOPED"), 0, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_COKE_I_SCOPED"), 0, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_COKE_C_SCOPED"), 0, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_GOLD_I_SCOPED"), 0, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_GOLD_C_SCOPED"), 0, true)
+					STATS.STAT_SET_INT(joaat(mpx .. "H4LOOT_PAINT_SCOPED"), -1, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4_MISSIONS"), 65535, true)
+							STATS.STAT_SET_INT(joaat(mpx .. "H4_PLAYTHROUGH_STATUS"), 32, true)
+							
+							--
+							
+							gui.show_message("Cayo Perico Heist", "Has been set to 'Finale - Panther'")
+			end
+			
+			if ImGui.Button("Finale - Full Painting Loot##CayoPericoHeist") then
+				stats.set_int("MPX_H4CNF_WEAPONS", 1)
+				stats.set_int("MPX_H4CNF_WEP_DISRP", 3)
+				stats.set_int("MPX_H4CNF_ARM_DISRP", 3)
+				stats.set_int("MPX_H4CNF_HEL_DISRP", 3)
+				stats.set_int("MPX_H4CNF_BOLTCUT", 4424)
+				stats.set_int("MPX_H4CNF_UNIFORM", 5256)
+				stats.set_int("MPX_H4CNF_GRAPPEL", 5156)
+				stats.set_int("MPX_H4CNF_BS_GEN", 131071)
+				stats.set_int("MPX_H4CNF_BS_ABIL", 63)
+				stats.set_int("MPx_H4LOOT_PAINT", 127)
+				stats.set_int("MPx_H4LOOT_PAINT_SCOPED", 127)
+				stats.set_int("MPX_H4LOOT_PAINT_V", 189500)
+				stats.set_int("MPX_H4_MISSIONS", 65535)
+				gui.show_message("Cayo Perico Heist", "Has been set to 'Finale - Full Painting Loot'")
+			end
+			
+			if ImGui.Button("Finale - Full Gold&Painting Loot##CayoPericoHeist") then
+				stats.set_int("MPX_H4CNF_WEAPONS", 1)
+				stats.set_int("MPX_H4CNF_WEP_DISRP", 3)
+				stats.set_int("MPX_H4CNF_ARM_DISRP", 3)
+				stats.set_int("MPX_H4CNF_HEL_DISRP", 3)
+				stats.set_int("MPX_H4CNF_BOLTCUT", 4424)
+				stats.set_int("MPX_H4CNF_UNIFORM", 5256)
+				stats.set_int("MPX_H4CNF_GRAPPEL", 5156)
+				stats.set_int("MPX_H4CNF_BS_GEN", 131071)
+				stats.set_int("MPX_H4CNF_BS_ABIL", 63)
+				stats.set_int("MPX_H4LOOT_GOLD_I_SCOPED", 16777215)
+				stats.set_int("MPX_H4LOOT_GOLD_C", 255)
+				stats.set_int("MPX_H4LOOT_GOLD_C_SCOPED", 255)
+				stats.set_int("MPX_H4LOOT_PAINT", 127)
+				stats.set_int("MPX_H4LOOT_PAINT_SCOPED", 127)
+				stats.set_int("MPX_H4LOOT_GOLD_V", 330350)
+				stats.set_int("MPX_H4LOOT_PAINT_V", 189500)
+				stats.set_int("MPX_H4_MISSIONS", 65535)
+				gui.show_message("Cayo Perico Heist", "Has been set to 'Finale - Full Gold&Painting Loot'")
+			end
+			ImGui.EndTabItem()
+		end
+		
+		if ImGui.BeginTabItem("Cuts") then
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("Don't over the pay limits, pay limit is $2.55 Millions")
+			end
+			if ImGui.Button("All Player Cuts 85%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 85)
+					locals_set_int(SupportVersion_string, CPCg1 + i, 85)
+				end
+			end
+			ImGui.SameLine()
+			if ImGui.Button("All Player Cuts 100%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 100)
+					locals_set_int(SupportVersion_string, CPCg1 + i, 100)
+				end
+			end
+			
+			if ImGui.Button("All Player Cuts 125%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 125)
+					locals_set_int(SupportVersion_string, CPCg1 + i, 125)
+				end
+			end
+			ImGui.SameLine()
+			if ImGui.Button("All Player Cuts 150%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 150)
+					locals_set_int(SupportVersion_string, CPCg1 + i, 150)
+				end
+			end
+			
+			if ImGui.Button("All Player Cuts 175%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 175)
+					locals_set_int(SupportVersion_string, CPCg1 + i, 175)
+				end
+			end
+			ImGui.SameLine()
+			if ImGui.Button("All Player Cuts 200%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 200)
+					locals_set_int(SupportVersion_string, CPCg1 + i, 200)
+				end
+			end
+			
+			if ImGui.Button("All Player Cuts 225%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 225)
+					locals_set_int(SupportVersion_string, CPCg1 + i, 225)
+				end
+			end
+			ImGui.SameLine()
+			if ImGui.Button("All Player Cuts 250%") then
+				for i = 0, 4, 1 do
+					locals_set_int(SupportVersion_string, GCg, 250)
+					locals_set_int(SupportVersion_string, CPCg1 + i, 250)
+				end
+			end
+			ImGui.EndTabItem()
+		end
+		
+		if ImGui.BeginTabItem("Bypass") then
+			
+			if ImGui.Button("Remove CCTV") then
+				for _, ent in pairs(entities.get_all_objects_as_handles()) do
+					for __, cam in pairs(CamList) do
+						if ENTITY.GET_ENTITY_MODEL(ent) == cam then
+							ENTITY.SET_ENTITY_AS_MISSION_ENTITY(ent, true, true)
+							ENTITY.DELETE_ENTITY(ent)
+						end
+					end
+				end
+			end
+			CamList = {
+				joaat("prop_cctv_cam_01a"),
+				joaat("prop_cctv_cam_01b"),
+				joaat("prop_cctv_cam_02a"),
+				joaat("prop_cctv_cam_03a"),
+				joaat("prop_cctv_cam_04a"),
+				joaat("prop_cctv_cam_04c"),
+				joaat("prop_cctv_cam_05a"),
+				joaat("prop_cctv_cam_06a"),
+				joaat("prop_cctv_cam_07a"),
+				joaat("prop_cs_cctv"),
+				joaat("p_cctv_s"),
+				joaat("hei_prop_bank_cctv_01"),
+				joaat("hei_prop_bank_cctv_02"),
+				joaat("ch_prop_ch_cctv_cam_02a"),
+				joaat("xm_prop_x17_server_farm_cctv_01"),
+			}
+			ImGui.SameLine()
+			if ImGui.Button("Removed Perico Heavy Armor") then -- Thanks to RazorGamerX for the help on this
+				for index, ped in ipairs(entities.get_all_peds_as_handles()) do 
+					local model = ENTITY.GET_ENTITY_MODEL(ped)
+					if model == 0x7ED5AD78 or model == 0x6C8C08E5 or model == 0x995B3F9F or model == 0xB881AEE then 
+							ENTITY.SET_ENTITY_AS_MISSION_ENTITY(ped, true, true)
+							PED.DELETE_PED(ped)
+					end
+				end
+			end
+			
+			if ImGui.Button("Fingerprint Scanner") then
+				if locals.get_int(FMC20, CPFHl) == 4 then
+					locals_set_int(SupportVersion_string, FMC20, CPFHl, 5)
+					gui.show_message("Cayo Perico Heist", "Bypassed Fingerprint Scanner")
+				end
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Drainage Cut") then
+				if locals.get_int(FMC20, CPSTCl) >= 3 or locals.get_int(FMC20, CPSTCl) <= 6 then
+					locals_set_int(SupportVersion_string, FMC20, CPSTCl, 6)
+					gui.show_message("Cayo Perico Heist", "Bypassed Drainage Cut")
+				end
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Glass Cutter") then
+				locals.set_float(FMC20, CPPCCl, 100)
+				gui.show_message("Cayo Perico Heist", "Bypassed Glass Cutter")
+			end
+			
+			if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC20)) ~= 0 then -- Cayo / Tuners / ULP / Agency
+				if ImGui.Button("Instant Finish##CayoPericoHeist") then
+					locals_set_int(SupportVersion_string, FMC20, CPIFl1, 9)
+					locals_set_int(SupportVersion_string, FMC20, CPIFl2, 50)
+				end
+			else
+				ImGui.Text("Instant Finish: waiting for heist...")
+			end
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("It's preferable to wait 5 to 10 second before press 'Instant Finish'")
+			end
+			
+			ImGui.Separator()
+			
+			if ImGui.Button("Remove Cooldown - Solo##CayoPericoHeist") then
+				stats.set_int("MPX_H4_TARGET_POSIX", 1659643454)
+				stats.set_int("MPX_H4_COOLDOWN", 0)
+				stats.set_int("MPX_H4_COOLDOWN_HARD", 0)
+			end
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("Press 'Remove Cooldown - Solo' after solo cayo perico heist.\nAfter 'Remove Cooldown' leave to single player and go gta online again")
+			end
+			
+			if ImGui.Button("Remove Cooldown - Multiplayer##CayoPericoHeist") then
+				stats.set_int("MPX_H4_TARGET_POSIX", 1659429119)
+				stats.set_int("MPX_H4_COOLDOWN", 0)
+				stats.set_int("MPX_H4_COOLDOWN_HARD", 0)
+			end
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("Press 'Remove Cooldown - Multiplayer' after multiplayer cayo perico heist.\nAfter 'Remove Cooldown' leave to single player and go gta online again")
+			end
+			ImGui.EndTabItem()
+		end
+		
+		if ImGui.BeginTabItem("Teleport") then
+			if ImGui.Button("Kosatka (Interior - Planning Screen)") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 1561.133057, 385.922, -51.585)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Communication Tower (Prep)") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 5266.279, -5428.247, 140.046)
+			end
+			
+			ImGui.Text("Outside Compound:")
+			if ImGui.Button("Compound Gate Entry") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 4907.252, -5644.971, 23.374)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Drainage Tunnel") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 5043.633, -5814.967, -11.968)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Drainage Infiltration Point") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 5053.766, -5773.625, -4.995)
+			end
+			
+			if ImGui.Button("Tower Station") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 4373.472, -4579.726, 2.907)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("TP on the sea") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 4200.177, -5625.261, -2.69)
+			end
+			
+			ImGui.Text("Inside Compound:")
+			if ImGui.Button("Compound Gate Escape") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 4990.044, -5717.710, 20.000)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Office") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 5010.407, -5752.104, 27.840)
+			end
+			
+			if ImGui.Button("Vault Target") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 5009.144, -5753.708, 15.484)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Vault Storage") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 4999.764, -5749.863, 14.840)
+			end
+			
+			if ImGui.Button("Storage Room 1") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 5030.186, -5736.462, 16.865)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Storage Room 2") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 5008.817, -5785.959, 16.830)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Storage Room 3") then
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), 5084.014, -5757.491, 15.000)
+			end
+			ImGui.EndTabItem()
+		end
+		ImGui.EndTabBar()
+	end
+end)
+
+------------------------------------
+
+--
+AutoShopContract = GoldenGetsMission:add_tab("Auto Shop Contract")
+--
+
+ExtraTime = tunables.get_int("TUNER_AUTO_SHOP_STAFF_DELIVERY_TIME_SEC")
+CarsChance = globals.get_int(ASCCC)
+LiftsCooldown = tunables.get_float("TUNER_AUTO_SHOP_CLIENT_VEH_SPAWN_COOLDOWN_POSIX_TIME_MULTIPLIER")
+DeliveryPayout1 = tunables.get_int("TUNER_AUTO_SHOP_STAFF_DELIVERY_BONUS_LOW")
+DeliveryPayout2 = tunables.get_int("TUNER_AUTO_SHOP_STAFF_DELIVERY_BONUS_MID")
+DeliveryPayout3 = tunables.get_int("TUNER_AUTO_SHOP_STAFF_DELIVERY_BONUS_HIGH")
+DisplayedDeliveryPayout1 = tunables.get_int("TUNER_CLIENT_VEHICLE_DELIVERY_LOW_PAYMENT")
+DisplayedDeliveryPayout2 = tunables.get_int("TUNER_CLIENT_VEHICLE_DELIVERY_MID_PAYMENT")
+DisplayedDeliveryPayout3 = tunables.get_int("TUNER_CLIENT_VEHICLE_DELIVERY_HIGH_PAYMENT")
+
+AutoShopContract:add_imgui(function()
+	if ImGui.BeginTabBar("Auto Shop Contract Tab") then
+		if ImGui.BeginTabItem("Bypass") then
+			if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC20)) ~= 0 then
+				if ImGui.Button("Instant Finish##AutoShopContract") then
+					locals_set_int(SupportVersion_string, FMC20, ASIFl1, 51338977)
+					locals_set_int(SupportVersion_string, FMC20, ASIFl2, 101)
+				end
+			else
+				ImGui.Text("Instant Finish: waiting for heist...")
+			end
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("It's preferable to wait 5 to 10 second before press 'Instant Finish'")
+			end
+			ImGui.EndTabItem()
+		end
+		
+		if ImGui.BeginTabItem("Customer") then
+			AutoShopCustomer, drag = ImGui.Checkbox("> Auto Shop Customer", AutoShopCustomer)
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("Toggle to expand for customize a auto shop customer")
+			end
+			if AutoShopCustomer then
+				ExtraTime = ImGui.DragInt("Extra Time", ExtraTime, 1, 0, INT_MAX)
+				CarsChance = ImGui.DragInt("Cars % Chance", CarsChance, 1, 0, 100)
+				LiftsCooldown = ImGui.DragFloat("2 Lifts Cooldown", LiftsCooldown, 0.10, 0.00, INT_MAX, "%.2f")
+				DeliveryPayout1 = ImGui.DragInt("Delivery Payout 1", DeliveryPayout1, 1, 0, INT_MAX)
+				DeliveryPayout2 = ImGui.DragInt("Delivery Payout 2", DeliveryPayout2, 1, 0, INT_MAX)
+				DeliveryPayout3 = ImGui.DragInt("Delivery Payout 3", DeliveryPayout3, 1, 0, INT_MAX)
+				DisplayedDeliveryPayout1 = ImGui.DragInt("Displayed Delivery Payout 1", DisplayedDeliveryPayout1, 1, 0, INT_MAX)
+				DisplayedDeliveryPayout2 = ImGui.DragInt("Displayed Delivery Payout 2", DisplayedDeliveryPayout2, 1, 0, INT_MAX)
+				DisplayedDeliveryPayout3 = ImGui.DragInt("Displayed Delivery Payout 3", DisplayedDeliveryPayout3, 1, 0, INT_MAX)
+			end
+			ImGui.EndTabItem()
+		end
+		ImGui.EndTabBar()
+	end
+end)
+
+------------------------------------
+
+--
+AgencyContract = GoldenGetsMission:add_tab("Agency Contract")
+--
+
+AgencyContract:add_imgui(function()
+	PayphoneHitAssassinationMission = ImGui.Checkbox("Easy Payphone Hit Assassination", PayphoneHitAssassinationMission)
+	if ImGui.IsItemHovered() then
+		ImGui.SetTooltip("Easy difficulty payphone hit assassination mission")
+	end
+	
+	if ImGui.Button("Remove Cooldown Agency Payphone Hit Assassination") then
+		if tunables.get_int("REQUEST_FRANKLIN_PAYPHONE_HIT_COOLDOWN") ~= 0 then -- *(600000ms)*
+			tunables.set_int("REQUEST_FRANKLIN_PAYPHONE_HIT_COOLDOWN", 0)
+		end
+	end
+end)
+
+AgencyContract:add_separator()
+
+AgencyContract:add_text("-Payphone Hit")
+
+local PAYPHONE_FLOW  = 2709088
+local FMMC_VARIATION = 2738934
+local PAYPHONE_DATA  = 5675
+
+local GPBL = 0x679D39
+
+local PAYPHONE_STATE_WAIT       = 0
+local PAYPHONE_STATE_AVAILABLE  = 1
+local PAYPHONE_STATE_ACTIVE     = 2
+local PAYPHONE_STATE_LAUNCHING  = 3
+local PAYPHONE_STATE_ON_MISSION = 4
+
+local ASSASSINATION_BONUSES = {
+    [0] = { 0, 1, 2 },
+    [1] = { 6, 7, 8 },
+    [2] = { 9, 10, 11 },
+    [3] = { 21, 22, 23 },
+    [4] = { 15, 16, 17 },
+    [5] = { 3, 4, 5 },
+    [6] = { 18, 19, 20 },
+    [7] = { 12, 13, 14 }
+}
+
+local VARIATION_NAMES = {
+    "The Tech Entrepreneur",
+    "The Judge",
+    "The Cofounder",
+    "The Trolls",
+    "The Dealers",
+    "The CEO",
+    "The Popstar",
+    "The Hitmen"
+}
+
+local SUBVARIATION_NAMES = {
+    [0] = { "Ocean", "Car Crusher", "Gas Station" },
+    [1] = { "Golf Club", "Golf Cart", "Remote Bomb" },
+    [2] = { "Car on Fire", "Install Explosives", "Scoped Rifle" },
+    [3] = { "Headshot", "7 minutes", "Run Over" },
+    [4] = { "Scoped Rifle", "Suppressed Pistol", "Explosives" },
+    [5] = { "Bulldozer", "Cargo Container", "Gas Tank Explosion" },
+    [6] = { "Vagos Lowrider", "Police Cruiser", "Truck" },
+    [7] = { "Throwable Explosives", "Drive-By", "After They Arrive" }
+}
+
+local selected_variation    = 0
+local selected_subvariation = 0
+local force_selected        = false
+
+local payphone_state = 0
+local is_host        = false
+local cooldown_str   = ""
+
+local function GET_COOLDOWN_STR()
+    local epoch    = NETWORK.GET_CLOUD_TIME_AS_INT()
+    local cooldown = stats.get_int("MPX_PAYPHONE_HIT_CDTIMER")
+
+    if epoch > cooldown then
+        return "Request is available."
+    end
+
+    local time_left = (cooldown - epoch) * 1000
+    local ms_to_sec = time_left / 1000
+    local minutes   = math.floor(ms_to_sec / 60)
+    local seconds   = math.floor(ms_to_sec % 60)
+
+    return string.format("Next request is available in %02d:%02d.", minutes, seconds)
+end
+
+script.register_looped("Payphone Hits", function()
+    payphone_state = globals.get_int(PAYPHONE_FLOW)
+    is_host        = NETWORK.NETWORK_GET_HOST_OF_SCRIPT("fm_content_payphone_hit", 0, 0)
+    cooldown_str   = GET_COOLDOWN_STR()
+    
+    if force_selected then
+        globals.set_int(FMMC_VARIATION + 5249 + 347, selected_variation)
+        locals_set_int(SupportVersion_string, "fm_content_payphone_hit", PAYPHONE_DATA + 742 + 2, ASSASSINATION_BONUSES[selected_variation][selected_subvariation + 1])
+    end
+end)
+
+AgencyContract:add_imgui(function()
+    ImGui.BeginDisabled(payphone_state == PAYPHONE_STATE_ON_MISSION)
+    selected_variation, used = ImGui.Combo("Select Variation", selected_variation, VARIATION_NAMES, #VARIATION_NAMES)
+    if used then
+        selected_subvariation = 0
+    end
+
+    selected_subvariation = ImGui.Combo("Select Subvariation", selected_subvariation, SUBVARIATION_NAMES[selected_variation], #SUBVARIATION_NAMES[selected_variation])
+
+    force_selected = ImGui.Checkbox("Force Selected", force_selected)
+    ImGui.EndDisabled()
+
+    ImGui.Separator()
+
+    ImGui.Text(cooldown_str)
+    
+    if ImGui.Button("Request Payphone Hit") then
+        if payphone_state == PAYPHONE_STATE_WAIT then
+            local value = globals.get_int(PAYPHONE_FLOW + 1 + 1) | (1 << 0)
+            globals.set_int(PAYPHONE_FLOW + 1 + 1, value)
+        else
+            gui.show_error("Payphone Hits", "Not available at the moment.")
+        end
+    end
+    
+    if ImGui.IsItemHovered() then
+        ImGui.SetTooltip("You won't get paid if you request a hit when cooldown is active.")
+    end
+
+    if ImGui.Button("Teleport to Payphone Hit") then
+        script.run_in_fiber(function()
+            if payphone_state == PAYPHONE_STATE_ACTIVE then
+                local coords = scr_function.call_script_function("freemode", GPBL, "vector3", {})
+                PED.SET_PED_COORDS_KEEP_VEHICLE(self.get_ped(), coords.x, coords.y, coords.z + 2.0)
+            else
+                gui.show_error("Payphone Hits", "Not available at the moment.")
+            end
+        end)
+    end
+    
+    if ImGui.Button("Instant Finish Payphone Hit") then
+        if payphone_state == PAYPHONE_STATE_ON_MISSION then
+            if is_host then
+                locals_set_int(SupportVersion_string, "fm_content_payphone_hit", PAYPHONE_DATA + 683, 3)
+            else
+                gui.show_error("Payphone Hits", "You must be the mission host.")
+            end
+        else
+            gui.show_error("Payphone Hits", "Not available at the moment.")
+        end
+    end    
+
+    if ImGui.Button("Complete Assassination Bonus") then
+        if payphone_state == PAYPHONE_STATE_ON_MISSION then
+            if is_host then
+                local value = locals.get_int("fm_content_payphone_hit", PAYPHONE_DATA + 740 + 1) | (1 << 1)
+                locals_set_int(SupportVersion_string, "fm_content_payphone_hit", PAYPHONE_DATA + 740 + 1, value)
+            else
+                gui.show_error("Payphone Hits", "You must be the mission host.")
+            end
+        else
+            gui.show_error("Payphone Hits", "Not available at the moment.")
+        end
+    end
+	
+	if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat(FMC20)) ~= 0 then
+		if ImGui.Button("Instant Finish##AgencyContract") then
+			locals_set_int(SupportVersion_string, FMC20, AIFl1, 51338752)
+			locals_set_int(SupportVersion_string, FMC20, AIFl2, 50)
+		end
+	else
+		ImGui.Text("Instant Finish: waiting for heist...")
+	end
+	if ImGui.IsItemHovered() then
+		ImGui.SetTooltip("It's preferable to wait 5 to 10 second before press 'Instant Finish'")
+	end
+end)
+
+------------------------------------
+
+--
+SalvageYard = GoldenGetsMission:add_tab("Salvage Yard")
+--
+
+local possible_vehicles = {
+	vehicles.get_vehicle_display_name("lm87"),
+	vehicles.get_vehicle_display_name("cinquemila"),
+	vehicles.get_vehicle_display_name("autarch"),
+	vehicles.get_vehicle_display_name("tigon"),
+	vehicles.get_vehicle_display_name("champion"),
+	vehicles.get_vehicle_display_name("tenf"),
+	vehicles.get_vehicle_display_name("sm722"),
+	vehicles.get_vehicle_display_name("omnisegt"),
+	vehicles.get_vehicle_display_name("growler"),
+	vehicles.get_vehicle_display_name("deity"),
+	vehicles.get_vehicle_display_name("italirsx"),
+	vehicles.get_vehicle_display_name("coquette4"),
+	vehicles.get_vehicle_display_name("jubilee"),
+	vehicles.get_vehicle_display_name("astron"),
+	vehicles.get_vehicle_display_name("comet7"),
+	vehicles.get_vehicle_display_name("torero"),
+	vehicles.get_vehicle_display_name("cheetah2"),
+	vehicles.get_vehicle_display_name("turismo2"),
+	vehicles.get_vehicle_display_name("infernus2"),
+	vehicles.get_vehicle_display_name("stafford"),
+	vehicles.get_vehicle_display_name("gt500"),
+	vehicles.get_vehicle_display_name("viseris"),
+	vehicles.get_vehicle_display_name("mamba"),
+	vehicles.get_vehicle_display_name("coquette3"),
+	vehicles.get_vehicle_display_name("stingergt"),
+	vehicles.get_vehicle_display_name("ztype"),
+	vehicles.get_vehicle_display_name("broadway"),
+	vehicles.get_vehicle_display_name("vigero2"),
+	vehicles.get_vehicle_display_name("buffalo4"),
+	vehicles.get_vehicle_display_name("ruston"),
+	vehicles.get_vehicle_display_name("gauntlet4"),
+	vehicles.get_vehicle_display_name("dominator8"),
+	vehicles.get_vehicle_display_name("btype3"),
+	vehicles.get_vehicle_display_name("swinger"),
+	vehicles.get_vehicle_display_name("feltzer3"),
+	vehicles.get_vehicle_display_name("omnis"),
+	vehicles.get_vehicle_display_name("tropos"),
+	vehicles.get_vehicle_display_name("jugular"),
+	vehicles.get_vehicle_display_name("patriot3"),
+	vehicles.get_vehicle_display_name("toros"),
+	vehicles.get_vehicle_display_name("caracara2"),
+	vehicles.get_vehicle_display_name("sentinel3"),
+	vehicles.get_vehicle_display_name("weevil"),
+	vehicles.get_vehicle_display_name("kanjo"),
+	vehicles.get_vehicle_display_name("eudora"),
+	vehicles.get_vehicle_display_name("kamacho"),
+	vehicles.get_vehicle_display_name("hellion"),
+	vehicles.get_vehicle_display_name("ellie"),
+	vehicles.get_vehicle_display_name("hermes"),
+	vehicles.get_vehicle_display_name("hustler"),
+	vehicles.get_vehicle_display_name("turismo3"),
+	vehicles.get_vehicle_display_name("buffalo5"),
+	vehicles.get_vehicle_display_name("stingertt"),
+	vehicles.get_vehicle_display_name("virtue"),
+	vehicles.get_vehicle_display_name("ignus"),
+	vehicles.get_vehicle_display_name("zentorno"),
+	vehicles.get_vehicle_display_name("neon"),
+	vehicles.get_vehicle_display_name("furia"),
+	vehicles.get_vehicle_display_name("zorrusso"),
+	vehicles.get_vehicle_display_name("thrax"),
+	vehicles.get_vehicle_display_name("vagner"),
+	vehicles.get_vehicle_display_name("panthere"),
+	vehicles.get_vehicle_display_name("italigto"),
+	vehicles.get_vehicle_display_name("s80"),
+	vehicles.get_vehicle_display_name("tyrant"),
+	vehicles.get_vehicle_display_name("entity3"),
+	vehicles.get_vehicle_display_name("torero2"),
+	vehicles.get_vehicle_display_name("neo"),
+	vehicles.get_vehicle_display_name("corsita"),
+	vehicles.get_vehicle_display_name("paragon"),
+	vehicles.get_vehicle_display_name("btype2"),
+	vehicles.get_vehicle_display_name("comet4"),
+	vehicles.get_vehicle_display_name("fr36"),
+	vehicles.get_vehicle_display_name("everon2"),
+	vehicles.get_vehicle_display_name("komoda"),
+	vehicles.get_vehicle_display_name("tailgater2"),
+	vehicles.get_vehicle_display_name("jester3"),
+	vehicles.get_vehicle_display_name("jester4"),
+	vehicles.get_vehicle_display_name("euros"),
+	vehicles.get_vehicle_display_name("zr350"),
+	vehicles.get_vehicle_display_name("cypher"),
+	vehicles.get_vehicle_display_name("dominator7"),
+	vehicles.get_vehicle_display_name("baller8"),
+	vehicles.get_vehicle_display_name("casco"),
+	vehicles.get_vehicle_display_name("yosemite2"),
+	vehicles.get_vehicle_display_name("everon"),
+	vehicles.get_vehicle_display_name("penumbra2"),
+	vehicles.get_vehicle_display_name("vstr"),
+	vehicles.get_vehicle_display_name("dominator9"),
+	vehicles.get_vehicle_display_name("schlagen"),
+	vehicles.get_vehicle_display_name("cavalcade3"),
+	vehicles.get_vehicle_display_name("clique"),
+	vehicles.get_vehicle_display_name("boor"),
+	vehicles.get_vehicle_display_name("sugoi"),
+	vehicles.get_vehicle_display_name("greenwood"),
+	vehicles.get_vehicle_display_name("brigham"),
+	vehicles.get_vehicle_display_name("issi8"),
+	vehicles.get_vehicle_display_name("seminole2"),
+	vehicles.get_vehicle_display_name("kanjosj"),
+	vehicles.get_vehicle_display_name("previon"),
+	vehicles.get_vehicle_display_name("lm87"),
+	vehicles.get_vehicle_display_name("cinquemila"),
+	vehicles.get_vehicle_display_name("autarch"),
+	vehicles.get_vehicle_display_name("tigon"),
+	vehicles.get_vehicle_display_name("champion"),
+	vehicles.get_vehicle_display_name("tenf"),
+	vehicles.get_vehicle_display_name("sm722"),
+	vehicles.get_vehicle_display_name("omnisegt"),
+	vehicles.get_vehicle_display_name("growler"),
+	vehicles.get_vehicle_display_name("deity"),
+	vehicles.get_vehicle_display_name("italirsx"),
+	vehicles.get_vehicle_display_name("coquette4"),
+	vehicles.get_vehicle_display_name("jubilee"),
+	vehicles.get_vehicle_display_name("astron"),
+	vehicles.get_vehicle_display_name("comet7"),
+	vehicles.get_vehicle_display_name("torero"),
+	vehicles.get_vehicle_display_name("cheetah2"),
+	vehicles.get_vehicle_display_name("turismo2"),
+	vehicles.get_vehicle_display_name("infernus2"),
+	vehicles.get_vehicle_display_name("stafford"),
+	vehicles.get_vehicle_display_name("gt500"),
+	vehicles.get_vehicle_display_name("viseris"),
+	vehicles.get_vehicle_display_name("mamba"),
+	vehicles.get_vehicle_display_name("coquette3"),
+	vehicles.get_vehicle_display_name("stingergt"),
+	vehicles.get_vehicle_display_name("ztype"),
+	vehicles.get_vehicle_display_name("broadway"),
+	vehicles.get_vehicle_display_name("vigero2"),
+	vehicles.get_vehicle_display_name("buffalo4"),
+	vehicles.get_vehicle_display_name("ruston"),
+	vehicles.get_vehicle_display_name("gauntlet4"),
+	vehicles.get_vehicle_display_name("dominator8"),
+	vehicles.get_vehicle_display_name("btype3"),
+	vehicles.get_vehicle_display_name("swinger"),
+	vehicles.get_vehicle_display_name("feltzer3"),
+	vehicles.get_vehicle_display_name("omnis"),
+	vehicles.get_vehicle_display_name("tropos"),
+	vehicles.get_vehicle_display_name("jugular"),
+	vehicles.get_vehicle_display_name("patriot3"),
+	vehicles.get_vehicle_display_name("toros"),
+	vehicles.get_vehicle_display_name("caracara2"),
+	vehicles.get_vehicle_display_name("sentinel3"),
+	vehicles.get_vehicle_display_name("weevil"),
+	vehicles.get_vehicle_display_name("kanjo"),
+	vehicles.get_vehicle_display_name("eudora"),
+	vehicles.get_vehicle_display_name("kamacho"),
+	vehicles.get_vehicle_display_name("hellion"),
+	vehicles.get_vehicle_display_name("ellie"),
+	vehicles.get_vehicle_display_name("hermes"),
+	vehicles.get_vehicle_display_name("hustler"),
+	vehicles.get_vehicle_display_name("turismo3"),
+	vehicles.get_vehicle_display_name("buffalo5"),
+	vehicles.get_vehicle_display_name("stingertt"),
+	vehicles.get_vehicle_display_name("virtue"),
+	vehicles.get_vehicle_display_name("ignus"),
+	vehicles.get_vehicle_display_name("zentorno"),
+	vehicles.get_vehicle_display_name("neon"),
+	vehicles.get_vehicle_display_name("furia"),
+	vehicles.get_vehicle_display_name("zorrusso"),
+	vehicles.get_vehicle_display_name("thrax"),
+	vehicles.get_vehicle_display_name("vagner"),
+	vehicles.get_vehicle_display_name("panthere"),
+	vehicles.get_vehicle_display_name("italigto"),
+	vehicles.get_vehicle_display_name("s80"),
+	vehicles.get_vehicle_display_name("tyrant"),
+	vehicles.get_vehicle_display_name("entity3"),
+	vehicles.get_vehicle_display_name("torero2"),
+	vehicles.get_vehicle_display_name("neo"),
+	vehicles.get_vehicle_display_name("corsita"),
+	vehicles.get_vehicle_display_name("paragon"),
+	vehicles.get_vehicle_display_name("btype2"),
+	vehicles.get_vehicle_display_name("comet4"),
+	vehicles.get_vehicle_display_name("fr36"),
+	vehicles.get_vehicle_display_name("everon2"),
+	vehicles.get_vehicle_display_name("komoda"),
+	vehicles.get_vehicle_display_name("tailgater2"),
+	vehicles.get_vehicle_display_name("jester3"),
+	vehicles.get_vehicle_display_name("jester4"),
+	vehicles.get_vehicle_display_name("euros"),
+	vehicles.get_vehicle_display_name("zr350"),
+	vehicles.get_vehicle_display_name("cypher"),
+	vehicles.get_vehicle_display_name("dominator7"),
+	vehicles.get_vehicle_display_name("baller8"),
+	vehicles.get_vehicle_display_name("casco"),
+	vehicles.get_vehicle_display_name("yosemite2"),
+	vehicles.get_vehicle_display_name("everon"),
+	vehicles.get_vehicle_display_name("penumbra2"),
+	vehicles.get_vehicle_display_name("vstr"),
+	vehicles.get_vehicle_display_name("dominator9"),
+	vehicles.get_vehicle_display_name("schlagen"),
+	vehicles.get_vehicle_display_name("cavalcade3"),
+	vehicles.get_vehicle_display_name("clique"),
+	vehicles.get_vehicle_display_name("boor"),
+	vehicles.get_vehicle_display_name("sugoi"),
+	vehicles.get_vehicle_display_name("greenwood"),
+	vehicles.get_vehicle_display_name("brigham"),
+	vehicles.get_vehicle_display_name("issi8"),
+	vehicles.get_vehicle_display_name("seminole2"),
+	vehicles.get_vehicle_display_name("kanjosj"),
+	vehicles.get_vehicle_display_name("previon"),
+	vehicles.get_vehicle_display_name("lm87"),
+	vehicles.get_vehicle_display_name("cinquemila"),
+	vehicles.get_vehicle_display_name("autarch"),
+	vehicles.get_vehicle_display_name("tigon"),
+	vehicles.get_vehicle_display_name("champion"),
+	vehicles.get_vehicle_display_name("tenf"),
+	vehicles.get_vehicle_display_name("sm722"),
+	vehicles.get_vehicle_display_name("omnisegt"),
+	vehicles.get_vehicle_display_name("growler"),
+	vehicles.get_vehicle_display_name("deity"),
+	vehicles.get_vehicle_display_name("italirsx"),
+	vehicles.get_vehicle_display_name("coquette4"),
+	vehicles.get_vehicle_display_name("jubilee"),
+	vehicles.get_vehicle_display_name("astron"),
+	vehicles.get_vehicle_display_name("comet7"),
+	vehicles.get_vehicle_display_name("torero"),
+	vehicles.get_vehicle_display_name("cheetah2"),
+	vehicles.get_vehicle_display_name("turismo2"),
+	vehicles.get_vehicle_display_name("infernus2"),
+	vehicles.get_vehicle_display_name("stafford"),
+	vehicles.get_vehicle_display_name("gt500"),
+	vehicles.get_vehicle_display_name("viseris"),
+	vehicles.get_vehicle_display_name("mamba"),
+	vehicles.get_vehicle_display_name("coquette3"),
+	vehicles.get_vehicle_display_name("stingergt"),
+	vehicles.get_vehicle_display_name("ztype"),
+	vehicles.get_vehicle_display_name("broadway"),
+	vehicles.get_vehicle_display_name("vigero2"),
+	vehicles.get_vehicle_display_name("buffalo4"),
+	vehicles.get_vehicle_display_name("ruston"),
+	vehicles.get_vehicle_display_name("gauntlet4"),
+	vehicles.get_vehicle_display_name("dominator8"),
+	vehicles.get_vehicle_display_name("btype3"),
+	vehicles.get_vehicle_display_name("swinger"),
+	vehicles.get_vehicle_display_name("feltzer3"),
+	vehicles.get_vehicle_display_name("omnis"),
+	vehicles.get_vehicle_display_name("tropos"),
+	vehicles.get_vehicle_display_name("jugular"),
+	vehicles.get_vehicle_display_name("patriot3"),
+	vehicles.get_vehicle_display_name("toros"),
+	vehicles.get_vehicle_display_name("caracara2"),
+	vehicles.get_vehicle_display_name("sentinel3"),
+	vehicles.get_vehicle_display_name("weevil"),
+	vehicles.get_vehicle_display_name("kanjo"),
+	vehicles.get_vehicle_display_name("eudora"),
+	vehicles.get_vehicle_display_name("kamacho"),
+	vehicles.get_vehicle_display_name("hellion"),
+	vehicles.get_vehicle_display_name("ellie"),
+	vehicles.get_vehicle_display_name("hermes"),
+	vehicles.get_vehicle_display_name("hustler"),
+	vehicles.get_vehicle_display_name("turismo3"),
+	vehicles.get_vehicle_display_name("buffalo5"),
+	vehicles.get_vehicle_display_name("stingertt"),
+	vehicles.get_vehicle_display_name("virtue"),
+	vehicles.get_vehicle_display_name("ignus"),
+	vehicles.get_vehicle_display_name("zentorno"),
+	vehicles.get_vehicle_display_name("neon"),
+	vehicles.get_vehicle_display_name("furia"),
+	vehicles.get_vehicle_display_name("zorrusso"),
+	vehicles.get_vehicle_display_name("thrax"),
+	vehicles.get_vehicle_display_name("vagner"),
+	vehicles.get_vehicle_display_name("panthere"),
+	vehicles.get_vehicle_display_name("italigto"),
+	vehicles.get_vehicle_display_name("s80"),
+	vehicles.get_vehicle_display_name("tyrant"),
+	vehicles.get_vehicle_display_name("entity3"),
+	vehicles.get_vehicle_display_name("torero2"),
+	vehicles.get_vehicle_display_name("neo"),
+	vehicles.get_vehicle_display_name("corsita"),
+	vehicles.get_vehicle_display_name("paragon"),
+	vehicles.get_vehicle_display_name("btype2"),
+	vehicles.get_vehicle_display_name("comet4"),
+	vehicles.get_vehicle_display_name("fr36"),
+	vehicles.get_vehicle_display_name("everon2"),
+	vehicles.get_vehicle_display_name("komoda"),
+	vehicles.get_vehicle_display_name("tailgater2"),
+	vehicles.get_vehicle_display_name("jester3"),
+	vehicles.get_vehicle_display_name("jester4"),
+	vehicles.get_vehicle_display_name("euros"),
+	vehicles.get_vehicle_display_name("zr350"),
+	vehicles.get_vehicle_display_name("cypher"),
+	vehicles.get_vehicle_display_name("dominator7"),
+	vehicles.get_vehicle_display_name("baller8"),
+	vehicles.get_vehicle_display_name("casco"),
+	vehicles.get_vehicle_display_name("yosemite2"),
+	vehicles.get_vehicle_display_name("everon"),
+	vehicles.get_vehicle_display_name("penumbra2"),
+	vehicles.get_vehicle_display_name("vstr"),
+	vehicles.get_vehicle_display_name("dominator9"),
+	vehicles.get_vehicle_display_name("schlagen"),
+	vehicles.get_vehicle_display_name("cavalcade3"),
+	vehicles.get_vehicle_display_name("clique"),
+	vehicles.get_vehicle_display_name("boor"),
+	vehicles.get_vehicle_display_name("sugoi"),
+	vehicles.get_vehicle_display_name("greenwood"),
+	vehicles.get_vehicle_display_name("brigham"),
+	vehicles.get_vehicle_display_name("issi8"),
+	vehicles.get_vehicle_display_name("seminole2"),
+	vehicles.get_vehicle_display_name("kanjosj"),
+	vehicles.get_vehicle_display_name("previon"),
+	vehicles.get_vehicle_display_name("lm87"),
+	vehicles.get_vehicle_display_name("cinquemila"),
+	vehicles.get_vehicle_display_name("autarch"),
+	vehicles.get_vehicle_display_name("tigon"),
+	vehicles.get_vehicle_display_name("champion"),
+	vehicles.get_vehicle_display_name("tenf"),
+	vehicles.get_vehicle_display_name("sm722"),
+	vehicles.get_vehicle_display_name("omnisegt"),
+	vehicles.get_vehicle_display_name("growler"),
+	vehicles.get_vehicle_display_name("deity"),
+	vehicles.get_vehicle_display_name("italirsx"),
+	vehicles.get_vehicle_display_name("coquette4"),
+	vehicles.get_vehicle_display_name("jubilee"),
+	vehicles.get_vehicle_display_name("astron"),
+	vehicles.get_vehicle_display_name("comet7"),
+	vehicles.get_vehicle_display_name("torero"),
+	vehicles.get_vehicle_display_name("cheetah2"),
+	vehicles.get_vehicle_display_name("turismo2"),
+	vehicles.get_vehicle_display_name("infernus2"),
+	vehicles.get_vehicle_display_name("stafford"),
+	vehicles.get_vehicle_display_name("gt500"),
+	vehicles.get_vehicle_display_name("viseris"),
+	vehicles.get_vehicle_display_name("mamba"),
+	vehicles.get_vehicle_display_name("coquette3"),
+	vehicles.get_vehicle_display_name("stingergt"),
+	vehicles.get_vehicle_display_name("ztype"),
+	vehicles.get_vehicle_display_name("broadway"),
+	vehicles.get_vehicle_display_name("vigero2"),
+	vehicles.get_vehicle_display_name("buffalo4"),
+	vehicles.get_vehicle_display_name("ruston"),
+	vehicles.get_vehicle_display_name("gauntlet4"),
+	vehicles.get_vehicle_display_name("dominator8"),
+	vehicles.get_vehicle_display_name("btype3"),
+	vehicles.get_vehicle_display_name("swinger"),
+	vehicles.get_vehicle_display_name("feltzer3"),
+	vehicles.get_vehicle_display_name("omnis"),
+	vehicles.get_vehicle_display_name("tropos"),
+	vehicles.get_vehicle_display_name("jugular"),
+	vehicles.get_vehicle_display_name("patriot3"),
+	vehicles.get_vehicle_display_name("toros"),
+	vehicles.get_vehicle_display_name("caracara2"),
+	vehicles.get_vehicle_display_name("sentinel3"),
+	vehicles.get_vehicle_display_name("weevil"),
+	vehicles.get_vehicle_display_name("kanjo"),
+	vehicles.get_vehicle_display_name("eudora"),
+	vehicles.get_vehicle_display_name("kamacho"),
+	vehicles.get_vehicle_display_name("hellion"),
+	vehicles.get_vehicle_display_name("ellie"),
+	vehicles.get_vehicle_display_name("hermes"),
+	vehicles.get_vehicle_display_name("hustler"),
+	vehicles.get_vehicle_display_name("turismo3"),
+	vehicles.get_vehicle_display_name("buffalo5"),
+	vehicles.get_vehicle_display_name("stingertt"),
+	vehicles.get_vehicle_display_name("virtue"),
+	vehicles.get_vehicle_display_name("ignus"),
+	vehicles.get_vehicle_display_name("zentorno"),
+	vehicles.get_vehicle_display_name("neon"),
+	vehicles.get_vehicle_display_name("furia"),
+	vehicles.get_vehicle_display_name("zorrusso"),
+	vehicles.get_vehicle_display_name("thrax"),
+	vehicles.get_vehicle_display_name("vagner"),
+	vehicles.get_vehicle_display_name("panthere"),
+	vehicles.get_vehicle_display_name("italigto"),
+	vehicles.get_vehicle_display_name("s80"),
+	vehicles.get_vehicle_display_name("tyrant"),
+	vehicles.get_vehicle_display_name("entity3"),
+	vehicles.get_vehicle_display_name("torero2"),
+	vehicles.get_vehicle_display_name("neo"),
+	vehicles.get_vehicle_display_name("corsita"),
+	vehicles.get_vehicle_display_name("paragon"),
+	vehicles.get_vehicle_display_name("btype2"),
+	vehicles.get_vehicle_display_name("comet4"),
+	vehicles.get_vehicle_display_name("fr36"),
+	vehicles.get_vehicle_display_name("everon2"),
+	vehicles.get_vehicle_display_name("komoda"),
+	vehicles.get_vehicle_display_name("tailgater2"),
+	vehicles.get_vehicle_display_name("jester3"),
+	vehicles.get_vehicle_display_name("jester4"),
+	vehicles.get_vehicle_display_name("euros"),
+	vehicles.get_vehicle_display_name("zr350"),
+	vehicles.get_vehicle_display_name("cypher"),
+	vehicles.get_vehicle_display_name("dominator7"),
+	vehicles.get_vehicle_display_name("baller8"),
+	vehicles.get_vehicle_display_name("casco"),
+	vehicles.get_vehicle_display_name("yosemite2"),
+	vehicles.get_vehicle_display_name("everon"),
+	vehicles.get_vehicle_display_name("penumbra2"),
+	vehicles.get_vehicle_display_name("vstr"),
+	vehicles.get_vehicle_display_name("dominator9"),
+	vehicles.get_vehicle_display_name("schlagen"),
+	vehicles.get_vehicle_display_name("cavalcade3"),
+	vehicles.get_vehicle_display_name("clique"),
+	vehicles.get_vehicle_display_name("boor"),
+	vehicles.get_vehicle_display_name("sugoi"),
+	vehicles.get_vehicle_display_name("greenwood"),
+	vehicles.get_vehicle_display_name("brigham"),
+	vehicles.get_vehicle_display_name("issi8"),
+	vehicles.get_vehicle_display_name("seminole2"),
+	vehicles.get_vehicle_display_name("kanjosj"),
+	vehicles.get_vehicle_display_name("previon"),
+	vehicles.get_vehicle_display_name("lm87"),
+	vehicles.get_vehicle_display_name("cinquemila"),
+	vehicles.get_vehicle_display_name("autarch"),
+	vehicles.get_vehicle_display_name("tigon"),
+	vehicles.get_vehicle_display_name("champion"),
+	vehicles.get_vehicle_display_name("tenf"),
+	vehicles.get_vehicle_display_name("sm722"),
+	vehicles.get_vehicle_display_name("omnisegt"),
+	vehicles.get_vehicle_display_name("growler"),
+	vehicles.get_vehicle_display_name("deity"),
+	vehicles.get_vehicle_display_name("italirsx"),
+	vehicles.get_vehicle_display_name("coquette4"),
+	vehicles.get_vehicle_display_name("jubilee"),
+	vehicles.get_vehicle_display_name("astron"),
+	vehicles.get_vehicle_display_name("comet7"),
+	vehicles.get_vehicle_display_name("torero"),
+	vehicles.get_vehicle_display_name("cheetah2"),
+	vehicles.get_vehicle_display_name("turismo2"),
+	vehicles.get_vehicle_display_name("infernus2"),
+	vehicles.get_vehicle_display_name("stafford"),
+	vehicles.get_vehicle_display_name("gt500"),
+	vehicles.get_vehicle_display_name("viseris"),
+	vehicles.get_vehicle_display_name("mamba"),
+	vehicles.get_vehicle_display_name("coquette3"),
+	vehicles.get_vehicle_display_name("stingergt"),
+	vehicles.get_vehicle_display_name("ztype"),
+	vehicles.get_vehicle_display_name("broadway"),
+	vehicles.get_vehicle_display_name("vigero2"),
+	vehicles.get_vehicle_display_name("buffalo4"),
+	vehicles.get_vehicle_display_name("ruston"),
+	vehicles.get_vehicle_display_name("gauntlet4"),
+	vehicles.get_vehicle_display_name("dominator8"),
+	vehicles.get_vehicle_display_name("btype3"),
+	vehicles.get_vehicle_display_name("swinger"),
+	vehicles.get_vehicle_display_name("feltzer3"),
+	vehicles.get_vehicle_display_name("omnis"),
+	vehicles.get_vehicle_display_name("tropos"),
+	vehicles.get_vehicle_display_name("jugular"),
+	vehicles.get_vehicle_display_name("patriot3"),
+	vehicles.get_vehicle_display_name("toros"),
+	vehicles.get_vehicle_display_name("caracara2"),
+	vehicles.get_vehicle_display_name("sentinel3"),
+	vehicles.get_vehicle_display_name("weevil"),
+	vehicles.get_vehicle_display_name("kanjo"),
+	vehicles.get_vehicle_display_name("eudora"),
+	vehicles.get_vehicle_display_name("kamacho"),
+	vehicles.get_vehicle_display_name("hellion"),
+	vehicles.get_vehicle_display_name("ellie"),
+	vehicles.get_vehicle_display_name("hermes"),
+	vehicles.get_vehicle_display_name("hustler"),
+	vehicles.get_vehicle_display_name("turismo3"),
+	vehicles.get_vehicle_display_name("buffalo5"),
+	vehicles.get_vehicle_display_name("stingertt"),
+	vehicles.get_vehicle_display_name("virtue"),
+	vehicles.get_vehicle_display_name("ignus"),
+	vehicles.get_vehicle_display_name("zentorno"),
+	vehicles.get_vehicle_display_name("neon"),
+	vehicles.get_vehicle_display_name("furia"),
+	vehicles.get_vehicle_display_name("zorrusso"),
+	vehicles.get_vehicle_display_name("thrax"),
+	vehicles.get_vehicle_display_name("vagner"),
+	vehicles.get_vehicle_display_name("panthere"),
+	vehicles.get_vehicle_display_name("italigto"),
+	vehicles.get_vehicle_display_name("s80"),
+	vehicles.get_vehicle_display_name("tyrant"),
+	vehicles.get_vehicle_display_name("entity3"),
+	vehicles.get_vehicle_display_name("torero2"),
+	vehicles.get_vehicle_display_name("neo"),
+	vehicles.get_vehicle_display_name("corsita"),
+	vehicles.get_vehicle_display_name("paragon"),
+	vehicles.get_vehicle_display_name("btype2"),
+	vehicles.get_vehicle_display_name("comet4"),
+	vehicles.get_vehicle_display_name("fr36"),
+	vehicles.get_vehicle_display_name("everon2"),
+	vehicles.get_vehicle_display_name("komoda"),
+	vehicles.get_vehicle_display_name("tailgater2"),
+	vehicles.get_vehicle_display_name("jester3"),
+	vehicles.get_vehicle_display_name("jester4"),
+	vehicles.get_vehicle_display_name("euros"),
+	vehicles.get_vehicle_display_name("zr350"),
+	vehicles.get_vehicle_display_name("cypher"),
+	vehicles.get_vehicle_display_name("dominator7"),
+	vehicles.get_vehicle_display_name("baller8"),
+	vehicles.get_vehicle_display_name("casco"),
+	vehicles.get_vehicle_display_name("yosemite2"),
+	vehicles.get_vehicle_display_name("everon"),
+	vehicles.get_vehicle_display_name("penumbra2"),
+	vehicles.get_vehicle_display_name("vstr"),
+	vehicles.get_vehicle_display_name("dominator9"),
+	vehicles.get_vehicle_display_name("schlagen"),
+	vehicles.get_vehicle_display_name("cavalcade3"),
+	vehicles.get_vehicle_display_name("clique"),
+	vehicles.get_vehicle_display_name("boor"),
+	vehicles.get_vehicle_display_name("sugoi"),
+	vehicles.get_vehicle_display_name("greenwood"),
+	vehicles.get_vehicle_display_name("brigham"),
+	vehicles.get_vehicle_display_name("issi8"),
+	vehicles.get_vehicle_display_name("seminole2"),
+	vehicles.get_vehicle_display_name("kanjosj"),
+	vehicles.get_vehicle_display_name("previon")
+}
+
+local selected_slot = 0
+local selected_robbery = 0
+local selected_vehicle = 0
+local can_keep = false
+local savlv23_bitset
+
+function has_bit_set(address, pos)
+	return (address & (1 << pos)) ~= 0
+end
+
+script.register_looped("GoldenGets Salvage Yard", function()
+	selected_robbery = tunables.get_int("SALV23_VEHICLE_ROBBERY_" .. selected_slot)
+	selected_vehicle = (tunables.get_int("SALV23_VEHICLE_ROBBERY_ID_" .. selected_slot) - 1)
+	can_keep = tunables.get_bool("SALV23_VEHICLE_ROBBERY_CAN_KEEP_" .. selected_slot)
+	savlv23_bitset = stats.get_int("MPX_SALV23_GEN_BS")
+end)
+
+SalvageYard:add_imgui(function()
+	ImGui.Text("Make all the changes outside of the Salvage Yard.")
+	
+	ImGui.BeginDisabled(has_bit_set(savlv23_bitset, 0))
+	selected_slot = ImGui.Combo("Slot", selected_slot, { "1", "2", "3" }, 3)
+	
+	selected_robbery, robbery_selected = ImGui.Combo("Robbery Type", selected_robbery, { "The Cargo Ship", "The Gangbanger", "The Duggan", "The Podium", "The McTony" }, 5)
+	
+	if robbery_selected then
+		tunables.set_int("SALV23_VEHICLE_ROBBERY_" .. selected_slot, selected_robbery)
+	end
+	
+	selected_vehicle, vehicle_selected = ImGui.Combo("Vehicle Type", selected_vehicle, possible_vehicles, 500)
+	
+	if vehicle_selected then
+		tunables.set_int("SALV23_VEHICLE_ROBBERY_ID_" .. selected_slot, selected_vehicle + 1)
+	end
+	
+	can_keep, pressed = ImGui.Checkbox("Can Keep as PV", can_keep)
+	
+	if pressed then
+		tunables.set_bool("SALV23_VEHICLE_ROBBERY_CAN_KEEP_" .. selected_slot, can_keep)
+	end
+	ImGui.EndDisabled()
+	
+	ImGui.BeginDisabled(has_bit_set(savlv23_bitset, 0) == false)
+	if ImGui.Button("Skip Preps") then
+		stats.set_int("MPX_SALV23_FM_PROG", -1)
+		gui.show_message("Salvage Yard", "The preps have been skipped.")
+	end
+	ImGui.EndDisabled()
+	
+	ImGui.SameLine()
+	
+	if ImGui.Button("Skip Weekly Cooldown") then
+		week = stats.get_int("MPX_SALV23_WEEK_SYNC")
+		tunables.set_int("SALV23_VEH_ROBBERY_WEEK_ID", week + 1)
+		gui.show_message("Salvage Yard", "The cooldown has been skipped.")
+	end
+end)
+
+------------------------------------
+
+--
+TheCluckinBellFarmRaid = GoldenGetsMission:add_tab("The Cluckin Bell Farm Raid")
+--
+
+TheCluckinBellFarmRaid:add_imgui(function ()
+	ImGui.Text("Black market fund")
+	
+	if ImGui.Button("Quick cash pickup##TheCluckinBellFarmRaid") then
+		locals_set_int(SupportVersion_string, FMC20, 29465, 5)
+	end
+	
+	ImGui.Text("Breaking and Entering")
+	
+	if ImGui.Button("Transfer to laptop##TheCluckinBellFarmRaid") then
+		for _, ent in pairs(entities.get_all_objects_as_handles()) do
+			if ENTITY.GET_ENTITY_MODEL(ent) == joaat("m23_2_prop_m32_laptop_01a") then
+				local laptoppos = ENTITY.GET_ENTITY_COORDS(ent, false)
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), laptoppos.x, laptoppos.y, laptoppos.z)        
+			end
+		end
+	end
+	
+	if ImGui.Button("Teleport to Terrorbyte##TheCluckinBellFarmRaid") then
+		for _, ent in pairs(entities.get_all_vehicles_as_handles()) do
+			if VEHICLE.GET_DISPLAY_NAME_FROM_VEHICLE_MODEL(ENTITY.GET_ENTITY_MODEL(ent)) == "terbyte" then
+				local terbytepos = ENTITY.GET_ENTITY_COORDS(ent, false)
+				PED.SET_PED_COORDS_KEEP_VEHICLE(PLAYER.PLAYER_PED_ID(), terbytepos.x, terbytepos.y, terbytepos.z + 5)        
+			end
+		end
+	end
+	
+	if ImGui.Button("Shoot down the drone##TheCluckinBellFarmRaid") then
+		for _, ent in pairs(entities.get_all_objects_as_handles()) do
+			
+			if ENTITY.GET_ENTITY_MODEL(ent) == joaat("reh_prop_reh_drone_02a") then
+				log.info("d2")
+				local dronepos = ENTITY.GET_ENTITY_COORDS(ent, true)
+				MISC.SHOOT_SINGLE_BULLET_BETWEEN_COORDS(dronepos.x, dronepos.y, dronepos.z + 1, dronepos.x, dronepos.y, dronepos.z, 1000, true, 2526821735, PLAYER.PLAYER_PED_ID(), false, true, 1.0)  --2526821735???????MK2?Hash?,?????? https://github.com/DurtyFree/gta-v-data-dumps/blob/master/WeaponList.ini ??
+			end
+		end
+	end
+	
+	ImGui.Text("Disorganized Crime")
+	
+	if ImGui.Button("Fast drilling + 100% chance of obtaining access cards##TheCluckinBellFarmRaid") then
+		local_CF_drill_v = locals.get_int(FMC20, 30950 + 54)
+		if (local_CF_drill_v & (1 << 4)) == 0 then
+			local_CF_drill_v = local_CF_drill_v ~ (1 << 4)
+		end
+		if (local_CF_drill_v & (1 << 16)) == 0 then
+			local_CF_drill_v = local_CF_drill_v ~ (1 << 16)
+		end
+		locals_set_int(SupportVersion_string, FMC20, 30950 + 54, local_CF_drill_v)
+		locals_set_int(SupportVersion_string, FMC20, 30950 + 56 ,4)
+		locals_set_int(SupportVersion_string, FMC20, 30950 + 39 ,3)
+	end
+	
+	ImGui.Text("Final Chapter: Scene of the Crime")
+end)
+
+------------------------------------
+
+ForceChallenges = false
+ForcePercentage = false
+AutoShopCustomer = false
+PayphoneHitAssassinationMission = false
+
+script.register_looped("GoldenGets Mission", function()
+	if AloneLaunchMission:is_enabled() then
+		if locals.get_int("fmmc_launcher", ALMl + 34) ~= nil then
+			if locals.get_int("fmmc_launcher", ALMl + 34) ~= 0 then
+				if locals.get_int("fmmc_launcher", ALMl + 15) > 1 then
+					locals_set_int(SupportVersion_string, "fmmc_launcher", ALMl + 15, 1)
+					locals_set_int(SupportVersion_string, 794744 + 4 + 1 + (locals.get_int("fmmc_launcher", ALMl + 34) * 89) + 69, 1)
+				end
+				locals_set_int(SupportVersion_string, 4718592 + ALMl1, 1)
+				locals_set_int(SupportVersion_string, 4718592 + ALMl2, 1)
+				locals_set_int(SupportVersion_string, 4718592 + ALMl3 + 1, 1)
+				locals_set_int(SupportVersion_string, 4718592 + ALMl4 + 1, 0)
+			end
+		end
+	end
+	
+    if ForceChallenges then
+        -- Force All In Order
+        stats.set_int("MPPLY_HEISTFLOWORDERPROGRESS", 134217727)
+        stats.set_bool("MPPLY_AWD_HST_ORDER", false)
+        -- Force Loyalty
+        stats.set_int("MPPLY_HEISTTEAMPROGRESSBITSET", 134217727)
+        stats.set_bool("MPPLY_AWD_HST_SAME_TEAM", false)
+        -- Force Criminal Mastermind
+        stats.set_int("MPPLY_HEISTNODEATHPROGREITSET", 134217727)
+        stats.set_bool("MPPLY_AWD_HST_ULT_CHAL", false)
+    else
+        -- Complete All In Order
+        stats.set_int("MPPLY_HEISTFLOWORDERPROGRESS", 268435455)
+        stats.set_bool("MPPLY_AWD_HST_ORDER", true)
+        -- Complete Loyalty
+        stats.set_int("MPPLY_HEISTTEAMPROGRESSBITSET", 268435455)
+        stats.set_bool("MPPLY_AWD_HST_SAME_TEAM", true)
+        -- Complete Criminal Mastermind
+        stats.set_int("MPPLY_HEISTNODEATHPROGREITSET", 268435455)
+        stats.set_bool("MPPLY_AWD_HST_ULT_CHAL", true)
+    end
+	
+    if ForcePercentage then
+        -- Set the tunables to bypass restrictions
+        tunables.set_int("MAX_HEIST_CUT_AMOUNT", 100) -- https://www.unknowncheats.me/forum/3664875-post95.html
+        tunables.set_int("MEMBER_MIN_HEIST_FINALE_TAKE_PERCENTAGE", 0)
+        tunables.set_int("LEADER_MIN_HEIST_FINALE_TAKE_PERCENTAGE", 0)
+    else
+        -- Reset the tunables to their default values
+        tunables.set_int("MAX_HEIST_CUT_AMOUNT", 70)
+        tunables.set_int("MEMBER_MIN_HEIST_FINALE_TAKE_PERCENTAGE", 15)
+        tunables.set_int("LEADER_MIN_HEIST_FINALE_TAKE_PERCENTAGE", 15)
+    end
+	
+	if AutoShopCustomer then
+		tunables.set_int("TUNER_AUTO_SHOP_STAFF_DELIVERY_TIME_SEC", ExtraTime)
+		globals.set_int(ASCCC, CarsChance)
+		tunables.set_float("TUNER_AUTO_SHOP_CLIENT_VEH_SPAWN_COOLDOWN_POSIX_TIME_MULTIPLIER", LiftsCooldown)
+		tunables.set_int("TUNER_AUTO_SHOP_STAFF_DELIVERY_BONUS_LOW", DeliveryPayout1)
+		tunables.set_int("TUNER_AUTO_SHOP_STAFF_DELIVERY_BONUS_MID", DeliveryPayout2)
+		tunables.set_int("TUNER_AUTO_SHOP_STAFF_DELIVERY_BONUS_HIGH", DeliveryPayout3)
+		tunables.set_int("TUNER_CLIENT_VEHICLE_DELIVERY_LOW_PAYMENT", DisplayedDeliveryPayout1)
+		tunables.set_int("TUNER_CLIENT_VEHICLE_DELIVERY_MID_PAYMENT", DisplayedDeliveryPayout2)
+		tunables.set_int("TUNER_CLIENT_VEHICLE_DELIVERY_HIGH_PAYMENT", DisplayedDeliveryPayout3)
+	end
+	
+	if PayphoneHitAssassinationMission then
+		if tunables.get_float("PAYPHONE_APPROACH_WEIGHTING") ~= 0.00 then
+			tunables.set_float("PAYPHONE_APPROACH_WEIGHTING", 0.00)
+		end
+		if tunables.get_float("PAYPHONE_CONSTRUCTION_WEIGHTING") ~= 0.00 then
+			tunables.set_float("PAYPHONE_CONSTRUCTION_WEIGHTING", 0.00)
+		end
+		if tunables.get_float("PAYPHONE_COORDATTACK_WEIGHTING") ~= 0.00 then
+			tunables.set_float("PAYPHONE_COORDATTACK_WEIGHTING", 0.00)
+		end
+		if tunables.get_float("PAYPHONE_GOLF_WEIGHTING") ~= 0.00 then
+			tunables.set_float("PAYPHONE_GOLF_WEIGHTING", 0.00)
+		end
+		--if tunables.get_float("PAYPHONE_HITLIST_WEIGHTING") ~= 0.00 then
+		--	tunables.set_float("PAYPHONE_HITLIST_WEIGHTING", 0.00)
+		--end
+		if tunables.get_float("PAYPHONE_JOYRIDER_WEIGHTING") ~= 0.00 then
+			tunables.set_float("PAYPHONE_JOYRIDER_WEIGHTING", 0.00)
+		end
+		if tunables.get_float("PAYPHONE_MOTEL_WEIGHTING") ~= 0.00 then
+			tunables.set_float("PAYPHONE_MOTEL_WEIGHTING", 0.00)
+		end
+		if tunables.get_float("PAYPHONE_TAXI_WEIGHTING") ~= 0.00 then
+			tunables.set_float("PAYPHONE_TAXI_WEIGHTING", 0.00)
+		end
+	else
+		tunables.set_float("PAYPHONE_APPROACH_WEIGHTING", 1.00)
+		tunables.set_float("PAYPHONE_CONSTRUCTION_WEIGHTING", 1.00)
+		tunables.set_float("PAYPHONE_COORDATTACK_WEIGHTING", 1.00)
+		tunables.set_float("PAYPHONE_GOLF_WEIGHTING", 1.00)
+	--	tunables.set_float("PAYPHONE_HITLIST_WEIGHTING", 1.00)
+		tunables.set_float("PAYPHONE_JOYRIDER_WEIGHTING", 1.00)
+		tunables.set_float("PAYPHONE_MOTEL_WEIGHTING", 1.00)
+		tunables.set_float("PAYPHONE_TAXI_WEIGHTING", 1.00)
+	end
+end)
+
+script.register_looped("Casino Pacino Thread", function (script)
+    if force_poker_cards:is_enabled() then
+        local player_id = PLAYER.PLAYER_ID()
+        if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("three_card_poker")) ~= 0 then
+            while NETWORK.NETWORK_GET_HOST_OF_SCRIPT("three_card_poker", -1, 0) ~= player_id and NETWORK.NETWORK_GET_HOST_OF_SCRIPT("three_card_poker", 0, 0) ~= player_id and NETWORK.NETWORK_GET_HOST_OF_SCRIPT("three_card_poker", 1, 0) ~= player_id and NETWORK.NETWORK_GET_HOST_OF_SCRIPT("three_card_poker", 2, 0) ~= player_id and NETWORK.NETWORK_GET_HOST_OF_SCRIPT("three_card_poker", 3, 0) ~= player_id do 
+                network.force_script_host("three_card_poker")
+                gui.show_message("CasinoPacino", "Taking control of the three_card_poker script.") --If you see this spammed, someone if fighting you for control.
+                script:sleep(500)
+            end
+            local players_current_table = locals.get_int("three_card_poker", three_card_poker_table + 1 + (player_id * three_card_poker_table_size) + 2) --The Player's current table he is sitting at.
+            if (players_current_table ~= -1) then -- If the player is sitting at a poker table
+                local player_0_card_1 = locals.get_int("three_card_poker", (three_card_poker_cards) + (three_card_poker_current_deck) + (1 + (players_current_table * three_card_poker_deck_size)) + (2) + (1) + (0 * 3))
+                local player_0_card_2 = locals.get_int("three_card_poker", (three_card_poker_cards) + (three_card_poker_current_deck) + (1 + (players_current_table * three_card_poker_deck_size)) + (2) + (2) + (0 * 3))
+                local player_0_card_3 = locals.get_int("three_card_poker", (three_card_poker_cards) + (three_card_poker_current_deck) + (1 + (players_current_table * three_card_poker_deck_size)) + (2) + (3) + (0 * 3))
+                if player_0_card_1 ~= 50 or player_0_card_2 ~= 51 or player_0_card_3 ~= 52 then --Check if we need to overwrite the deck.
+                    local total_players = 0
+                    for player_iter = 0, 31, 1 do
+                        local player_table = locals.get_int("three_card_poker", three_card_poker_table + 1 + (player_iter * three_card_poker_table_size) + 2)
+                        if player_iter ~= player_id and player_table == players_current_table then --An additional player is sitting at the user's table.
+                            total_players = total_players + 1
+                        end
+                    end
+                    for playing_player_iter = 0, total_players, 1 do
+                        set_poker_cards(playing_player_iter, players_current_table, 50, 51, 52)
+                    end
+                    if set_dealers_poker_cards:is_enabled() then
+                        set_poker_cards(total_players + 1, players_current_table, 1, 8, 22)
+                    end
+                end
+            end
+        end
+    end
+    if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("blackjack")) ~= 0 then
+        local dealers_card = 0
+        local blackjack_table = locals.get_int("blackjack", blackjack_table_players + 1 + (PLAYER.PLAYER_ID() * blackjack_table_players_size) + 4) --The Player's current table he is sitting at.
+        if blackjack_table ~= -1 then
+            dealers_card = locals.get_int("blackjack", blackjack_cards + blackjack_decks + 1 + (blackjack_table * 13) + 1) --Dealer's facedown card.
+            dealers_card_gui_element:set_value(get_cardname_from_index(dealers_card))
+        else
+            dealers_card_gui_element:set_value("Not sitting at a Blackjack table.")
+        end
+    else
+        dealers_card_gui_element:set_value("Not in Casino.")
+    end
+    if force_roulette_wheel:is_enabled() then
+        local player_id = PLAYER.PLAYER_ID()
+        if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("casinoroulette")) ~= 0 then
+            while NETWORK.NETWORK_GET_HOST_OF_SCRIPT("casinoroulette", -1, 0) ~= player_id and NETWORK.NETWORK_GET_HOST_OF_SCRIPT("casinoroulette", 0, 0) ~= player_id and NETWORK.NETWORK_GET_HOST_OF_SCRIPT("casinoroulette", 1, 0) ~= player_id and NETWORK.NETWORK_GET_HOST_OF_SCRIPT("casinoroulette", 2, 0) ~= player_id and NETWORK.NETWORK_GET_HOST_OF_SCRIPT("casinoroulette", 3, 0) ~= player_id do 
+                network.force_script_host("casinoroulette")
+                gui.show_message("CasinoPacino", "Taking control of the casinoroulette script.") --If you see this spammed, someone if fighting you for control.
+                script:sleep(500)
+            end
+            for tabler_iter = 0, 6, 1 do
+                locals.set_int("casinoroulette", (roulette_master_table) + (roulette_outcomes_table) + (roulette_ball_table) + (tabler_iter), 18)
+            end
+        end
+    end
+    if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("casino_slots")) ~= 0 then
+        local needs_run = false
+        if rig_slot_machine:is_enabled() then
+            for slots_iter = 3, 196, 1 do
+                if slots_iter ~= 67 and slots_iter ~= 132 then
+                    if locals.get_int("casino_slots", (slots_random_results_table) + (slots_iter)) ~= 6 then
+                        needs_run = true
+                    end
+                end
+            end
+        else
+            local sum = 0
+            for slots_iter = 3, 196, 1 do
+                if slots_iter ~= 67 and slots_iter ~= 132 then
+                    sum = sum + locals.get_int("casino_slots", (slots_random_results_table) + (slots_iter))
+                end
+            end
+            needs_run = sum == 1152
+        end
+        if needs_run then
+            for slots_iter = 3, 196, 1 do
+                if slots_iter ~= 67 and slots_iter ~= 132 then
+                    local slot_result = 6
+                    if rig_slot_machine:is_enabled() == false then
+                        math.randomseed(os.time()+slots_iter)
+                        slot_result = math.random(0, 7)
+                    end
+                    locals.set_int("casino_slots", (slots_random_results_table) + (slots_iter), slot_result)
+                end
+            end
+        end
+        if autoplay_slots:is_enabled() then
+            local slotstate = locals.get_int("casino_slots", slots_slot_machine_state) --Local Laddie?®?© is a product of Limited Laddies LLC, all rights reserved.
+            if slotstate & (1 << 0) == 1 then --The user is sitting at a slot machine.
+                local chips = stats.get_int('MPX_CASINO_CHIPS')
+                local chip_cap = autoplay_chips_cap:get_value()
+                if (autoplay_cap:is_enabled() and chips < chip_cap) or autoplay_cap:is_enabled() == false then
+                    if (slotstate & (1 << 24) == 0) then --The slot machine is not currently spinning.
+                        script:yield() -- Wait for the previous spin to clean up, if we just came from a spin.
+                        slotstate = slotstate | (1 << 3) -- Bitwise set the 3rd bit (begin playing)
+                        locals.set_int("casino_slots", slots_slot_machine_state, slotstate)
+                        script:sleep(500) --If we rewrite the begin playing bit again, the machine will get stuck.
+                    end
+                end
+            end
+        end
+    end
+    if bypass_casino_bans:is_enabled() then
+        stats.set_int("MPPLY_CASINO_CHIPS_WON_GD", 0)
+        stats.set_int("MPPLY_CASINO_CHIPS_WONTIM", 0)
+        stats.set_int("MPPLY_CASINO_GMBLNG_GD", 0)
+        stats.set_int("MPPLY_CASINO_BAN_TIME", 0)
+        stats.set_int("MPPLY_CASINO_CHIPS_PURTIM", 0)
+        stats.set_int("MPPLY_CASINO_CHIPS_PUR_GD", 0)
+        stats.set_int("MPPLY_CASINO_CHIPS_SOLD", 0)
+        stats.set_int("MPPLY_CASINO_CHIPS_SELTIM", 0)
+    end
+    if gui.is_open() and casino_gui:is_selected() then
+        local pacino_needs_a_dunkpacino = false
+        if bypass_casino_bans:is_enabled() ~= config_table["bypass_casino_bans"] then
+            config_table["bypass_casino_bans"] = bypass_casino_bans:is_enabled()
+            pacino_needs_a_dunkpacino = true
+        end
+        if force_poker_cards:is_enabled() ~= config_table["force_poker_cards"] then
+            config_table["force_poker_cards"] = force_poker_cards:is_enabled()
+            pacino_needs_a_dunkpacino = true
+        end
+        if set_dealers_poker_cards:is_enabled() ~= config_table["set_dealers_poker_cards"] then
+            config_table["set_dealers_poker_cards"] = set_dealers_poker_cards:is_enabled()
+            pacino_needs_a_dunkpacino = true
+        end
+        if rig_slot_machine:is_enabled() ~= config_table["rig_slot_machine"] then
+            config_table["rig_slot_machine"] = rig_slot_machine:is_enabled()
+            pacino_needs_a_dunkpacino = true
+        end
+        if force_roulette_wheel:is_enabled() ~= config_table["force_roulette_wheel"] then
+            config_table["force_roulette_wheel"] = force_roulette_wheel:is_enabled()
+            pacino_needs_a_dunkpacino = true
+        end
+        if autoplay_slots:is_enabled() ~= config_table["autoplay_slots"] then
+            config_table["autoplay_slots"] = autoplay_slots:is_enabled()
+            pacino_needs_a_dunkpacino = true
+        end
+        if autoplay_cap:is_enabled() ~= config_table["autoplay_cap"] then
+            config_table["autoplay_cap"] = autoplay_cap:is_enabled()
+            pacino_needs_a_dunkpacino = true
+        end
+        if autoplay_chips_cap:get_value() ~= config_table["autoplay_chips_cap"] then
+            config_table["autoplay_chips_cap"] = autoplay_chips_cap:get_value()
+            pacino_needs_a_dunkpacino = true
+        end
+        if fm_mission_controller_cart_autograb ~= config_table["fm_mission_controller_cart_autograb"] then
+            config_table["fm_mission_controller_cart_autograb"] = fm_mission_controller_cart_autograb
+            pacino_needs_a_dunkpacino = true
+        end
+        if pacino_needs_a_dunkpacino then
+            local json_file = io.open("CasinoPacino.json", "w")
+            json_file:write(json.encode(config_table))
+            json_file:flush()
+            json_file:close()
+        end
+        casino_heist_approach = stats.get_int("MPX_H3OPT_APPROACH")
+        casino_heist_target = stats.get_int("MPX_H3OPT_TARGET")
+        casino_heist_last_approach = stats.get_int("MPX_H3_LAST_APPROACH")
+        casino_heist_hard = stats.get_int("MPX_H3_HARD_APPROACH")
+        casino_heist_gunman = stats.get_int("MPX_H3OPT_CREWWEAP")
+        casino_heist_driver = stats.get_int("MPX_H3OPT_CREWDRIVER")
+        casino_heist_hacker = stats.get_int("MPX_H3OPT_CREWHACKER")
+        casino_heist_weapons = stats.get_int("MPX_H3OPT_WEAPS")
+        casino_heist_cars = stats.get_int("MPX_H3OPT_VEHS")
+        casino_heist_masks = stats.get_int("MPX_H3OPT_MASKS")
+        local cooldown_time = tunables.get_int("VC_CASINO_CHIP_MAX_WIN_LOSS_COOLDOWN")
+        local time_delta = os.time() - stats.get_int("MPPLY_CASINO_CHIPS_WONTIM") --"I've won the jackpot, and it doesn't make me feel bad." ~Casino Pacino (He only cares about winners)
+        local minutes_left = (cooldown_time - time_delta) / 60
+        local chipswon_gd = stats.get_int("MPPLY_CASINO_CHIPS_WON_GD")
+        local max_chip_wins = tunables.get_int("VC_CASINO_CHIP_MAX_WIN_DAILY")
+        banned_element:set_value(chipswon_gd >= max_chip_wins and "Cooldown expires in approximately: " .. string.format("%.2f", minutes_left) .. " minute(s)." or "Off Cooldown")
+    end
+    if fm_mission_controller_cart_autograb then
+        if locals.get_int("fm_mission_controller", fm_mission_controller_cart_grab) == 3 then
+            locals.set_int("fm_mission_controller", fm_mission_controller_cart_grab, 4)
+        elseif locals.get_int("fm_mission_controller", fm_mission_controller_cart_grab) == 4 then
+            locals.set_float("fm_mission_controller", fm_mission_controller_cart_grab + fm_mission_controller_cart_grab_speed, 2)
+        end
+    end
+end)
+
+local persisted_config = io.open("CasinoPacino.json", "r")
+if persisted_config == nil then
+    config_table = {}
+    config_table["bypass_casino_bans"] = bypass_casino_bans:is_enabled()
+    config_table["force_poker_cards"] = force_poker_cards:is_enabled()
+    config_table["set_dealers_poker_cards"] = set_dealers_poker_cards:is_enabled()
+    config_table["rig_slot_machine"] = rig_slot_machine:is_enabled()
+    config_table["force_roulette_wheel"] = force_roulette_wheel:is_enabled()
+    config_table["autoplay_slots"] = autoplay_slots:is_enabled()
+    config_table["autoplay_cap"] = autoplay_cap:is_enabled()
+    config_table["autoplay_chips_cap"] = autoplay_chips_cap:get_value()
+    config_table["fm_mission_controller_cart_autograb"] = fm_mission_controller_cart_autograb
+    local new_file = io.open("CasinoPacino.json", "w+")
+    new_file:write(json.encode(config_table))
+    new_file:flush()
+    new_file:close()
+else
+    config_table = json.decode(persisted_config:read("*all"))
+    bypass_casino_bans:set_enabled(config_table["bypass_casino_bans"])
+    force_poker_cards:set_enabled(config_table["force_poker_cards"])
+    set_dealers_poker_cards:set_enabled(config_table["set_dealers_poker_cards"])
+    rig_slot_machine:set_enabled(config_table["rig_slot_machine"])
+    force_roulette_wheel:set_enabled(config_table["force_roulette_wheel"])
+    autoplay_slots:set_enabled(config_table["autoplay_slots"])
+    autoplay_cap:set_enabled(config_table["autoplay_cap"])
+    autoplay_chips_cap:set_value(config_table["autoplay_chips_cap"])
+    fm_mission_controller_cart_autograb = config_table["fm_mission_controller_cart_autograb"]
+    persisted_config:close()
+end
 
 ------------------------------------
 
@@ -4476,10 +8362,136 @@ GoldenGetsMisc:add_imgui(function()
 			end
 			
 			if ImGui.Button("Remove Self Bounty") then
-				globals_v_set_int(SupportVersion, 1 + 2359296 + 5150 + 13, 2880000)
+				locals_set_int(SupportBuild, 1 + 2359296 + 5150 + 13, 2880000)
 			end
 			
 			disabletransactionerror = ImGui.Checkbox("Disable Transaction error", disabletransactionerror) --??????,??????
+			
+			ImGui.Separator()
+			
+			ImGui.SeparatorText("Bodyguard")
+			
+			allbodyguardtable = {} --??NPC?
+			function npc2bodyguard(peds_func) --?NPC????????
+				if math.random(0, 100) > 50 then 
+					WEAPON.GIVE_WEAPON_TO_PED(peds_func, joaat("WEAPON_MICROSMG"), 9999, false, true)
+				else
+				--WEAPON.GIVE_WEAPON_TO_PED(peds_func, joaat("WEAPON_CARBINERIFLE_MK2"), 9999, false, true)
+				WEAPON.GIVE_WEAPON_TO_PED(peds_func, joaat("WEAPON_RAILGUNXM3"), 1, false, true)
+				end
+				WEAPON.SET_PED_INFINITE_AMMO(peds_func, true, joaat("WEAPON_RAILGUNXM3"))
+				PED.SET_PED_AS_GROUP_MEMBER(peds_func, PED.GET_PED_GROUP_INDEX(PLAYER.PLAYER_PED_ID()))
+				PED.SET_PED_RELATIONSHIP_GROUP_HASH(peds_func, PED.GET_PED_RELATIONSHIP_GROUP_HASH(PLAYER.PLAYER_PED_ID()))
+				PED.SET_PED_NEVER_LEAVES_GROUP(peds_func, true)
+				PED.SET_CAN_ATTACK_FRIENDLY(peds_func, false, true)
+				PED.SET_PED_COMBAT_ABILITY(peds_func, 2)
+				PED.SET_PED_CAN_TELEPORT_TO_GROUP_LEADER(peds_func, PED.GET_PED_GROUP_INDEX(PLAYER.PLAYER_PED_ID()), true)
+				PED.SET_PED_FLEE_ATTRIBUTES(peds_func, 512, true)
+				PED.SET_PED_FLEE_ATTRIBUTES(peds_func, 1024, true)
+				PED.SET_PED_FLEE_ATTRIBUTES(peds_func, 2048, true)
+				PED.SET_PED_FLEE_ATTRIBUTES(peds_func, 16384, true)
+				PED.SET_PED_FLEE_ATTRIBUTES(peds_func, 131072, true)
+				PED.SET_PED_FLEE_ATTRIBUTES(peds_func, 262144, true)
+				PED.SET_PED_COMBAT_ATTRIBUTES(peds_func, 5, true)
+				PED.SET_PED_COMBAT_ATTRIBUTES(peds_func, 12, true)
+				PED.SET_PED_COMBAT_ATTRIBUTES(peds_func, 13, true)
+				PED.SET_PED_COMBAT_ATTRIBUTES(peds_func, 21, false)
+				PED.SET_PED_COMBAT_ATTRIBUTES(peds_func, 27, true)
+				PED.SET_PED_COMBAT_ATTRIBUTES(peds_func, 58, true)
+				PED.SET_PED_CONFIG_FLAG(peds_func, 394, true)
+				PED.SET_PED_CONFIG_FLAG(peds_func, 400, true)
+				PED.SET_PED_CONFIG_FLAG(peds_func, 134, true)
+				PED.SET_PED_CAN_RAGDOLL(peds_func, false)
+				PED.SET_PED_SHOOT_RATE(peds_func, 1000)
+				PED.SET_PED_ACCURACY(peds_func,100)
+				TASK.TASK_COMBAT_HATED_TARGETS_AROUND_PED(peds_func, 100, 67108864)
+				ENTITY.SET_ENTITY_HEALTH(peds_func,1000,0,0)
+				HUD.SET_PED_HAS_AI_BLIP_WITH_COLOUR(peds_func, true, 3)
+				HUD.SET_PED_AI_BLIP_SPRITE(peds_func, 270)
+				table.insert(allbodyguardtable,peds_func)            
+			end
+			
+			heli_sp_table = {}
+			heli_guard_table = {}
+			if ImGui.Button("Generate Bodyguard Helicopter") then
+				script.run_in_fiber(function (heli_guard_f)
+			
+				local heli_mod = joaat("valkyrie") --??? ???
+				local drv_mod = joaat("s_m_y_blackops_01")
+				while not STREAMING.HAS_MODEL_LOADED(heli_mod) do	
+					STREAMING.REQUEST_MODEL(heli_mod)
+					heli_guard_f:yield()
+				end    
+				while not STREAMING.HAS_MODEL_LOADED(drv_mod) do	
+					STREAMING.REQUEST_MODEL(drv_mod)
+					heli_guard_f:yield()
+				end    
+				local selfpedPos_sp_heli = ENTITY.GET_ENTITY_COORDS(PLAYER.PLAYER_PED_ID(), false)
+				selfpedPos_sp_heli.z = selfpedPos_sp_heli.z + math.random(40, 50)
+				selfpedPos_sp_heli.x = selfpedPos_sp_heli.x + math.random(-7, 7)
+				selfpedPos_sp_heli.y = selfpedPos_sp_heli.y + math.random(-7, 7)
+			
+				local heli_sp = VEHICLE.CREATE_VEHICLE(heli_mod, selfpedPos_sp_heli.x,selfpedPos_sp_heli.y,selfpedPos_sp_heli.z, CAM.GET_GAMEPLAY_CAM_ROT(0).z , true, true, true)
+				table.insert(heli_sp_table, heli_sp)
+				vehNetId = NETWORK.VEH_TO_NET(heli_sp)
+				if NETWORK.NETWORK_GET_ENTITY_IS_NETWORKED(NETWORK.NET_TO_PED(vehNetId)) then
+				NETWORK.SET_NETWORK_ID_EXISTS_ON_ALL_MACHINES(vehNetId, true)
+				end
+				NETWORK.SET_NETWORK_ID_ALWAYS_EXISTS_FOR_PLAYER(vehNetId, PLAYER.PLAYER_ID(), true)
+				VEHICLE.SET_VEHICLE_ENGINE_ON(heli_sp, true, true, true)
+				VEHICLE.SET_HELI_BLADES_SPEED(heli_sp, 1.0)
+				VEHICLE.SET_VEHICLE_SEARCHLIGHT(heli_sp, true, true)
+				ENTITY.SET_ENTITY_INVINCIBLE(heli_sp, true)
+				ENTITY.SET_ENTITY_MAX_HEALTH(heli_sp, 10000)
+				ENTITY.SET_ENTITY_HEALTH(heli_sp, 10000, 0, 0)
+			
+				local heli_guards = {}
+				for i = 1, 4 do
+					local heli_guard = PED.CREATE_PED(29, drv_mod, selfpedPos_sp_heli.x, selfpedPos_sp_heli.y, selfpedPos_sp_heli.z, CAM.GET_GAMEPLAY_CAM_ROT(0).z, true, true)
+					PED.SET_PED_KEEP_TASK(heli_guard, true)
+					ENTITY.SET_ENTITY_INVINCIBLE(heli_guard, true)
+					PED.SET_PED_MAX_HEALTH(heli_guard, 1000)
+					ENTITY.SET_ENTITY_HEALTH(heli_guard, 1000, 0, 0)
+					npc2bodyguard(heli_guard)
+					table.insert(heli_guard_table, heli_guard)
+					heli_guards[i] = heli_guard
+				end
+			
+				PED.SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(heli_guards[1], true)
+				PED.SET_PED_INTO_VEHICLE(heli_guards[4], heli_sp, 0)
+				PED.SET_PED_INTO_VEHICLE(heli_guards[3], heli_sp, 2)
+				PED.SET_PED_INTO_VEHICLE(heli_guards[2], heli_sp, 1)
+				PED.SET_PED_INTO_VEHICLE(heli_guards[1], heli_sp, -1)
+				PED.SET_PED_COMBAT_ATTRIBUTES(heli_guards[1], 3, false)
+				PED.SET_PED_COMBAT_ATTRIBUTES(heli_guards[2], 3, false)
+				PED.SET_PED_COMBAT_ATTRIBUTES(heli_guards[3], 3, false)
+				PED.SET_PED_COMBAT_ATTRIBUTES(heli_guards[4], 3, false)
+				PED.SET_PED_CONFIG_FLAG(heli_guards[1], 402, true)
+				PED.SET_PED_CONFIG_FLAG(heli_guards[2], 402, true)
+				PED.SET_PED_CONFIG_FLAG(heli_guards[3], 402, true)
+				PED.SET_PED_CONFIG_FLAG(heli_guards[4], 402, true)
+				TASK.TASK_VEHICLE_FOLLOW(heli_guards[1], heli_sp, PLAYER.PLAYER_PED_ID(), 80, 1, 10, 10)
+				PED.SET_PED_KEEP_TASK(heli_guards[1], true)
+				end)
+			end
+			ImGui.SameLine()
+			if ImGui.Button("Remove Bodyguard Helicopter") then
+				for _, hgt_ele in pairs(heli_guard_table) do
+					delete_entity(hgt_ele)
+				end
+				for _, hst_elm in pairs(heli_sp_table) do
+					delete_entity(hst_elm)
+				end
+				heli_sp_table = {}
+			end
+			
+			--ImGui.Separator()
+			
+			--ImGui.SeparatorText("Service")
+			
+			--taxiservice1 = ImGui.Checkbox("Automation of online taxi work (continuous transmission)", taxiservice1)--??????,??????
+			
+			--taxiservice2 = ImGui.Checkbox("Automation of online taxi work (simulation driving)", taxiservice2)--??????,??????
 			ImGui.EndTabItem()
 		end
 		
@@ -5526,82 +9538,87 @@ GoldenGetsMisc:add_imgui(function()
 			if ImGui.IsItemHovered() then
 				ImGui.SetTooltip("Displaying some vehicle purchases that have been removed from the website")
 			end
-			--ImGui.SameLine()
-			--EnableVehicle2 = ImGui.Checkbox("Enable Removed Vehicles", EnableVehicle2) -- don't know this list function
+			ImGui.SameLine()
+			EnableVehicle2 = ImGui.Checkbox("Enable Removed Vehicles", EnableVehicle2)
 			
 			stonehatchetrampage = ImGui.Checkbox("Infinite Stone Hatchet's Power", stonehatchetrampage)
+			
+			MaxBetLimit = ImGui.Checkbox("Remove Bet Limit Challenge##MaxBetLimit", MaxBetLimit)
+			if ImGui.IsItemHovered() then
+				ImGui.SetTooltip("Removed bet limit for multiplayer challenge. Not work for casino chip gambling")
+			end
 			
 			TunableMultplier, drag = ImGui.Checkbox("> Multiplier##TunableMultplier", TunableMultplier)
 			if ImGui.IsItemHovered() then
 				ImGui.SetTooltip("Toggle to expand for customize a multiplier")
 			end
 			if TunableMultplier then
-				CashMultiplier, drag = ImGui.DragFloat("Cash##CashMultiplier", CashMultiplier, 0.10, 0.00, 1000.00, "%.2f")
+				CashMultiplier, drag = ImGui.DragFloat("Cash Multiplier##CashMultiplier", CashMultiplier, 0.10, 0.00, 1000.00, "%.2f")
 				if drag then
 					CashMultiplier = math.min(math.max(CashMultiplier, 0.00), 1000.00)
 				end
-				XPMultiplier, drag = ImGui.DragFloat("XP##XPMultiplier", XPMultiplier, 0.10, 0.00, 1000.00, "%.2f")
+				XPMultiplier, drag = ImGui.DragFloat("XP Multiplier##XPMultiplier", XPMultiplier, 0.10, 0.00, 1000.00, "%.2f")
 				if drag then
 					XPMultiplier = math.min(math.max(XPMultiplier, 0.00), 1000.00)
 				end
-				TimeMultiplier, drag = ImGui.DragFloat("Time##TimeMultiplier", TimeMultiplier, 0.10, 0.00, 1000.00, "%.2f")
+				TimeMultiplier, drag = ImGui.DragFloat("Time Multiplier##TimeMultiplier", TimeMultiplier, 0.10, 0.00, 1000.00, "%.2f")
 				if drag then
 					TimeMultiplier = math.min(math.max(TimeMultiplier, 0.00), 1000.00)
 				end
-				APMultiplier, drag = ImGui.DragFloat("AP##APMultiplier", APMultiplier, 0.10, 0.00, 1000.00, "%.2f")
+				APMultiplier, drag = ImGui.DragFloat("AP Multiplier##APMultiplier", APMultiplier, 0.10, 0.00, 1000.00, "%.2f")
 				if drag then
 					APMultiplier = math.min(math.max(APMultiplier, 0.00), 1000.00)
 				end
-				ArenaWheelAP, drag = ImGui.DragInt("Arena Wheel AP##ArenaWheelAP", ArenaWheelAP, 50, 0, 500000)
+				ArenaWheelAP, drag = ImGui.DragInt("Arena Spin Wheel AP Override##ArenaWheelAP", ArenaWheelAP, 50, 0, 500000)
 				if drag then
 					ArenaWheelAP = math.min(math.max(ArenaWheelAP, 0.00), 1000000)
 				end
-				ArenaWheelRP, drag = ImGui.DragInt("Arena Wheel RP##ArenaWheelRP", ArenaWheelRP, 500, 0, 500000)
+				ArenaWheelRP, drag = ImGui.DragInt("Arena Spin Wheel RP Override##ArenaWheelRP", ArenaWheelRP, 500, 0, 500000)
 				if drag then
 					ArenaWheelRP = math.min(math.max(ArenaWheelRP, 0.00), 1000000)
 				end
-				ArenaWheelCash, drag = ImGui.DragInt("Arena Wheel Cash##ArenaWheelCash", ArenaWheelCash, 2000, 0, 20000)
+				ArenaWheelCash, drag = ImGui.DragInt("Arena Spin Wheel Cash Override##ArenaWheelCash", ArenaWheelCash, 2000, 0, 20000)
 				if drag then
 					ArenaWheelCash = math.min(math.max(ArenaWheelCash, 0.00), 40000)
 				end
-				TaxiWork, drag = ImGui.DragFloat("Taxi Work##TaxiWork", TaxiWork, 0.10, 0.00, 1000.00, "%.2f")
+				TaxiWork, drag = ImGui.DragFloat("Taxi Work Multiplier##TaxiWork", TaxiWork, 0.10, 0.00, 1000.00, "%.2f")
 				if drag then
 					TaxiWork = math.min(math.max(TaxiWork, 0.00), 1000.00)
 				end
 				if not LSCarMeetAllMultiplier then
-					--LSCarMeetFirst, drag = ImGui.DragFloat("LS Car Meet First Time##LSCarMeetFirst", LSCarMeetFirst, 0.10, 0.00, 99999.00, "%.2f")
+					--LSCarMeetFirst, drag = ImGui.DragFloat("LS Car Meet First Time Multiplier##LSCarMeetFirst", LSCarMeetFirst, 0.10, 0.00, 99999.00, "%.2f")
 					--if drag then
 					--	LSCarMeetFirst = math.min(math.max(LSCarMeetFirst, 0.00), 99999.00)
 					--end
-					LSCarMeetSprint, drag = ImGui.DragFloat("Sprint Race##LSCarMeetSprint", LSCarMeetSprint, 0.10, 0.00, 99999.00, "%.2f")
+					LSCarMeetSprint, drag = ImGui.DragFloat("Sprint Race Multiplier##LSCarMeetSprint", LSCarMeetSprint, 0.10, 0.00, 99999.00, "%.2f")
 					if drag then
 						LSCarMeetSprint = math.min(math.max(LSCarMeetSprint, 0.00), 99999.00)
 					end
-					LSCarMeetStreet, drag = ImGui.DragFloat("Street Race##LSCarMeetStreet", LSCarMeetStreet, 0.10, 0.00, 99999.00, "%.2f")
+					LSCarMeetStreet, drag = ImGui.DragFloat("Street Race Multiplier##LSCarMeetStreet", LSCarMeetStreet, 0.10, 0.00, 99999.00, "%.2f")
 					if drag then
 						LSCarMeetStreet = math.min(math.max(LSCarMeetStreet, 0.00), 99999.00)
 					end
-					LSCarMeetPursuit, drag = ImGui.DragFloat("Pursuit Race##LSCarMeetPursuit", LSCarMeetPursuit, 0.10, 0.00, 99999.00, "%.2f")
+					LSCarMeetPursuit, drag = ImGui.DragFloat("Pursuit Race Multiplier##LSCarMeetPursuit", LSCarMeetPursuit, 0.10, 0.00, 99999.00, "%.2f")
 					if drag then
 						LSCarMeetPursuit = math.min(math.max(LSCarMeetPursuit, 0.00), 99999.00)
 					end
-					LSCarMeetCheckpoint, drag = ImGui.DragFloat("Scramble##LSCarMeetCheckpoint", LSCarMeetCheckpoint, 0.10, 0.00, 99999.00, "%.2f")
+					LSCarMeetCheckpoint, drag = ImGui.DragFloat("Scramble Multiplier##LSCarMeetCheckpoint", LSCarMeetCheckpoint, 0.10, 0.00, 99999.00, "%.2f")
 					if drag then
 						LSCarMeetCheckpoint = math.min(math.max(LSCarMeetCheckpoint, 0.00), 99999.00)
 					end
-					LSCarMeetHeadtohead, drag = ImGui.DragFloat("Head to Head##LSCarMeetHeadtohead", LSCarMeetHeadtohead, 0.10, 0.00, 99999.00, "%.2f")
+					LSCarMeetHeadtohead, drag = ImGui.DragFloat("Head to Head Multiplier##LSCarMeetHeadtohead", LSCarMeetHeadtohead, 0.10, 0.00, 99999.00, "%.2f")
 					if drag then
 						LSCarMeetHeadtohead = math.min(math.max(LSCarMeetHeadtohead, 0.00), 99999.00)
 					end
-					LSCarMeet, drag = ImGui.DragFloat("LS Car Meet##LSCarMeet", LSCarMeet, 0.10, 0.00, 99999.00, "%.2f")
+					LSCarMeet, drag = ImGui.DragFloat("LS Car Meet Multiplier##LSCarMeet", LSCarMeet, 0.10, 0.00, 99999.00, "%.2f")
 					if drag then
 						LSCarMeet = math.min(math.max(LSCarMeet, 0.00), 99999.00)
 					end
-					LSCarMeetTrack, drag = ImGui.DragFloat("LS Car Meet's Track##LSCarMeetTrack", LSCarMeetTrack, 0.10, 0.00, 99999.00, "%.2f")
+					LSCarMeetTrack, drag = ImGui.DragFloat("LS Car Meet's Track Multiplier##LSCarMeetTrack", LSCarMeetTrack, 0.10, 0.00, 99999.00, "%.2f")
 					if drag then
 						LSCarMeetTrack = math.min(math.max(LSCarMeetTrack, 0.00), 99999.00)
 					end
-					--LSCarMeetMerch, drag = ImGui.DragFloat("LS Car Meet Buy Merchandise##LSCarMeetMerch", LSCarMeetMerch, 0.10, 0.00, 99999.00, "%.2f")
+					--LSCarMeetMerch, drag = ImGui.DragFloat("LS Car Meet Buy Merchandise Multiplier##LSCarMeetMerch", LSCarMeetMerch, 0.10, 0.00, 99999.00, "%.2f")
 					--if drag then
 					--	LSCarMeetMerch = math.min(math.max(LSCarMeetMerch, 0.00), 99999.00)
 					--end
@@ -5617,12 +9634,156 @@ GoldenGetsMisc:add_imgui(function()
 					end
 				end
 			end
+			ImGui.EndTabItem()
+		end
+		
+		if ImGui.BeginTabItem("Unlocks") then
+			if ImGui.BeginTabItem("Buildings") then
+				if ImGui.Button("Nightclub First Time Setups##Unlocks") then
+					if stats.set_packed_stat_bool(18161) ~= true then
+						stats.set_packed_stat_bool(18161, true)
+					end
+					if stats.set_packed_stat_bool(22067) ~= true then
+						stats.set_packed_stat_bool(22067, true)
+					end
+					if stats.set_packed_stat_bool(22068) ~= true then
+						stats.set_packed_stat_bool(22068, true)
+					end
+				end
+				if ImGui.IsItemHovered() then
+					ImGui.SetTooltip("Skip all of setups when you buy a Nightclub first:\nEquipment, Staff, and Collect DJ")
+				end
+				ImGui.SameLine()
+				if ImGui.Button("Nightclub Vehicle Trade in##Unlocks") then
+					if stats.get_int("NIGHTCLUB_JOBS_DONE") < 10 then
+						stats.set_int("NIGHTCLUB_JOBS_DONE", 10)
+					end
+					if stats.get_int("HUB_SALES_COMPLETED") < 10 then
+						stats.set_int("HUB_SALES_COMPLETED", 10)
+					end
+				end
+				if ImGui.IsItemHovered() then
+					ImGui.SetTooltip("Unlocks trade in vehicles for blimp, mule, and pounder")
+				end
+				
+				if ImGui.Button("Acid Lab Equipment Upgrade##Unlocks") then
+					if stats.get_int("AWD_CALLME") < 10 then -- Job Finished
+						stats.set_int("AWD_CALLME", 10)
+					end
+				end
+				if ImGui.IsItemHovered() then
+					ImGui.SetTooltip("Immediately complete 10 dax works to unlock acid\nlab brickade equipment upgrade")
+				end
+				ImGui.EndTabItem()
+			end
 			
-			--MaxBetLimit = ImGui.Checkbox("Remove Bet Limit Challenge##MaxBetLimit", MaxBetLimit) -- may not work
-			--if ImGui.IsItemHovered() then
-			--	ImGui.SetTooltip("Removed bet limit for multiplayer challenge. Not work for casino chip gambling")
-			--end
-			
+			if ImGui.BeginTabItem("Buildings") then
+				if ImGui.Button("Cayo Perico Heist##Unlocks") then
+					if stats.get_bool("COMPLETE_H4_F_USING_VETIR") ~= true then
+						stats.set_bool("COMPLETE_H4_F_USING_VETIR", true)
+					end
+					if stats.get_bool("COMPLETE_H4_F_USING_LONGFIN") ~= true then
+						stats.set_bool("COMPLETE_H4_F_USING_LONGFIN", true)
+					end
+					if stats.get_bool("COMPLETE_H4_F_USING_ANNIH") ~= true then
+						stats.set_bool("COMPLETE_H4_F_USING_ANNIH", true)
+					end
+					if stats.get_bool("COMPLETE_H4_F_USING_ALKONOS") ~= true then
+						stats.set_bool("COMPLETE_H4_F_USING_ALKONOS", true)
+					end
+					if stats.get_bool("COMPLETE_H4_F_USING_PATROLB") ~= true then
+						stats.set_bool("COMPLETE_H4_F_USING_PATROLB", true)
+					end
+				end
+				
+				if ImGui.Button("The Diamond Casino Heist##Unlocks") then
+					if stats.get_int("CAS_HEIST_NOTS") ~= -1 then
+						stats.set_int("CAS_HEIST_NOTS", -1)
+					end
+					if stats.get_int("CH_ARC_CAB_CLAW_TROPHY") ~= -1 then
+						stats.set_int("CH_ARC_CAB_CLAW_TROPHY", -1)
+					end
+					if stats.get_int("CH_ARC_CAB_LOVE_TROPHY") ~= -1 then
+						stats.set_int("CH_ARC_CAB_LOVE_TROPHY", -1)
+					end
+					if stats.get_int("SIGNAL_JAMMERS_COLLECTED") ~= -1 then
+						stats.set_int("SIGNAL_JAMMERS_COLLECTED", -1)
+					end
+					if stats.get_int("H3_BOARD_DIALOGUE0") ~= -1 then
+						stats.set_int("H3_BOARD_DIALOGUE0", -1)
+					end
+					if stats.get_int("H3_BOARD_DIALOGUE1") ~= -1 then
+						stats.set_int("H3_BOARD_DIALOGUE1", -1)
+					end
+					if stats.get_int("H3_BOARD_DIALOGUE2") ~= -1 then
+						stats.set_int("H3_BOARD_DIALOGUE2", -1)
+					end
+					if stats.get_int("H3_VEHICLESUSED") ~= -1 then
+						stats.set_int("H3_VEHICLESUSED", -1)
+					end
+					if stats.get_bool("VCM_FLOW_CS_RSC_SEEN") ~= true then
+						stats.set_bool("VCM_FLOW_CS_RSC_SEEN", true)
+					end
+					if stats.get_bool("VCM_FLOW_CS_BWL_SEEN") ~= true then
+						stats.set_bool("VCM_FLOW_CS_BWL_SEEN", true)
+					end
+					if stats.get_bool("VCM_FLOW_CS_MTG_SEEN") ~= true then
+						stats.set_bool("VCM_FLOW_CS_MTG_SEEN", true)
+					end
+					if stats.get_bool("VCM_FLOW_CS_OIL_SEEN") ~= true then
+						stats.set_bool("VCM_FLOW_CS_OIL_SEEN", true)
+					end
+					if stats.get_bool("VCM_FLOW_CS_DEF_SEEN") ~= true then
+						stats.set_bool("VCM_FLOW_CS_DEF_SEEN", true)
+					end
+					if stats.get_bool("VCM_FLOW_CS_FIN_SEEN") ~= true then
+						stats.set_bool("VCM_FLOW_CS_FIN_SEEN", true)
+					end
+					if stats.get_bool("HELP_FURIA") ~= true then
+						stats.set_bool("HELP_FURIA", true)
+					end
+					if stats.get_bool("HELP_MINITAN") ~= true then
+						stats.set_bool("HELP_MINITAN", true)
+					end
+					if stats.get_bool("HELP_YOSEMITE2") ~= true then
+						stats.set_bool("HELP_YOSEMITE2", true)
+					end
+					if stats.get_bool("HELP_ZHABA") ~= true then
+						stats.set_bool("HELP_ZHABA", true)
+					end
+					if stats.get_bool("HELP_IMORGEN") ~= true then
+						stats.set_bool("HELP_IMORGEN", true)
+					end
+					if stats.get_bool("HELP_SULTAN2") ~= true then
+						stats.set_bool("HELP_SULTAN2", true)
+					end
+					if stats.get_bool("HELP_VAGRANT") ~= true then
+						stats.set_bool("HELP_VAGRANT", true)
+					end
+					if stats.get_bool("HELP_VSTR") ~= true then
+						stats.set_bool("HELP_VSTR", true)
+					end
+					if stats.get_bool("HELP_STRYDER") ~= true then
+						stats.set_bool("HELP_STRYDER", true)
+					end
+					if stats.get_bool("HELP_SUGOI") ~= true then
+						stats.set_bool("HELP_SUGOI", true)
+					end
+					if stats.get_bool("HELP_KANJO") ~= true then
+						stats.set_bool("HELP_KANJO", true)
+					end
+					if stats.get_bool("HELP_FORMULA") ~= true then
+						stats.set_bool("HELP_FORMULA", true)
+					end
+					if stats.get_bool("HELP_FORMULA2") ~= true then
+						stats.set_bool("HELP_FORMULA2", true)
+					end
+					if stats.get_bool("HELP_JB7002") ~= true then
+						stats.set_bool("HELP_JB7002", true)
+					end
+				end
+				ImGui.EndTabItem()
+			end
 			ImGui.EndTabItem()
 		end
 		ImGui.EndTabBar()
@@ -5635,10 +9796,10 @@ taxiservice2 = false
 
 script.register_looped("GoldenGets Misc", function(script)
 	if disabletransactionerror then --????????
-		if globals.set_int(BTEg1 + 6) == 4 or 20 then
-			globals.set_int(BTEg1, 0) -- shop_controller.c	if (Global_4536677)    HUD::SET_WARNING_MESSAGE_WITH_HEADER("CTALERT_A" /*Alert*/, func_1372(Global_4536683), instructionalKey, 0, false, -1, 0, 0, true, 0);
-			globals.set_int(BTEg2, 0) -- shop_controller.c	HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("CTALERT_F_1" /*Rockstar game servers could not process this transaction. Please try again and check ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about current issues, outages, or scheduled maintenance periods.*/);
-			globals.set_int(BTEg3, 0) -- shop_controller.c	HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("CTALERT_F_1" /*Rockstar game servers could not process this transaction. Please try again and check ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about current issues, outages, or scheduled maintenance periods.*/);
+		if locals_get_int(SupportVersion_string, BTEg1 + 6) == 4 or 20 then
+			locals_set_int(SupportVersion_string, BTEg1, 0) -- shop_controller.c	if (Global_4536677)    HUD::SET_WARNING_MESSAGE_WITH_HEADER("CTALERT_A" /*Alert*/, func_1372(Global_4536683), instructionalKey, 0, false, -1, 0, 0, true, 0);
+			locals_set_int(SupportVersion_string, BTEg2, 0) -- shop_controller.c	HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("CTALERT_F_1" /*Rockstar game servers could not process this transaction. Please try again and check ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about current issues, outages, or scheduled maintenance periods.*/);
+			locals_set_int(SupportVersion_string, BTEg3, 0) -- shop_controller.c	HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("CTALERT_F_1" /*Rockstar game servers could not process this transaction. Please try again and check ~HUD_COLOUR_SOCIAL_CLUB~www.rockstargames.com/support~s~ for information about current issues, outages, or scheduled maintenance periods.*/);
 		end
 	end
 	
@@ -5746,9 +9907,9 @@ end)
 EnableVehicle = false
 EnableVehicle2 = false
 stonehatchetrampage = false
+MaxBetLimit = false
 TunableMultplier = false
 LSCarMeetAllMultiplier = false
-MaxBetLimit = false
 
 script.register_looped("GoldenGets Multiplier", function()
 	if EnableVehicle then
@@ -7210,6 +11371,14 @@ script.register_looped("GoldenGets Multiplier", function()
         tunables.set_float("BB_HATCHET_RAMPAGE_HEALTH_REGEN_MAX", 1) -- Health Recharge Limit
     end
 	
+	if MaxBetLimit then
+		tunables.set_float("MIN_BET_LIMIT", 0)
+		tunables.set_float("MAX_BET_LIMIT", INT_MAX)
+	else
+		tunables.set_float("MIN_BET_LIMIT", 100.000)
+		tunables.set_float("MAX_BET_LIMIT", 1000.000)
+	end
+	
 	if TunableMultplier then
 		tunables.set_float("CASH_MULTIPLIER", CashMultiplier)
 		tunables.set_float("XP_MULTIPLIER", XPMultiplier)
@@ -7246,7 +11415,7 @@ script.register_looped("GoldenGets Multiplier", function()
 	end
 	
 	if LSCarMeetAllMultiplier then
-		tunables.set_float("TUNER_SPRINT_FIRST_TIME_BONUS_XP_MULTIPLIER", LSCarMeetAll) -- 1
+		tunables.set_float("TUNER_SPRINT_FIRST_TIME_BONUS_XP_MULTIPLIER", LSCarMeetAll) -- #1
 		tunables.set_float("TUNER_STREET_FIRST_TIME_BONUS_XP_MULTIPLIER", LSCarMeetAll)
 		tunables.set_float("TUNER_PURSUIT_FIRST_TIME_BONUS_XP_MULTIPLIER", LSCarMeetAll)
 		tunables.set_float("TUNER_MOD_FIRST_TIME_BONUS_XP_MULTIPLIER", LSCarMeetAll)
@@ -7275,17 +11444,9 @@ script.register_looped("GoldenGets Multiplier", function()
 		tunables.set_float("TUNER_CARCLUB_VISITS_STREAK_XP_MULTIPLIER", LSCarMeetAll)
 		tunables.set_float("TUNER_CARCLUB_TIME_XP_MULTIPLIER", LSCarMeetAll)
 		tunables.set_float("TUNER_SANDBOX_TIME_XP_MULTIPLIER", LSCarMeetAll)
-		tunables.set_float("TUNER_MERCH_PURCHASE_XP_MULTIPLIER", LSCarMeetAll) -- 30
-		tunables.set_float("TUNER_CARCLUB_TIME_XP_MERCH_MULTIPLIER", LSCarMeetAll) -- 41
-		tunables.set_float("TUNER_SANDBOX_TIME_XP_MERCH_MULTIPLIER", LSCarMeetAll) -- 42
-	end
-	
-	if MaxBetLimit then
-		tunables.set_float("MIN_BET_LIMIT", 0)
-		tunables.set_float("MAX_BET_LIMIT", INT_MAX)
-	else
-		tunables.set_float("MIN_BET_LIMIT", 100.000)
-		tunables.set_float("MAX_BET_LIMIT", 1000.000)
+		tunables.set_float("TUNER_MERCH_PURCHASE_XP_MULTIPLIER", LSCarMeetAll) -- #30
+		tunables.set_float("TUNER_CARCLUB_TIME_XP_MERCH_MULTIPLIER", LSCarMeetAll) -- #41
+		tunables.set_float("TUNER_SANDBOX_TIME_XP_MERCH_MULTIPLIER", LSCarMeetAll) -- #42
 	end
 end)
 

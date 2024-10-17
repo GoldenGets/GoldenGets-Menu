@@ -4,7 +4,7 @@ SupportVersion = "1.69"
 ------------------------------------ Launch Menu
 
 GoldenGetsMenu = gui.get_tab("GoldenGets Menu")
-gui.show_message("GoldenGets Menu v1.1 | "..SupportVersion.." b"..SupportBuild.."","is Successfully launched!")
+gui.show_message("GoldenGets Menu v1.1 | "..SupportVersion.."-"..SupportBuild.."","is Successfully launched!")
 
 ------------------------------------ Build Compatibility
 
@@ -13,7 +13,7 @@ CurrentBuild_string = CurrentBuild:get_string()
 BuildStatus = 0
 
 if CurrentBuild:get_string() ~= SupportBuild then
-    BuildStatus = 0
+    BuildStatus = 0 -- Failed to find some patterns for GTA5 (Note: Found game version 1.69-3351 but this YimMenu version is for game version 1.69-3337)
 	gui.show_error("GoldenGets Menu - Outdate","Unsupported Build version (b"..SupportBuild.."). Some functions will be automatically disabled!")
     log.warning("Unsupported Build version (b"..SupportBuild.."), current Build version is (b"..CurrentBuild_string.."). Some functions will be automatically disabled!")
 else
@@ -102,67 +102,67 @@ else
     VersionStatus = 1
 end
 
-function globals_v_get_int(SupportVersion_string, intglobal)
-    if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
+function globals_v_get_int(SupportVersion, intglobal)
+    if tostring(SupportVersion) == CurrentVersion_string or VersionStatus == 5 then
         return globals.get_int(intglobal)
     else
-        log.warning("Unable to read data, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to read data, unsupported Online version (v"..SupportVersion.."). Current Online version is (v"..CurrentVersion_string..")")
     end
 end
 
-function globals_v_set_int(SupportVersion_string, intglobal, intval)
-    if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
+function globals_v_set_int(SupportVersion, intglobal, intval)
+    if tostring(SupportVersion) == CurrentVersion_string or VersionStatus == 5 then
         globals.set_int(intglobal, intval)
     else
-        log.warning("Unable to run, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to run, unsupported Online version (v"..SupportVersion.."). Current Online version is (v"..CurrentVersion_string..")")
     end
 end
 
-function globals_v_get_float(SupportVersion_string, floatglobal)
-    if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
+function globals_v_get_float(SupportVersion, floatglobal)
+    if tostring(SupportVersion) == CurrentVersion_string or VersionStatus == 5 then
         return globals.get_float(floatglobal)
     else
-        log.warning("Unable to read data, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to read data, unsupported Online version (v"..SupportVersion.."). Current Online version is (v"..CurrentVersion_string..")")
     end
 end
 
-function globals_v_set_float(SupportVersion_string, floatglobal, floatval)
-    if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
+function globals_v_set_float(SupportVersion, floatglobal, floatval)
+    if tostring(SupportVersion) == CurrentVersion_string or VersionStatus == 5 then
         globals.set_float(floatglobal, floatval)
     else
-        log.warning("Unable to run, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to run, unsupported Online version (v"..SupportVersion.."). Current Online version is (v"..CurrentVersion_string..")")
     end
 end
 
-function locals_v_get_int(SupportVersion_string, scriptname, intlocal)
-    if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
+function locals_v_get_int(SupportVersion, scriptname, intlocal)
+    if tostring(SupportVersion) == CurrentVersion_string or VersionStatus == 5 then
         return locals.get_int(scriptname, intlocal)
     else
-        log.warning("Unable to read data, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to read data, unsupported Online version (v"..SupportVersion.."). Current Online version is (v"..CurrentVersion_string..")")
     end
 end
 
-function locals_v_set_int(SupportVersion_string, scriptname, intlocal, intlocalval)
-    if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
+function locals_v_set_int(SupportVersion, scriptname, intlocal, intlocalval)
+    if tostring(SupportVersion) == CurrentVersion_string or VersionStatus == 5 then
         locals.set_int(scriptname, intlocal, intlocalval)
     else
-        log.warning("Unable to run, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to run, unsupported Online version (v"..SupportVersion.."). Current Online version is (v"..CurrentVersion_string..")")
     end
 end
 
-function locals_v_get_float(SupportVersion_string, scriptname, flocal)
-    if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
+function locals_v_get_float(SupportVersion, scriptname, flocal)
+    if tostring(SupportVersion) == CurrentVersion_string or VersionStatus == 5 then
         return locals.get_float(scriptname, flocal)
     else
-        log.warning("Unable to read data, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to read data, unsupported Online version (v"..SupportVersion.."). Current Online version is (v"..CurrentVersion_string..")")
     end
 end
 
-function locals_v_set_float(SupportVersion_string, scriptname, flocal, flocalval)
-    if tostring(SupportVersion_string) == CurrentVersion_string or VersionStatus == 5 then
+function locals_v_set_float(SupportVersion, scriptname, flocal, flocalval)
+    if tostring(SupportVersion) == CurrentVersion_string or VersionStatus == 5 then
         locals.set_float(scriptname, flocal, flocalval)
     else
-        log.warning("Unable to run, unsupported Online version (v"..SupportVersion_string.."). Current Online version is (v"..CurrentVersion_string..")")
+        log.warning("Unable to run, unsupported Online version (v"..SupportVersion.."). Current Online version is (v"..CurrentVersion_string..")")
     end
 end
 
@@ -194,37 +194,102 @@ CS    = "casino_slots"
 TCP   = "three_card_poker"
 GSH   = "gunclub_shop"
 
---Globals--
-
-FMg     = 262145 						-- free mode 				    	   		// Tunable: CASH_MULTIPLIER
-
-BTEg1   = 4537455 						-- bypass transaction error 1
-BTEg2   = 4537456 						-- bypass transaction error 2
-BTEg3   = 4537457 						-- bypass transaction error 3
-
-TTg     = 4537311 						-- trigger transaction
-
-GSIg    = 1663174 						-- get supplies instantly 					// Guide:   OR_PSUP_DEL
-
 --Locals--
 
-BCISl    = 1211 + 774 		-- bunker crash instant sell
-HCVISl1  = 1934 + 1078 		-- hangar cargo vip instant sell 1 			   // Guide: SMOT_HLPDROP2
-HCVISl2  = 1934 + 768 		-- hangar cargo vip instant sell 2			   // Guide: MP_MISSION_COUNTDOWN_SOUNDSET
-SCVAl1   = 741 				-- special cargo vip appsecuroserv 1 		   // Guide: MP_WH_SELL
-SCVAl2   = 742 				-- special cargo vip appsecuroserv 2 		   // Guide: MP_WH_SELL
-SCVAl3   = 560 				-- special cargo vip appsecuroserv 3 		   // Guide: MP_WH_SELL
-SCVAl4   = 1138 			-- special cargo vip additional 1
-SCVAl5   = 598 				-- special cargo vip additional 2
-SCVAl6   = 1127 			-- special cargo vip additional 3
-SCVMTl   = 545 + 7 			-- special cargo vip mission type
-SCVISl   = 545 + 1 			-- special cargo vip instant sell
-SCVIBl1  = 603 + 5 			-- special cargo vip instant buy 1
-SCVIBl2  = 603 + 1 			-- special cargo vip instant buy 2
-SCVIBl3  = 603 + 191 		-- special cargo vip instant buy 3
-SCVIBl4  = 603 + 192 		-- special cargo vip instant buy 4
-NLCl     = 181 + 32 + 1 	-- night loop collect local
-BLWLl    = 142 + 747 		-- bypass locked weapon livery
+FMg     	= 262145 						-- free mode 				    	   		// Tunable: CASH_MULTIPLIER
+ACg1    	= 1928958 + 1 + 1 				-- apartment player 1 cut
+ACg2    	= 1928958 + 1 + 2 				-- apartment player 2 cut
+ACg3    	= 1928958 + 1 + 3 				-- apartment player 3 cut
+ACg4    	= 1928958 + 1 + 4 				-- apartment player 4 cut
+ACg5    	= 1930926 + 3008 + 1 			-- local apartment player 1 cut
+ACFg1   	= 1930926 + 192
+ACFg2   	= 1930926 + 190
+CPCg1   	= 1971648 + 831 + 56 + 1 		-- cayo perico player 1 cut
+CPCg2   	= 1971648 + 831 + 56 + 2 		-- cayo perico player 2 cut
+CPCg3   	= 1971648 + 831 + 56 + 3		-- cayo perico player 3 cut
+CPCg4   	= 1971648 + 831 + 56 + 4 		-- cayo perico player 4 cut
+DCCg1   	= 1964849 + 1497 + 736 + 92 + 1 -- diamond casino player 1 cut
+DCCg2   	= 1964849 + 1497 + 736 + 92 + 2 -- diamond casino player 2 cut
+DCCg3   	= 1964849 + 1497 + 736 + 92 + 3 -- diamond casino player 3 cut
+DCCg4   	= 1964849 + 1497 + 736 + 92 + 4 -- diamond casino player 4 cut
+DCg1    	= 1960755 + 812 + 50 + 1        -- doomsday player 1 cut
+DCg2    	= 1960755 + 812 + 50 + 2        -- doomsday player 2 cut
+DCg3    	= 1960755 + 812 + 50 + 3        -- doomsday player 3 cut
+DCg4    	= 1960755 + 812 + 50 + 4        -- doomsday player 4 cut
+BTEg1   	= 4537455 						-- bypass transaction error 1
+BTEg2   	= 4537456 						-- bypass transaction error 2
+BTEg3   	= 4537457 						-- bypass transaction error 3
+CLg     	= 1964419 						-- cheap loop 								// Guide:   MPPLY_CASINO_MEM_BONUS
+TTg     	= 4537311 						-- trigger transaction
+GSIg    	= 1663174 						-- get supplies instantly 					// Guide:   OR_PSUP_DEL
+
+FMCSHl   	= 3236  		    -- fm_mission_controller script host 	  	   // Guide: MP_Reduce_Score_For_Emitters_Scene
+FMC20SHl 	= 19376 		    -- fm_mission_controller_2020 script host 	   // Guide: bVar0 = NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT();
+AIFl1    	= 38397 			-- agency instant finish 1 (outdated)
+AIFl2    	= 39772 			-- agency instant finish 2 (outdated)
+ASRBl    	= 383 			    -- auto shop reload board
+ASIFl1   	= 50150 + 1  	    -- auto shop instant finish 1
+ASIFl2   	= 50150 + 1770 + 1 -- auto shop finish 2
+AIFl3    	= 19746  		    -- apartment instant finish 1
+AIFl4    	= 28365 + 1 		-- apartment instant finish 2
+AIFl5    	= 31621 + 69 		-- apartment instant finish 3
+AFHl     	= 11778 + 24 		-- apartment fleeca hack
+AFDl     	= 10069 + 11 		-- apartment fleeca drill
+CPRSl    	= 1546 			-- cayo perico reload screen
+CPFHl    	= 24880 			-- cayo perico fingerprint hack			 	   // Guide: practice
+CPPCCl   	= 30939 + 3		-- cayo perico plasma cutter cut 			   // Guide: Overheat_Loop
+CPSTCl   	= 29700 			-- cayo perico drainage pipe cut			   // Guide: UT_WELD_PROMPT
+CPIFl1   	= 50150 			-- cayo perico instant finish 1
+CPIFl2   	= 50150 + 1770 + 1 -- cayo perico instant finish 2
+DCRBl    	= 185 			    -- diamond casino reload board
+DCAl     	= 10255 		    -- diamond casino autograbber 			 	   // Guide: DLC_HEIST_MINIGAME_PAC_CASH_GRAB_SCENE
+DCASl    	= 10255 + 14 	    -- diamond casino autograbber speed
+DCFHl    	= 53019 		    -- diamond casino fingerprint hack		 	   // Guide: DLC_HEIST_MINIGAME_PAC_CASH_GRAB_SCENE
+DCKHl    	= 54085 		    -- diamond casino keypad hack
+DCDVDl1  	= 10109 + 7 	    -- diamond casino drill vault door 1 	 	   // Guide: DLC_HEIST_MINIGAME_FLEECA_DRILLING_SCENE
+DCDVDl2  	= 10109 + 37 	    -- diamond casino drill vault door 2
+DDBHl    	= 1514 			-- doomsday data breaches hack
+DDSHl    	= 1271 + 135 		-- doomsday doomsday scenario hack
+DIFl1    	= 19746	 		-- doomsday instant finish 1
+DIFl2    	= 19746 + 1741 	-- doomsday instant finish 2
+DIFl3    	= 27489 + 859 + 18 -- doomsday instant finish 3
+DIFl4    	= 31621 + 69 		-- doomsday instant finish 4
+DIFl5    	= 31621 + 97 		-- doomsday instant finish 5
+SYRSl    	= 512 				-- salvage yard reload screen
+BCISl    	= 1211 + 774 		-- bunker crash instant sell
+CMBJCl   	= 116 				-- casino master bjackjack cards
+CMBJDl   	= 846 				-- casino master bjackjack decks
+CMBJPTl  	= 1776 			-- casino master bjackjack player's table
+CMBJPTSl 	= 8 				-- casino master bjackjack player's table size
+CMGLPl1  	= 280 + 14 		-- casino master lucky wheel win state
+CMGLPl2  	= 280 + 45 		-- casino master lucky wheel prize state
+CMPTl    	= 749 				-- casino master poker table
+CMPTSl   	= 9 				-- casino master poker table size
+CMPCl    	= 116				-- casino master poker cards
+CMPCDl   	= 168 				-- casino master poker current deck
+CMPACl   	= 1038 			-- casino master poker anti cheat
+CMPACDl  	= 799 				-- casino master poker anti cheat deck
+CMPDSl   	= 55 				-- casino master poker deck size
+CMRMTl   	= 124 				-- casino master roulette master table
+CMROTl   	= 1357				-- casino master roulette outcomes table
+CMRBTl   	= 153 				-- casino master roulette ball table
+CMSRRTl  	= 1348 			-- casino master slots random results table
+HCVISl1  	= 1934 + 1078 		-- hangar cargo vip instant sell 1 			   // Guide: SMOT_HLPDROP2
+HCVISl2  	= 1934 + 768 		-- hangar cargo vip instant sell 2			   // Guide: MP_MISSION_COUNTDOWN_SOUNDSET
+SCVAl1   	= 741 				-- special cargo vip appsecuroserv 1 		   // Guide: MP_WH_SELL
+SCVAl2   	= 742 				-- special cargo vip appsecuroserv 2 		   // Guide: MP_WH_SELL
+SCVAl3   	= 560 				-- special cargo vip appsecuroserv 3 		   // Guide: MP_WH_SELL
+SCVAl4   	= 1138 			-- special cargo vip additional 1
+SCVAl5   	= 598 				-- special cargo vip additional 2
+SCVAl6   	= 1127 			-- special cargo vip additional 3
+SCVMTl   	= 545 + 7 			-- special cargo vip mission type
+SCVISl   	= 545 + 1 			-- special cargo vip instant sell
+SCVIBl1  	= 603 + 5 			-- special cargo vip instant buy 1
+SCVIBl2  	= 603 + 1 			-- special cargo vip instant buy 2
+SCVIBl3  	= 603 + 191 		-- special cargo vip instant buy 3
+SCVIBl4  	= 603 + 192 		-- special cargo vip instant buy 4
+NLCl     	= 181 + 32 + 1 	-- night loop collect local
+BLWLl    	= 142 + 747 		-- bypass locked weapon livery
 
 --Global Variables--
 
@@ -234,19 +299,17 @@ README  = "Read Me"  -- just read me
 
 ------------------------------------
 
-	-- GoldenGets Scripts --
+	-- GoldenGetsMenu Scripts --
 	
 	AMP 		= "am_mp_peds"
 	GBCS 		= "gb_biker_contraband_sell"
 	FCALS 		= "fm_content_acid_lab_sell"
 	
-	-- GoldenGets Globals 1.69 --
+	-- GoldenGetsMenu Globals 1.69 --
 	
-	SCSMg 	= FMg + 15624			-- Special Cargo Sell Mission global
-	MCBSg 	= FMg + 18356		 	-- Motorcycle Club Business Sell global
-	ASCCC 	= FMg + 31869			-- Auto Shop Customer Cars % Chance							// Tunable: 
+	ASCCC 	= 1561590376 --FMg + 31869			-- Auto Shop Customer Cars % Chance							// Tunable: 
 	
-	-- GoldenGets Locals 1.69 --
+	-- GoldenGetsMenu Locals 1.69 --
 	
 	SCVSIl 	= 1942640				-- special cargo vip special item local
 	SCVUCl 	= 1942486				-- special cargo vip unique cargo local
@@ -333,6 +396,11 @@ function TransactionManager:GetBankBalance()
 end
 transactionManager = setmetatable({}, TransactionManager)
 
+function IS_HELP_MSG_DISPLAYED(label) -- Credit goes to @jerry1234508 on Discord
+    HUD.BEGIN_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(label)
+    return HUD.END_TEXT_COMMAND_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(0)
+end
+
 ------------------------------------
 
 WalletValue = 0
@@ -341,27 +409,32 @@ BankValue = 0
 BankValue = math.min(transactionManager:GetBankBalance(), BankValue)
 
 GoldenGetsMenu:add_imgui(function()
-    --if ImGui.Button("Switch CEO/President") then
-	--	local playerIndex = stats.get_int("MPPLY_LAST_MP_CHAR") --????ID
-	--	--playerOrganizationTypeRaw: {Global_1886967[PLAYER::PLAYER_ID() /*609*/].f_10.f_429}  GLOBAL  
-	--	--playerOrganizationType: {('1886967', '*609', '10', '429', '1')}  GLOBAL  global + (pid *pidmultiplier) + offset + offset + offset (values: 0 = CEO and 1 = MOTORCYCLE CLUB) 
-	--	if locals_b_get_int(SupportBuild, 1887305+playerIndex*609+10+430+1) == 0 then --1886967+playerIndex*609+10+429+1 = 0 ?CEO =1??????
-	--		locals_b_set_int(SupportBuild, 1887305+playerIndex*609+10+430+1,1)
-	--		gui.show_message("Switch as a President","Become a President of your own Motorcycle Club")
-	--	else
-	--		if locals_b_get_int(SupportBuild, 1887305+playerIndex*609+10+430+1) == 1 then
-	--			locals_b_set_int(SupportBuild, 1887305+playerIndex*609+10+430+1,0)
-	--			gui.show_message("Switch as a CEO","Become a CEO of your own Organization")
-	--		else
-	--			gui.show_message("You are Not the Boss","You Must Register as a CEO or President")
-	--		end
-	--	end
-	--end
-    --if ImGui.IsItemHovered() then	
-    --    ImGui.SetTooltip("May not work in public session")
-    --end
-	--ImGui.SameLine()
-	--auto_ceo_mc = ImGui.Checkbox("Auto Register as a Boss", auto_ceo_mc) -- Detects the cases that you should be a CEO/MC to start some heists/missions, make you one of it.
+    if ImGui.Button("Switch CEO/President") then
+		if NETWORK.NETWORK_IS_HOST() then
+			local PlayerCharacter = stats.get_int("MPPLY_LAST_MP_CHAR") --????ID
+			--playerOrganizationTypeRaw: {Global_1886967[PLAYER::PLAYER_ID() /*609*/].f_10.f_429}  GLOBAL  
+			--playerOrganizationType: {('1886967', '*609', '10', '429', '1')}  GLOBAL  global + (pid *pidmultiplier) + offset + offset + offset (values: 0 = CEO and 1 = MOTORCYCLE CLUB) 
+			if locals_b_get_int(SupportBuild, 1887305 + PlayerCharacter*609 + 10 + 430 + 1) == 0 then --1886967+PlayerCharacter*609+10+429+1 = 0 ?CEO =1??????
+				locals_v_set_int(SupportBuild, 1887305 + PlayerCharacter*609 + 10 + 430 + 1, 1)
+				gui.show_message("Switch as a President","Become a President of your own Motorcycle Club")
+			else
+				if locals_b_get_int(SupportBuild, 1887305 + PlayerCharacter*609 + 10 + 430 + 1) == 1 then
+					locals_v_set_int(SupportBuild, 1887305 + PlayerCharacter*609 + 10 + 430 + 1, 0)
+					gui.show_message("Switch as a CEO","Become a CEO of your own Organization")
+				else
+					gui.show_message("You are Not the Boss","You Must Register as a CEO or President")
+				end
+			end
+		end
+	end
+    if ImGui.IsItemHovered() then	
+        ImGui.SetTooltip("May not work in public session")
+    end
+	ImGui.SameLine()
+	AutoCEOPresident = ImGui.Checkbox("Auto CEO/President##AutoCEOPresident", AutoCEOPresident)
+	if ImGui.IsItemHovered() then
+		ImGui.SetTooltip("Detects the cases that you should become a CEO/MC\nto start some heist/mission, make you one of it.")
+	end
 	
 	ImGui.SeparatorText("Device Access")
 	
@@ -393,13 +466,13 @@ GoldenGetsMenu:add_imgui(function()
 	
 			locals_v_set_int(SupportVersion, "fm_mission_controller_2020", 29700, 6) --3274 --??????????
 	
-			locals_v_set_float(SupportVersion, "fm_mission_controller_2020", 30939 + 3, 100) --3274 ????????
+			globals_v_set_float(SupportVersion, "fm_mission_controller_2020", 30939 + 3, 100) --3274 ????????
 	
 			if locals_v_get_int(SupportVersion, "fm_mission_controller_2020", 30914) == 3 then --?????? --Input_Code_Enter_Correct
 				locals_v_set_int(SupportVersion, "fm_mission_controller_2020", 30915, 2) --3274 --???????
-				locals_v_set_float(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1, locals_v_get_int(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 1)) --3274 --???????????
-				locals_v_set_float(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 2, locals_v_get_int(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 1 + 2)) --3274 --???????????
-				locals_v_set_float(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 4, locals_v_get_int(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 1 + 4)) --3274 --???????????
+				globals_v_set_float(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1, locals_v_get_int(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 1)) --3274 --???????????
+				globals_v_set_float(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 2, locals_v_get_int(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 1 + 2)) --3274 --???????????
+				globals_v_set_float(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 4, locals_v_get_int(SupportVersion, "fm_mission_controller_2020", 30915 + 1 + 1 + 1 + 4)) --3274 --???????????
 				PAD.SET_CONTROL_VALUE_NEXT_FRAME(2, 237, 1.0) --????
 			end
 		
@@ -411,7 +484,7 @@ GoldenGetsMenu:add_imgui(function()
 		end
 				
 		if SCRIPT.GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_mission_controller")) ~= 0 then --????
-			locals_v_set_float(SupportVersion, "fm_mission_controller", 10069 + 11, 1) --3274 ??????
+			globals_v_set_float(SupportVersion, "fm_mission_controller", 10069 + 11, 1) --3274 ??????
 			locals_v_set_int(SupportVersion, "fm_mission_controller", 10109 + 2, 8) --3274 ??????? DLC_HEIST3\HEIST_FINALE_LASER_DRILL case 8
 		end
 		--???????????
@@ -604,7 +677,7 @@ GoldenGetsMenu:add_imgui(function()
 						NETSHOPPING.NET_GAMESERVER_TRANSFER_WALLET_TO_BANK(character, wallet)
 					end
 					
-					WalletValue, drag = ImGui.DragInt("##WalletValue", WalletValue, 1, 0, transactionManager:GetWalletBalance())
+					WalletValue = ImGui.DragInt("##WalletValue", WalletValue, 1, 0, transactionManager:GetWalletBalance())
 					if ImGui.Button("Deposit Amount") then
 						character = transactionManager:GetCharacter()
 						NETSHOPPING.NET_GAMESERVER_TRANSFER_WALLET_TO_BANK(character, WalletValue)
@@ -618,7 +691,7 @@ GoldenGetsMenu:add_imgui(function()
 						NETSHOPPING.NET_GAMESERVER_TRANSFER_BANK_TO_WALLET(character, bank)
 					end
 					
-					BankValue, drag = ImGui.DragInt("##BankValue", BankValue, 1, 0, transactionManager:GetBankBalance())
+					BankValue = ImGui.DragInt("##BankValue", BankValue, 1, 0, transactionManager:GetBankBalance())
 					if ImGui.Button("Withdraw Amount") then
 						character = transactionManager:GetCharacter()
 						NETSHOPPING.NET_GAMESERVER_TRANSFER_BANK_TO_WALLET(character, BankValue)
@@ -746,6 +819,7 @@ GoldenGetsMenu:add_imgui(function()
 					if AllCooldowns ~= All_Cooldowns then
 						AllJobCooldowns = AllCooldowns
 						VIPMCWorkChallengeCooldown = AllCooldowns
+						VIPMCWorkChallengeDuration = AllCooldowns
 						MCBikerBarMissionCooldown = AllCooldowns
 						TerrorbyteClientJobCooldown = AllCooldowns
 						CasinoWorkCooldown = AllCooldowns
@@ -759,30 +833,39 @@ GoldenGetsMenu:add_imgui(function()
 						VehicleCargoCooldown = AllCooldowns
 						VehicleCargoSourceCooldown = AllCooldowns
 						VehicleCargoSellCooldown = AllCooldowns
+						VehicleCargoGlobalSignal = AllCooldowns
+						VehicleCargoDuration = AllCooldowns
+						MCBusinessGlobalSignal = AllCooldowns
+						MCBusinessDuration = AllCooldowns
+						BunkerGlobalSignal = AllCooldowns
+						BunkerDuration = AllCooldowns
 						HangarCargoCooldown = AllCooldowns
 						HangarCargoSourceCooldown = AllCooldowns
 						HangarCargoSellCooldown = AllCooldowns
+						HangarCargoGlobalSignal = AllCooldowns
 						HangarCargoDuration = AllCooldowns
 						NightclubCooldown = AllCooldowns
+						NightclubGlobalSignal = AllCooldowns
 						AllOtherCooldowns = AllCooldowns
 						RequestVehicleCooldown = AllCooldowns
 						ServiceVehiclesCooldown = AllCooldowns
 						CEOAbilitiesCooldown = AllCooldowns
 						CEOVehiclesCooldown = AllCooldowns
+						ArenaWheelCooldown = AllCooldowns
 						SpinLuckyWheelCooldown = AllCooldowns
 						AllMiscCooldowns = AllCooldowns
 						MCClientVehicleCooldown = AllCooldowns
 						BunkerCooldown = AllCooldowns
-						ArenaWheelCooldown = AllCooldowns
 						NightclubTroublemakerCooldown = AllCooldowns
 						AutoShopClientVehicleCooldown = AllCooldowns
-						AllCooldowns28 = true
+						AllCooldowns31 = true
 					else
-						AllCooldowns28 = false
+						AllCooldowns31 = false
 					end
-					if not AllCooldowns28 then
+					if not AllCooldowns31 then
 						AllCooldowns = AllJobCooldowns
 						and VIPMCWorkChallengeCooldown
+						and VIPMCWorkChallengeDuration
 						and MCBikerBarMissionCooldown
 						and TerrorbyteClientJobCooldown
 						and CasinoWorkCooldown
@@ -796,21 +879,29 @@ GoldenGetsMenu:add_imgui(function()
 						and VehicleCargoCooldown
 						and VehicleCargoSourceCooldown
 						and VehicleCargoSellCooldown
+						and VehicleCargoGlobalSignal
+						and VehicleCargoDuration
+						and MCBusinessGlobalSignal
+						and MCBusinessDuration
+						and BunkerGlobalSignal
+						and BunkerDuration
 						and HangarCargoCooldown
 						and HangarCargoSourceCooldown
 						and HangarCargoSellCooldown
+						and HangarCargoGlobalSignal
 						and HangarCargoDuration
 						and NightclubCooldown
+						and NightclubGlobalSignal
 						and AllOtherCooldowns
 						and RequestVehicleCooldown
 						and ServiceVehiclesCooldown
 						and CEOAbilitiesCooldown
 						and CEOVehiclesCooldown
+						and ArenaWheelCooldown
 						and SpinLuckyWheelCooldown
 						and AllMiscCooldowns
 						and MCClientVehicleCooldown
 						and BunkerCooldown
-						and ArenaWheelCooldown
 						and NightclubTroublemakerCooldown
 						and AutoShopClientVehicleCooldown
 					end
@@ -822,6 +913,7 @@ GoldenGetsMenu:add_imgui(function()
 					end
 					if AllJobCooldowns ~= All_Job_Cooldowns then
 						VIPMCWorkChallengeCooldown = AllJobCooldowns
+						VIPMCWorkChallengeDuration = AllJobCooldowns
 						MCBikerBarMissionCooldown = AllJobCooldowns
 						TerrorbyteClientJobCooldown = AllJobCooldowns
 						CasinoWorkCooldown = AllJobCooldowns
@@ -834,6 +926,7 @@ GoldenGetsMenu:add_imgui(function()
 					end
 					if not AllJobCooldowns28 then
 						AllJobCooldowns = VIPMCWorkChallengeCooldown
+						and	VIPMCWorkChallengeDuration
 						and MCBikerBarMissionCooldown
 						and TerrorbyteClientJobCooldown
 						and CasinoWorkCooldown
@@ -846,6 +939,11 @@ GoldenGetsMenu:add_imgui(function()
 						VIPMCWorkChallengeCooldown = ImGui.Checkbox("VIP/MC Work & Challenge##VIPMCWorkChallengeCooldown", VIPMCWorkChallengeCooldown)
 						if ImGui.IsItemHovered() then
 							ImGui.SetTooltip("Remove cooldown vip/mc work and challenge on interaction menu")
+						end
+						ImGui.SameLine()
+						VIPMCWorkChallengeDuration = ImGui.Checkbox("Extend Timers##VIPMCWorkChallengeDuration", VIPMCWorkChallengeDuration)
+						if ImGui.IsItemHovered() then
+							ImGui.SetTooltip("Long duration vip/mc work and challenge on interaction menu")
 						end
 						
 						MCBikerBarMissionCooldown = ImGui.Checkbox("MC Biker Bar Mission##MCBikerBarMissionCooldown", MCBikerBarMissionCooldown)
@@ -895,11 +993,19 @@ GoldenGetsMenu:add_imgui(function()
 						VehicleCargoCooldown = AllBusinessCooldowns
 						VehicleCargoSourceCooldown = AllBusinessCooldowns
 						VehicleCargoSellCooldown = AllBusinessCooldowns
+						VehicleCargoGlobalSignal = AllBusinessCooldowns
+						VehicleCargoDuration = AllBusinessCooldowns
+						MCBusinessGlobalSignal = AllBusinessCooldowns
+						MCBusinessDuration = AllBusinessCooldowns
+						BunkerGlobalSignal = AllBusinessCooldowns
+						BunkerDuration = AllBusinessCooldowns
 						HangarCargoCooldown = AllBusinessCooldowns
 						HangarCargoSourceCooldown = AllBusinessCooldowns
 						HangarCargoSellCooldown = AllBusinessCooldowns
+						HangarCargoGlobalSignal = AllBusinessCooldowns
 						HangarCargoDuration = AllBusinessCooldowns
 						NightclubCooldown = AllBusinessCooldowns
+						NightclubGlobalSignal = AllBusinessCooldowns
 						AllBusinessCooldowns28 = true
 					else
 						AllBusinessCooldowns28 = false
@@ -911,11 +1017,19 @@ GoldenGetsMenu:add_imgui(function()
 						and VehicleCargoCooldown
 						and VehicleCargoSourceCooldown
 						and VehicleCargoSellCooldown
+						and VehicleCargoGlobalSignal
+						and VehicleCargoDuration
+						and MCBusinessGlobalSignal
+						and MCBusinessDuration
+						and BunkerGlobalSignal
+						and BunkerDuration
 						and HangarCargoCooldown
 						and HangarCargoSourceCooldown
 						and HangarCargoSellCooldown
+						and HangarCargoGlobalSignal
 						and HangarCargoDuration
 						and NightclubCooldown
+						and NightclubGlobalSignal
 					end
 					ImGui.SameLine()
 					if ImGui.TreeNode("Remove Business Cooldowns") then
@@ -952,6 +1066,18 @@ GoldenGetsMenu:add_imgui(function()
 							VehicleCargoCooldown = VehicleCargoSourceCooldown
 							and VehicleCargoSellCooldown
 						end
+						ImGui.SameLine()
+						VehicleCargoGlobalSignal = ImGui.Checkbox("Extend Global Signal##VehicleCargoGlobalSignal", VehicleCargoGlobalSignal)
+						ImGui.SameLine()
+						VehicleCargoDuration = ImGui.Checkbox("Extend Timers##VehicleCargoDuration", VehicleCargoDuration)
+						
+						MCBusinessGlobalSignal = ImGui.Checkbox("MC Business Extend Global Signal##MCBusinessGlobalSignal", MCBusinessGlobalSignal)
+						ImGui.SameLine()
+						MCBusinessDuration = ImGui.Checkbox("Extend Timers##MCBusinessDuration", MCBusinessDuration)
+						
+						BunkerGlobalSignal = ImGui.Checkbox("Bunker Extend Global Signal##BunkerGlobalSignal", BunkerGlobalSignal)
+						ImGui.SameLine()
+						BunkerDuration = ImGui.Checkbox("Extend Timers##BunkerDuration", BunkerDuration)
 						
 						Hangar_Cargo_Cooldown = HangarCargoCooldown
 						HangarCargoCooldown = ImGui.Checkbox("Hangar Cargo##HangarCargoCooldown", HangarCargoCooldown)
@@ -970,12 +1096,16 @@ GoldenGetsMenu:add_imgui(function()
 							and HangarCargoSellCooldown
 						end
 						ImGui.SameLine()
+						HangarCargoGlobalSignal = ImGui.Checkbox("Extend Global Signal##HangarCargoGlobalSignal", HangarCargoGlobalSignal)
+						ImGui.SameLine()
 						HangarCargoDuration = ImGui.Checkbox("Extend Timers##HangarCargoDuration", HangarCargoDuration)
 						
 						NightclubCooldown = ImGui.Checkbox("Nightclub##NightclubCooldown", NightclubCooldown)
 						if ImGui.IsItemHovered() then
 							ImGui.SetTooltip("Remove cooldown promote club, source/sell goods")
 						end
+						ImGui.SameLine()
+						NightclubGlobalSignal = ImGui.Checkbox("Extend Global Signal##NightclubGlobalSignal", NightclubGlobalSignal)
 						
 						ImGui.Separator()
 						
@@ -992,16 +1122,18 @@ GoldenGetsMenu:add_imgui(function()
 						ServiceVehiclesCooldown = AllOtherCooldowns
 						CEOAbilitiesCooldown = AllOtherCooldowns
 						CEOVehiclesCooldown = AllOtherCooldowns
+						ArenaWheelCooldown = AllOtherCooldowns
 						SpinLuckyWheelCooldown = AllOtherCooldowns
-						AllOtherCooldowns28 = true
+						AllOtherCooldowns6 = true
 					else
-						AllOtherCooldowns28 = false
+						AllOtherCooldowns6 = false
 					end
-					if not AllOtherCooldowns28 then
+					if not AllOtherCooldowns6 then
 						AllOtherCooldowns = RequestVehicleCooldown
 						and ServiceVehiclesCooldown
 						and CEOAbilitiesCooldown
 						and CEOVehiclesCooldown
+						and ArenaWheelCooldown
 						and SpinLuckyWheelCooldown
 					end
 					ImGui.SameLine()
@@ -1026,6 +1158,11 @@ GoldenGetsMenu:add_imgui(function()
 							ImGui.SetTooltip("Remove short cooldown after request a ceo vehicles on interaction menu")
 						end
 						
+						ArenaWheelCooldown = ImGui.Checkbox("Arena Spin Wheel##ArenaWheelCooldown", ArenaWheelCooldown)
+						if ImGui.IsItemHovered() then
+							ImGui.SetTooltip("Remove short cooldown after spin arena wheel spectate")
+						end
+						
 						SpinLuckyWheelCooldown = ImGui.Checkbox("Spin Lucky Wheel##SpinLuckyWheelCooldown", SpinLuckyWheelCooldown)
 						if ImGui.IsItemHovered() then
 							ImGui.SetTooltip("Remove cooldown spin lucky wheel once per day at diamond casino")
@@ -1044,17 +1181,15 @@ GoldenGetsMenu:add_imgui(function()
 					if AllMiscCooldowns ~= All_Misc_Cooldowns then
 						MCClientVehicleCooldown = AllMiscCooldowns
 						BunkerCooldown = AllMiscCooldowns
-						ArenaWheelCooldown = AllMiscCooldowns
 						NightclubTroublemakerCooldown = AllMiscCooldowns
 						AutoShopClientVehicleCooldown = AllMiscCooldowns
-						AllMiscCooldowns28 = true
+						AllMiscCooldowns4 = true
 					else
-						AllMiscCooldowns28 = false
+						AllMiscCooldowns4 = false
 					end
-					if not AllMiscCooldowns28 then
+					if not AllMiscCooldowns4 then
 						AllMiscCooldowns = MCClientVehicleCooldown
 						and BunkerCooldown
-						and ArenaWheelCooldown
 						and NightclubTroublemakerCooldown
 						and AutoShopClientVehicleCooldown
 					end
@@ -1068,11 +1203,6 @@ GoldenGetsMenu:add_imgui(function()
 						BunkerCooldown = ImGui.Checkbox("Bunker Deliver Ammunation##BunkerCooldown", BunkerCooldown)
 						if ImGui.IsItemHovered() then
 							ImGui.SetTooltip("Bunker delivery ammunation is always ready")
-						end
-						
-						ArenaWheelCooldown = ImGui.Checkbox("Arena Spin Wheel##ArenaWheelCooldown", ArenaWheelCooldown)
-						if ImGui.IsItemHovered() then
-							ImGui.SetTooltip("Remove short cooldown after spin arena wheel")
 						end
 						
 						NightclubTroublemakerCooldown = ImGui.Checkbox("Nightclub Troublemaker##NightclubTroublemakerCooldown", NightclubTroublemakerCooldown)
@@ -1143,62 +1273,64 @@ AllCCTV = {
 	joaat("h4_prop_h4_cctv_pole_04"),
 }
 
-auto_ceo_mc = false
+AutoCEOPresident = false
 RemoveAllCCTV = false
 
 script.register_looped("GoldenGets Menu", function()
-	--if not util.is_session_started() then return end
-	--
-	--local CEOLabels = {
-	--	"HIP_HELP_BBOSS",
-	--	"HIP_HELP_BBOSS2",
-	--	"HPBOARD_REG",
-	--	"HPBOARD_REGB",
-	--	"HT_NOT_BOSS",
-	--	"HUB_PC_BLCK",
-	--	"NHPG_HELP_BBOSS",
-	--	"OFF_COMP_REG",
-	--	"TRUCK_PC_BLCK",
-	--	"TUN_HELP_BBOSS",
-	--	"BUNK_PC_BLCK",
-	--	"CH_FINALE_REG",
-	--	"CH_PREP_REG",
-	--	"CH_SETUP_REG",
-	--	"FHQ_PC_BLCK",
-	--	"HANG_PC_BLCK",
-	--	"HFBOARD_REG",
-	--	"HIBOARD_REG",
-	--	"HIBOARD_REGB",
-	--	"MP_OFF_LAP_1",
-	--	"MP_OFF_LAP_PC",
-	--	"OFF_COMP_REG",
-	--	"ARC_PC_BLCK",
-	--	"ARC_HT_0",
-	--	"ARC_HT_0B",
-	--	"ACID_SLL_HLP2",
-	--	"HRBOARD_REG",
-	--	"HRBOARD_REGB",
-	--}
-	--for _, label in pairs(CEOLabels) do
-	--	if IS_HELP_MSG_DISPLAYED(label) then
-	--		if players.get_boss(players.user()) == -1 then menu.trigger_commands("ceostart") end
-	--		if players.get_org_type(players.user()) == 1 then menu.trigger_commands("ceotomc") end
-	--		gui.show_message("Seems like you need to be a CEO. So, Heist Control made you become CEO.")
-	--	end
-	--end
-	--
-	--local MCLabels = {
-	--	"CLBHBKRREG",
-	--	"ARC_HT_1",
-	--	"ARC_HT_1B",
-	--}
-	--for _, label in pairs(MCLabels) do
-	--	if IS_HELP_MSG_DISPLAYED(label) then
-	--		if players.get_boss(players.user()) == -1 then menu.trigger_commands("mcstart") end
-	--		if players.get_org_type(players.user()) == 0 then menu.trigger_commands("ceotomc") end
-	--		gui.show_message("Seems like you need to be a MC President. So, Heist Control made you become MC President.")
-	--	end
-	--end
+	if AutoCEOPresident then
+		if not NETWORK.NETWORK_IS_SESSION_STARTED() then
+			return
+		end
+		local CEOLabels = {
+			"HIP_HELP_BBOSS",
+			"HIP_HELP_BBOSS2",
+			"HPBOARD_REG",
+			"HPBOARD_REGB",
+			"HT_NOT_BOSS",
+			"HUB_PC_BLCK",
+			"NHPG_HELP_BBOSS",
+			"OFF_COMP_REG",
+			"TRUCK_PC_BLCK",
+			"TUN_HELP_BBOSS",
+			"BUNK_PC_BLCK",
+			"CH_FINALE_REG",
+			"CH_PREP_REG",
+			"CH_SETUP_REG",
+			"FHQ_PC_BLCK",
+			"HANG_PC_BLCK",
+			"HFBOARD_REG",
+			"HIBOARD_REG",
+			"HIBOARD_REGB",
+			"MP_OFF_LAP_1",
+			"MP_OFF_LAP_PC",
+			"OFF_COMP_REG",
+			"ARC_PC_BLCK",
+			"ARC_HT_0",
+			"ARC_HT_0B",
+			"ACID_SLL_HLP2",
+			"HRBOARD_REG",
+			"HRBOARD_REGB",
+		}
+		for _, label in pairs(CEOLabels) do
+			if IS_HELP_MSG_DISPLAYED(label) then
+				if players.get_boss(players.user()) == -1 or players.get_org_type(players.user()) == 1 then
+					gui.show_message("Seems like you need to be a CEO. So, made you become CEO.")
+				end
+			end
+		end
+		local MCLabels = {
+			"CLBHBKRREG",
+			"ARC_HT_1",
+			"ARC_HT_1B",
+		}
+		for _, label in pairs(MCLabels) do
+			if IS_HELP_MSG_DISPLAYED(label) then
+				if players.get_boss(players.user()) == -1 or players.get_org_type(players.user()) == 0 then
+					gui.show_message("Seems like you need to be a MC President. So, made you become MC President.")
+				end
+			end
+		end
+	end
 	
     if RemoveAllCCTV then
         for _, ent in pairs(entities.get_all_objects_as_handles()) do
@@ -1214,6 +1346,7 @@ end)
 
 AllCooldowns = false
 VIPMCWorkChallengeCooldown = false
+VIPMCWorkChallengeDuration = false
 MCBikerBarMissionCooldown = false
 TerrorbyteClientJobCooldown = false
 CasinoWorkCooldown = false
@@ -1223,19 +1356,27 @@ DispatchWorkCooldown = false
 AllBusinessCooldowns = false
 SpecialCargoCooldown = false
 VehicleCargoCooldown = false
+VehicleCargoGlobalSignal = false
+VehicleCargoDuration = false
+MCBusinessGlobalSignal = false
+MCBusinessDuration = false
+BunkerGlobalSignal = false
+BunkerDuration = false
 HangarCargoCooldown = false
+HangarCargoGlobalSignal = false
 HangarCargoDuration = false
 NightclubCooldown = false
+NightclubGlobalSignal = false
 AllOtherCooldowns = false
 RequestVehicleCooldown = false
 ServiceVehiclesCooldown = false
 CEOAbilitiesCooldown = false
 CEOVehiclesCooldown = false
+ArenaWheelCooldown = false
 SpinLuckyWheelCooldown = false
 AllMiscCooldowns = false
 MCClientVehicleCooldown = false
 BunkerCooldown = false
-ArenaWheelCooldown = false
 NightclubTroublemakerCooldown = false
 AutoShopClientVehicleCooldown = false
 
@@ -1259,14 +1400,20 @@ script.register_looped("GoldenGets Cooldowns", function()
 		if tunables.get_int("GB_BOSSVSBOSSDM_COOLDOWN") ~= 0 then -- *(1800000ms)*
 			tunables.set_int("GB_BOSSVSBOSSDM_COOLDOWN", 0)
 		end
+		if tunables.get_int("GB_SIGHTSEER_COOLDOWN") ~= 0 then -- *(600000ms)*
+			tunables.set_int("GB_SIGHTSEER_COOLDOWN", 0)
+		end
+		if tunables.get_int("GB_HUNTBOSS_COOLDOWN") ~= 0 then -- *(600000ms)*
+			tunables.set_int("GB_HUNTBOSS_COOLDOWN", 0)
+		end
+		if tunables.get_int("GB_YACHTATTACK_COOLDOWN") ~= 0 then -- *(3600000ms)*
+			tunables.set_int("GB_YACHTATTACK_COOLDOWN", 0)
+		end
 		if tunables.get_int("GB_CARJACKING_COOLDOWN") ~= 0 then -- *(600000ms)*
 			tunables.set_int("GB_CARJACKING_COOLDOWN", 0)
 		end
 		if tunables.get_int("GB_FINDERS_KEEPERS_COOLDOWN") ~= 0 then -- *(600000ms)*
 			tunables.set_int("GB_FINDERS_KEEPERS_COOLDOWN", 0)
-		end
-		if tunables.get_int("GB_HUNTBOSS_COOLDOWN") ~= 0 then -- *(600000ms)*
-			tunables.set_int("GB_HUNTBOSS_COOLDOWN", 0)
 		end
 		if tunables.get_int("GB_MOSTWANTED_COOLDOWN") ~= 0 then -- *(600000ms)*
 			tunables.set_int("GB_MOSTWANTED_COOLDOWN", 0)
@@ -1277,17 +1424,26 @@ script.register_looped("GoldenGets Cooldowns", function()
 		if tunables.get_int("GB_PROTECTIONRACKET_COOLDOWN") ~= 0 then -- *(600000ms)*
 			tunables.set_int("GB_PROTECTIONRACKET_COOLDOWN", 0)
 		end
-		if tunables.get_int("GB_SIGHTSEER_COOLDOWN") ~= 0 then -- *(600000ms)*
-			tunables.set_int("GB_SIGHTSEER_COOLDOWN", 0)
+		if tunables.get_int("GB_SMASHANDGRAB_STORE_COOLDOWN") ~= 0 then -- *(120000ms)*
+			tunables.set_int("GB_SMASHANDGRAB_STORE_COOLDOWN", 0)
 		end
 		if tunables.get_int("GB_SMASHANDGRAB_COOLDOWN") ~= 0 then -- *(600000ms)*
 			tunables.set_int("GB_SMASHANDGRAB_COOLDOWN", 0)
 		end
-		if tunables.get_int("GB_YACHTATTACK_COOLDOWN") ~= 0 then -- *(3600000ms)*
-			tunables.set_int("GB_YACHTATTACK_COOLDOWN", 0)
+		if tunables.get_int("EXEC_AIRFREIGHT_DISCONNECT_COOLDOWN") ~= 0 then -- *(30000ms)*
+			tunables.set_int("EXEC_AIRFREIGHT_DISCONNECT_COOLDOWN", 0)
 		end
-		if tunables.get_int("GB_SMASHANDGRAB_STORE_COOLDOWN") ~= 0 then -- *(120000ms)*
-			tunables.set_int("GB_SMASHANDGRAB_STORE_COOLDOWN", 0)
+		if tunables.get_int("EXEC_AIRFREIGHT_COOLDOWN") ~= 0 then -- *(600000ms)*
+			tunables.set_int("EXEC_AIRFREIGHT_COOLDOWN", 0)
+		end
+		if tunables.get_int("EXEC_FGOODS_DISCONNECT_COOLDOWN") ~= 0 then -- *(30000ms)*
+			tunables.set_int("EXEC_FGOODS_DISCONNECT_COOLDOWN", 0)
+		end
+		if tunables.get_int("EXEC_FGOODS_COOLDOWN") ~= 0 then -- *(600000ms)*
+			tunables.set_int("EXEC_FGOODS_COOLDOWN", 0)
+		end
+		if tunables.get_int("EXEC_HEADHUNTER_COOLDOWN") ~= 0 then -- *(600000ms)*
+			tunables.set_int("EXEC_HEADHUNTER_COOLDOWN", 0)
 		end
 		if tunables.get_int("EXEC_CASHING_COOLDOWN") ~= 0 then -- *(600000ms)*
 			tunables.set_int("EXEC_CASHING_COOLDOWN", 0)
@@ -1295,24 +1451,9 @@ script.register_looped("GoldenGets Cooldowns", function()
 		if tunables.get_int("EXEC_SALVAGE_COOLDOWN") ~= 0 then -- *(600000ms)*
 			tunables.set_int("EXEC_SALVAGE_COOLDOWN", 0)
 		end
-		if tunables.get_int("EXEC_AIRFREIGHT_COOLDOWN") ~= 0 then -- *(600000ms)*
-			tunables.set_int("EXEC_AIRFREIGHT_COOLDOWN", 0)
-		end
-		if tunables.get_int("EXEC_AIRFREIGHT_DISCONNECT_COOLDOWN") ~= 0 then -- *(30000ms)*
-			tunables.set_int("EXEC_AIRFREIGHT_DISCONNECT_COOLDOWN", 0)
-		end
-		if tunables.get_int("EXEC_DESTROY_CONTRABAND_RATE_LIMITER_COOLDOWN") ~= 0 then -- *(2880ms)*
-			tunables.set_int("EXEC_DESTROY_CONTRABAND_RATE_LIMITER_COOLDOWN", 0)
-		end
-		if tunables.get_int("EXEC_FGOODS_COOLDOWN") ~= 0 then -- *(600000ms)*
-			tunables.set_int("EXEC_FGOODS_COOLDOWN", 0)
-		end
-		if tunables.get_int("EXEC_FGOODS_DISCONNECT_COOLDOWN") ~= 0 then -- *(30000ms)*
-			tunables.set_int("EXEC_FGOODS_DISCONNECT_COOLDOWN", 0)
-		end
-		if tunables.get_int("EXEC_HEADHUNTER_COOLDOWN") ~= 0 then -- *(600000ms)*
-			tunables.set_int("EXEC_HEADHUNTER_COOLDOWN", 0)
-		end
+		--if tunables.get_int("EXEC_DESTROY_CONTRABAND_RATE_LIMITER_COOLDOWN") ~= 0 then -- *(2880ms)*
+		--	tunables.set_int("EXEC_DESTROY_CONTRABAND_RATE_LIMITER_COOLDOWN", 0)
+		--end
 		if tunables.get_int("IMPEXP_PLOWED_COOLDOWN") ~= 0 then -- *(3600000ms)*
 			tunables.set_int("IMPEXP_PLOWED_COOLDOWN", 0)
 		end
@@ -1368,24 +1509,24 @@ script.register_looped("GoldenGets Cooldowns", function()
 		tunables.set_int("GB_ASSAULT_COOLDOWN", 1200000)
 		tunables.set_int("GB_BELLY_COOLDOWN", 600000)
 		tunables.set_int("GB_BOSSVSBOSSDM_COOLDOWN", 1800000)
+		tunables.set_int("GB_SIGHTSEER_COOLDOWN", 600000)
+		tunables.set_int("GB_HUNTBOSS_COOLDOWN", 600000)
+		tunables.set_int("GB_YACHTATTACK_COOLDOWN", 3600000)
 		tunables.set_int("GB_CARJACKING_COOLDOWN", 600000)
 		tunables.set_int("GB_FINDERS_KEEPERS_COOLDOWN", 600000)
-		tunables.set_int("GB_HUNTBOSS_COOLDOWN", 600000)
 		tunables.set_int("GB_MOSTWANTED_COOLDOWN", 600000)
 		tunables.set_int("GB_POINTTOPOINT_COOLDOWN", 600000)
 		tunables.set_int("GB_PROTECTIONRACKET_COOLDOWN", 600000)
-		tunables.set_int("GB_SIGHTSEER_COOLDOWN", 600000)
-		tunables.set_int("GB_SMASHANDGRAB_COOLDOWN", 600000)
-		tunables.set_int("GB_YACHTATTACK_COOLDOWN", 3600000)
 		tunables.set_int("GB_SMASHANDGRAB_STORE_COOLDOWN", 120000)
+		tunables.set_int("GB_SMASHANDGRAB_COOLDOWN", 600000)
+		tunables.set_int("EXEC_AIRFREIGHT_DISCONNECT_COOLDOWN", 30000)
+		tunables.set_int("EXEC_AIRFREIGHT_COOLDOWN", 600000)
+		tunables.set_int("EXEC_FGOODS_DISCONNECT_COOLDOWN", 30000)
+		tunables.set_int("EXEC_FGOODS_COOLDOWN", 600000)
+		tunables.set_int("EXEC_HEADHUNTER_COOLDOWN", 600000)
 		tunables.set_int("EXEC_CASHING_COOLDOWN", 600000)
 		tunables.set_int("EXEC_SALVAGE_COOLDOWN", 600000)
-		tunables.set_int("EXEC_AIRFREIGHT_COOLDOWN", 600000)
-		tunables.set_int("EXEC_AIRFREIGHT_DISCONNECT_COOLDOWN", 30000)
-		tunables.set_int("EXEC_DESTROY_CONTRABAND_RATE_LIMITER_COOLDOWN", 2880)
-		tunables.set_int("EXEC_FGOODS_COOLDOWN", 600000)
-		tunables.set_int("EXEC_FGOODS_DISCONNECT_COOLDOWN", 30000)
-		tunables.set_int("EXEC_HEADHUNTER_COOLDOWN", 600000)
+		--tunables.set_int("EXEC_DESTROY_CONTRABAND_RATE_LIMITER_COOLDOWN", 2880)
 		tunables.set_int("IMPEXP_PLOWED_COOLDOWN", 3600000)
 		tunables.set_int("IMPEXP_FULLY_LOADED_COOLDOWN", 3600000)
 		tunables.set_int("IMPEXP_AMPHIBIOUS_ASSAULT_COOLDOWN", 1800000)
@@ -1395,13 +1536,217 @@ script.register_looped("GoldenGets Cooldowns", function()
 		tunables.set_int("IMPEXP_RAMPED_UP_COOLDOWN", 3600000)
 		tunables.set_int("IMPEXP_STOCKPILING_COOLDOWN", 1800000)
 		tunables.set_int("BIKER_CLUB_WORK_COOLDOWN_GLOBAL", 180000)
-		--tunables.set_int("BIKER_CHALLENGES_COOLDOWN_GLOBAL", 0)
-		--tunables.set_int("BIKER_CHALLENGES_COOLDOWN_SPECIFIC", 0)
-		--tunables.set_int("BIKER_DEATHMATCH_COOLDOWN", 0)
-		--tunables.set_int("BIKER_JOUST_COOLDOWN", 0)
+		--tunables.set_int("BIKER_CHALLENGES_COOLDOWN_GLOBAL", 0) -- null tunable
+		--tunables.set_int("BIKER_CHALLENGES_COOLDOWN_SPECIFIC", 0) -- null tunable
+		--tunables.set_int("BIKER_DEATHMATCH_COOLDOWN", 0) -- null tunable
+		--tunables.set_int("BIKER_JOUST_COOLDOWN", 0) -- null tunable
 		tunables.set_int("BIKER_STAND_YOUR_GROUND_COOLDOWN", 180000)
-		--tunables.set_int("BIKER_CAGED_IN_COOLDOWN", 0)
+		--tunables.set_int("BIKER_CAGED_IN_COOLDOWN", 0) -- null tunable
 		--stats.set_int("MPPLY_VIPGAMEPLAYDISABLEDTIMER", 0)
+	end
+	
+	if VIPMCWorkChallengeDuration then
+		if tunables.get_int("GB_ASSAULT_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("GB_ASSAULT_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("GB_BELLY_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("GB_BELLY_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("GB_BOSSVSBOSSDM_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("GB_BOSSVSBOSSDM_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("GB_SIGHTSEER_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("GB_SIGHTSEER_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("GB_HUNTBOSS_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("GB_HUNTBOSS_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("GB_YACHTATTACK_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("GB_YACHTATTACK_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("GB_CARJACKING_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("GB_CARJACKING_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("GB_FINDERS_KEEPERS_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("GB_FINDERS_KEEPERS_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("GB_MOSTWANTED_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("GB_MOSTWANTED_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("GB_POINTTOPOINT_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("GB_POINTTOPOINT_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("GB_POINTTOPOINT_DESTINATION_SELECT_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("GB_POINTTOPOINT_DESTINATION_SELECT_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("GB_PROTECTIONR_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("GB_PROTECTIONR_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("GB_SMASHANDGRAB_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("GB_SMASHANDGRAB_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("EXEC_AIRFREIGHT_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("EXEC_AIRFREIGHT_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("EXEC_FGOODS_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("EXEC_FGOODS_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("EXEC_HEADHUNTER_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("EXEC_HEADHUNTER_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("EXEC_CASHING_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("EXEC_CASHING_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("EXEC_SALVAGE_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("EXEC_SALVAGE_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("IMPEXP_MOVING_CAR_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("IMPEXP_MOVING_CAR_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("IMPEXP_PLOWED_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("IMPEXP_PLOWED_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("IMPEXP_FULLY_LOADED_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("IMPEXP_FULLY_LOADED_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("IMPEXP_AMPHIBIOUS_ASSAULT_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("IMPEXP_AMPHIBIOUS_ASSAULT_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("IMPEXP_TRANSPORTER_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("IMPEXP_TRANSPORTER_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("IMPEXP_FORTIFIED_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("IMPEXP_FORTIFIED_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("IMPEXP_VELOCITY_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("IMPEXP_VELOCITY_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("IMPEXP_RAMPED_UP_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("IMPEXP_RAMPED_UP_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("IMPEXP_STOCKPILING_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("IMPEXP_STOCKPILING_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("BIKER_GUNRUNNING_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_GUNRUNNING_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_POW_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_POW_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_GUNS_FOR_HIRE_GOTO_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_GUNS_FOR_HIRE_GOTO_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_GUNS_FOR_HIRE_DEFEND_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_GUNS_FOR_HIRE_DEFEND_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_BY_THE_POUND_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_BY_THE_POUND_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_WEAPON_OF_CHOICE_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_WEAPON_OF_CHOICE_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_NINE_TENTHS_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_NINE_TENTHS_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_CRACKED_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_CRACKED_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_JAILBREAK_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_JAILBREAK_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_FRAGILE_GOODS_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_FRAGILE_GOODS_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_OUTRIDER_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_OUTRIDER_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_TORCHED_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_TORCHED_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_DEATHMATCH_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_DEATHMATCH_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_JOUST_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_JOUST_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_STAND_YOUR_GROUND_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_STAND_YOUR_GROUND_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_CAGED_IN_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_CAGED_IN_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_ON_THE_RUN_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_ON_THE_RUN_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_RACE_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_RACE_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_RIPPIN_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_RIPPIN_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_HIT_AND_RIDE_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_HIT_AND_RIDE_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_WHEELIE_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_WHEELIE_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_MISCHIEF_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_MISCHIEF_TIME_LIMIT", 9999999)
+		end
+		if tunables.get_int("BIKER_SEARCH_AND_DESTROY_TIME_LIMIT") ~= 9999999 then
+			tunables.set_int("BIKER_SEARCH_AND_DESTROY_TIME_LIMIT", 9999999)
+		end
+	else
+		tunables.set_int("GB_ASSAULT_TIME_LIMIT", 1800000)
+		tunables.set_int("GB_BELLY_TIME_LIMIT", 1200000)
+		tunables.set_int("GB_BOSSVSBOSSDM_TIME_LIMIT", 1200000)
+		tunables.set_int("GB_SIGHTSEER_TIME_LIMIT", 900000)
+		tunables.set_int("GB_HUNTBOSS_TIME_LIMIT", 600000)
+		tunables.set_int("GB_YACHTATTACK_TIME_LIMIT", 600000)
+		tunables.set_int("GB_CARJACKING_TIME_LIMIT", 600000)
+		tunables.set_int("GB_FINDERS_KEEPERS_TIME_LIMIT", 600000)
+		tunables.set_int("GB_MOSTWANTED_TIME_LIMIT", 600000)
+		tunables.set_int("GB_POINTTOPOINT_TIME_LIMIT", 600000)
+		tunables.set_int("GB_POINTTOPOINT_DESTINATION_SELECT_TIME_LIMIT", 60000)
+		tunables.set_int("GB_PROTECTIONR_TIME_LIMIT", 600000)
+		tunables.set_int("GB_SMASHANDGRAB_TIME_LIMIT", 600000)
+		tunables.set_int("EXEC_AIRFREIGHT_TIME_LIMIT", 1200000)
+		tunables.set_int("EXEC_FGOODS_TIME_LIMIT", 1200000)
+		tunables.set_int("EXEC_HEADHUNTER_TIME_LIMIT", 900000)
+		tunables.set_int("EXEC_CASHING_TIME_LIMIT", 600000)
+		tunables.set_int("EXEC_SALVAGE_TIME_LIMIT", 600000)
+		tunables.set_int("IMPEXP_MOVING_CAR_TIME_LIMIT", 900000)
+		tunables.set_int("IMPEXP_PLOWED_TIME_LIMIT", 900000)
+		tunables.set_int("IMPEXP_FULLY_LOADED_TIME_LIMIT", 1200000)
+		tunables.set_int("IMPEXP_AMPHIBIOUS_ASSAULT_TIME_LIMIT", 900000)
+		tunables.set_int("IMPEXP_TRANSPORTER_TIME_LIMIT", 900000)
+		tunables.set_int("IMPEXP_FORTIFIED_TIME_LIMIT", 600000)
+		tunables.set_int("IMPEXP_VELOCITY_TIME_LIMIT", 600000)
+		tunables.set_int("IMPEXP_RAMPED_UP_TIME_LIMIT", 1200000)
+		tunables.set_int("IMPEXP_STOCKPILING_TIME_LIMIT", 600000)
+		tunables.set_int("BIKER_GUNRUNNING_TIME_LIMIT", 1800)
+		tunables.set_int("BIKER_POW_TIME_LIMIT", 1800)
+		tunables.set_int("BIKER_GUNS_FOR_HIRE_GOTO_TIME_LIMIT", 900)
+		tunables.set_int("BIKER_GUNS_FOR_HIRE_DEFEND_TIME_LIMIT", 300)
+		tunables.set_int("BIKER_BY_THE_POUND_TIME_LIMIT", 1800)
+		tunables.set_int("BIKER_WEAPON_OF_CHOICE_TIME_LIMIT", 900)
+		tunables.set_int("BIKER_NINE_TENTHS_TIME_LIMIT", 1800)
+		tunables.set_int("BIKER_CRACKED_TIME_LIMIT", 1800)
+		tunables.set_int("BIKER_JAILBREAK_TIME_LIMIT", 1800)
+		tunables.set_int("BIKER_FRAGILE_GOODS_TIME_LIMIT", 900)
+		tunables.set_int("BIKER_OUTRIDER_TIME_LIMIT", 1800)
+		tunables.set_int("BIKER_TORCHED_TIME_LIMIT", 900)
+		tunables.set_int("BIKER_DEATHMATCH_TIME_LIMIT", 1200)
+		tunables.set_int("BIKER_JOUST_TIME_LIMIT", 1200)
+		tunables.set_int("BIKER_STAND_YOUR_GROUND_TIME_LIMIT", 1200)
+		tunables.set_int("BIKER_CAGED_IN_TIME_LIMIT", 1200)
+		tunables.set_int("BIKER_ON_THE_RUN_TIME_LIMIT", 600)
+		tunables.set_int("BIKER_RACE_TIME_LIMIT", 300000)
+		tunables.set_int("BIKER_RIPPIN_TIME_LIMIT", 300)
+		tunables.set_int("BIKER_HIT_AND_RIDE_TIME_LIMIT", 600)
+		tunables.set_int("BIKER_WHEELIE_TIME_LIMIT", 300)
+		tunables.set_int("BIKER_MISCHIEF_TIME_LIMIT", 600)
+		tunables.set_int("BIKER_SEARCH_AND_DESTROY_TIME_LIMIT", 600)
 	end
 	
 	if MCBikerBarMissionCooldown then
@@ -1518,6 +1863,274 @@ script.register_looped("GoldenGets Cooldowns", function()
 		--locals_v_set_int(SupportVersion, DWCl, 0)
 		--stats.set_int("MPX_DISPATCH_WORK_CALL_CD", 0)
 		--stats.set_int("MPX_DISPATCH_WORK_REQUEST_CD", 0)
+	end
+	
+	if VehicleCargoGlobalSignal then
+		if tunables.get_int("IMPEXP_STEAL_EASY_GLOBAL_SIGNAL") ~= 2000000000 then
+			tunables.set_int("IMPEXP_STEAL_EASY_GLOBAL_SIGNAL", 2000000000)
+		end
+		if tunables.get_int("IMPEXP_STEAL_MEDIUM_GLOBAL_SIGNAL") ~= 2000000000 then
+			tunables.set_int("IMPEXP_STEAL_MEDIUM_GLOBAL_SIGNAL", 2000000000)
+		end
+		if tunables.get_int("IMPEXP_STEAL_HARD_GLOBAL_SIGNAL") ~= 2000000000 then
+			tunables.set_int("IMPEXP_STEAL_HARD_GLOBAL_SIGNAL", 2000000000)
+		end
+	else
+		tunables.set_int("IMPEXP_STEAL_EASY_GLOBAL_SIGNAL", 20000)
+		tunables.set_int("IMPEXP_STEAL_MEDIUM_GLOBAL_SIGNAL", 10000)
+		tunables.set_int("IMPEXP_STEAL_HARD_GLOBAL_SIGNAL", 5000)
+	end
+	
+	if VehicleCargoDuration then
+		--if tunables.get_int("IMPEXP_STEAL_TAIL_VEHICLE_STUCK_TIME") ~= 2000000000 then
+		--	tunables.set_int("IMPEXP_STEAL_TAIL_VEHICLE_STUCK_TIME", 2000000000)
+		--end
+		--if tunables.get_int("IMPEXP_STEAL_TAIL_VEHICLE_JAMMED_TIME") ~= 2000000000 then
+		--	tunables.set_int("IMPEXP_STEAL_TAIL_VEHICLE_JAMMED_TIME", 2000000000)
+		--end
+		if tunables.get_int("IMPEXP_STEAL_COLLECT_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("IMPEXP_STEAL_COLLECT_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("IMPEXP_STEAL_DELIVER_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("IMPEXP_STEAL_DELIVER_TIME_LIMIT", 2000000000)
+		end
+		--if tunables.get_int("IMPEXP_STEAL_ENABLE_TIMEOUT_CHECKS") ~= 2000000000 then
+		--	tunables.set_int("IMPEXP_STEAL_ENABLE_TIMEOUT_CHECKS", 2000000000)
+		--end
+		if tunables.get_int("IMPEXP_SELL_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("IMPEXP_SELL_TIME_LIMIT", 2000000000)
+		end
+		--if tunables.get_int("IMPEXP_SELL_MODDING_TIMER") ~= 2000000000 then
+		--	tunables.set_int("IMPEXP_SELL_MODDING_TIMER", 2000000000)
+		--end
+		--if tunables.get_int("IMPEXP_SELL_POST_MOD_TRANS_TIMEOUT") ~= 2000000000 then
+		--	tunables.set_int("IMPEXP_SELL_POST_MOD_TRANS_TIMEOUT", 2000000000)
+		--end
+	else
+		--tunables.set_int("IMPEXP_STEAL_TAIL_VEHICLE_STUCK_TIME", 10000)
+		--tunables.set_int("IMPEXP_STEAL_TAIL_VEHICLE_JAMMED_TIME", 15000)
+		tunables.set_int("IMPEXP_STEAL_COLLECT_TIME_LIMIT", 1200000)
+		tunables.set_int("IMPEXP_STEAL_DELIVER_TIME_LIMIT", 1200000)
+		--tunables.set_int("IMPEXP_STEAL_ENABLE_TIMEOUT_CHECKS", 1)
+		--tunables.set_int("IMPEXP_SELL_MODDING_TIMER", 300000)
+		tunables.set_int("IMPEXP_SELL_TIME_LIMIT", 900000)
+		--tunables.set_int("IMPEXP_SELL_POST_MOD_TRANS_TIMEOUT", 90000)
+	end
+	
+	if MCBusinessGlobalSignal then
+		if tunables.get_int("BIKER_GLOBAL_SIGNAL_EASY") ~= 2000000000 then
+			tunables.set_int("BIKER_GLOBAL_SIGNAL_EASY", 2000000000)
+		end
+		if tunables.get_int("BIKER_GLOBAL_SIGNAL_MEDIUM") ~= 2000000000 then
+			tunables.set_int("BIKER_GLOBAL_SIGNAL_MEDIUM", 2000000000)
+		end
+		if tunables.get_int("BIKER_GLOBAL_SIGNAL_HARD") ~= 2000000000 then
+			tunables.set_int("BIKER_GLOBAL_SIGNAL_HARD", 2000000000)
+		end
+	else
+		tunables.set_int("BIKER_GLOBAL_SIGNAL_EASY", 40000)
+		tunables.set_int("BIKER_GLOBAL_SIGNAL_MEDIUM", 20000)
+		tunables.set_int("BIKER_GLOBAL_SIGNAL_HARD", 5000)
+	end
+	
+	if MCBusinessDuration then
+		if tunables.get_int("BIKER_RESUPPLY_DELIVERY_TIME") ~= 9999999 then
+			tunables.set_int("BIKER_RESUPPLY_DELIVERY_TIME", 9999999)
+		end
+		if tunables.get_int("BIKER_SELL_CONVOY_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("BIKER_SELL_CONVOY_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("BIKER_SELL_TRASHMASTER_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("BIKER_SELL_TRASHMASTER_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("BIKER_SELL_PROVEN_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("BIKER_SELL_PROVEN_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("BIKER_SELL_BORDER_PATROL_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("BIKER_SELL_BORDER_PATROL_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("BIKER_SELL_AIR_DROP_AT_SEA_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("BIKER_SELL_AIR_DROP_AT_SEA_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("BIKER_SELL_BENSON_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("BIKER_SELL_BENSON_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("BIKER_SELL_BAG_DROP_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("BIKER_SELL_BAG_DROP_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("BIKER_SELL_CLUB_RUN_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("BIKER_SELL_CLUB_RUN_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("BIKER_SELL_FRIENDS_IN_NEED_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("BIKER_SELL_FRIENDS_IN_NEED_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("BIKER_SELL_HELICOPTER_DROP_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("BIKER_SELL_HELICOPTER_DROP_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("BIKER_SELL_POSTMAN_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("BIKER_SELL_POSTMAN_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("BIKER_SELL_STING_OP_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("BIKER_SELL_STING_OP_TIME_LIMIT", 2000000000)
+		end
+		if tunables.get_int("BIKER_SELL_RACE_TIME_LIMIT") ~= 2000000000 then
+			tunables.set_int("BIKER_SELL_RACE_TIME_LIMIT", 2000000000)
+		end
+	else
+		tunables.set_int("BIKER_RESUPPLY_DELIVERY_TIME", 1200)
+		tunables.set_int("BIKER_SELL_CONVOY_TIME_LIMIT", 1800000)
+		tunables.set_int("BIKER_SELL_TRASHMASTER_TIME_LIMIT", 1800000)
+		tunables.set_int("BIKER_SELL_PROVEN_TIME_LIMIT", 1800000)
+		tunables.set_int("BIKER_SELL_BORDER_PATROL_TIME_LIMIT", 1800000)
+		tunables.set_int("BIKER_SELL_AIR_DROP_AT_SEA_TIME_LIMIT", 1800000)
+		tunables.set_int("BIKER_SELL_BENSON_TIME_LIMIT", 1800000)
+		tunables.set_int("BIKER_SELL_BAG_DROP_TIME_LIMIT", 1800000)
+		tunables.set_int("BIKER_SELL_CLUB_RUN_TIME_LIMIT", 1800000)
+		tunables.set_int("BIKER_SELL_FRIENDS_IN_NEED_TIME_LIMIT", 1800000)
+		tunables.set_int("BIKER_SELL_HELICOPTER_DROP_TIME_LIMIT", 1800000)
+		tunables.set_int("BIKER_SELL_POSTMAN_TIME_LIMIT", 1800000)
+		tunables.set_int("BIKER_SELL_STING_OP_TIME_LIMIT", 1800000)
+		tunables.set_int("BIKER_SELL_RACE_TIME_LIMIT", 1800000)
+	end
+	
+	if BunkerGlobalSignal then
+		if tunables.get_int("GR_RESUPPLY_AND_SELL_EASY_GLOBAL_SIGNAL_TIME") ~= 2000000000 then
+			tunables.set_int("GR_RESUPPLY_AND_SELL_EASY_GLOBAL_SIGNAL_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_RESUPPLY_AND_SELL_MEDIUM_GLOBAL_SIGNAL_TIME") ~= 2000000000 then
+			tunables.set_int("GR_RESUPPLY_AND_SELL_MEDIUM_GLOBAL_SIGNAL_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_RESUPPLY_AND_SELL_HARD_GLOBAL_SIGNAL_TIME") ~= 2000000000 then
+			tunables.set_int("GR_RESUPPLY_AND_SELL_HARD_GLOBAL_SIGNAL_TIME", 2000000000)
+		end
+	else
+		tunables.set_int("GR_RESUPPLY_AND_SELL_EASY_GLOBAL_SIGNAL_TIME", 40)
+		tunables.set_int("GR_RESUPPLY_AND_SELL_MEDIUM_GLOBAL_SIGNAL_TIME", 20)
+		tunables.set_int("GR_RESUPPLY_AND_SELL_HARD_GLOBAL_SIGNAL_TIME", 5)
+	end
+	
+	if BunkerDuration then
+		--if tunables.get_int("GR_RESUPPLY_GENERAL_MISSION_TIME") ~= 2000000000 then -- Tunable 0x2216793185 not found.
+		--	tunables.set_int("GR_RESUPPLY_GENERAL_MISSION_TIME", 2000000000)
+		--end
+		if tunables.get_int("GR_SETUP_GENERAL_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_SETUP_GENERAL_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_STEAL_APC_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_STEAL_APC_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_STEAL_MINIGUNS_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_STEAL_MINIGUNS_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_STEAL_RAILGUNS_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_STEAL_RAILGUNS_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_STEAL_RHINO_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_STEAL_RHINO_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_STEAL_TECHNICAL_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_STEAL_TECHNICAL_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_STEAL_VAN_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_STEAL_VAN_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_RIVAL_OPERATION_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_RIVAL_OPERATION_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_ALTRUISTS_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_ALTRUISTS_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_YACHT_SEARCH_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_YACHT_SEARCH_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_DESTROY_TRUCKS_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_DESTROY_TRUCKS_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_AMBUSHED_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_AMBUSHED_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_DIVERSION_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_DIVERSION_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_FLASHLIGHT_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_FLASHLIGHT_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_FLY_SWATTER_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_FLY_SWATTER_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_FOLLOW_THE_LEADER_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_FOLLOW_THE_LEADER_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_HILL_CLIMB_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_HILL_CLIMB_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_MOVE_WEAPONS_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_MOVE_WEAPONS_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_PHANTOM_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_PHANTOM_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_ROUGH_TERRAIN_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_ROUGH_TERRAIN_MISSION_TIME", 2000000000)
+		end
+		--if tunables.get_int("GR_MANU_BASE_DEFEND_TIMER") ~= 2000000000 then
+		--	tunables.set_int("GR_MANU_BASE_DEFEND_TIMER", 2000000000)
+		--end
+		--if tunables.get_int("GR_MANU_UPGRADE_DEFEND_TIMER") ~= 2000000000 then
+		--	tunables.set_int("GR_MANU_UPGRADE_DEFEND_TIMER", 2000000000)
+		--end
+		if tunables.get_int("GR_DEFEND_VALKYRIE_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_DEFEND_VALKYRIE_MISSION_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_DEFEND_DISARM_BOMBS_BOMB_DISARM_TIME") ~= 2000000000 then
+			tunables.set_int("GR_DEFEND_DISARM_BOMBS_BOMB_DISARM_TIME", 2000000000)
+		end
+		if tunables.get_int("GR_DEFEND_DISARM_BOMBS_MISSION_TIME") ~= 2000000000 then
+			tunables.set_int("GR_DEFEND_DISARM_BOMBS_MISSION_TIME", 2000000000)
+		end
+	else
+		--tunables.set_int("GR_RESUPPLY_GENERAL_MISSION_TIME", 0) -- Tunable 0x2216793185 not found.
+		tunables.set_int("GR_SETUP_GENERAL_MISSION_TIME", 1800000)
+		tunables.set_int("GR_STEAL_APC_MISSION_TIME", 1800000)
+		tunables.set_int("GR_STEAL_MINIGUNS_MISSION_TIME", 1800000)
+		tunables.set_int("GR_STEAL_RAILGUNS_MISSION_TIME", 1800000)
+		tunables.set_int("GR_STEAL_RHINO_MISSION_TIME", 1800000)
+		tunables.set_int("GR_STEAL_TECHNICAL_MISSION_TIME", 1800000)
+		tunables.set_int("GR_STEAL_VAN_MISSION_TIME", 1800000)
+		tunables.set_int("GR_RIVAL_OPERATION_MISSION_TIME", 1800000)
+		tunables.set_int("GR_ALTRUISTS_MISSION_TIME", 1800000)
+		tunables.set_int("GR_YACHT_SEARCH_MISSION_TIME", 1800000)
+		tunables.set_int("GR_DESTROY_TRUCKS_MISSION_TIME", 1800000)
+		tunables.set_int("GR_AMBUSHED_MISSION_TIME", 1800000)
+		tunables.set_int("GR_DIVERSION_MISSION_TIME", 1800000)
+		tunables.set_int("GR_FLASHLIGHT_MISSION_TIME", 1800000)
+		tunables.set_int("GR_FLY_SWATTER_MISSION_TIME", 1800000)
+		tunables.set_int("GR_FOLLOW_THE_LEADER_MISSION_TIME", 900000)
+		tunables.set_int("GR_HILL_CLIMB_MISSION_TIME", 900000)
+		tunables.set_int("GR_MOVE_WEAPONS_MISSION_TIME", 900000)
+		tunables.set_int("GR_PHANTOM_MISSION_TIME", 900000)
+		tunables.set_int("GR_ROUGH_TERRAIN_MISSION_TIME", 900000)
+		--tunables.set_int("GR_MANU_BASE_DEFEND_TIMER", 18000)
+		--tunables.set_int("GR_MANU_UPGRADE_DEFEND_TIMER", 36000)
+		tunables.set_int("GR_DEFEND_VALKYRIE_MISSION_TIME", 1800000)
+		tunables.set_int("GR_DEFEND_DISARM_BOMBS_BOMB_DISARM_TIME", 300000)
+		tunables.set_int("GR_DEFEND_DISARM_BOMBS_MISSION_TIME", 1800000)
+	end
+	
+	if HangarCargoGlobalSignal then
+		if tunables.get_int("SMUG_STEAL_AND_SELL_EASY_GLOBAL_SIGNAL_TIME") ~= 2000000000 then
+			tunables.set_int("SMUG_STEAL_AND_SELL_EASY_GLOBAL_SIGNAL_TIME", 2000000000)
+		end
+		if tunables.get_int("SMUG_STEAL_AND_SELL_MEDIUM_GLOBAL_SIGNAL_TIME") ~= 2000000000 then
+			tunables.set_int("SMUG_STEAL_AND_SELL_MEDIUM_GLOBAL_SIGNAL_TIME", 2000000000)
+		end
+		if tunables.get_int("SMUG_STEAL_AND_SELL_HARD_GLOBAL_SIGNAL_TIME") ~= 2000000000 then
+			tunables.set_int("SMUG_STEAL_AND_SELL_HARD_GLOBAL_SIGNAL_TIME", 2000000000)
+		end
+	else
+		tunables.set_int("SMUG_STEAL_AND_SELL_EASY_GLOBAL_SIGNAL_TIME", 30)
+		tunables.set_int("SMUG_STEAL_AND_SELL_MEDIUM_GLOBAL_SIGNAL_TIME", 15)
+		tunables.set_int("SMUG_STEAL_AND_SELL_HARD_GLOBAL_SIGNAL_TIME", 5)
 	end
 	
 	if HangarCargoDuration then
@@ -1660,6 +2273,18 @@ script.register_looped("GoldenGets Cooldowns", function()
 		tunables.set_int("NIGHTCLUB_SOURCE_GOODS_CD_TIME", 1200)
 	end
 	
+	if NightclubGlobalSignal then
+		if tunables.get_int("BB_CLUB_MANAGEMENT_CLUB_MANAGEMENT_GLOBAL_SIGNAL_TIME") ~= 2000000000 then
+			tunables.set_int("BB_CLUB_MANAGEMENT_CLUB_MANAGEMENT_GLOBAL_SIGNAL_TIME", 2000000000)
+		end
+		if tunables.get_int("BB_SELL_MISSIONS_MISSION_GLOBAL_SIGNAL_TIME") ~= 2000000000 then
+			tunables.set_int("BB_SELL_MISSIONS_MISSION_GLOBAL_SIGNAL_TIME", 2000000000)
+		end
+	else
+		tunables.set_int("BB_CLUB_MANAGEMENT_CLUB_MANAGEMENT_GLOBAL_SIGNAL_TIME", 20000)
+		tunables.set_int("BB_SELL_MISSIONS_MISSION_GLOBAL_SIGNAL_TIME", 20000)
+	end
+	
 	if RequestVehicleCooldown then
 		if tunables.get_int("PV_MECHANIC_COOLDOWN") ~= 0 then -- null tunable
 			tunables.set_int("PV_MECHANIC_COOLDOWN", 0)
@@ -1792,6 +2417,14 @@ script.register_looped("GoldenGets Cooldowns", function()
 		tunables.set_int("GB_CALL_VEHICLE_COOLDOWN", 120000)
 	end
 	
+	if ArenaWheelCooldown then
+		if tunables.get_int("AW_ARENA_WAR_WHEEL_COOLDOWN") ~= 0 then -- *(10000ms)*
+			tunables.set_int("AW_ARENA_WAR_WHEEL_COOLDOWN", 0)
+		end
+	else
+		tunables.set_int("AW_ARENA_WAR_WHEEL_COOLDOWN", 10000)
+	end
+	
 	if SpinLuckyWheelCooldown then
 		if stats.get_int("MPX_LUCKY_WHEEL_NUM_SPIN") ~= 0 then
 			stats.set_int("MPX_LUCKY_WHEEL_NUM_SPIN", 0)
@@ -1822,14 +2455,6 @@ script.register_looped("GoldenGets Cooldowns", function()
 		end
 	else
 		tunables.set_int("BUNKER_VEHICLE_COOLDOWN_TIME", 120000)
-	end
-	
-	if ArenaWheelCooldown then
-		if tunables.get_int("AW_ARENA_WAR_WHEEL_COOLDOWN") ~= 0 then -- *(10000ms)*
-			tunables.set_int("AW_ARENA_WAR_WHEEL_COOLDOWN", 0)
-		end
-	else
-		tunables.set_int("AW_ARENA_WAR_WHEEL_COOLDOWN", 10000)
 	end
 	
 	if NightclubTroublemakerCooldown then
@@ -1896,6 +2521,9 @@ end)
 GoldenGetsBusiness = GoldenGetsMenu:add_tab("Business")
 ------------------
 
+ -- Controls
+WarehouseAutoCratesSellAmount = locals.get_int(SupportVersion, GCS, SCVMTl + 588)
+
  -- Resupply
 Warehouse1 = stats.get_int("MPX_CONTOTALFORWHOUSE0")
 Warehouse2 = stats.get_int("MPX_CONTOTALFORWHOUSE1")
@@ -1903,7 +2531,7 @@ Warehouse3 = stats.get_int("MPX_CONTOTALFORWHOUSE2")
 Warehouse4 = stats.get_int("MPX_CONTOTALFORWHOUSE3")
 Warehouse5 = stats.get_int("MPX_CONTOTALFORWHOUSE4")
 WarehouseCrates = (Warehouse1 + Warehouse2 + Warehouse3 + Warehouse4 + Warehouse5)
-collectcrates = 1
+SpecialCargoBuy = locals.get_int(GCB, SCVIBl2)
 selected_unique_cargo = locals.get_int(SCVUCl)
 unique_cargo_selected = 0
 MCBusinessSupplyCost = tunables.get_int("BIKER_PURCHASE_SUPPLIES_COST_PER_SEGMENT")
@@ -1916,6 +2544,9 @@ PharmaceuticalResearchCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_M
 OrganicProduceCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_WEED")
 PrintingandCopyingCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_FORGED_DOCUMENTS")
 CashCreationCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_COUNTERFEIT_CASH")
+AcidSupplyCost = tunables.get_int("ACID_LAB_PURCHASE_SUPPLIES_COST_PER_SEGMENT") -- int *(12000)*
+AcidBoost = tunables.get_int("ACID_LAB_BOOST_AMOUNT") -- int *(80)*
+AcidCapacity = tunables.get_int("ACID_LAB_PRODUCT_CAPACITY") -- int *(160)*
 
  -- Selling
 CratesValue1 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD1")
@@ -1939,12 +2570,13 @@ CratesValue8089 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD18")
 CratesValue9099 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD19")
 CratesValue100110 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD20")
 CratesValue111 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD21")
+SpecialCargoSell = locals.get_int(SupportVersion, GCS, SCVMTl + 588)
 VehicleStandardRange = tunables.get_int("IMPEXP_SELL_BUYER1_OFFER_EASY")
 VehicleMidRange = tunables.get_int("IMPEXP_SELL_BUYER1_OFFER_MED")
 VehicleTopRange = tunables.get_int("IMPEXP_SELL_BUYER1_OFFER_HARD")
 MCBusinessProductMultiplier1 = tunables.get_float("BIKER_SELL_PRODUCT_LOCAL_MODIFIER")
 MCBusinessProductMultiplier2 = tunables.get_float("BIKER_SELL_PRODUCT_FAR_MODIFIER")
-MCBusinessSell = 1
+MCBusinessSell = locals.get_int(SupportVersion, GBCS, MCBISl)
 BunkerProduct = tunables.get_int("GR_MANU_PRODUCT_VALUE")
 BunkerEquipmentUpgrade = tunables.get_int("GR_MANU_PRODUCT_VALUE_EQUIPMENT_UPGRADE")
 BunkerStaffUpgrade = tunables.get_int("GR_MANU_PRODUCT_VALUE_STAFF_UPGRADE")
@@ -1955,65 +2587,82 @@ PharmaceuticalResearchValue = tunables.get_int("BB_BUSINESS_VALUE_METH")
 OrganicProduceValue = tunables.get_int("BB_BUSINESS_VALUE_WEED")
 PrintingandCopyingValue = tunables.get_int("BB_BUSINESS_VALUE_FORGED_DOCUMENTS")
 CashCreationValue = tunables.get_int("BB_BUSINESS_VALUE_COUNTERFEIT_CASH")
+AcidValue = tunables.get_int("BIKER_ACID_PRODUCT_VALUE") -- int *(1485)*
+AcidValueUpgrade = tunables.get_int("BIKER_ACID_PRODUCT_VALUE_EQUIPMENT_UPGRADE") -- int *(610)*
 
-script.register_looped("get_GoldenGets Business", function (script)
-	Warehouse1 = stats.get_int("MPX_CONTOTALFORWHOUSE0")
-	Warehouse2 = stats.get_int("MPX_CONTOTALFORWHOUSE1")
-	Warehouse3 = stats.get_int("MPX_CONTOTALFORWHOUSE2")
-	Warehouse4 = stats.get_int("MPX_CONTOTALFORWHOUSE3")
-	Warehouse5 = stats.get_int("MPX_CONTOTALFORWHOUSE4")
-	WarehouseCrates = (Warehouse1 + Warehouse2 + Warehouse3 + Warehouse4 + Warehouse5)
-	collectcrates = 1
-	selected_unique_cargo = locals.get_int(SCVUCl)
-	unique_cargo_selected = 0
-	MCBusinessSupplyCost = tunables.get_int("BIKER_PURCHASE_SUPPLIES_COST_PER_SEGMENT")
-	BunkerSupplyCost = tunables.get_int("GR_PURCHASE_SUPPLIES_COST_PER_SEGMENT")
-	HangarCrates = stats.get_int("MPX_HANGAR_CONTRABAND_TOTAL")
-	CargoandShipmentsCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_CARGO")
-	SportingGoodsCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_WEAPONS")
-	SouthAmericaImportsCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_COKE")
-	PharmaceuticalResearchCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_METH")
-	OrganicProduceCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_WEED")
-	PrintingandCopyingCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_FORGED_DOCUMENTS")
-	CashCreationCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_COUNTERFEIT_CASH")
-	
-	CratesValue1 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD1")
-	CratesValue2 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD2")
-	CratesValue3 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD3")
-	CratesValue45 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD4")
-	CratesValue67 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD5")
-	CratesValue89 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD6")
-	CratesValue1014 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD7")
-	CratesValue1519 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD8")
-	CratesValue2024 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD9")
-	CratesValue2529 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD10")
-	CratesValue3034 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD11")
-	CratesValue3539 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD12")
-	CratesValue4044 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD13")
-	CratesValue4549 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD14")
-	CratesValue5059 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD15")
-	CratesValue6069 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD16")
-	CratesValue7079 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD17")
-	CratesValue8089 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD18")
-	CratesValue9099 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD19")
-	CratesValue100110 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD20")
-	CratesValue111 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD21")
-	VehicleStandardRange = tunables.get_int("IMPEXP_SELL_BUYER1_OFFER_EASY")
-	VehicleMidRange = tunables.get_int("IMPEXP_SELL_BUYER1_OFFER_MED")
-	VehicleTopRange = tunables.get_int("IMPEXP_SELL_BUYER1_OFFER_HARD")
-	MCBusinessProductMultiplier1 = tunables.get_float("BIKER_SELL_PRODUCT_LOCAL_MODIFIER")
-	MCBusinessProductMultiplier2 = tunables.get_float("BIKER_SELL_PRODUCT_FAR_MODIFIER")
-	BunkerProduct = tunables.get_int("GR_MANU_PRODUCT_VALUE")
-	BunkerEquipmentUpgrade = tunables.get_int("GR_MANU_PRODUCT_VALUE_EQUIPMENT_UPGRADE")
-	BunkerStaffUpgrade = tunables.get_int("GR_MANU_PRODUCT_VALUE_STAFF_UPGRADE")
-	CargoandShipmentsValue = tunables.get_int("BB_BUSINESS_VALUE_CARGO")
-	SportingGoodsValue = tunables.get_int("BB_BUSINESS_VALUE_WEAPONS")
-	SouthAmericaImportsValue = tunables.get_int("BB_BUSINESS_VALUE_COKE")
-	PharmaceuticalResearchValue = tunables.get_int("BB_BUSINESS_VALUE_METH")
-	OrganicProduceValue = tunables.get_int("BB_BUSINESS_VALUE_WEED")
-	PrintingandCopyingValue = tunables.get_int("BB_BUSINESS_VALUE_FORGED_DOCUMENTS")
-	CashCreationValue = tunables.get_int("BB_BUSINESS_VALUE_COUNTERFEIT_CASH")
-	script:yield()
+script.register_looped("GoldenGets get_Business", function()
+	script.run_in_fiber(function (get_Business_script)
+		
+		-- Controls
+		--WarehouseAutoCratesSellAmount = locals.get_int(SupportVersion, GCS, SCVMTl + 588)
+		
+		-- Resupply
+		Warehouse1 = stats.get_int("MPX_CONTOTALFORWHOUSE0")
+		Warehouse2 = stats.get_int("MPX_CONTOTALFORWHOUSE1")
+		Warehouse3 = stats.get_int("MPX_CONTOTALFORWHOUSE2")
+		Warehouse4 = stats.get_int("MPX_CONTOTALFORWHOUSE3")
+		Warehouse5 = stats.get_int("MPX_CONTOTALFORWHOUSE4")
+		WarehouseCrates = (Warehouse1 + Warehouse2 + Warehouse3 + Warehouse4 + Warehouse5)
+		--SpecialCargoBuy = locals.get_int(GCB, SCVIBl2)
+		selected_unique_cargo = locals.get_int(SCVUCl)
+		unique_cargo_selected = 0
+		MCBusinessSupplyCost = tunables.get_int("BIKER_PURCHASE_SUPPLIES_COST_PER_SEGMENT")
+		BunkerSupplyCost = tunables.get_int("GR_PURCHASE_SUPPLIES_COST_PER_SEGMENT")
+		HangarCrates = stats.get_int("MPX_HANGAR_CONTRABAND_TOTAL")
+		CargoandShipmentsCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_CARGO")
+		SportingGoodsCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_WEAPONS")
+		SouthAmericaImportsCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_COKE")
+		PharmaceuticalResearchCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_METH")
+		OrganicProduceCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_WEED")
+		PrintingandCopyingCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_FORGED_DOCUMENTS")
+		CashCreationCapacity = tunables.get_int("BB_BUSINESS_TOTAL_MAX_UNITS_COUNTERFEIT_CASH")
+		AcidSupplyCost = tunables.get_int("ACID_LAB_PURCHASE_SUPPLIES_COST_PER_SEGMENT")
+		AcidBoost = tunables.get_int("ACID_LAB_BOOST_AMOUNT")
+		AcidCapacity = tunables.get_int("ACID_LAB_PRODUCT_CAPACITY")
+		
+		-- Selling
+		CratesValue1 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD1")
+		CratesValue2 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD2")
+		CratesValue3 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD3")
+		CratesValue45 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD4")
+		CratesValue67 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD5")
+		CratesValue89 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD6")
+		CratesValue1014 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD7")
+		CratesValue1519 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD8")
+		CratesValue2024 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD9")
+		CratesValue2529 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD10")
+		CratesValue3034 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD11")
+		CratesValue3539 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD12")
+		CratesValue4044 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD13")
+		CratesValue4549 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD14")
+		CratesValue5059 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD15")
+		CratesValue6069 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD16")
+		CratesValue7079 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD17")
+		CratesValue8089 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD18")
+		CratesValue9099 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD19")
+		CratesValue100110 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD20")
+		CratesValue111 = tunables.get_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD21")
+		--SpecialCargoSell = locals.get_int(SupportVersion, GCS, SCVMTl + 588)
+		VehicleStandardRange = tunables.get_int("IMPEXP_SELL_BUYER1_OFFER_EASY")
+		VehicleMidRange = tunables.get_int("IMPEXP_SELL_BUYER1_OFFER_MED")
+		VehicleTopRange = tunables.get_int("IMPEXP_SELL_BUYER1_OFFER_HARD")
+		MCBusinessProductMultiplier1 = tunables.get_float("BIKER_SELL_PRODUCT_LOCAL_MODIFIER")
+		MCBusinessProductMultiplier2 = tunables.get_float("BIKER_SELL_PRODUCT_FAR_MODIFIER")
+		--MCBusinessSell = locals.get_int(SupportVersion, GBCS, MCBISl)
+		BunkerProduct = tunables.get_int("GR_MANU_PRODUCT_VALUE")
+		BunkerEquipmentUpgrade = tunables.get_int("GR_MANU_PRODUCT_VALUE_EQUIPMENT_UPGRADE")
+		BunkerStaffUpgrade = tunables.get_int("GR_MANU_PRODUCT_VALUE_STAFF_UPGRADE")
+		CargoandShipmentsValue = tunables.get_int("BB_BUSINESS_VALUE_CARGO")
+		SportingGoodsValue = tunables.get_int("BB_BUSINESS_VALUE_WEAPONS")
+		SouthAmericaImportsValue = tunables.get_int("BB_BUSINESS_VALUE_COKE")
+		PharmaceuticalResearchValue = tunables.get_int("BB_BUSINESS_VALUE_METH")
+		OrganicProduceValue = tunables.get_int("BB_BUSINESS_VALUE_WEED")
+		PrintingandCopyingValue = tunables.get_int("BB_BUSINESS_VALUE_FORGED_DOCUMENTS")
+		CashCreationValue = tunables.get_int("BB_BUSINESS_VALUE_COUNTERFEIT_CASH")
+		AcidValue = tunables.get_int("BIKER_ACID_PRODUCT_VALUE")
+		AcidValueUpgrade = tunables.get_int("BIKER_ACID_PRODUCT_VALUE_EQUIPMENT_UPGRADE")
+		get_Business_script:yield()
+	end)
 end)
 
 GoldenGetsBusiness:add_imgui(function()
@@ -2332,16 +2981,17 @@ GoldenGetsBusiness:add_imgui(function()
 					ImGui.TreePop()
 				end
 				
-				WarehouseAuto = ImGui.Checkbox("Enable Warehouse Auto", WarehouseAuto)
+				WarehouseAuto = ImGui.Checkbox("Enable Warehouse Auto##WarehouseAuto", WarehouseAuto)
 				if ImGui.IsItemHovered() then
 					ImGui.SetTooltip("Automatically fill your warehouse in one second or also sell crates one by one. On the\ncomputer screen, select special cargo > source/sell cargo, select your warehouse")
 				end
 				if WarehouseAuto then
-					if ImGui.Button("Start Master Control Terminal") then
+					if ImGui.Button("Start Master Control Terminal##WarehouseAuto") then
 						script.run_in_fiber(function (script)
 							start_script('appArcadeBusinessHub', 1424, script)
 						end)
 					end
+					WarehouseAutoCratesSellAmount = ImGui.DragInt("Crates Sell Amount##WarehouseAuto", WarehouseAutoCratesSellAmount, 1, 0, 111)
 				end
 				ImGui.EndTabItem()
 			end
@@ -2358,10 +3008,10 @@ GoldenGetsBusiness:add_imgui(function()
 					ImGui.SetTooltip("Completing the current crate orders as needed. Not working\non Lupe's mission source special cargo")
 				end
 				
-				collectcrates, drag = ImGui.DragInt("Crates Source", collectcrates, 1, 0, 111)
-				if ImGui.Button("Collect Crates Amount##SpecialCargo") then
+				SpecialCargoBuy = ImGui.DragInt("Crates Amount", SpecialCargoBuy, 1, 0, 111)
+				if ImGui.Button("Collect Crates Amount##SpecialCargoBuy") then
 					locals_v_set_int(SupportVersion, GCB, SCVIBl1, 1)
-					locals_v_set_int(SupportVersion, GCB, SCVIBl2, collectcrates)
+					locals_v_set_int(SupportVersion, GCB, SCVIBl2, SpecialCargoBuy)
 					locals_v_set_int(SupportVersion, GCB, SCVIBl3, 6)
 					locals_v_set_int(SupportVersion, GCB, SCVIBl4, 4)
 				end
@@ -2371,10 +3021,10 @@ GoldenGetsBusiness:add_imgui(function()
 				
 				if WarehouseCrates < 555 then
 					if ImGui.Button("Staff Source Crates##WarehouseStaffSourced") then
-						script.run_in_fiber(function(fillceo)
+						script.run_in_fiber(function (WarehouseCrates_script)
 							for i = 12, 16 do
 								stats.set_bool_masked("MPX_FIXERPSTAT_BOOL1", true, i)
-								fillceo:sleep(500) -- half second delay between each warehouse
+								WarehouseCrates_script:sleep(500) -- half second delay between each warehouse
 							end
 						end)
 					end
@@ -2427,9 +3077,9 @@ GoldenGetsBusiness:add_imgui(function()
 				end
 				if MCBusinessResupplyCost then
 					MCBusinessSupplyCost, drag = ImGui.DragInt("Cost##MCBusinessSupplyCost", MCBusinessSupplyCost, 100, 200, 15000)
-					if drag then
-						MCBusinessSupplyCost = math.min(math.max(MCBusinessSupplyCost, 0), INT_MAX)
-					end
+					--if drag then
+					--	MCBusinessSupplyCost = math.min(math.max(MCBusinessSupplyCost, 0), INT_MAX)
+					--end
 				end
 				
 				MCBusinessSupplyDelay = ImGui.Checkbox("Remove Supply Delay##MCBusinessSupplyDelay", MCBusinessSupplyDelay)
@@ -2442,9 +3092,9 @@ GoldenGetsBusiness:add_imgui(function()
 				end
 				if BunkerResupplyCost then
 					BunkerSupplyCost, drag = ImGui.DragInt("Cost##BunkerSupplyCost", BunkerSupplyCost, 100, 200, 15000)
-					if drag then
-						BunkerSupplyCost = math.min(math.max(BunkerSupplyCost, 0), INT_MAX)
-					end
+					--if drag then
+					--	BunkerSupplyCost = math.min(math.max(BunkerSupplyCost, 0), INT_MAX)
+					--end
 				end
 				
 				BunkerSupplyDelay = ImGui.Checkbox("Remove Supply Delay##BunkerSupplyDelay", BunkerSupplyDelay)
@@ -2495,33 +3145,54 @@ GoldenGetsBusiness:add_imgui(function()
 				end
 				if NightclubGoodsCapacity then
 					CargoandShipmentsCapacity, drag = ImGui.DragInt("Cargo and Shipments##CargoandShipmentsCapacity", CargoandShipmentsCapacity, 10, 50, 500)
-					if drag then
-						CargoandShipmentsCapacity = math.min(math.max(CargoandShipmentsCapacity, 0), INT_MAX)
-					end
+					--if drag then
+					--	CargoandShipmentsCapacity = math.min(math.max(CargoandShipmentsCapacity, 0), 5000)
+					--end
 					SportingGoodsCapacity, drag = ImGui.DragInt("Sporting Goods##SportingGoodsCapacity", SportingGoodsCapacity, 10, 100, 1000)
-					if drag then
-						SportingGoodsCapacity = math.min(math.max(SportingGoodsCapacity, 0), INT_MAX)
-					end
+					--if drag then
+					--	SportingGoodsCapacity = math.min(math.max(SportingGoodsCapacity, 0), 10000)
+					--end
 					SouthAmericaImportsCapacity, drag = ImGui.DragInt("South America Imports##SouthAmericaImportsCapacity", SouthAmericaImportsCapacity, 10, 10, 100)
-					if drag then
-						SouthAmericaImportsCapacity = math.min(math.max(SouthAmericaImportsCapacity, 0), INT_MAX)
-					end
+					--if drag then
+					--	SouthAmericaImportsCapacity = math.min(math.max(SouthAmericaImportsCapacity, 0), 1000)
+					--end
 					PharmaceuticalResearchCapacity, drag = ImGui.DragInt("Pharmaceutical Research##PharmaceuticalResearchCapacity", PharmaceuticalResearchCapacity, 10, 20, 200)
-					if drag then
-						PharmaceuticalResearchCapacity = math.min(math.max(PharmaceuticalResearchCapacity, 0), INT_MAX)
-					end
+					--if drag then
+					--	PharmaceuticalResearchCapacity = math.min(math.max(PharmaceuticalResearchCapacity, 0), 2000)
+					--end
 					OrganicProduceCapacity, drag = ImGui.DragInt("Organic Produce##OrganicProduceCapacity", OrganicProduceCapacity, 10, 80, 800)
-					if drag then
-						OrganicProduceCapacity = math.min(math.max(OrganicProduceCapacity, 0), INT_MAX)
-					end
+					--if drag then
+					--	OrganicProduceCapacity = math.min(math.max(OrganicProduceCapacity, 0), 8000)
+					--end
 					PrintingandCopyingCapacity, drag = ImGui.DragInt("Printing & Copying##PrintingandCopyingCapacity", PrintingandCopyingCapacity, 10, 60, 600)
-					if drag then
-						PrintingandCopyingCapacity = math.min(math.max(PrintingandCopyingCapacity, 0), INT_MAX)
-					end
+					--if drag then
+					--	PrintingandCopyingCapacity = math.min(math.max(PrintingandCopyingCapacity, 0), 6000)
+					--end
 					CashCreationCapacity, drag = ImGui.DragInt("Cash Creation##CashCreationCapacity", CashCreationCapacity, 10, 40, 400)
-					if drag then
-						CashCreationCapacity = math.min(math.max(CashCreationCapacity, 0), INT_MAX)
-					end
+					--if drag then
+					--	CashCreationCapacity = math.min(math.max(CashCreationCapacity, 0), 4000)
+					--end
+				end
+				
+				ImGui.SeparatorText("Acid Lab")
+				
+				AcidLabProduct = ImGui.Checkbox("> Acid Lab Product##AcidLabProduct", AcidLabProduct)
+				if ImGui.IsItemHovered() then
+					ImGui.SetTooltip("Toggle to expand for customize a acid lab product")
+				end
+				if AcidLabProduct then
+					AcidSupplyCost, drag = ImGui.DragInt("Cost##AcidSupplyCost", AcidSupplyCost, 100, 0, 12000)
+					--if drag then
+					--	AcidSupplyCost = math.min(math.max(AcidSupplyCost, 0), INT_MAX)
+					--end
+					AcidBoost, drag = ImGui.DragInt("Production Boost##AcidBoost", AcidBoost, 10, 0, 160)
+					--if drag then
+					--	AcidBoost = math.min(math.max(AcidBoost, 0), INT_MAX)
+					--end
+					AcidCapacity, drag = ImGui.DragInt("Capacity##AcidCapacity", AcidCapacity, 20, 0, 1600)
+					--if drag then
+					--	AcidCapacity = math.min(math.max(AcidCapacity, 0), INT_MAX)
+					--end
 				end
 				ImGui.EndTabItem()
 			end
@@ -2535,89 +3206,89 @@ GoldenGetsBusiness:add_imgui(function()
 				end
 				if SpecialCargoValue then
 					CratesValue1, drag = ImGui.DragInt("1 Crates##CratesValue1", CratesValue1, 50, 10000, 20000)
-					if drag then
-						CratesValue1 = math.min(math.max(CratesValue1, 0), 40000)
-					end
+					--if drag then
+					--	CratesValue1 = math.min(math.max(CratesValue1, 0), 40000)
+					--end
 					CratesValue2, drag = ImGui.DragInt("2 Crates##CratesValue2", CratesValue2, 50, 11000, 22000)
-					if drag then
-						CratesValue2 = math.min(math.max(CratesValue2, 0), 44000)
-					end
+					--if drag then
+					--	CratesValue2 = math.min(math.max(CratesValue2, 0), 44000)
+					--end
 					CratesValue3, drag = ImGui.DragInt("3 Crates##CratesValue3", CratesValue3, 50, 12000, 24000)
-					if drag then
-						CratesValue3 = math.min(math.max(CratesValue3, 0), 48000)
-					end
+					--if drag then
+					--	CratesValue3 = math.min(math.max(CratesValue3, 0), 48000)
+					--end
 					CratesValue45, drag = ImGui.DragInt("4-5 Crates##CratesValue45", CratesValue45, 50, 13000, 26000)
-					if drag then
-						CratesValue45 = math.min(math.max(CratesValue45, 0), 52000)
-					end
+					--if drag then
+					--	CratesValue45 = math.min(math.max(CratesValue45, 0), 52000)
+					--end
 					CratesValue67, drag = ImGui.DragInt("6-7 Crates##CratesValue67", CratesValue67, 50, 13500, 27000)
-					if drag then
-						CratesValue67 = math.min(math.max(CratesValue67, 0), 54000)
-					end
+					--if drag then
+					--	CratesValue67 = math.min(math.max(CratesValue67, 0), 54000)
+					--end
 					CratesValue89, drag = ImGui.DragInt("8-9 Crates##CratesValue89", CratesValue89, 50, 14000, 28000)
-					if drag then
-						CratesValue89 = math.min(math.max(CratesValue89, 0), 56000)
-					end
+					--if drag then
+					--	CratesValue89 = math.min(math.max(CratesValue89, 0), 56000)
+					--end
 					CratesValue1014, drag = ImGui.DragInt("10-14 Crates##CratesValue1014", CratesValue1014, 50, 14500, 29000)
-					if drag then
-						CratesValue1014 = math.min(math.max(CratesValue1014, 0), 58000)
-					end
+					--if drag then
+					--	CratesValue1014 = math.min(math.max(CratesValue1014, 0), 58000)
+					--end
 					CratesValue1519, drag = ImGui.DragInt("15-19 Crates##CratesValue1519", CratesValue1519, 50, 15000, 30000)
-					if drag then
-						CratesValue1519 = math.min(math.max(CratesValue1519, 0), 60000)
-					end
+					--if drag then
+					--	CratesValue1519 = math.min(math.max(CratesValue1519, 0), 60000)
+					--end
 					CratesValue2024, drag = ImGui.DragInt("20-24 Crates##CratesValue2024", CratesValue2024, 50, 15500, 31000)
-					if drag then
-						CratesValue2024 = math.min(math.max(CratesValue2024, 0), 62000)
-					end
+					--if drag then
+					--	CratesValue2024 = math.min(math.max(CratesValue2024, 0), 62000)
+					--end
 					CratesValue2529, drag = ImGui.DragInt("25-29 Crates##CratesValue2529", CratesValue2529, 50, 16000, 32000)
-					if drag then
-						CratesValue2529 = math.min(math.max(CratesValue2529, 0), 64000)
-					end
+					--if drag then
+					--	CratesValue2529 = math.min(math.max(CratesValue2529, 0), 64000)
+					--end
 					CratesValue3034, drag = ImGui.DragInt("30-34 Crates##CratesValue3034", CratesValue3034, 50, 16500, 33000)
-					if drag then
-						CratesValue3034 = math.min(math.max(CratesValue3034, 0), 66000)
-					end
+					--if drag then
+					--	CratesValue3034 = math.min(math.max(CratesValue3034, 0), 66000)
+					--end
 					CratesValue3539, drag = ImGui.DragInt("35-39 Crates##CratesValue3539", CratesValue3539, 50, 17000, 34000)
-					if drag then
-						CratesValue3539 = math.min(math.max(CratesValue3539, 0), 68000)
-					end
+					--if drag then
+					--	CratesValue3539 = math.min(math.max(CratesValue3539, 0), 68000)
+					--end
 					CratesValue4044, drag = ImGui.DragInt("40-44 Crates##CratesValue4044", CratesValue4044, 50, 17500, 35000)
-					if drag then
-						CratesValue4044 = math.min(math.max(CratesValue4044, 0), 70000)
-					end
+					--if drag then
+					--	CratesValue4044 = math.min(math.max(CratesValue4044, 0), 70000)
+					--end
 					CratesValue4549, drag = ImGui.DragInt("45-49 Crates##CratesValue4549", CratesValue4549, 50, 17750, 35500)
-					if drag then
-						CratesValue4549 = math.min(math.max(CratesValue4549, 0), 71000)
-					end
+					--if drag then
+					--	CratesValue4549 = math.min(math.max(CratesValue4549, 0), 71000)
+					--end
 					CratesValue5059, drag = ImGui.DragInt("50-59 Crates##CratesValue5059", CratesValue5059, 50, 18000, 36000)
-					if drag then
-						CratesValue5059 = math.min(math.max(CratesValue5059, 0), 72000)
-					end
+					--if drag then
+					--	CratesValue5059 = math.min(math.max(CratesValue5059, 0), 72000)
+					--end
 					CratesValue6069, drag = ImGui.DragInt("60-69 Crates##CratesValue6069", CratesValue6069, 50, 18250, 36500)
-					if drag then
-						CratesValue6069 = math.min(math.max(CratesValue6069, 0), 73000)
-					end
+					--if drag then
+					--	CratesValue6069 = math.min(math.max(CratesValue6069, 0), 73000)
+					--end
 					CratesValue7079, drag = ImGui.DragInt("70-79 Crates##CratesValue7079", CratesValue7079, 50, 18500, 37000)
-					if drag then
-						CratesValue7079 = math.min(math.max(CratesValue7079, 0), 74000)
-					end
+					--if drag then
+					--	CratesValue7079 = math.min(math.max(CratesValue7079, 0), 74000)
+					--end
 					CratesValue8089, drag = ImGui.DragInt("80-89 Crates##CratesValue8089", CratesValue8089, 50, 18750, 37500)
-					if drag then
-						CratesValue8089 = math.min(math.max(CratesValue8089, 0), 75000)
-					end
+					--if drag then
+					--	CratesValue8089 = math.min(math.max(CratesValue8089, 0), 75000)
+					--end
 					CratesValue9099, drag = ImGui.DragInt("90-99 Crates##CratesValue9099", CratesValue9099, 50, 19000, 38000)
-					if drag then
-						CratesValue9099 = math.min(math.max(CratesValue9099, 0), 76000)
-					end
+					--if drag then
+					--	CratesValue9099 = math.min(math.max(CratesValue9099, 0), 76000)
+					--end
 					CratesValue100110, drag = ImGui.DragInt("100-110 Crates##CratesValue100110", CratesValue100110, 50, 19500, 39000)
-					if drag then
-						CratesValue100110 = math.min(math.max(CratesValue100110, 0), 78000)
-					end
+					--if drag then
+					--	CratesValue100110 = math.min(math.max(CratesValue100110, 0), 78000)
+					--end
 					CratesValue111, drag = ImGui.DragInt("111 Crates##CratesValue111", CratesValue111, 50, 20000, 40000)
-					if drag then
-						CratesValue111 = math.min(math.max(CratesValue111, 0), 800000)
-					end
+					--if drag then
+					--	CratesValue111 = math.min(math.max(CratesValue111, 0), 800000)
+					--end
 				end
 				
 				SpecialCargoShipmentType = ImGui.Checkbox("Sell With Single Shipment##SpecialCargoShipmentType", SpecialCargoShipmentType)
@@ -2627,6 +3298,13 @@ GoldenGetsBusiness:add_imgui(function()
 				
 				if ImGui.Button("Instant Sell##SpecialCargo") then
 					locals_v_set_int(SupportVersion, GCS, SCVISl, 99999)
+				end
+				
+				SpecialCargoSell = ImGui.DragInt("Crates Amount##SpecialCargoSell", SpecialCargoSell, 1, 0, 111)
+				if ImGui.Button("Sell Crates Amount") then
+					if locals.get_int(SupportVersion, GCS, SCVMTl + 588) >= 1 then
+						locals_v_set_int(SupportVersion, GCS, SCVMTl, SpecialCargoSell)
+					end
 				end
 				
 				SpecialCargoSellCooldown = ImGui.Checkbox("Remove Special Cargo Sell Cooldown", SpecialCargoSellCooldown)
@@ -2687,10 +3365,10 @@ GoldenGetsBusiness:add_imgui(function()
 					ImGui.SetTooltip("Activate before selling. Does not support instant sales")
 				end
 				
-				MCBusinessSell, drag = ImGui.DragInt("Supply Sell", MCBusinessSell, 1, 0, 15)
-				if ImGui.Button("Sell Supply Amount") then
+				MCBusinessSell = ImGui.DragInt("Delivery Amount##MCBusinessSell", MCBusinessSell, 1, 0, 15)
+				if ImGui.Button("Sell Delivery Amount") then
 					if locals_v_get_int(SupportVersion, GBCS, MCBSTl) >= 1 then
-						locals_v_set_int(SupportVersion, GBCS, 704 + 122, MCBusinessSell) --704 + 122 = 826
+						locals_v_set_int(SupportVersion, GBCS, MCBISl, MCBusinessSell) --704 + 122 = 826
 					else
 						gui.show_error("GoldenGets Selling - Error", "Not work with single Shipment, there will be no payment.")
 					end
@@ -2731,7 +3409,7 @@ GoldenGetsBusiness:add_imgui(function()
 				
 				ImGui.SeparatorText("Hangar Cargo")
 				
-				HangarSellRonsCut = ImGui.Checkbox("Remove Ron's Cut Hangar Sell", HangarSellRonsCut)
+				HangarSellRonsCut = ImGui.Checkbox("Remove Ron's Cut Sell", HangarSellRonsCut)
 				if ImGui.IsItemHovered() then
 					ImGui.SetTooltip("Delete Ron's cut payment sales")
 				end
@@ -2755,44 +3433,59 @@ GoldenGetsBusiness:add_imgui(function()
 					ImGui.SetTooltip("Toggle to expand for customize a goods price")
 				end
 				if NightclubGoodsValue then
-					CargoandShipmentsValue, drag = ImGui.DragInt("Cargo and Shipments##CargoandShipmentsValue", CargoandShipmentsValue, 1000, 10000, 20000)
-					if drag then
-						CargoandShipmentsValue = math.min(math.max(CargoandShipmentsValue, 0), 40000)
-					end
-					SportingGoodsValue, drag = ImGui.DragInt("Sporting Goods##SportingGoodsValue", SportingGoodsValue, 500, 5000, 10000)
-					if drag then
-						SportingGoodsValue = math.min(math.max(SportingGoodsValue, 0), 20000)
-					end
-					SouthAmericaImportsValue, drag = ImGui.DragInt("South America Imports##SouthAmericaImportsValue", SouthAmericaImportsValue, 1500, 27000, 54000)
-					if drag then
-						SouthAmericaImportsValue = math.min(math.max(SouthAmericaImportsValue, 0), 108000)
-					end
+					CargoandShipmentsValue, drag = ImGui.DragInt("Cargo and Shipments##CargoandShipmentsValue", CargoandShipmentsValue, 100, 10000, 20000)
+					--if drag then
+					--	CargoandShipmentsValue = math.min(math.max(CargoandShipmentsValue, 0), 40000)
+					--end
+					SportingGoodsValue, drag = ImGui.DragInt("Sporting Goods##SportingGoodsValue", SportingGoodsValue, 50, 5000, 10000)
+					--if drag then
+					--	SportingGoodsValue = math.min(math.max(SportingGoodsValue, 0), 20000)
+					--end
+					SouthAmericaImportsValue, drag = ImGui.DragInt("South America Imports##SouthAmericaImportsValue", SouthAmericaImportsValue, 150, 27000, 54000)
+					--if drag then
+					--	SouthAmericaImportsValue = math.min(math.max(SouthAmericaImportsValue, 0), 108000)
+					--end
 					PharmaceuticalResearchValue, drag = ImGui.DragInt("Pharmaceutical Research##PharmaceuticalResearchValue", PharmaceuticalResearchValue, 75, 11475, 22950)
-					if drag then
-						PharmaceuticalResearchValue = math.min(math.max(PharmaceuticalResearchValue, 0), 45900)
-					end
+					--if drag then
+					--	PharmaceuticalResearchValue = math.min(math.max(PharmaceuticalResearchValue, 0), 45900)
+					--end
 					OrganicProduceValue, drag = ImGui.DragInt("Organic Produce##OrganicProduceValue", OrganicProduceValue, 25, 2025, 4050)
-					if drag then
-						OrganicProduceValue = math.min(math.max(OrganicProduceValue, 0), 8100)
-					end
+					--if drag then
+					--	OrganicProduceValue = math.min(math.max(OrganicProduceValue, 0), 8100)
+					--end
 					PrintingandCopyingValue, drag = ImGui.DragInt("Printing & Copying##PrintingandCopyingValue", PrintingandCopyingValue, 50, 1350, 2700)
-					if drag then
-						PrintingandCopyingValue = math.min(math.max(PrintingandCopyingValue, 0), 5400)
-					end
+					--if drag then
+					--	PrintingandCopyingValue = math.min(math.max(PrintingandCopyingValue, 0), 5400)
+					--end
 					CashCreationValue, drag = ImGui.DragInt("Cash Creation##CashCreationValue", CashCreationValue, 25, 4725, 9450)
-					if drag then
-						CashCreationValue = math.min(math.max(CashCreationValue, 0), 18900)
-					end
+					--if drag then
+					--	CashCreationValue = math.min(math.max(CashCreationValue, 0), 18900)
+					--end
 				end
 				
-				NightclubSellTonysCut = ImGui.Checkbox("Remove Tony's Cut Nightclub Sell", NightclubSellTonysCut)
+				NightclubSellTonysCut = ImGui.Checkbox("Remove Tony's Cut Sell", NightclubSellTonysCut)
 				if ImGui.IsItemHovered() then
 					ImGui.SetTooltip("Delete Tony's cut payment sales")
 				end
 				
 				ImGui.SeparatorText("Acid Lab")
 				
-				if ImGui.Button("Instant Sell##AcidLab") then
+				AcidLabProductValue = ImGui.Checkbox("> Acid Lab Product Price##AcidLabProductValue", AcidLabProductValue)
+				if ImGui.IsItemHovered() then
+					ImGui.SetTooltip("Toggle to expand for customize a acid lab product price")
+				end
+				if AcidLabProductValue then
+					AcidValue, drag = ImGui.DragInt("Acid Value##AcidValue", AcidValue, 5, 0, 2970)
+					--if drag then
+					--	AcidValue = math.min(math.max(AcidValue, 0), INT_MAX)
+					--end
+					AcidValueUpgrade, drag = ImGui.DragInt("Acid Value Equipment Upgrade##AcidValueUpgrade", AcidValueUpgrade, 5, 0, 2970)
+					--if drag then
+					--	AcidValueUpgrade = math.min(math.max(AcidValueUpgrade, 0), INT_MAX)
+					--end
+				end
+				
+				if ImGui.Button("Instant Sell (Beta)##AcidLab") then
 					if locals_v_get_int(SupportVersion, FCALS) == true then -- https://www.unknowncheats.me/forum/3641612-post76.html
 						if locals_v_get_int(SupportVersion, FCALS, ALISCl1) >= 1 then
 							locals_v_set_int(SupportVersion, FCALS, ALISDl1 + 2, 10) -- Progress Delivery Mission
@@ -2822,8 +3515,7 @@ GoldenGetsBusiness:add_imgui(function()
 	end
 end)
 
-------------------------------------
-
+ -- Controls
 BusinessRaids = false
 AllBusinessIncome = false
 NightclubIncome = false
@@ -2877,7 +3569,39 @@ HangarAirSellMission = false
 NightclubSellMission = false
 WarehouseAuto = false
 
-script.register_looped("GoldenGets Controls", function (script)
+ -- Resupply
+WarehouseStaffSourced = false
+CEOSpecialItem = false
+SpecialCargoSourceCooldown = false
+VehicleCargoSourceCooldown = false
+MCBusinessResupplyCost = false
+MCBusinessSupplyDelay = false
+BunkerResupplyCost = false
+BunkerSupplyDelay = false
+TriggerBunkerProduction = false
+HangarStaffSourced = false
+HangarCargoSourceCooldown = false
+NightclubGoodsCapacity = false
+AcidLabProduct = false
+
+ -- Selling
+SpecialCargoValue = false
+SpecialCargoShipmentType = false
+SpecialCargoSellCooldown = false
+VehicleCargoPaymentPrice = false
+VehicleCargoSellCooldown = false
+MCBusinessProductMultiplier = false
+MCBusinessShipmentType = false
+MCBusinessShipmentType0 = false
+BunkerValue = false
+HangarCargoSellCooldown = false
+NightclubGoodsValue = false
+NightclubSellTonysCut = false
+AcidLabProductValue = false
+
+script.register_looped("GoldenGets Business", function (script)
+	
+	 -- Controls
 	if BusinessRaids then
 		if tunables.get_bool("EXEC_DISABLE_DEFEND_MISSIONS") ~= true then -- CEO Warehouse
 			tunables.set_bool("EXEC_DISABLE_DEFEND_MISSIONS", true)
@@ -3300,7 +4024,7 @@ script.register_looped("GoldenGets Controls", function (script)
 	
     if MCBusinessProductionCooldown5s then
         if MCBusinessProductionControl5s == 0 then
-			gui.show_message("MC Business Speed5s","It will take effect the next time production is triggered. You can change session immediately")
+			gui.show_message("MC Business Speed 5s","It will take effect the next time production is triggered. You can change session immediately")
             tunables.set_int("BIKER_FAKEIDS_UPGRADE_EQUIPMENT_REDUCTION_TIME", 0)
             tunables.set_int("BIKER_COUNTERCASH_UPGRADE_EQUIPMENT_REDUCTION_TIME", 0)
             tunables.set_int("BIKER_CRACK_UPGRADE_EQUIPMENT_REDUCTION_TIME", 0)
@@ -3377,7 +4101,7 @@ script.register_looped("GoldenGets Controls", function (script)
 	
     if BunkerProductionCooldown5s then
         if BunkerProductionControl5s == 0 then
-			gui.show_message("Bunker Speed5s","It will take effect the next time production is triggered. You can change session immediately")
+			gui.show_message("Bunker Speed 5s","It will take effect the next time production is triggered. You can change session immediately")
         end
         if tunables.get_int("GR_MANU_PRODUCTION_TIME") ~= 5000 then
             tunables.set_int("GR_MANU_PRODUCTION_TIME", 5000)
@@ -3419,7 +4143,7 @@ script.register_looped("GoldenGets Controls", function (script)
 	
     if BunkerResearchCooldown5s then
         if BunkerResearchControl5s == 0 then
-			gui.show_message("Research Speed5s","It will take effect the next time production is triggered. You can change session immediately")
+			gui.show_message("Research Speed 5s","It will take effect the next time production is triggered. You can change session immediately")
         end
         if tunables.get_int("GR_RESEARCH_PRODUCTION_TIME") ~= 5000 then
             tunables.set_int("GR_RESEARCH_PRODUCTION_TIME", 5000)
@@ -3555,7 +4279,7 @@ script.register_looped("GoldenGets Controls", function (script)
 	
 	if NightclubProductionCooldown5s then
         if NightclubProductionControl5s == 0 then
-            gui.show_message("Nightclub Speed5s","It will take effect the next time production is triggered. Reassign employees to take effect immediately")
+            gui.show_message("Nightclub Speed 5s","It will take effect the next time production is triggered. Reassign employees to take effect immediately")
         end
         if tunables.get_int("BB_BUSINESS_DEFAULT_ACCRUE_TIME_CARGO") ~= 5000 then -- Cargo and Shipments
             tunables.set_int("BB_BUSINESS_DEFAULT_ACCRUE_TIME_CARGO", 5000)
@@ -3613,7 +4337,7 @@ script.register_looped("GoldenGets Controls", function (script)
     if AcidLabProductionCooldown5s then
         local playerid = stats.get_int("MPPLY_LAST_MP_CHAR")
         if AcidLabProductionControl5s == 0 then
-			gui.show_message("Acid Lab Speed5s","It will take effect the next time production is triggered. You can change session immediately")
+			gui.show_message("Acid Lab Speed 5s","It will take effect the next time production is triggered. You can change session immediately")
             tunables.set_int("BIKER_ACID_UPGRADE_EQUIPMENT_REDUCTION_TIME", 0)
         end
         if tunables.get_int("BIKER_ACID_PRODUCTION_TIME") ~= 5000 then
@@ -4123,30 +4847,56 @@ script.register_looped("GoldenGets Controls", function (script)
 		tunables.set_bool("BB_SELL_MISSIONS_WEIGHTING_FOLLOW_HELI", false)
 		tunables.set_bool("BB_SELL_MISSIONS_WEIGHTING_FIND_BUYER", false)
 	end
-end)
-
-WarehouseStaffSourced = false
-CEOSpecialItem = false
-SpecialCargoSourceCooldown = false
-VehicleCargoSourceCooldown = false
-MCBusinessResupplyCost = false
-MCBusinessSupplyDelay = false
-BunkerResupplyCost = false
-BunkerSupplyDelay = false
-TriggerBunkerProduction = false
-HangarStaffSourced = false
-HangarCargoSourceCooldown = false
-NightclubGoodsCapacity = false
-
-script.register_looped("GoldenGets Resupply", function (script)
-	if WarehouseStaffSourced then
-		repeat
-			for i = 12, 16 do
-				stats.set_bool_masked("MPX_FIXERPSTAT_BOOL1", true, i)
-				script:sleep(500) -- half second delay between each warehouse
+	
+	if WarehouseAuto then
+		script.run_in_fiber(function (WarehouseAuto_script)
+			if locals_v_get_int(SupportVersion, GCS, 2) == 1 then -- Auto Sell Warehouse Special Cargo
+				locals_v_set_int(SupportVersion, GCS, SCVMTl + 588, WarehouseAutoCratesSellAmount) -- Crates to Sell
+				locals_v_set_int(SupportVersion, GCS, SCVMTl + 48, 0)
+				locals_v_set_int(SupportVersion, GCS, SCVMTl + 577, 0)
+				locals_v_set_int(SupportVersion, GCS, SCVMTl, 7) -- Special Cargo Sell Shipment Type
+				WarehouseAuto_script:sleep(500)
+				locals_v_set_int(SupportVersion, GCS, SCVISl, 99999) 
 			end
-			script:sleep(969) -- add a delay to prevent transaction error or infinite 'transaction pending'
-		until WarehouseCrates == 555 or WarehouseStaffSourced == false
+			if locals_v_get_int(SupportVersion, ASS, 2) == 1 then
+				WarehouseAuto_script:sleep(500)
+				locals_v_set_int(SupportVersion, ASS, SCVAl2, 1)
+				WarehouseAuto_script:sleep(200)
+				locals_v_set_int(SupportVersion, ASS, SCVAl1, 1)
+				WarehouseAuto_script:sleep(200)
+				locals_v_set_int(SupportVersion, ASS, SCVAl3, 3012)
+				WarehouseAuto_script:sleep(1000)
+			end
+			if locals_v_get_int(SupportVersion, GCB, 2) == 1 then -- Auto Source Warehouse Special Cargo
+				locals_v_set_int(SupportVersion, GCB, SCVIBl1, 1)
+				locals_v_set_int(SupportVersion, GCB, SCVIBl2, WarehouseAutoCratesSellAmount) -- Crates to Buy
+				locals_v_set_int(SupportVersion, GCB, SCVIBl3, 6)
+				locals_v_set_int(SupportVersion, GCB, SCVIBl4, 4)
+				gui.show_message("Your Warehouse is now Full!")
+			end
+			if locals_v_get_int(SupportVersion, GCS, 2) ~= 1 then  
+				WarehouseAuto_script:sleep(500)
+				if locals_v_get_int(SupportVersion, AMW, 2) == 1 then
+					SCRIPT.REQUEST_SCRIPT(ASS)
+					SYSTEM.START_NEW_SCRIPT(ASS, 8344)
+					SCRIPT.SET_SCRIPT_AS_NO_LONGER_NEEDED(ASS)
+				end
+			end
+			WarehouseAuto_script:sleep(1000)
+		end)
+	end
+	
+	 -- Resupply
+	if WarehouseStaffSourced then
+		script.run_in_fiber(function (WarehouseStaffSourced_script)
+			repeat
+				for i = 12, 16 do
+					stats.set_bool_masked("MPX_FIXERPSTAT_BOOL1", true, i)
+					WarehouseStaffSourced_script:sleep(500) -- half second delay between each warehouse
+				end
+				WarehouseStaffSourced_script:sleep(969) -- add a delay to prevent transaction error or infinite 'transaction pending'
+			until WarehouseCrates == 555 or WarehouseStaffSourced == false
+		end)
 	end
 	
 	if CEOSpecialItem then
@@ -4176,7 +4926,7 @@ script.register_looped("GoldenGets Resupply", function (script)
 	end
 	
 	if MCBusinessSupplyDelay then
-		if tunables.get_int("BIKER_PURCHASE_SUPPLIES_DELAY") ~= 0 then
+		if tunables.get_int("BIKER_PURCHASE_SUPPLIES_DELAY") ~= 0 then -- *(600ms)*
 			tunables.set_int("BIKER_PURCHASE_SUPPLIES_DELAY", 0)
 		end
 	end
@@ -4192,16 +4942,20 @@ script.register_looped("GoldenGets Resupply", function (script)
 	end
 	
 	if TriggerBunkerProduction then
-		locals_v_set_int(SupportVersion, TTg + 6, 0)
-		locals_v_set_int(SupportVersion, TTg, 1)
-		script:sleep(1000)
+		script.run_in_fiber(function (TriggerBunkerProduction_script)
+			locals_v_set_int(SupportVersion, TTg + 6, 0)
+			locals_v_set_int(SupportVersion, TTg, 1)
+			TriggerBunkerProduction_script:sleep(1000)
+		end)
 	end
 	
 	if HangarStaffSourced then
-		repeat
-			stats.set_bool_masked("MPX_DLC22022PSTAT_BOOL3", true, 9)
-			script:sleep(969) -- add a delay to prevent transaction error or infinite 'transaction pending'
-		until HangarCrates == 50 or HangarStaffSourced == false
+		script.run_in_fiber(function (HangarStaffSourced_script)
+			repeat
+				stats.set_bool_masked("MPX_DLC22022PSTAT_BOOL3", true, 9)
+				HangarStaffSourced_script:sleep(969) -- add a delay to prevent transaction error or infinite 'transaction pending'
+			until HangarCrates == 50 or HangarStaffSourced == false
+		end)
 	end
 	
 	if HangarCargoSourceCooldown then
@@ -4228,60 +4982,14 @@ script.register_looped("GoldenGets Resupply", function (script)
 		tunables.set_int("BB_BUSINESS_TOTAL_MAX_UNITS_FORGED_DOCUMENTS", PrintingandCopyingCapacity)
 		tunables.set_int("BB_BUSINESS_TOTAL_MAX_UNITS_COUNTERFEIT_CASH", CashCreationCapacity)
 	end
-end)
-
-script.register_looped("GoldenGets WarehouseAuto", function (script)
-    if WarehouseAuto then
-        if locals_v_get_int(SupportVersion, GCS, 2) == 1 then -- Auto Sell Warehouse Special Cargo
-            locals_v_set_int(SupportVersion, GCS, SCVMTl + 588, 1) -- crates to sell
-            locals_v_set_int(SupportVersion, GCS, SCVMTl + 48, 0)
-            locals_v_set_int(SupportVersion, GCS, SCVMTl + 577, 0)
-            locals_v_set_int(SupportVersion, GCS, SCVMTl, 7) -- Special Cargo Sell Vehicle Type
-            script:sleep(500)
-            locals_v_set_int(SupportVersion, GCS, SCVISl, 99999)  
-        end
-        if locals_v_get_int(SupportVersion, ASS, 2) == 1 then
-            script:sleep(500)
-            locals_v_set_int(SupportVersion, ASS, SCVAl2, 1)
-            script:sleep(200)
-            locals_v_set_int(SupportVersion, ASS, SCVAl1, 1)
-            script:sleep(200)
-            locals_v_set_int(SupportVersion, ASS, SCVAl3, 3012)
-            script:sleep(1000)
-        end
-        if locals_v_get_int(SupportVersion, GCB, 2) == 1 then -- Auto Source Warehouse Special Cargo
-            locals_v_set_int(SupportVersion, GCB, SCVIBl1, 1)
-            locals_v_set_int(SupportVersion, GCB, SCVIBl2, 111)
-            locals_v_set_int(SupportVersion, GCB, SCVIBl3, 6)
-            locals_v_set_int(SupportVersion, GCB, SCVIBl4, 4)
-            gui.show_message("Your Warehouse is now Full!")
-        end
-        if locals_v_get_int(SupportVersion, GCS, 2) ~= 1 then  
-            script:sleep(500)
-            if locals_v_get_int(SupportVersion, AMW, 2) == 1 then
-                SCRIPT.REQUEST_SCRIPT(ASS)
-                SYSTEM.START_NEW_SCRIPT(ASS, 8344)
-                SCRIPT.SET_SCRIPT_AS_NO_LONGER_NEEDED(ASS)
-            end
-        end
-    end
-    script:sleep(1000)
-end)
-
-SpecialCargoValue = false
-SpecialCargoShipmentType = false
-SpecialCargoSellCooldown = false
-VehicleCargoPaymentPrice = false
-VehicleCargoSellCooldown = false
-MCBusinessProductMultiplier = false
-MCBusinessShipmentType = false
-MCBusinessShipmentType0 = false
-BunkerValue = false
-HangarCargoSellCooldown = false
-NightclubGoodsValue = false
-NightclubSellTonysCut = false
-
-script.register_looped("GoldenGets Selling", function()
+	
+	if AcidLabProduct then
+		tunables.set_int("ACID_LAB_PURCHASE_SUPPLIES_COST_PER_SEGMENT", AcidSupplyCost)
+		tunables.set_int("ACID_LAB_BOOST_AMOUNT", AcidBoost)
+		tunables.set_int("ACID_LAB_PRODUCT_CAPACITY", AcidCapacity)
+	end
+	
+	 -- Selling
 	if SpecialCargoValue then
 		tunables.set_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD1", CratesValue1)
 		tunables.set_int("EXEC_CONTRABAND_SALE_VALUE_THRESHOLD2", CratesValue2)
@@ -4406,6 +5114,11 @@ script.register_looped("GoldenGets Selling", function()
 		tunables.set_float("BB_SELL_MISSIONS_TONYS_CUT", 0)
 	else
 		tunables.set_float("BB_SELL_MISSIONS_TONYS_CUT", Nightclub_Sell_Tony_Cut)
+	end
+	
+	if AcidLabProductValue then
+		tunables.set_int("BIKER_ACID_PRODUCT_VALUE", AcidValue)
+		tunables.set_int("BIKER_ACID_PRODUCT_VALUE_EQUIPMENT_UPGRADE", AcidValueUpgrade)
 	end
 end)
 

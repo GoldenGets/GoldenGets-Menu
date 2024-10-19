@@ -5,6 +5,8 @@ I think it might be too late to make and share this script after the disaster ha
 
 ## Features
 
+- **Switch CEO/President**
+- **Auto CEO/President**
 - **Instant Hack/Mini Games**
 - **Remove All CCTV**
 - **ATM**
@@ -32,30 +34,32 @@ In fact, most of these scripts are independent of the GTA Online update version.
 - **Switch CEO/President**
 - **Instant Hack/Mini Games**
 - **Cooldowns** | Dispatch Work
-- **Controls** | Auto-Fill Low Supplies, and Enable Warehouse Auto
+- **Controls** | Auto-Fill Low Supplies and Enable Warehouse Auto
 - **Resupply** | Instant Collect Crates
-- **Selling** | All Shipment Type Sell, and All Instant Sell
+- **Selling** | All Shipment Type Sell and All Instant Sell
 - **Misc** | Remove Self Bounty
 
 
-> [!Note:]
+> **[!Note:]**
 > Please note, some features are experimental and may not work as expected.
 
 ## An Experimental Features
 
 - **Auto CEO/MC**
+- **Misc Cooldowns**
 - **Max Agency Income**
 - **Easy Business Mission**
+- **Trigger Bunker Production**
 
-I'm not sure how it works yet, if you find something, you can contact me
+I'm not sure how it works yet. If you find something, you can contact me
 
 
-> [!Note:]
+> **[!Note:]**
 > **For safety reasons**, I've limited all business sales to a 2x profit cap to avoid detection. Based on past experience, exceeding large sales limits or using instant money options has resulted in bans.
 > If you don't want to be restricted just type manually by double clicking, and change the value as you wish.
 
 
-> <span style="color:red">[⚠︎Disclaimer⚠︎]</span>
+> **[⚠︎Disclaimer⚠︎]**
 > This is for educational and evaluation purposes only.
 > No responsibility is held or accepted for misuse.
 > Use at your own risk!

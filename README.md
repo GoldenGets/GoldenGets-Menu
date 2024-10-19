@@ -9,9 +9,9 @@ I think it might be too late to make and share this script after the disaster ha
 - **Auto CEO/President**
 - **Instant Hack/Mini Games**
 - **Remove All CCTV**
-- **ATM**
+- **ATM** (Just work in online cloud server. Not for FSL (File Save Local))
 - **Computers**
-- **Cooldowns** (Note: seems complete, but there are some that have not been found or are not available.)
+- **Cooldowns** (seems complete)
 - **Business**
 - **Mission/Heist** (Coming Soon)
 - **Misc**
@@ -49,7 +49,6 @@ In fact, most of these scripts are independent of the GTA Online update version.
 - **Misc Cooldowns**
 - **Max Agency Income**
 - **Easy Business Mission**
-- **Trigger Bunker Production**
 
 I'm not sure how it works yet. If you find something, you can contact me
 
